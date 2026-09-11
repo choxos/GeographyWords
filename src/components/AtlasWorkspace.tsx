@@ -172,7 +172,7 @@ export function AtlasWorkspace() {
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="denim, Nîmes, France…"
-              aria-label="Search words and places"
+              aria-label="Filter the words shown"
             />
             {query ? (
               <button

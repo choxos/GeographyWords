@@ -118,7 +118,7 @@ export function Header({ compact = false }: { compact?: boolean }) {
             }}
             onFocus={() => setOpen(true)}
             placeholder="Search a word or place…"
-            aria-label="Search words and places"
+            aria-label="Search the whole atlas"
             className="mono text-[12.5px] rounded-md w-full"
             style={{
               paddingLeft: 28,

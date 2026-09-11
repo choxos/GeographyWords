@@ -11,7 +11,8 @@
     "lint": "eslint",
     "type-check": "tsc --noEmit",
     "validate:places": "python3 scripts/validate-places.py",
-    "validate:layers": "node --experimental-strip-types --no-warnings scripts/validate-layers.mjs"
+    "validate:layers": "node --experimental-strip-types --no-warnings scripts/validate-layers.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "lucide-react": "^1.44.0",
@@ -23,6 +24,7 @@
     "react-map-gl": "^8.1.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
