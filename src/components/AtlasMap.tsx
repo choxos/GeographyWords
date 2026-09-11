@@ -11,7 +11,6 @@ import Map, {
   type MapLayerMouseEvent,
   type MapRef,
 } from "react-map-gl/maplibre";
-import type { GeoJSONSource } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 // Side effect: points MapLibre at the worker in public/.
 import "@/lib/maplibreWorker";
@@ -42,11 +41,9 @@ type AtlasMapProps = {
 };
 
 const SOURCE = "atlas-places";
-const CLUSTERS = "atlas-clusters";
-const CLUSTER_COUNT = "atlas-cluster-count";
 const POINTS = "atlas-points";
 const SELECTED = "atlas-selected";
-const INTERACTIVE = [CLUSTERS, POINTS];
+const INTERACTIVE = [POINTS];
 
 type Hover = { lng: number; lat: number; label: string; place: string } | null;
 
@@ -74,9 +71,10 @@ export function AtlasMap({
   const dark = resolvedTheme === "dark";
 
   /**
-   * Pins are a clustered GeoJSON source rather than DOM markers. At 200-plus
-   * places the markers piled into an unreadable heap over Europe, and every
-   * pan had to re-lay-out that many React nodes.
+   * Pins are a GeoJSON source rather than DOM markers: at 200-plus places,
+   * that many React nodes had to be re-laid-out on every pan. Every place is
+   * its own dot at every zoom, deliberately unclustered, so the distribution
+   * of the atlas stays visible rather than collapsing into counters.
    */
   const pins = useMemo<GeoJSON.FeatureCollection>(
     () => ({
@@ -172,34 +170,15 @@ export function AtlasMap({
         return;
       }
 
-      // A cluster zooms to where it splits; a single pin opens its place.
-      if (feature.properties?.cluster) {
-        const map = mapRef.current?.getMap();
-        const source = map?.getSource(SOURCE) as GeoJSONSource | undefined;
-        const clusterId = feature.properties.cluster_id as number;
-        const [lng, lat] = (feature.geometry as GeoJSON.Point).coordinates;
-        void Promise.resolve(source?.getClusterExpansionZoom(clusterId))
-          .then((zoom) => {
-            if (!map) return;
-            map.easeTo({
-              center: [lng, lat],
-              zoom: zoom ?? map.getZoom() + 2,
-              duration: reducedMotion ? 0 : 600,
-            });
-          })
-          .catch(() => {});
-        return;
-      }
-
       const slug = feature.properties?.slug as string | undefined;
       if (slug) onSelectPlace?.(slug);
     },
-    [guessPin, onClearSelection, onPickPoint, onSelectPlace, reducedMotion],
+    [guessPin, onClearSelection, onPickPoint, onSelectPlace],
   );
 
   const handleMouseMove = useCallback((event: MapLayerMouseEvent) => {
     const feature = event.features?.[0];
-    if (!feature || feature.properties?.cluster) {
+    if (!feature) {
       setHover(null);
       return;
     }
@@ -281,57 +260,27 @@ export function AtlasMap({
       ) : null}
 
       {hidePins ? null : (
-        <Source
-          id={SOURCE}
-          type="geojson"
-          data={pins}
-          cluster
-          clusterRadius={42}
-          clusterMaxZoom={6}
-        >
-          <Layer
-            id={CLUSTERS}
-            type="circle"
-            filter={["has", "point_count"]}
-            paint={{
-              "circle-color": accent,
-              "circle-opacity": 0.92,
-              "circle-stroke-width": 2,
-              "circle-stroke-color": surface,
-              "circle-radius": [
-                "step",
-                ["get", "point_count"],
-                13,
-                5,
-                17,
-                15,
-                22,
-                40,
-                28,
-              ],
-            }}
-          />
-          <Layer
-            id={CLUSTER_COUNT}
-            type="symbol"
-            filter={["has", "point_count"]}
-            layout={{
-              "text-field": ["get", "point_count_abbreviated"],
-              "text-font": ["Noto Sans Regular"],
-              "text-size": 12,
-              "text-allow-overlap": true,
-            }}
-            paint={{ "text-color": "#FFFFFF" }}
-          />
+        <Source id={SOURCE} type="geojson" data={pins}>
           <Layer
             id={POINTS}
             type="circle"
-            filter={["!", ["has", "point_count"]]}
             paint={{
               "circle-color": accent,
-              "circle-radius": 6,
-              "circle-stroke-width": 2,
+              "circle-stroke-width": 1.5,
               "circle-stroke-color": surface,
+              // Small enough at world zoom that dense regions stay readable
+              // as separate dots, larger once there is room for them.
+              "circle-radius": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                1,
+                3.2,
+                3,
+                4.5,
+                6,
+                6,
+              ],
             }}
           />
           {selectedPlaceSlug ? (
