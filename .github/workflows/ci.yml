@@ -20,6 +20,9 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://geowords.xera.ac
+      # Map layer expressions are invisible to tsc and to next build: a bad
+      # one fails only inside MapLibre at runtime, dropping the layer.
+      - run: npm run validate:layers
 
   data:
     # Every entry cites a Wikidata id as its evidence. 45 of the original 74

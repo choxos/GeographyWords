@@ -10,7 +10,8 @@
     "start": "next start -p ${PORT:-3021}",
     "lint": "eslint",
     "type-check": "tsc --noEmit",
-    "validate:places": "python3 scripts/validate-places.py"
+    "validate:places": "python3 scripts/validate-places.py",
+    "validate:layers": "node --experimental-strip-types --no-warnings scripts/validate-layers.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.44.0",

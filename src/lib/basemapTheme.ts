@@ -1,7 +1,7 @@
 import type { Map as MapLibreMap } from "maplibre-gl";
 
 /**
- * Recolour the OpenFreeMap basemap to match the Xera palette.
+ * Recolor the OpenFreeMap basemap to match the Xera palette.
  *
  * Both upstream styles are wrong for this product. The dark style paints land
  * rgb(12,12,12) against water rgb(27,27,29), which is nearly the same colour;

@@ -14,6 +14,17 @@ import Map, {
 import "maplibre-gl/dist/maplibre-gl.css";
 // Side effect: points MapLibre at the worker in public/.
 import "@/lib/maplibreWorker";
+import {
+  ARC,
+  MULTI_WORD_FILTER,
+  POINTS,
+  POINT_COUNT,
+  SELECTED,
+  arcPaint,
+  countLayout,
+  pointsPaint,
+  selectedPaint,
+} from "@/lib/atlasLayers";
 import { restyleBasemap } from "@/lib/basemapTheme";
 import { greatCircle, type LngLat } from "@/lib/geo";
 import { MAP_STYLE_DARK, MAP_STYLE_LIGHT } from "@/lib/site";
@@ -41,9 +52,6 @@ type AtlasMapProps = {
 };
 
 const SOURCE = "atlas-places";
-const POINTS = "atlas-points";
-const POINT_COUNT = "atlas-point-count";
-const SELECTED = "atlas-selected";
 const INTERACTIVE = [POINTS];
 
 type Hover = { lng: number; lat: number; label: string; place: string } | null;
@@ -103,7 +111,7 @@ export function AtlasMap({
     };
   }, [arc]);
 
-  // Recolour on every style load. Switching theme swaps the whole style, so
+  // Recolor on every style load. Switching theme swaps the whole style, so
   // this has to run again each time rather than only once at mount.
   useEffect(() => {
     const map = mapRef.current?.getMap();
@@ -249,60 +257,20 @@ export function AtlasMap({
     >
       {arcData ? (
         <Source id="etymology-arc" type="geojson" data={arcData}>
-          <Layer
-            id="etymology-arc-line"
-            type="line"
-            paint={{
-              "line-color": hot,
-              "line-width": 2,
-              "line-dasharray": [2, 2],
-            }}
-          />
+          <Layer id={ARC} type="line" paint={arcPaint(hot)} />
         </Source>
       ) : null}
 
       {hidePins ? null : (
         <Source id={SOURCE} type="geojson" data={pins}>
-          <Layer
-            id={POINTS}
-            type="circle"
-            paint={{
-              "circle-color": accent,
-              "circle-stroke-width": 1.5,
-              "circle-stroke-color": surface,
-              // Small enough at world zoom that dense regions stay readable
-              // as separate dots, larger once there is room for them. A place
-              // holding several words is widened to carry its count.
-              "circle-radius": [
-                "*",
-                [
-                  "interpolate",
-                  ["linear"],
-                  ["zoom"],
-                  1,
-                  3.2,
-                  3,
-                  4.5,
-                  6,
-                  6,
-                ],
-                ["case", [">", ["get", "count"], 1], 1.9, 1],
-              ],
-            }}
-          />
+          <Layer id={POINTS} type="circle" paint={pointsPaint(accent, surface)} />
           {/* Only places holding more than one word carry a number. A single
               word needs no label; the tooltip already names it. */}
           <Layer
             id={POINT_COUNT}
             type="symbol"
-            filter={[">", ["get", "count"], 1]}
-            layout={{
-              "text-field": ["to-string", ["get", "count"]],
-              "text-font": ["Noto Sans Regular"],
-              "text-size": 10,
-              "text-allow-overlap": true,
-              "text-ignore-placement": true,
-            }}
+            filter={MULTI_WORD_FILTER}
+            layout={countLayout}
             paint={{ "text-color": "#FFFFFF" }}
           />
 
@@ -311,12 +279,7 @@ export function AtlasMap({
               id={SELECTED}
               type="circle"
               filter={["==", ["get", "slug"], selectedPlaceSlug]}
-              paint={{
-                "circle-color": hot,
-                "circle-radius": 9,
-                "circle-stroke-width": 3,
-                "circle-stroke-color": surface,
-              }}
+              paint={selectedPaint(hot, surface)}
             />
           ) : null}
         </Source>
