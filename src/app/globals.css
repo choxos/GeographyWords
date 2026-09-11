@@ -562,6 +562,75 @@
     min-width: 0;
     background: var(--surface-2);
   }
+  /* Map pins and their hover tooltip. */
+  .atlas-pin-wrap {
+    position: relative;
+    display: block;
+  }
+  .atlas-pin {
+    display: block;
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: 2px solid var(--surface);
+    border-radius: 999px;
+    background: var(--xera);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    transition:
+      width 0.15s var(--ease),
+      height 0.15s var(--ease);
+  }
+  .atlas-pin:hover {
+    width: 15px;
+    height: 15px;
+  }
+  .atlas-pin.is-active {
+    width: 16px;
+    height: 16px;
+    background: var(--disputed);
+    box-shadow: 0 0 0 6px color-mix(in oklab, var(--disputed) 28%, transparent);
+  }
+
+  .atlas-pin-tip {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 9px);
+    transform: translateX(-50%);
+    z-index: 5;
+    display: none;
+    flex-direction: column;
+    gap: 1px;
+    padding: 6px 9px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    white-space: nowrap;
+    pointer-events: none;
+    max-width: 220px;
+  }
+  .atlas-pin-wrap:hover .atlas-pin-tip,
+  .atlas-pin:focus-visible + .atlas-pin-tip {
+    display: flex;
+  }
+  .atlas-pin-tip-word {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .atlas-pin-tip-place {
+    font-family: var(--font-mono), monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+  }
+
   /* Shown only when MapLibre reports a problem, so a screenshot explains it. */
   .atlas-map-error {
     position: absolute;

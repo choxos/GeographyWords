@@ -145,31 +145,33 @@ export function AtlasMap({
                 latitude={place.lat}
                 anchor="center"
               >
-                <button
-                  type="button"
-                  aria-label={
-                    place.words.length === 1
-                      ? `${place.words[0].lemma}, ${place.name}`
-                      : `${place.name}, ${place.words.length} words`
-                  }
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    onSelectPlace?.(place.slug);
-                  }}
-                  style={{
-                    width: active ? 16 : 11,
-                    height: active ? 16 : 11,
-                    borderRadius: 999,
-                    border: "2px solid var(--surface)",
-                    background: active ? "var(--disputed)" : "var(--xera)",
-                    boxShadow: active
-                      ? "0 0 0 6px color-mix(in oklab, var(--disputed) 28%, transparent)"
-                      : "0 1px 3px rgba(0,0,0,0.35)",
-                    cursor: "pointer",
-                    padding: 0,
-                    transition: "width .15s, height .15s",
-                  }}
-                />
+                <span className="atlas-pin-wrap">
+                  <button
+                    type="button"
+                    className={active ? "atlas-pin is-active" : "atlas-pin"}
+                    aria-label={
+                      place.words.length === 1
+                        ? `${place.words[0].lemma}, ${place.name}`
+                        : `${place.name}, ${place.words.length} words`
+                    }
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      onSelectPlace?.(place.slug);
+                    }}
+                  />
+                  {/* Hover and focus tooltip. CSS-only, so it needs no state
+                      and shows for keyboard users too. */}
+                  <span className="atlas-pin-tip" aria-hidden>
+                    <span className="atlas-pin-tip-word">
+                      {place.words.length === 1
+                        ? place.words[0].lemma
+                        : place.words.map((word) => word.lemma).join(", ")}
+                    </span>
+                    <span className="atlas-pin-tip-place">
+                      {place.name}, {place.country}
+                    </span>
+                  </span>
+                </span>
               </Marker>
             );
           })}
