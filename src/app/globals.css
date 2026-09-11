@@ -1,0 +1,687 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =============================================================
+   Xera / Geography Words design system
+   Tokens shared with the Xera OpenScience / Retractions platform.
+   ============================================================= */
+
+:root {
+  /* Brand */
+  --xera: #0f47f7;
+  --xera-light: #3366ff;
+  --xera-dark: #0a35c2;
+
+  /* Semantic (light): confidence in an etymology.
+     Darkened so chip text on the pale tints clears WCAG AA. */
+  --attested: #047857;
+  --probable: #b45309;
+  --disputed: #dc2626;
+
+  /* Neutrals: warm paper, light theme */
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --surface-2: #f4f4ee;
+  --surface-3: #ecece4;
+  --border: #e4e4da;
+  --border-strong: #d4d4c8;
+  --ink: #0b0b0a;
+  --ink-2: #2c2c28;
+  --ink-3: #56564e;
+  --ink-4: #6b6b61; /* WCAG AA: 5.38:1 on #FFF */
+  --ink-5: #b5b5aa; /* decorative only; never body text */
+
+  /* Map surface (the globe sits on its own darker ground in both themes) */
+  --map-ground: #eceae2;
+  --map-pin: var(--xera);
+
+  /* Radii */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-xl: 16px;
+
+  /* Density */
+  --pad: 20px;
+  --pad-sm: 12px;
+  --row-h: 44px;
+  --text-base: 14px;
+
+  /* Easing */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.dark {
+  --bg: #0b0e14;
+  --surface: #11151e;
+  --surface-2: #161b27;
+  --surface-3: #1e2433;
+  --border: #232a3b;
+  --border-strong: #2e3650;
+  --ink: #f3f4f8;
+  --ink-2: #d9dce5;
+  --ink-3: #9da3b4;
+  --ink-4: #8b93a6;
+  --ink-5: #4a5161;
+  --xera: #5b7fff;
+  --xera-light: #7b97ff;
+  --xera-dark: #3a60e6;
+
+  --attested: #34d399;
+  --probable: #fbbf24;
+  --disputed: #f87171;
+
+  --map-ground: #0d1119;
+}
+
+@theme inline {
+  --color-xera: var(--xera);
+  --color-xera-light: var(--xera-light);
+  --color-xera-dark: var(--xera-dark);
+  --color-attested: var(--attested);
+  --color-probable: var(--probable);
+  --color-disputed: var(--disputed);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-ink-4: var(--ink-4);
+  --color-ink-5: var(--ink-5);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+}
+
+/* =============================================================
+   Base
+   ============================================================= */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition:
+      background-color 0.2s var(--ease),
+      color 0.2s var(--ease);
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--xera);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--xera) 25%, transparent);
+    color: var(--ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 999px;
+    border: 2px solid var(--bg);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--ink-4);
+  }
+}
+
+/* =============================================================
+   Components
+   ============================================================= */
+@layer components {
+  .shell {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    .shell {
+      padding: 0 20px;
+    }
+  }
+
+  /* Typography */
+  .h-display {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: clamp(34px, 8vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    color: var(--ink);
+    margin: 0;
+  }
+  .h-page {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: var(--ink);
+    margin: 0;
+  }
+  .h-section {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: clamp(26px, 4.5vw, 32px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: var(--ink);
+    margin: 0;
+  }
+  .h-eyebrow {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    font-weight: 500;
+  }
+  .muted {
+    color: var(--ink-3);
+  }
+  .muted-sm {
+    color: var(--ink-4);
+    font-size: 12px;
+  }
+
+  /* The lemma itself: the one piece of type that carries the product. */
+  .lemma {
+    font-family: var(--font-serif), Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+  }
+
+  /* Cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+  }
+  .card-pad {
+    padding: var(--pad);
+  }
+  .card-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px var(--pad);
+    border-bottom: 1px solid var(--border);
+  }
+  .card-link {
+    display: block;
+    transition:
+      border-color 0.15s var(--ease),
+      background 0.15s var(--ease);
+  }
+  .card-link:hover {
+    border-color: var(--border-strong);
+    background: var(--surface-2);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: var(--r-md);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s var(--ease);
+    white-space: nowrap;
+    color: var(--ink);
+  }
+  .btn:hover {
+    border-color: var(--border-strong);
+  }
+  .btn-primary {
+    background: var(--xera);
+    border-color: var(--xera);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--xera-dark);
+    border-color: var(--xera-dark);
+    color: #fff;
+  }
+  .btn-ghost {
+    border-color: transparent;
+    background: transparent;
+    color: var(--ink-3);
+  }
+  .btn-ghost:hover {
+    background: var(--surface-2);
+    color: var(--ink);
+  }
+  .btn-lg {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* Chips */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    letter-spacing: -0.01em;
+    background: var(--surface-2);
+    color: var(--ink-2);
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .chip .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: currentColor;
+    flex: 0 0 6px;
+    margin-right: 5px;
+  }
+  .chip-attested {
+    color: var(--attested);
+    background: color-mix(in oklab, var(--attested) 8%, var(--surface));
+    border-color: color-mix(in oklab, var(--attested) 20%, var(--border));
+  }
+  .chip-probable {
+    color: var(--probable);
+    background: color-mix(in oklab, var(--probable) 8%, var(--surface));
+    border-color: color-mix(in oklab, var(--probable) 20%, var(--border));
+  }
+  .chip-disputed {
+    color: var(--disputed);
+    background: color-mix(in oklab, var(--disputed) 8%, var(--surface));
+    border-color: color-mix(in oklab, var(--disputed) 20%, var(--border));
+  }
+  .chip-plain {
+    background: transparent;
+  }
+
+  /* Stats strip */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+  }
+  .stat {
+    padding: 22px 24px;
+    border-right: 1px solid var(--border);
+  }
+  .stat:last-child {
+    border-right: none;
+  }
+  .stat-label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--ink-4);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .stat-value {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: 40px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-top: 6px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+  @media (max-width: 900px) {
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .stat:nth-child(2) {
+      border-right: none;
+    }
+    .stat:nth-child(1),
+    .stat:nth-child(2) {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  /* Tables */
+  .tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .tbl th {
+    text-align: left;
+    font-weight: 500;
+    font-size: 11px;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-4);
+    padding: 12px var(--pad);
+    border-bottom: 1px solid var(--border);
+    background: var(--surface-2);
+  }
+  .tbl td {
+    padding: 14px var(--pad);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .tbl tr:last-child td {
+    border-bottom: none;
+  }
+  .tbl tr.clickable:hover td {
+    background: var(--surface-2);
+  }
+
+  /* Search field */
+  .search-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0 6px 0 16px;
+    height: 48px;
+    transition:
+      border-color 0.15s,
+      box-shadow 0.15s;
+  }
+  .search-field:focus-within {
+    border-color: var(--xera);
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--xera) 14%, transparent);
+  }
+  .search-field input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .search-field input::placeholder {
+    color: var(--ink-4);
+  }
+  .search-field-lg {
+    height: 62px;
+    padding: 0 8px 0 22px;
+  }
+  .search-field-lg input {
+    font-size: 17px;
+  }
+
+  /* Row shown in feeds and search results */
+  .entry-row {
+    display: block;
+    padding: var(--pad);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  .entry-row:hover {
+    background: var(--surface-2);
+  }
+  .entry-row:last-child {
+    border-bottom: none;
+  }
+
+  /* Tiny bar used in the league table */
+  .bar-bg {
+    display: block;
+    height: 4px;
+    background: var(--surface-3);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    display: block;
+    height: 100%;
+    background: var(--xera);
+    border-radius: 999px;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 32px 0;
+  }
+
+  /* Overlays for the two full-screen map modes. On a phone there is no room
+     for a floating panel beside a floating rail, so the rail becomes a sheet
+     anchored to the bottom and the filter panel keeps the top. */
+  .map-panel {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 292px;
+    max-width: calc(100vw - 32px);
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+  }
+
+  .map-rail {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    bottom: 16px;
+    width: 380px;
+    max-width: calc(100vw - 32px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    z-index: 3;
+  }
+
+  .map-sheet {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 420px;
+    max-width: calc(100vw - 32px);
+    max-height: calc(100% - 108px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.22);
+    z-index: 3;
+  }
+
+  .map-strip {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 18px;
+    padding: 9px 16px;
+    max-width: calc(100vw - 32px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+    z-index: 2;
+  }
+
+  @media (max-width: 860px) {
+    .map-panel {
+      left: 12px;
+      right: 12px;
+      top: 12px;
+      width: auto;
+      max-width: none;
+    }
+    .map-rail,
+    .map-sheet {
+      left: 12px;
+      right: 12px;
+      top: auto;
+      bottom: 12px;
+      width: auto;
+      max-width: none;
+      max-height: 58%;
+    }
+    .map-strip {
+      top: auto;
+      bottom: calc(58% + 20px);
+      left: 12px;
+      right: 12px;
+      transform: none;
+      max-width: none;
+    }
+  }
+}
+
+/* =============================================================
+   Utilities
+   ============================================================= */
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 8px;
+    top: -48px;
+    z-index: 100;
+    padding: 8px 14px;
+    border-radius: var(--r-md);
+    background: var(--xera);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    transition: top 0.15s var(--ease);
+  }
+  .skip-link:focus {
+    top: 8px;
+  }
+
+  .mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+  .serif {
+    font-family: var(--font-serif), Georgia, serif;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.35s var(--ease);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MapLibre control chrome, themed to match the rest of the surface. */
+.maplibregl-ctrl-group {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--r-md) !important;
+  box-shadow: none !important;
+}
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid var(--border) !important;
+}
+.maplibregl-ctrl-group button span {
+  filter: var(--map-ctrl-filter, none);
+}
+.dark .maplibregl-ctrl-group button span {
+  filter: invert(1);
+}
+.maplibregl-ctrl-attrib {
+  background: color-mix(in oklab, var(--surface) 88%, transparent) !important;
+  color: var(--ink-4) !important;
+  font-family: var(--font-mono), monospace !important;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: var(--ink-3) !important;
+}
