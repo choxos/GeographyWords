@@ -3,12 +3,20 @@ import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CONFIDENCE_LABEL, CONFIDENCE_NOTE, RELATIONSHIP_LABEL } from "@/lib/copy";
 import { countConfidence, countRelationships, getStats } from "@/lib/data";
+import { openGraphBase } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "How Geography Words decides what counts as a word from a place, how confidence is recorded, and where the data comes from.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    ...openGraphBase,
+    title: "How this atlas decides what counts",
+    description:
+      "How Geography Words decides what counts as a word from a place, how confidence is recorded, and where the data comes from.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {

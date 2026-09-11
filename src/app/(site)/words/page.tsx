@@ -2,12 +2,20 @@ import type { Metadata } from "next";
 import { WordIndex } from "@/components/WordIndex";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { getStats, words } from "@/lib/data";
+import { openGraphBase } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `All ${getStats().words} English words named after places`,
   description:
     "Every entry in the Geography Words atlas, with the place it points at, the kind of borrowing, and how settled the etymology is.",
   alternates: { canonical: "/words" },
+  openGraph: {
+    ...openGraphBase,
+    title: `All ${getStats().words} English words named after places`,
+    description:
+      "Every entry in the atlas, with the place it points at, the kind of borrowing, and how settled the etymology is.",
+    url: "/words",
+  },
 };
 
 export default function WordsPage() {

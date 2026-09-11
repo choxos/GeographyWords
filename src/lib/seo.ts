@@ -1,3 +1,6 @@
+// Keep every runtime import out of this file. scripts/seo-audit.mjs loads it
+// with node --experimental-strip-types, which does not resolve the "@/" alias,
+// so a value import here breaks the audit while tsc stays happy.
 import type { Place, Word } from "@/lib/types";
 
 /**

@@ -38,7 +38,10 @@ def main() -> int:
     }
     rng = random.Random(7)
     sample = [p for group in kinds.values() for p in rng.sample(group, min(60, len(group)))]
-    sample += [p for p in pages if p.parent == ROOT and p.name == "index.html"]
+    # The static pages set metadata without openGraph, which is exactly how
+    # all four ended up sharing the site tagline as their card title.
+    flat = {"index.html", "about.html", "words.html", "countries.html", "guess.html"}
+    sample += [p for p in pages if p.parent == ROOT and p.name in flat]
 
     errors: list[str] = []
     seen_types: dict[str, int] = {}
@@ -63,8 +66,11 @@ def main() -> int:
         # The home page's title really is the tagline; anywhere else it means
         # the page inherited the root's card instead of describing itself.
         tw = meta(text, "name", "twitter:title")
-        if page.parent != ROOT and tw and "pinned to the map" in tw:
+        if name != "index.html" and tw and "pinned to the map" in tw:
             errors.append(f"{name}: twitter:title fell back to the site tagline")
+        og_title = meta(text, "property", "og:title")
+        if name != "index.html" and og_title and "pinned to the map" in og_title:
+            errors.append(f"{name}: og:title fell back to the site tagline")
 
         if not re.search(r'<link rel="canonical" href="https://', text):
             errors.append(f"{name}: no absolute canonical")
