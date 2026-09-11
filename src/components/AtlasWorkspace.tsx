@@ -4,7 +4,16 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ArrowRight, ExternalLink, MapPin, Search, Shuffle, X } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  MapPin,
+  Search,
+  Shuffle,
+  X,
+} from "lucide-react";
 import {
   CONFIDENCE_LABEL,
   CONFIDENCE_TONE,
@@ -83,8 +92,20 @@ export function AtlasWorkspace() {
   // tab bar is hidden and every panel shows, so this value is ignored.
   const [panel, setPanel] = useState<MobilePanel>("map");
 
+  // Both rails start closed so the map opens at full width, which is what the
+  // page is for. The details rail opens by itself when a pin is chosen, since
+  // choosing a pin is a request to read about it.
+  const [browseOpen, setBrowseOpen] = useState(false);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+
+  // A shared link carries ?word=, so the rail has to be open on arrival.
+  useEffect(() => {
+    if (selectedSlug) setDetailsOpen(true);
+  }, [selectedSlug]);
+
   const clearSelection = useCallback(() => {
     setPlaceSlug(null);
+    setDetailsOpen(false);
     setParams({ word: null });
   }, [setParams]);
 
@@ -167,6 +188,7 @@ export function AtlasWorkspace() {
     // One word at the pin opens straight away; several are offered first.
     setSelectedSlug(here.length === 1 ? here[0].slug : null);
     setPanel("details");
+    setDetailsOpen(true);
   }
 
   /** Selecting a word from the list or the map moves a phone to the entry. */
@@ -174,11 +196,17 @@ export function AtlasWorkspace() {
     setPlaceSlug(null);
     setSelectedSlug(slug);
     setPanel(slug ? "details" : "browse");
+    setDetailsOpen(Boolean(slug));
   }
 
 
   return (
-    <div className="atlas-workspace" data-panel={panel}>
+    <div
+      className="atlas-workspace"
+      data-panel={panel}
+      data-browse={browseOpen ? "open" : "closed"}
+      data-details={detailsOpen ? "open" : "closed"}
+    >
       <nav className="atlas-tabs" aria-label="Atlas sections">
         {MOBILE_PANELS.map((item) => (
           <button
@@ -194,7 +222,12 @@ export function AtlasWorkspace() {
       </nav>
 
       {/* ============================================= LEFT: browse ==== */}
-      <aside className="atlas-rail atlas-rail-left" aria-label="Browse the atlas">
+      <aside
+        id="atlas-browse"
+        className="atlas-rail atlas-rail-left"
+        aria-label="Browse the atlas"
+        aria-hidden={!browseOpen}
+      >
         <div className="atlas-rail-head">
           <h1 className="atlas-title">Geography Words</h1>
           <p className="atlas-sub">
@@ -323,6 +356,28 @@ export function AtlasWorkspace() {
 
       {/* ================================================ CENTER: map ==== */}
       <div className="atlas-stage">
+        <button
+          type="button"
+          className="atlas-handle atlas-handle-left"
+          aria-expanded={browseOpen}
+          aria-controls="atlas-browse"
+          onClick={() => setBrowseOpen((open) => !open)}
+        >
+          {browseOpen ? <ChevronLeft size={15} /> : <ChevronRight size={15} />}
+          <span>Browse</span>
+        </button>
+
+        <button
+          type="button"
+          className="atlas-handle atlas-handle-right"
+          aria-expanded={detailsOpen}
+          aria-controls="atlas-details"
+          onClick={() => setDetailsOpen((open) => !open)}
+        >
+          <span>{selected ? selected.lemma : "Details"}</span>
+          {detailsOpen ? <ChevronRight size={15} /> : <ChevronLeft size={15} />}
+        </button>
+
         <AtlasMap
           places={places}
           selectedPlaceSlug={selected?.place.slug}
@@ -334,7 +389,12 @@ export function AtlasWorkspace() {
       </div>
 
       {/* ========================================= RIGHT: inspector ==== */}
-      <aside className="atlas-rail atlas-rail-right" aria-label="Entry details">
+      <aside
+        id="atlas-details"
+        className="atlas-rail atlas-rail-right"
+        aria-label="Entry details"
+        aria-hidden={!detailsOpen}
+      >
         {selected ? (
           <Inspector
             word={selected}

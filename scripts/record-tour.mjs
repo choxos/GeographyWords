@@ -179,19 +179,36 @@ async function flyTo(slug) {
   await beat(700);
   await page.mouse.click(point.x, point.y);
 
-  // A pin holding several words opens a picker rather than an entry: Genoa
-  // carries jeans and genoise, Marathon carries marathon and -athon. Show the
-  // picker, then choose the word the tour came for.
+  // A pin holding more than one word opens a picker instead of an entry:
+  // Genoa carries jeans and genoise, Marathon carries marathon and -athon.
+  // The picker takes a moment to render, so wait for it rather than testing
+  // visibility straight after the click, which is always false and silently
+  // left those two words never opened.
   const choice = page
     .locator(`.atlas-starters li button:has(.lemma:text-is("${lemma}"))`)
     .first();
-  // Whether a picker appears depends on the pin, and it can close between the
-  // check and the click, so a miss here is not a failed recording.
-  if (await choice.isVisible().catch(() => false)) {
-    await beat(1400);
-    await choice.click({ timeout: 3_000 }).catch(() => {});
+  const hasPicker = await choice
+    .waitFor({ state: "visible", timeout: 2_500 })
+    .then(() => true)
+    .catch(() => false);
+
+  if (hasPicker) {
+    // Let the picker be read before choosing from it.
+    await beat(1800);
+    await choice.click();
   }
   await beat(3200);
+
+  // The entry has to be on screen by now. Getting this wrong is invisible in
+  // a silent recording, so say so rather than shipping a tour that skips a
+  // word the README promises.
+  const opened = await page
+    .locator(`[aria-label="Entry details"] .atlas-inspector-lemma:text-is("${lemma}")`)
+    .isVisible()
+    .catch(() => false);
+  if (!opened) {
+    console.warn(`record-tour: WARNING "${lemma}" never opened its entry`);
+  }
 }
 
 // ------------------------------------------------------------ Warm the caches

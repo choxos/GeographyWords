@@ -103,6 +103,8 @@ test("search narrows the list", async ({ page }) => {
   await page.goto("/");
   await waitForMap(page);
 
+  // Both rails start closed, so the filter has to be pulled in first.
+  await page.getByRole("button", { name: /Browse/ }).click();
   await page.locator('[aria-label="Filter the words shown"]').fill("denim");
   const list = page.locator('[aria-label="Words in the atlas"]');
   await expect(list).toContainText("denim", { timeout: 10_000 });
@@ -126,6 +128,37 @@ test("the header sits in the same place on every page", async ({ page }) => {
     positions.push(Math.round(box?.x ?? -1));
   }
   expect(new Set(positions).size, `header x positions: ${positions.join(", ")}`).toBe(1);
+});
+
+// The map is what the page is for, so it opens at full width and a rail is
+// pulled in when it is wanted.
+test("both rails start closed and the details rail opens on selection", async ({ page }) => {
+  await page.goto("/");
+  await waitForMap(page);
+
+  const workspace = page.locator(".atlas-workspace");
+  await expect(workspace).toHaveAttribute("data-browse", "closed");
+  await expect(workspace).toHaveAttribute("data-details", "closed");
+  await expect(page.locator('[aria-label="Words in the atlas"]')).toBeHidden();
+
+  await page.getByRole("button", { name: /Browse/ }).click();
+  await expect(workspace).toHaveAttribute("data-browse", "open");
+  await expect(page.locator('[aria-label="Words in the atlas"]')).toBeVisible();
+
+  // Choosing a word is a request to read about it, so its rail opens itself.
+  await page.locator('[aria-label="Words in the atlas"] li').first().click();
+  await expect(workspace).toHaveAttribute("data-details", "open");
+  await expect(page.locator('[aria-label="Entry details"]')).toBeVisible();
+
+  await page.keyboard.press("Escape");
+  await expect(workspace).toHaveAttribute("data-details", "closed");
+});
+
+// A shared link names a word, so it has to arrive with that rail open.
+test("a link to a word arrives with its rail open", async ({ page }) => {
+  await page.goto("/?word=bombay-duck");
+  await waitForMap(page);
+  await expect(page.locator(".atlas-workspace")).toHaveAttribute("data-details", "open");
 });
 
 test.describe("on a phone", () => {

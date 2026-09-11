@@ -536,12 +536,80 @@
      Three columns filling the viewport under the 60px header,
      each scrolling on its own.
      ========================================================= */
+  /* Both rails collapse. The map is what the page is for, so it opens at
+     full width and a rail is pulled in when it is wanted; choosing a pin
+     opens the details rail on its own. */
   .atlas-workspace {
     position: absolute;
     inset: 0;
     display: grid;
-    grid-template-columns: 288px minmax(320px, 1fr) 366px;
+    --rail-browse: 288px;
+    --rail-details: 366px;
+    grid-template-columns:
+      var(--rail-browse) minmax(320px, 1fr) var(--rail-details);
     background: var(--bg);
+    transition: grid-template-columns 0.28s var(--ease);
+  }
+  /* Collapsing belongs to the three column layout only. Below 640px the rails
+     are tabs, and hiding one there would empty the panel the reader chose. */
+  @media (min-width: 641px) {
+    .atlas-workspace[data-browse="closed"] {
+      --rail-browse: 0px;
+    }
+    .atlas-workspace[data-details="closed"] {
+      --rail-details: 0px;
+    }
+    /* A zero width column still lays its contents out and can be tabbed into,
+       so close it off properly rather than just narrowing it. */
+    .atlas-workspace[data-browse="closed"] .atlas-rail-left,
+    .atlas-workspace[data-details="closed"] .atlas-rail-right {
+      overflow: hidden;
+      border: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+  }
+
+  /* The handles ride on the map edge, so a closed rail stays discoverable. */
+  .atlas-handle {
+    position: absolute;
+    top: 14px;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 10px;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: var(--ink-2);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.08);
+    cursor: pointer;
+    max-width: 220px;
+    transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .atlas-handle:hover {
+    color: var(--xera);
+    border-color: color-mix(in oklab, var(--xera) 40%, var(--border));
+  }
+  .atlas-handle span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .atlas-handle-left {
+    left: 14px;
+  }
+  .atlas-handle-right {
+    right: 14px;
+  }
+  @media (max-width: 640px) {
+    .atlas-handle {
+      display: none;
+    }
   }
 
   .atlas-rail {
