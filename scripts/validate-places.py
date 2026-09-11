@@ -88,7 +88,10 @@ def main():
     missing, drifted = [], []
     for r in rows:
         e = entities.get(r["qid"], {})
-        if not e.get("labels", {}).get("en", {}).get("value"):
+        # An item with no English label is not a missing item. Small places are
+        # often labelled only in their own language, and the id plus its
+        # coordinates are what this check is really about.
+        if not e or "missing" in e or not e.get("claims"):
             missing.append(f'{r["word"]}: {r["qid"]} does not exist')
             continue
         c = coord(e)
