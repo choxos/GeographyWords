@@ -4,11 +4,11 @@ A curated atlas of English words that carry a place inside them. Search *denim*
 and the globe flies to Nîmes; open Bikini Atoll and the swimsuit is waiting
 there.
 
-![Hovering the pin at Sandwich in Kent, opening the entry, then the pin at Genoa](documentation/tour.gif)
+![Turning the globe to Sandwich in Kent, hovering the pin, and opening the entry](documentation/tour.gif)
 
-<sub>The first two of nine words. [Watch the full 86 second tour](documentation/tour.mp4):
-sandwich, jeans, jersey, marathon, Nokia, tuxedo, spa, peach and bikini, then
-the dollar entry and guess mode.</sub>
+<sub>The first of ten words. [Watch the full 113 second tour](documentation/tour.mp4):
+sandwich, mocha, jeans, jersey, marathon, Nokia, tuxedo, spa, peach and bikini,
+then the dollar entry and guess mode.</sub>
 
 <!-- stats -->
 **843 words · 604 places · 98 countries** — 683 well attested, 128 probable, 32 disputed.
@@ -87,6 +87,13 @@ by navigating: a page load drops the map, flashes white and rebuilds the globe,
 which reads as a stutter halfway through the video. The recording is 25fps and
 is encoded without resampling, since forcing it to 30 duplicates every fifth
 frame and shows up as judder on the flights.
+
+Each word is approached in two moves, a wide turn and then a descent. How far
+it descends is worked out from the distance to the nearest other pin: clicking
+hits whichever feature is under the cursor, and approaching peach at Persepolis
+from too far out opened Shiraz, 50km up the road. The recorder checks that each
+word actually opened and says so when one does not, because a tour that skips a
+word looks exactly like a tour that does not.
 
 The mp4 is the full tour; the gif is a short excerpt, because a whole tour at
 gif frame rates runs to tens of megabytes.

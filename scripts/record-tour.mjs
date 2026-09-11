@@ -38,9 +38,35 @@ const GUESSABLE = [
   "tangerine", "paisley", "sardine", "spa", "suede", "rugby", "bourbon",
 ];
 
-/** Where each word's pin sits, read from the dataset rather than hardcoded. */
+/**
+ * Where each word's pin sits, and how close it has to be approached.
+ *
+ * Clicking a pin hits whichever feature MapLibre finds under the cursor, so a
+ * pin with a neighbor a few pixels away opens the neighbor: approaching peach
+ * at Persepolis opened Shiraz, 50km up the road. The approach zoom is
+ * therefore derived from the distance to the nearest other pin, which leaves
+ * isolated words their wide establishing shot and only closes in where the
+ * map is crowded.
+ */
 function pinCoordinates(slugs) {
   const source = readFileSync("src/data/words.ts", "utf8");
+
+  const all = [];
+  for (const block of source.split("\n  {\n")) {
+    const lat = /\n\s*lat: (-?[\d.]+),/.exec(block);
+    const lng = /\n\s*lng: (-?[\d.]+),/.exec(block);
+    if (lat && lng) all.push({ lat: Number(lat[1]), lng: Number(lng[1]) });
+  }
+
+  const EARTH_KM = 40075;
+  /** Rough great-circle distance; only its order of magnitude matters here. */
+  function distanceKm(a, b) {
+    const toRad = Math.PI / 180;
+    const dLat = (b.lat - a.lat) * toRad;
+    const dLng = (b.lng - a.lng) * toRad * Math.cos(((a.lat + b.lat) / 2) * toRad);
+    return Math.hypot(dLat, dLng) * 6371;
+  }
+
   const found = new Map();
   for (const slug of slugs) {
     const block = new RegExp(
@@ -48,10 +74,19 @@ function pinCoordinates(slugs) {
     ).exec(source);
     if (!block) throw new Error(`record-tour: no coordinates for "${slug}"`);
     const lemma = new RegExp(`slug: "${slug}",\\n\\s*lemma: "([^"]*)"`).exec(source);
+    const here = { lat: Number(block[1]), lng: Number(block[2]) };
+
+    let nearest = Infinity;
+    for (const other of all) {
+      const d = distanceKm(here, other);
+      if (d > 0.5 && d < nearest) nearest = d;
+    }
+    // A pin needs roughly 26px of clear space before it can be aimed at.
+    const needed = Math.log2((26 * EARTH_KM) / (256 * Math.min(nearest, 4000)));
     found.set(slug, {
-      lat: Number(block[1]),
-      lng: Number(block[2]),
+      ...here,
       lemma: lemma ? lemma[1] : slug,
+      approach: Math.min(6.6, Math.max(4.5, Number(needed.toFixed(2)))),
     });
   }
   return found;
@@ -133,16 +168,16 @@ const MAP_HANDLE = `(() => {
   return null;
 })()`;
 
-/** Turn the globe so a pin is in view, without zooming in on it yet. */
-async function bringIntoView(lng, lat, zoom) {
+/** Move the camera and wait for it to arrive. */
+async function bringIntoView(lng, lat, zoom, duration = 1100) {
   await page.evaluate(
-    ({ lng, lat, zoom, handle }) => {
+    ({ lng, lat, zoom, duration, handle }) => {
       const map = eval(handle);
-      if (map) map.easeTo({ center: [lng, lat], zoom, duration: 1100 });
+      if (map) map.easeTo({ center: [lng, lat], zoom, duration });
     },
-    { lng, lat, zoom, handle: MAP_HANDLE },
+    { lng, lat, zoom, duration, handle: MAP_HANDLE },
   );
-  await beat(1300);
+  await beat(duration + 260);
 }
 
 /**
@@ -171,12 +206,15 @@ async function screenPoint(lng, lat) {
  * box is what the atlas actually feels like to use.
  */
 async function flyTo(slug) {
-  const { lng, lat, lemma } = pins.get(slug);
-  await bringIntoView(lng, lat, 2.8);
+  const { lng, lat, lemma, approach } = pins.get(slug);
+  // Turn the globe first, then close in. The turn is the shot worth having;
+  // the descent is what makes the pin safe to aim at.
+  await bringIntoView(lng, lat, 2.6, 1100);
+  await bringIntoView(lng, lat, approach, 1000);
   const point = await screenPoint(lng, lat);
   if (!point) throw new Error(`record-tour: could not project "${slug}"`);
   await page.mouse.move(point.x, point.y, { steps: 12 });
-  await beat(700);
+  await beat(600);
   await page.mouse.click(point.x, point.y);
 
   // A pin holding more than one word opens a picker instead of an entry:
@@ -188,16 +226,16 @@ async function flyTo(slug) {
     .locator(`.atlas-starters li button:has(.lemma:text-is("${lemma}"))`)
     .first();
   const hasPicker = await choice
-    .waitFor({ state: "visible", timeout: 2_500 })
+    .waitFor({ state: "visible", timeout: 1_200 })
     .then(() => true)
     .catch(() => false);
 
   if (hasPicker) {
     // Let the picker be read before choosing from it.
-    await beat(1800);
+    await beat(1500);
     await choice.click();
   }
-  await beat(3200);
+  await beat(2800);
 
   // The entry has to be on screen by now. Getting this wrong is invisible in
   // a silent recording, so say so rather than shipping a tour that skips a
@@ -225,17 +263,20 @@ await mapReady();
 await page.goto(`${base}/`);
 await mapReady();
 mark("open");
-await beat(2600);
+await beat(2000);
 
 // ------------------------------- 2 to 4. Words a reader already knows, in place
 mark("gifStart");
 for (const [index, word] of FLIGHTS.entries()) {
   await flyTo(word);
-  if (index === 1) mark("gifEnd");
+  if (index === 0) mark("gifEnd");
 }
 
 // --------------------------------------------------------- 5. Filter by evidence
-await beat(500);
+// The rails start closed, so pull the browse card in first. That also puts
+// the collapsing itself on screen, which is half of what the layout does.
+await page.locator(".atlas-handle-left").click();
+await beat(1600);
 // Two chip groups carry a "Disputed" control; the confidence one comes first.
 await page
   .locator(".atlas-rail-left")
@@ -243,17 +284,19 @@ await page
   .first()
   .click();
 await beat(3400);
+await page.locator(".atlas-handle-left").click();
+await beat(1200);
 
 // ------------------------------------------ 6. The entry page, and its chain
 await page.goto(`${base}/word/dollar`);
-await beat(2200);
+await beat(1800);
 await page.mouse.wheel(0, 420);
 await mapReady();
-await beat(3000);
+await beat(2600);
 // The chain is the point of this entry: Jachymov to Joachimsthal to
 // Joachimsthaler to dollar, so scroll it into frame and hold on it.
 await page.mouse.wheel(0, 380);
-await beat(3800);
+await beat(3200);
 
 // ---------------------------------------------------------------- 7. Guess mode
 // The deck is shuffled with Math.random, so seed it and reload until the word
@@ -280,7 +323,7 @@ await beat(4800);
 // --------------------------------------------------------- 8. Land on the globe
 await page.goto(`${base}/`);
 await mapReady();
-await beat(2600);
+await beat(2000);
 mark("end");
 
 await context.close();
@@ -314,9 +357,9 @@ execFileSync("ffmpeg", [
 // The gif shows the three flights only: a whole tour at gif frame rates runs
 // to tens of megabytes and GitHub will not play it smoothly.
 const gifFrom = Math.max(0, marks.gifStart - marks.open);
-const gifLen = Math.min(12, marks.gifEnd - marks.gifStart);
+const gifLen = Math.min(9, marks.gifEnd - marks.gifStart);
 const palette = join(outDir, ".palette.png");
-const gifFilter = "fps=10,scale=640:-1:flags=lanczos";
+const gifFilter = "fps=10,scale=600:-1:flags=lanczos";
 execFileSync("ffmpeg", [
   "-y", "-ss", gifFrom.toFixed(2), "-t", gifLen.toFixed(2), "-i", mp4,
   "-vf", `${gifFilter},palettegen=stats_mode=diff:max_colors=128`, palette,
