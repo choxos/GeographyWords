@@ -101,8 +101,6 @@ async function mapReady() {
   await beat(700);
 }
 
-const search = () => page.locator('[aria-label="Filter the words shown"]');
-
 /**
  * react-map-gl keeps the MapLibre instance in a ref rather than on the window,
  * so reach it through the React fiber on the map container. Nothing is added
@@ -144,7 +142,7 @@ async function bringIntoView(lng, lat, zoom) {
     },
     { lng, lat, zoom, handle: MAP_HANDLE },
   );
-  await beat(1000);
+  await beat(1300);
 }
 
 /**
@@ -178,7 +176,7 @@ async function flyTo(slug) {
   const point = await screenPoint(lng, lat);
   if (!point) throw new Error(`record-tour: could not project "${slug}"`);
   await page.mouse.move(point.x, point.y, { steps: 12 });
-  await beat(430);
+  await beat(700);
   await page.mouse.click(point.x, point.y);
 
   // A pin holding several words opens a picker rather than an entry: Genoa
@@ -187,11 +185,13 @@ async function flyTo(slug) {
   const choice = page
     .locator(`.atlas-starters li button:has(.lemma:text-is("${lemma}"))`)
     .first();
+  // Whether a picker appears depends on the pin, and it can close between the
+  // check and the click, so a miss here is not a failed recording.
   if (await choice.isVisible().catch(() => false)) {
-    await beat(950);
-    await choice.click();
+    await beat(1400);
+    await choice.click({ timeout: 3_000 }).catch(() => {});
   }
-  await beat(1550);
+  await beat(3200);
 }
 
 // ------------------------------------------------------------ Warm the caches
@@ -208,7 +208,7 @@ await mapReady();
 await page.goto(`${base}/`);
 await mapReady();
 mark("open");
-await beat(1700);
+await beat(2600);
 
 // ------------------------------- 2 to 4. Words a reader already knows, in place
 mark("gifStart");
@@ -225,13 +225,18 @@ await page
   .getByRole("button", { name: "Disputed", exact: true })
   .first()
   .click();
-await beat(2300);
+await beat(3400);
 
 // ------------------------------------------ 6. The entry page, and its chain
 await page.goto(`${base}/word/dollar`);
-await page.mouse.wheel(0, 560);
+await beat(2200);
+await page.mouse.wheel(0, 420);
 await mapReady();
-await beat(2600);
+await beat(3000);
+// The chain is the point of this entry: Jachymov to Joachimsthal to
+// Joachimsthaler to dollar, so scroll it into frame and hold on it.
+await page.mouse.wheel(0, 380);
+await beat(3800);
 
 // ---------------------------------------------------------------- 7. Guess mode
 // The deck is shuffled with Math.random, so seed it and reload until the word
@@ -251,14 +256,14 @@ for (let attempt = 0; attempt < 14 && !GUESSABLE.includes(offered); attempt += 1
 }
 console.log(`record-tour: guess mode offering "${offered}"`);
 await mapReady();
-await beat(1800);
+await beat(2600);
 await page.mouse.click(520, 380);
-await beat(3400);
+await beat(4800);
 
 // --------------------------------------------------------- 8. Land on the globe
 await page.goto(`${base}/`);
 await mapReady();
-await beat(1600);
+await beat(2600);
 mark("end");
 
 await context.close();
@@ -292,7 +297,7 @@ execFileSync("ffmpeg", [
 // The gif shows the three flights only: a whole tour at gif frame rates runs
 // to tens of megabytes and GitHub will not play it smoothly.
 const gifFrom = Math.max(0, marks.gifStart - marks.open);
-const gifLen = Math.min(11, marks.gifEnd - marks.gifStart);
+const gifLen = Math.min(12, marks.gifEnd - marks.gifStart);
 const palette = join(outDir, ".palette.png");
 const gifFilter = "fps=10,scale=640:-1:flags=lanczos";
 execFileSync("ffmpeg", [

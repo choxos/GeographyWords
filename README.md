@@ -6,7 +6,7 @@ there.
 
 ![Hovering the pin at Sandwich in Kent, opening the entry, then the pin at Genoa](documentation/tour.gif)
 
-<sub>The first two of nine words. [Watch the full 57 second tour](documentation/tour.mp4):
+<sub>The first two of nine words. [Watch the full 86 second tour](documentation/tour.mp4):
 sandwich, jeans, jersey, marathon, Nokia, tuxedo, spa, peach and bikini, then
 the dollar entry and guess mode.</sub>
 
