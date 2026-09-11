@@ -84,6 +84,27 @@ export function AtlasMap({
       minZoom={1}
       maxPitch={0}
       style={{ width: "100%", height: "100%" }}
+      // Without a sky block the globe projection paints the space around the
+      // sphere flat, so the planet reads as a hole rather than a globe.
+      sky={
+        dark
+          ? {
+              "sky-color": "#0B0E14",
+              "horizon-color": "#1E2433",
+              "fog-color": "#0B0E14",
+              "sky-horizon-blend": 0.5,
+              "horizon-fog-blend": 0.8,
+              "atmosphere-blend": 0.6,
+            }
+          : {
+              "sky-color": "#D8E4F0",
+              "horizon-color": "#EDEFE8",
+              "fog-color": "#FAFAF7",
+              "sky-horizon-blend": 0.6,
+              "horizon-fog-blend": 0.8,
+              "atmosphere-blend": 0.5,
+            }
+      }
       onLoad={() => setReady(true)}
       onClick={(event) => {
         if (onPickPoint && !guessPin) {
