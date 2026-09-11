@@ -161,6 +161,69 @@ test("a link to a word arrives with its rail open", async ({ page }) => {
   await expect(page.locator(".atlas-workspace")).toHaveAttribute("data-details", "open");
 });
 
+/**
+ * Closing the details panel is not a request to move the map. With a filter
+ * active it used to fly the camera back out to frame the filtered places,
+ * because the framing was never recorded while a word was open and the close
+ * therefore looked like a brand new filter.
+ */
+test("closing the details panel leaves the camera where it is", async ({ page }) => {
+  await page.goto("/?confidence=disputed&word=sandwich");
+  await waitForMap(page);
+
+  const camera = () =>
+    page.evaluate(() => {
+      const root = document.querySelector(".maplibregl-map");
+      if (!root) return null;
+      const key = Object.keys(root).find((k) => k.startsWith("__reactFiber$"));
+      if (!key) return null;
+      const seen = new Set();
+      const isMap = (v: unknown): boolean =>
+        Boolean(v) && typeof v === "object" &&
+        typeof (v as { getZoom?: unknown }).getZoom === "function" &&
+        typeof (v as { getCenter?: unknown }).getCenter === "function";
+      const stack: unknown[] = [(root as unknown as Record<string, unknown>)[key]];
+      let steps = 0;
+      while (stack.length > 0 && steps < 20000) {
+        steps += 1;
+        const node = stack.pop() as Record<string, unknown> | null;
+        if (!node || typeof node !== "object" || seen.has(node)) continue;
+        seen.add(node);
+        for (const field of ["stateNode", "memoizedState", "memoizedProps",
+                             "current", "child", "sibling", "return", "next"]) {
+          const value = node[field];
+          if (isMap(value)) {
+            const map = value as { getZoom(): number; getCenter(): { lng: number; lat: number } };
+            const center = map.getCenter();
+            return { zoom: Math.round(map.getZoom() * 100) / 100, lng: Math.round(center.lng * 100) / 100 };
+          }
+          if (value && typeof value === "object") stack.push(value);
+        }
+      }
+      return null;
+    });
+
+  /** The flight to the word is still running when the map first paints. */
+  async function settled() {
+    let previous = null;
+    for (let attempt = 0; attempt < 20; attempt += 1) {
+      const now = await camera();
+      if (previous && JSON.stringify(now) === JSON.stringify(previous)) return now;
+      previous = now;
+      await page.waitForTimeout(500);
+    }
+    return previous;
+  }
+
+  const before = await settled();
+  expect(before, "could not reach the map instance").not.toBeNull();
+
+  await page.locator('[aria-label="Close details"]').click();
+  await page.waitForTimeout(2500);
+
+  expect(await camera()).toEqual(before);
+});
+
 test.describe("on a phone", () => {
   test.use({ viewport: { width: 390, height: 844 } });
 

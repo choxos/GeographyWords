@@ -145,13 +145,23 @@ export function AtlasMap({
    * Frame the filtered places. A search that matches three pins should not
    * leave the reader looking at the whole planet. A selected word takes
    * precedence, since flying to it is the more specific intent.
+   *
+   * The framing is recorded even while a word is open. Skipping it there left
+   * no record of the last fit, so closing the panel looked like a brand new
+   * filter and flew the camera back out. Closing a panel is not a request to
+   * move the map.
    */
   useEffect(() => {
-    if (!ready || flyTarget || !fitTarget) {
-      if (!fitTarget) lastFitKey.current = "";
+    if (!ready) return;
+    if (!fitTarget) {
+      lastFitKey.current = "";
       return;
     }
     const key = `${fitTarget.west},${fitTarget.south},${fitTarget.east},${fitTarget.north}`;
+    if (flyTarget) {
+      lastFitKey.current = key;
+      return;
+    }
     if (key === lastFitKey.current) return;
     lastFitKey.current = key;
     mapRef.current?.fitBounds(
@@ -211,7 +221,9 @@ export function AtlasMap({
       projection="globe"
       attributionControl={{ compact: true }}
       cursor={onPickPoint && !guessPin ? "crosshair" : hover ? "pointer" : "grab"}
-      initialViewState={{ longitude: 12, latitude: 24, zoom: 1.95 }}
+      // Europe holds the densest run of pins in the atlas, so the globe opens
+      // facing it rather than on the equator.
+      initialViewState={{ longitude: 12, latitude: 47, zoom: 1.95 }}
       minZoom={1}
       interactiveLayerIds={hidePins ? [] : INTERACTIVE}
       style={{ width: "100%", height: "100%" }}

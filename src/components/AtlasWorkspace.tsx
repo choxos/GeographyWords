@@ -171,10 +171,17 @@ export function AtlasWorkspace() {
 
   const filtersOn = Boolean(query.trim() || confidence || relationship);
 
-  // With filters narrowing the atlas, frame what is left rather than leaving
-  // the reader on the whole globe. Only while nothing specific is selected.
+  /**
+   * With filters narrowing the atlas, frame what is left rather than leaving
+   * the reader on the whole globe.
+   *
+   * This deliberately ignores the selection. Blanking it while a word was
+   * open cleared the map's record of the last fit, so closing the panel read
+   * as a fresh filter and flew the camera back out. Closing a panel is not a
+   * request to move the map.
+   */
   const fitTarget = useMemo(() => {
-    if (selected || !filtersOn || places.length === 0) return null;
+    if (!filtersOn || places.length === 0) return null;
     const lngs = places.map((place) => place.lng);
     const lats = places.map((place) => place.lat);
     return {
@@ -183,7 +190,7 @@ export function AtlasWorkspace() {
       east: Math.max(...lngs),
       north: Math.max(...lats),
     };
-  }, [filtersOn, places, selected]);
+  }, [filtersOn, places]);
 
   function pickPlace(slug: string) {
     const here = getWordsByPlace(slug);
