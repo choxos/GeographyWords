@@ -1121,6 +1121,16 @@
     top: 8px;
   }
 
+  .theme-icon-dark {
+    display: none;
+  }
+  .dark .theme-icon-dark {
+    display: block;
+  }
+  .dark .theme-icon-light {
+    display: none;
+  }
+
   .mono {
     font-family: var(--font-mono), ui-monospace, monospace;
   }

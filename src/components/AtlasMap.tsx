@@ -77,7 +77,6 @@ export function AtlasMap({
       ref={mapRef}
       mapStyle={dark ? MAP_STYLE_DARK : MAP_STYLE_LIGHT}
       projection="globe"
-      reuseMaps
       attributionControl={{ compact: true }}
       cursor={onPickPoint && !guessPin ? "crosshair" : "grab"}
       initialViewState={{ longitude: 12, latitude: 24, zoom: 1.6 }}

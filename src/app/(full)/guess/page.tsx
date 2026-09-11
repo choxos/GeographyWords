@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GuessGame } from "@/components/GuessGame";
+import { GuessGameClient } from "@/components/GuessGameClient";
 
 export const metadata: Metadata = {
   title: "Guess mode",
@@ -12,7 +12,7 @@ export default function GuessPage() {
   return (
     <>
       <h1 className="sr-only">Guess the place behind an English word</h1>
-      <GuessGame />
+      <GuessGameClient />
     </>
   );
 }

@@ -3,21 +3,25 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
+/**
+ * Both icons are always rendered and CSS picks one from the `.dark` class that
+ * next-themes sets before hydration. Branching on `resolvedTheme` instead would
+ * mismatch: the server has no theme, the client may already know it from
+ * localStorage, and React then throws away the server HTML for the whole tree.
+ */
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
-  // resolvedTheme is undefined during SSR and the first client render, so both
-  // passes agree on the moon and next-themes swaps it once it knows.
-  const dark = resolvedTheme === "dark";
 
   return (
     <button
       type="button"
       className="btn btn-ghost"
       style={{ padding: 7 }}
-      aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
-      onClick={() => setTheme(dark ? "light" : "dark")}
+      aria-label="Toggle light and dark theme"
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      {dark ? <Sun size={15} /> : <Moon size={15} />}
+      <Moon size={15} className="theme-icon-light" aria-hidden />
+      <Sun size={15} className="theme-icon-dark" aria-hidden />
     </button>
   );
 }
