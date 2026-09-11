@@ -8,6 +8,21 @@ export type RelationshipType =
 
 export type Confidence = "well-attested" | "probable" | "disputed";
 
+/**
+ * Usage label, in the lexicographic sense. The atlas records terms that are
+ * pejorative or worse, because their derivation from a place is exactly the
+ * phenomenon being catalogued and omitting them would misrepresent how the
+ * language actually works. Recording one without marking how it is used
+ * would be the inaccurate choice, so entries that need a label carry one.
+ */
+export type Register =
+  | "derogatory"
+  | "ethnic-slur"
+  | "offensive"
+  | "vulgar"
+  | "dated"
+  | "humorous";
+
 export type PartOfSpeech = "noun" | "verb" | "adjective";
 
 export type Place = {
@@ -36,6 +51,8 @@ export type Word = {
   chain: string[];
   relationship: RelationshipType;
   confidence: Confidence;
+  /** Absent means the term is in neutral general use. */
+  register?: Register;
   attestation: string;
   wiktionary: string;
   place: Place;

@@ -369,6 +369,19 @@
   .chip-plain {
     background: transparent;
   }
+  /* Usage label. Deliberately neutral rather than alarming: it describes how
+     a word is used, it does not warn the reader away from the entry. */
+  .chip-register {
+    color: var(--ink-3);
+    background: repeating-linear-gradient(
+      135deg,
+      var(--surface-2),
+      var(--surface-2) 4px,
+      var(--surface-3) 4px,
+      var(--surface-3) 8px
+    );
+    border-color: var(--border-strong);
+  }
 
   /* Stats strip */
   .stats {

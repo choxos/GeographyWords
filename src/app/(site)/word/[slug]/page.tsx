@@ -10,6 +10,8 @@ import {
   CONFIDENCE_LABEL,
   CONFIDENCE_NOTE,
   CONFIDENCE_TONE,
+  REGISTER_LABEL,
+  REGISTER_NOTE,
   RELATIONSHIP_LABEL,
 } from "@/lib/copy";
 import {
@@ -104,6 +106,11 @@ export default async function WordPage({
           <span className="chip chip-plain">
             {RELATIONSHIP_LABEL[word.relationship]}
           </span>
+          {word.register ? (
+            <span className="chip chip-register">
+              {REGISTER_LABEL[word.register]}
+            </span>
+          ) : null}
         </div>
 
         <h1
@@ -205,6 +212,16 @@ export default async function WordPage({
                 {CONFIDENCE_NOTE[word.confidence]}
               </span>
             </Row>
+            {word.register ? (
+              <Row label="Usage">
+                <span style={{ color: "var(--ink-2)" }}>
+                  {REGISTER_LABEL[word.register]}
+                </span>
+                <span className="block mt-1" style={{ fontSize: 12.5, color: "var(--ink-4)" }}>
+                  {REGISTER_NOTE[word.register]}
+                </span>
+              </Row>
+            ) : null}
             <Row label="Attested">{word.attestation}</Row>
             <Row label="Part of speech">{word.pos}</Row>
             <Row label="Sources">

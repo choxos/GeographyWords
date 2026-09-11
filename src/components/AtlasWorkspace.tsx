@@ -8,6 +8,8 @@ import { ArrowRight, ExternalLink, MapPin, Search, Shuffle, X } from "lucide-rea
 import {
   CONFIDENCE_LABEL,
   CONFIDENCE_TONE,
+  REGISTER_LABEL,
+  REGISTER_NOTE,
   RELATIONSHIP_LABEL,
   RELATIONSHIP_SHORT,
 } from "@/lib/copy";
@@ -408,6 +410,11 @@ function Inspector({ word, onClose }: { word: Word; onClose: () => void }) {
             <span className="dot" aria-hidden />
             {CONFIDENCE_LABEL[word.confidence]}
           </span>
+          {word.register ? (
+            <span className="chip chip-register" title={REGISTER_NOTE[word.register]}>
+              {REGISTER_LABEL[word.register]}
+            </span>
+          ) : null}
           <button type="button" aria-label="Close details" onClick={onClose}>
             <X size={15} />
           </button>
