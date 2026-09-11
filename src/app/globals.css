@@ -1255,7 +1255,11 @@
 /* Hover tooltip on a pin.
    These rules sit outside @layer on purpose: maplibre-gl.css is unlayered, and
    unlayered CSS outranks every layer, so a layered override loses to it. That
-   is what left the two lines running together on one unreadable row. */
+   is what left the two lines running together on one unreadable row.
+
+   The spans are block rather than flex children on purpose: react-map-gl
+   portals children into a wrapper inside the content div, so a flex column on
+   the content has exactly one child and the two lines stay side by side. */
 .atlas-popup .maplibregl-popup-content {
   display: flex;
   flex-direction: column;
@@ -1272,6 +1276,7 @@
   display: none;
 }
 .atlas-popup .atlas-pin-tip-word {
+  display: block;
   font-family: var(--font-serif), Georgia, serif;
   font-size: 16px;
   line-height: 1.25;
@@ -1280,6 +1285,8 @@
   white-space: normal;
 }
 .atlas-popup .atlas-pin-tip-place {
+  display: block;
+  margin-top: 3px;
   font-family: var(--font-mono), monospace;
   font-size: 9.5px;
   letter-spacing: 0.08em;
