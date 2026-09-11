@@ -20,8 +20,10 @@
 # production
 /build
 
-# research notes (local)
-/documentation/
+# research notes stay local; the tour that the README embeds does not
+/documentation/*
+!/documentation/tour.mp4
+!/documentation/tour.gif
 
 # misc
 .DS_Store
