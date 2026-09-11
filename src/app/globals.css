@@ -562,6 +562,23 @@
     min-width: 0;
     background: var(--surface-2);
   }
+  /* Hover tooltip over a clustered pin. MapLibre owns the positioning, so
+     these override its default white bubble to match the surface tokens. */
+  .atlas-popup .maplibregl-popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 6px 9px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    max-width: 240px;
+  }
+  .atlas-popup .maplibregl-popup-tip {
+    display: none;
+  }
+
   /* Map pins and their hover tooltip. */
   .atlas-pin-wrap {
     position: relative;

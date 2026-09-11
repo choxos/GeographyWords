@@ -1,14 +1,17 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import Map, {
   Layer,
   Marker,
   NavigationControl,
+  Popup,
   Source,
+  type MapLayerMouseEvent,
   type MapRef,
 } from "react-map-gl/maplibre";
+import type { GeoJSONSource } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 // Side effect: points MapLibre at the worker in public/.
 import "@/lib/maplibreWorker";
@@ -32,6 +35,15 @@ type AtlasMapProps = {
   onPickPoint?: (point: LngLat) => void;
 };
 
+const SOURCE = "atlas-places";
+const CLUSTERS = "atlas-clusters";
+const CLUSTER_COUNT = "atlas-cluster-count";
+const POINTS = "atlas-points";
+const SELECTED = "atlas-selected";
+const INTERACTIVE = [CLUSTERS, POINTS];
+
+type Hover = { lng: number; lat: number; label: string; place: string } | null;
+
 export function AtlasMap({
   places,
   hidePins = false,
@@ -46,12 +58,32 @@ export function AtlasMap({
   const lastFlyKey = useRef("");
   const [ready, setReady] = useState(false);
   const [mapError, setMapError] = useState<string | null>(null);
-  // Vector tiles specifically. Counting any loaded source proved nothing:
-  // the raster and sprite sources resolve even when no basemap draws.
   const [vectorTiles, setVectorTiles] = useState(0);
+  const [hover, setHover] = useState<Hover>(null);
   const reducedMotion = useReducedMotion();
   const { resolvedTheme } = useTheme();
   const dark = resolvedTheme === "dark";
+
+  /**
+   * Pins are a clustered GeoJSON source rather than DOM markers. At 200-plus
+   * places the markers piled into an unreadable heap over Europe, and every
+   * pan had to re-lay-out that many React nodes.
+   */
+  const pins = useMemo<GeoJSON.FeatureCollection>(
+    () => ({
+      type: "FeatureCollection",
+      features: places.map((place) => ({
+        type: "Feature",
+        geometry: { type: "Point", coordinates: [place.lng, place.lat] },
+        properties: {
+          slug: place.slug,
+          place: `${place.name}, ${place.country}`,
+          label: place.words.map((word) => word.lemma).join(", "),
+        },
+      })),
+    }),
+    [places],
+  );
 
   const arcData = useMemo<GeoJSON.Feature | null>(() => {
     if (!arc) return null;
@@ -92,18 +124,69 @@ export function AtlasMap({
     });
   }, [flyTarget, reducedMotion, ready]);
 
+  const handleClick = useCallback(
+    (event: MapLayerMouseEvent) => {
+      if (onPickPoint && !guessPin) {
+        onPickPoint({ lng: event.lngLat.lng, lat: event.lngLat.lat });
+        return;
+      }
+      const feature = event.features?.[0];
+      if (!feature) return;
+
+      // A cluster zooms to where it splits; a single pin opens its place.
+      if (feature.properties?.cluster) {
+        const map = mapRef.current?.getMap();
+        const source = map?.getSource(SOURCE) as GeoJSONSource | undefined;
+        const clusterId = feature.properties.cluster_id as number;
+        const [lng, lat] = (feature.geometry as GeoJSON.Point).coordinates;
+        void Promise.resolve(source?.getClusterExpansionZoom(clusterId))
+          .then((zoom) => {
+            if (!map) return;
+            map.easeTo({
+              center: [lng, lat],
+              zoom: zoom ?? map.getZoom() + 2,
+              duration: reducedMotion ? 0 : 600,
+            });
+          })
+          .catch(() => {});
+        return;
+      }
+
+      const slug = feature.properties?.slug as string | undefined;
+      if (slug) onSelectPlace?.(slug);
+    },
+    [guessPin, onPickPoint, onSelectPlace, reducedMotion],
+  );
+
+  const handleMouseMove = useCallback((event: MapLayerMouseEvent) => {
+    const feature = event.features?.[0];
+    if (!feature || feature.properties?.cluster) {
+      setHover(null);
+      return;
+    }
+    setHover({
+      lng: event.lngLat.lng,
+      lat: event.lngLat.lat,
+      label: String(feature.properties?.label ?? ""),
+      place: String(feature.properties?.place ?? ""),
+    });
+  }, []);
+
+  const accent = dark ? "#5B7FFF" : "#0F47F7";
+  const hot = dark ? "#F87171" : "#DC2626";
+  const surface = dark ? "#11151E" : "#FFFFFF";
+
   return (
     <Map
       ref={mapRef}
       mapStyle={dark ? MAP_STYLE_DARK : MAP_STYLE_LIGHT}
       projection="globe"
       attributionControl={{ compact: true }}
-      cursor={onPickPoint && !guessPin ? "crosshair" : "grab"}
+      cursor={onPickPoint && !guessPin ? "crosshair" : hover ? "pointer" : "grab"}
       initialViewState={{ longitude: 12, latitude: 24, zoom: 1.6 }}
       minZoom={1}
+      interactiveLayerIds={hidePins ? [] : INTERACTIVE}
       style={{ width: "100%", height: "100%" }}
-      // Without a sky block the globe projection paints the space around the
-      // sphere flat, so the planet reads as a hole rather than a globe.
       sky={
         dark
           ? {
@@ -140,11 +223,9 @@ export function AtlasMap({
           setVectorTiles((count) => count + 1);
         }
       }}
-      onClick={(event) => {
-        if (onPickPoint && !guessPin) {
-          onPickPoint({ lng: event.lngLat.lng, lat: event.lngLat.lat });
-        }
-      }}
+      onClick={handleClick}
+      onMouseMove={hidePins ? undefined : handleMouseMove}
+      onMouseOut={() => setHover(null)}
     >
       {arcData ? (
         <Source id="etymology-arc" type="geojson" data={arcData}>
@@ -152,7 +233,7 @@ export function AtlasMap({
             id="etymology-arc-line"
             type="line"
             paint={{
-              "line-color": dark ? "#F87171" : "#DC2626",
+              "line-color": hot,
               "line-width": 2,
               "line-dasharray": [2, 2],
             }}
@@ -160,47 +241,89 @@ export function AtlasMap({
         </Source>
       ) : null}
 
-      {hidePins
-        ? null
-        : places.map((place) => {
-            const active = place.slug === selectedPlaceSlug;
-            return (
-              <Marker
-                key={place.slug}
-                longitude={place.lng}
-                latitude={place.lat}
-                anchor="center"
-              >
-                <span className="atlas-pin-wrap">
-                  <button
-                    type="button"
-                    className={active ? "atlas-pin is-active" : "atlas-pin"}
-                    aria-label={
-                      place.words.length === 1
-                        ? `${place.words[0].lemma}, ${place.name}`
-                        : `${place.name}, ${place.words.length} words`
-                    }
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      onSelectPlace?.(place.slug);
-                    }}
-                  />
-                  {/* Hover and focus tooltip. CSS-only, so it needs no state
-                      and shows for keyboard users too. */}
-                  <span className="atlas-pin-tip" aria-hidden>
-                    <span className="atlas-pin-tip-word">
-                      {place.words.length === 1
-                        ? place.words[0].lemma
-                        : place.words.map((word) => word.lemma).join(", ")}
-                    </span>
-                    <span className="atlas-pin-tip-place">
-                      {place.name}, {place.country}
-                    </span>
-                  </span>
-                </span>
-              </Marker>
-            );
-          })}
+      {hidePins ? null : (
+        <Source
+          id={SOURCE}
+          type="geojson"
+          data={pins}
+          cluster
+          clusterRadius={42}
+          clusterMaxZoom={6}
+        >
+          <Layer
+            id={CLUSTERS}
+            type="circle"
+            filter={["has", "point_count"]}
+            paint={{
+              "circle-color": accent,
+              "circle-opacity": 0.92,
+              "circle-stroke-width": 2,
+              "circle-stroke-color": surface,
+              "circle-radius": [
+                "step",
+                ["get", "point_count"],
+                13,
+                5,
+                17,
+                15,
+                22,
+                40,
+                28,
+              ],
+            }}
+          />
+          <Layer
+            id={CLUSTER_COUNT}
+            type="symbol"
+            filter={["has", "point_count"]}
+            layout={{
+              "text-field": ["get", "point_count_abbreviated"],
+              "text-font": ["Noto Sans Regular"],
+              "text-size": 12,
+              "text-allow-overlap": true,
+            }}
+            paint={{ "text-color": "#FFFFFF" }}
+          />
+          <Layer
+            id={POINTS}
+            type="circle"
+            filter={["!", ["has", "point_count"]]}
+            paint={{
+              "circle-color": accent,
+              "circle-radius": 6,
+              "circle-stroke-width": 2,
+              "circle-stroke-color": surface,
+            }}
+          />
+          {selectedPlaceSlug ? (
+            <Layer
+              id={SELECTED}
+              type="circle"
+              filter={["==", ["get", "slug"], selectedPlaceSlug]}
+              paint={{
+                "circle-color": hot,
+                "circle-radius": 9,
+                "circle-stroke-width": 3,
+                "circle-stroke-color": surface,
+              }}
+            />
+          ) : null}
+        </Source>
+      )}
+
+      {hover ? (
+        <Popup
+          longitude={hover.lng}
+          latitude={hover.lat}
+          closeButton={false}
+          closeOnClick={false}
+          offset={14}
+          className="atlas-popup"
+        >
+          <span className="atlas-pin-tip-word">{hover.label}</span>
+          <span className="atlas-pin-tip-place">{hover.place}</span>
+        </Popup>
+      ) : null}
 
       {guessPin ? (
         <Marker longitude={guessPin.lng} latitude={guessPin.lat} anchor="center">
@@ -231,8 +354,8 @@ export function AtlasMap({
         <div className="atlas-map-error" role="status">
           <strong>No basemap</strong>
           <span>
-            The style loaded but its vector source never delivered a tile.
-            Check that /maplibre/maplibre-gl-worker.mjs is being served.
+            The style loaded but its vector source never delivered a tile. Check
+            that /maplibre/maplibre-gl-worker.mjs is being served.
           </span>
         </div>
       ) : null}
