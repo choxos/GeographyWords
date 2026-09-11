@@ -110,3 +110,27 @@ test("entry and country pages render", async ({ page }) => {
     expect(response?.status(), `${path} status`).toBe(200);
   }
 });
+
+test.describe("on a phone", () => {
+  test.use({ viewport: { width: 390, height: 844 } });
+
+  test("the rails become tabs and show one panel at a time", async ({ page }) => {
+    await page.goto("/");
+    const tabs = page.locator(".atlas-tabs");
+    await expect(tabs).toBeVisible();
+
+    // Map is the landing panel: it is what the page is for.
+    await expect(page.locator(".atlas-stage")).toBeVisible();
+    await expect(page.locator(".atlas-rail-left")).toBeHidden();
+
+    await page.getByRole("button", { name: "Browse" }).click();
+    await expect(page.locator(".atlas-rail-left")).toBeVisible();
+    await expect(page.locator(".atlas-stage")).toBeHidden();
+
+    // Choosing a word has to move the reader to the entry, or the tap looks
+    // like it did nothing.
+    await page.locator('[aria-label="Words in the atlas"] li').first().click();
+    await expect(page.locator(".atlas-rail-right")).toBeVisible();
+    await expect(page.locator(".atlas-rail-left")).toBeHidden();
+  });
+});

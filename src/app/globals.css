@@ -1074,25 +1074,102 @@
     .atlas-rail-right .atlas-list {
       overflow-y: visible;
     }
+
+    /* The rail scrolls as one column here, so its footer button rides at the
+       end of the content rather than being pinned. Pinned, it sat on top of
+       the sources row. */
+    .atlas-rail-foot {
+      position: sticky;
+      bottom: 0;
+      background: var(--surface);
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
+    }
   }
 
-  /* One column: browse, then map, then inspector. */
+  /* The tab bar exists only on a phone. Above 640px all three rails are
+     visible at once and the bar would be noise. */
+  .atlas-tabs {
+    display: none;
+  }
+
+  /* One panel at a time: browse, map or details, chosen by the tab bar.
+     Stacking all three made the reader scroll the whole word list before
+     reaching the map, which is the thing the page is for. */
   @media (max-width: 640px) {
     .atlas-workspace {
       display: flex;
       flex-direction: column;
+      position: absolute;
+      inset: 0;
     }
+
+    .atlas-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      flex: 0 0 auto;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .atlas-tab {
+      padding: 11px 8px;
+      font-family: var(--font-mono), ui-monospace, monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+    }
+    .atlas-tab[aria-current="page"] {
+      color: var(--xera);
+      border-bottom-color: var(--xera);
+    }
+
+    .atlas-rail-left,
+    .atlas-stage,
+    .atlas-rail-right {
+      display: none;
+      min-height: 0;
+    }
+    .atlas-workspace[data-panel="browse"] .atlas-rail-left,
+    .atlas-workspace[data-panel="details"] .atlas-rail-right {
+      display: flex;
+      flex: 1 1 auto;
+      overflow-y: auto;
+    }
+    .atlas-workspace[data-panel="map"] .atlas-stage {
+      display: block;
+      flex: 1 1 auto;
+      height: auto;
+    }
+
     .atlas-rail-left {
       position: static;
       max-height: none;
       border-right: 0;
-      border-bottom: 1px solid var(--border);
     }
     .atlas-rail-left .atlas-list {
-      max-height: 320px;
+      max-height: none;
     }
-    .atlas-stage {
-      height: 420px;
+    .atlas-rail-right {
+      border-top: 0;
+    }
+    .atlas-scroll,
+    .atlas-rail-right .atlas-list {
+      overflow-y: visible;
+    }
+
+    /* The rail scrolls as one column here, so its footer button rides at the
+       end of the content rather than being pinned. Pinned, it sat on top of
+       the sources row. */
+    .atlas-rail-foot {
+      position: sticky;
+      bottom: 0;
+      background: var(--surface);
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
     }
   }
 

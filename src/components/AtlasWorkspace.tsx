@@ -32,6 +32,14 @@ const AtlasMap = dynamic(
 
 const CONFIDENCES: Confidence[] = ["well-attested", "probable", "disputed"];
 
+type MobilePanel = "browse" | "map" | "details";
+
+const MOBILE_PANELS: { id: MobilePanel; label: string }[] = [
+  { id: "browse", label: "Browse" },
+  { id: "map", label: "Map" },
+  { id: "details", label: "Details" },
+];
+
 export function AtlasWorkspace() {
   const stats = useMemo(() => getStats(), []);
   const countries = useMemo(() => getCountries(), []);
@@ -67,6 +75,11 @@ export function AtlasWorkspace() {
   const setRelationship = (value: RelationshipType | null) => setParams({ link: value });
   const setSelectedSlug = (value: string | null) => setParams({ word: value });
   const [placeSlug, setPlaceSlug] = useState<string | null>(null);
+
+  // Below 640px the three rails become tabs: stacking them made the reader
+  // scroll past the whole word list to reach the map. Above that width the
+  // tab bar is hidden and every panel shows, so this value is ignored.
+  const [panel, setPanel] = useState<MobilePanel>("map");
 
   const clearSelection = useCallback(() => {
     setPlaceSlug(null);
@@ -151,11 +164,33 @@ export function AtlasWorkspace() {
     setPlaceSlug(slug);
     // One word at the pin opens straight away; several are offered first.
     setSelectedSlug(here.length === 1 ? here[0].slug : null);
+    setPanel("details");
+  }
+
+  /** Selecting a word from the list or the map moves a phone to the entry. */
+  function openWord(slug: string | null) {
+    setPlaceSlug(null);
+    setSelectedSlug(slug);
+    setPanel(slug ? "details" : "browse");
   }
 
 
   return (
-    <div className="atlas-workspace">
+    <div className="atlas-workspace" data-panel={panel}>
+      <nav className="atlas-tabs" aria-label="Atlas sections">
+        {MOBILE_PANELS.map((item) => (
+          <button
+            key={item.id}
+            type="button"
+            className="atlas-tab"
+            aria-current={panel === item.id ? "page" : undefined}
+            onClick={() => setPanel(item.id)}
+          >
+            {item.label}
+          </button>
+        ))}
+      </nav>
+
       {/* ============================================= LEFT: browse ==== */}
       <aside className="atlas-rail atlas-rail-left" aria-label="Browse the atlas">
         <div className="atlas-rail-head">
@@ -250,8 +285,7 @@ export function AtlasWorkspace() {
                   word.slug === selectedSlug ? "atlas-item is-on" : "atlas-item"
                 }
                 onClick={() => {
-                  setPlaceSlug(null);
-                  setSelectedSlug(word.slug);
+                  openWord(word.slug);
                 }}
               >
                 <span className="atlas-item-lemma">{word.lemma}</span>
@@ -277,8 +311,7 @@ export function AtlasWorkspace() {
             className="btn"
             style={{ width: "100%" }}
             onClick={() => {
-              setPlaceSlug(null);
-              setSelectedSlug(randomWord(selectedSlug ?? undefined).slug);
+              openWord(randomWord(selectedSlug ?? undefined).slug);
             }}
           >
             <Shuffle size={14} /> Surprise me
@@ -311,7 +344,7 @@ export function AtlasWorkspace() {
         ) : atPlace.length > 1 ? (
           <PlacePicker
             words={atPlace}
-            onPick={(slug) => setSelectedSlug(slug)}
+            onPick={(slug) => openWord(slug)}
             onClose={() => setPlaceSlug(null)}
           />
         ) : (
@@ -319,8 +352,7 @@ export function AtlasWorkspace() {
             stats={stats}
             countries={countries}
             onPick={(slug) => {
-              setPlaceSlug(null);
-              setSelectedSlug(slug);
+              openWord(slug);
             }}
           />
         )}
