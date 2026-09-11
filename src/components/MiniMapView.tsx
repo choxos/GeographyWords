@@ -3,6 +3,8 @@
 import { useTheme } from "next-themes";
 import Map, { Marker } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
+// Side effect: points MapLibre at the worker in public/.
+import "@/lib/maplibreWorker";
 import type { PlaceIndex } from "@/lib/data";
 import { MAP_STYLE_DARK, MAP_STYLE_LIGHT } from "@/lib/site";
 

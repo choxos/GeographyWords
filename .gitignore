@@ -45,3 +45,6 @@ next-env.d.ts
 
 # gstack (local tooling state)
 /.gstack/
+
+# copied from node_modules by scripts/copy-maplibre-worker.mjs
+/public/maplibre/

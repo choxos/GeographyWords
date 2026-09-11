@@ -10,6 +10,8 @@ import Map, {
   type MapRef,
 } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
+// Side effect: points MapLibre at the worker in public/.
+import "@/lib/maplibreWorker";
 import { greatCircle, type LngLat } from "@/lib/geo";
 import { MAP_STYLE_DARK, MAP_STYLE_LIGHT } from "@/lib/site";
 import { useReducedMotion } from "@/lib/useReducedMotion";
@@ -43,7 +45,9 @@ export function AtlasMap({
   const lastFlyKey = useRef("");
   const [ready, setReady] = useState(false);
   const [mapError, setMapError] = useState<string | null>(null);
-  const [tiles, setTiles] = useState(0);
+  // Vector tiles specifically. Counting any loaded source proved nothing:
+  // the raster and sprite sources resolve even when no basemap draws.
+  const [vectorTiles, setVectorTiles] = useState(0);
   const reducedMotion = useReducedMotion();
   const { resolvedTheme } = useTheme();
   const dark = resolvedTheme === "dark";
@@ -112,7 +116,12 @@ export function AtlasMap({
         setMapError(message);
       }}
       onSourceData={(event) => {
-        if (event.isSourceLoaded) setTiles((count) => count + 1);
+        // openmaptiles is the vector source every OpenFreeMap style draws its
+        // land, water, boundaries and labels from. If it never reports a
+        // loaded tile, there is no basemap however healthy the rest looks.
+        if (event.sourceId === "openmaptiles" && event.isSourceLoaded) {
+          setVectorTiles((count) => count + 1);
+        }
       }}
       onClick={(event) => {
         if (onPickPoint && !guessPin) {
@@ -201,10 +210,13 @@ export function AtlasMap({
         </div>
       ) : null}
 
-      {ready && tiles === 0 && !mapError ? (
+      {ready && vectorTiles === 0 && !mapError ? (
         <div className="atlas-map-error" role="status">
-          <strong>No tiles loaded</strong>
-          <span>Style attached but no source finished loading.</span>
+          <strong>No basemap</strong>
+          <span>
+            The style loaded but its vector source never delivered a tile.
+            Check that /maplibre/maplibre-gl-worker.mjs is being served.
+          </span>
         </div>
       ) : null}
     </Map>
