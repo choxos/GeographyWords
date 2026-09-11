@@ -36,6 +36,8 @@ type AtlasMapProps = {
   arc?: { from: LngLat; to: LngLat } | null;
   guessPin?: LngLat | null;
   onSelectPlace?: (slug: string) => void;
+  /** Clicking bare map clears the current selection. */
+  onClearSelection?: () => void;
   onPickPoint?: (point: LngLat) => void;
 };
 
@@ -57,6 +59,7 @@ export function AtlasMap({
   arc,
   guessPin,
   onSelectPlace,
+  onClearSelection,
   onPickPoint,
 }: AtlasMapProps) {
   const mapRef = useRef<MapRef>(null);
@@ -162,8 +165,12 @@ export function AtlasMap({
         onPickPoint({ lng: event.lngLat.lng, lat: event.lngLat.lat });
         return;
       }
+      // Bare map, so nothing is under the cursor: clear the selection.
       const feature = event.features?.[0];
-      if (!feature) return;
+      if (!feature) {
+        onClearSelection?.();
+        return;
+      }
 
       // A cluster zooms to where it splits; a single pin opens its place.
       if (feature.properties?.cluster) {
@@ -187,7 +194,7 @@ export function AtlasMap({
       const slug = feature.properties?.slug as string | undefined;
       if (slug) onSelectPlace?.(slug);
     },
-    [guessPin, onPickPoint, onSelectPlace, reducedMotion],
+    [guessPin, onClearSelection, onPickPoint, onSelectPlace, reducedMotion],
   );
 
   const handleMouseMove = useCallback((event: MapLayerMouseEvent) => {

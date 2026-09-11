@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowRight, ExternalLink, MapPin, Search, Shuffle, X } from "lucide-react";
 import {
   CONFIDENCE_LABEL,
@@ -67,6 +67,19 @@ export function AtlasWorkspace() {
   const setRelationship = (value: RelationshipType | null) => setParams({ link: value });
   const setSelectedSlug = (value: string | null) => setParams({ word: value });
   const [placeSlug, setPlaceSlug] = useState<string | null>(null);
+
+  const clearSelection = useCallback(() => {
+    setPlaceSlug(null);
+    setParams({ word: null });
+  }, [setParams]);
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") clearSelection();
+    }
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [clearSelection]);
 
   const relationships = useMemo(() => {
     const seen = new Map<RelationshipType, number>();
@@ -281,6 +294,7 @@ export function AtlasWorkspace() {
           flyTarget={flyTarget}
           fitTarget={fitTarget}
           onSelectPlace={pickPlace}
+          onClearSelection={clearSelection}
         />
       </div>
 

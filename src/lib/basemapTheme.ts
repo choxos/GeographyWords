@@ -70,6 +70,16 @@ const BORDERS: [string, keyof Palette][] = [
   ["boundary_disputed", "borderMinor"],
 ];
 
+/** National outlines: the ones an atlas always wants. */
+const COUNTRY_BORDERS = [
+  "boundary_country_z0-4",
+  "boundary_country_z5-",
+  "boundary_2",
+];
+
+/** State and province lines: noise at world zoom. */
+const SUBNATIONAL_BORDERS = ["boundary_3", "boundary_state", "boundary_disputed"];
+
 const MAJOR_LABELS = [
   "place_country_major", "place_country_minor", "place_country_other",
   "label_country_1", "label_country_2", "label_country_3",
@@ -93,6 +103,20 @@ export function restyleBasemap(map: MapLibreMap, dark: boolean) {
     value: string | number,
   ) => void;
 
+  const paintExpression = (id: string, prop: string, value: unknown) => {
+    if (map.getLayer(id)) {
+      try {
+        (set as unknown as (l: string, p: string, v: unknown) => void)(
+          id,
+          prop,
+          value,
+        );
+      } catch {
+        // As above: a renamed layer upstream is not worth breaking the map.
+      }
+    }
+  };
+
   const paint = (id: string, prop: string, value: string | number) => {
     if (map.getLayer(id)) {
       try {
@@ -108,7 +132,22 @@ export function restyleBasemap(map: MapLibreMap, dark: boolean) {
   for (const [id, key] of FILLS) paint(id, "fill-color", p[key]);
   for (const [id, key] of BORDERS) {
     paint(id, "line-color", p[key]);
-    paint(id, "line-opacity", 0.9);
+  }
+  // Country borders are always on. Subnational ones only once the reader has
+  // zoomed past the world view, and identically in both themes: the two
+  // upstream styles disagree about when to draw them, so dark showed state
+  // lines over the whole globe while light showed none at all.
+  for (const id of COUNTRY_BORDERS) paint(id, "line-opacity", 0.9);
+  for (const id of SUBNATIONAL_BORDERS) {
+    paintExpression(id, "line-opacity", [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      3.5,
+      0,
+      5.5,
+      0.55,
+    ]);
   }
   for (const id of MAJOR_LABELS) {
     paint(id, "text-color", p.labelMajor);
