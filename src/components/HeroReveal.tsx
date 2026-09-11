@@ -66,7 +66,7 @@ export function HeroReveal({ words }: { words: Word[] }) {
         <Link href={`/word/${word.slug}`} className="btn btn-primary btn-lg">
           Read this entry <ArrowRight size={14} />
         </Link>
-        <Link href="/map" className="btn btn-lg">
+        <Link href="/" className="btn btn-lg">
           Open the atlas
         </Link>
         <Link href="/guess" className="btn btn-lg">

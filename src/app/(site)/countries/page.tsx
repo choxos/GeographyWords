@@ -4,7 +4,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { getCountries, getStats } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Countries",
+  title: `${getStats().countries} countries that gave English a word`,
   description:
     "Every country represented in the Geography Words atlas, ranked by how many English words point back to it.",
   alternates: { canonical: "/countries" },

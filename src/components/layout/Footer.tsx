@@ -21,7 +21,7 @@ export function Footer() {
         <div className="flex gap-12 flex-wrap">
           <div className="flex flex-col gap-2">
             <span className="h-eyebrow">Explore</span>
-            <Link href="/map" className="text-[13px] muted">
+            <Link href="/" className="text-[13px] muted">
               The atlas
             </Link>
             <Link href="/words" className="text-[13px] muted">

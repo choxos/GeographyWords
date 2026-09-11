@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ChevronRight, ExternalLink, MapPin } from "lucide-react";
@@ -24,7 +25,14 @@ import {
   words,
 } from "@/lib/data";
 import { formatKm } from "@/lib/geo";
-import { SITE_URL } from "@/lib/site";
+import {
+  breadcrumbLd,
+  wordCrumbs,
+  wordDescription,
+  wordTitle,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 type WordParams = { slug: string };
 
@@ -43,12 +51,15 @@ export async function generateMetadata({
   const word = getWord(slug);
   if (!word) return { title: "Not found" };
   return {
-    title: `${word.lemma}: ${word.hook}`,
-    description: `${word.hook} ${word.definition} Pinned to ${word.place.name}, ${word.place.country}.`,
+    title: wordTitle(word),
+    description: wordDescription(word),
     openGraph: {
+      // The hook is the line worth sharing, so the card keeps it even though
+      // the search title cannot fit it.
       title: `${word.lemma}: ${word.hook}`,
       description: storyFor(word.slug),
       url: `/word/${word.slug}`,
+      type: "article",
     },
     alternates: { canonical: `/word/${word.slug}` },
   };
@@ -78,6 +89,7 @@ export default async function WordPage({
   const countryHref = word.place.countryCode
     ? `/country/${word.place.countryCode.toLowerCase()}`
     : null;
+  const crumbs = wordCrumbs(word);
 
   return (
     <article>
@@ -87,21 +99,14 @@ export default async function WordPage({
         className="shell flex items-center gap-1.5 pt-6 mono"
         style={{ fontSize: 11, color: "var(--ink-4)" }}
       >
-        <Link href="/map" style={{ color: "var(--ink-3)" }}>
-          Atlas
-        </Link>
-        <ChevronRight size={11} aria-hidden />
-        {countryHref ? (
-          <Link href={countryHref} style={{ color: "var(--ink-3)" }}>
-            {word.place.country}
-          </Link>
-        ) : (
-          <span style={{ color: "var(--ink-3)" }}>{word.place.country}</span>
-        )}
-        <ChevronRight size={11} aria-hidden />
-        <Link href={`/place/${word.place.slug}`} style={{ color: "var(--ink-3)" }}>
-          {word.place.name}
-        </Link>
+        {crumbs.map((crumb, index) => (
+          <Fragment key={crumb.href}>
+            {index > 0 ? <ChevronRight size={11} aria-hidden /> : null}
+            <Link href={crumb.href} style={{ color: "var(--ink-3)" }}>
+              {crumb.name}
+            </Link>
+          </Fragment>
+        ))}
       </nav>
 
       {/* -------------------------------------------------------- Hero */}
@@ -198,7 +203,7 @@ export default async function WordPage({
                 {word.place.wikidata}
               </p>
             </div>
-            <Link href="/map" className="btn">
+            <Link href="/" className="btn">
               Open on the atlas <ArrowRight size={13} />
             </Link>
           </div>
@@ -357,24 +362,37 @@ export default async function WordPage({
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "DefinedTerm",
-            name: word.lemma,
-            description: storyFor(word.slug),
-            inDefinedTermSet: {
-              "@type": "DefinedTermSet",
-              name: "Geography Words",
-              url: SITE_URL,
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          name: word.lemma,
+          description: storyFor(word.slug),
+          inDefinedTermSet: {
+            "@type": "DefinedTermSet",
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
+          url: `${SITE_URL}/word/${word.slug}`,
+          inLanguage: "en",
+          termCode: word.slug,
+          // The place is the claim this entry makes, so it is stated as data
+          // rather than left for a reader to infer from the prose.
+          about: {
+            "@type": "Place",
+            name: word.place.name,
+            sameAs: `https://www.wikidata.org/wiki/${word.place.wikidata}`,
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: word.place.lat,
+              longitude: word.place.lng,
             },
-            url: `${SITE_URL}/word/${word.slug}`,
-            citation: sources.map((source) => source.url),
-          }),
+          },
+          sameAs: sources.map((source) => source.url),
+          citation: sources.map((source) => source.url),
         }}
       />
+      <JsonLd data={breadcrumbLd(crumbs, word.lemma, SITE_URL)} />
     </article>
   );
 }

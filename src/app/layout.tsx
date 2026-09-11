@@ -66,12 +66,10 @@ export const metadata: Metadata = {
       "A curated atlas of English words that carry a place inside them. Search a word, find the map.",
     url: "/",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: `${SITE_NAME}: ${SITE_TAGLINE}`,
-    description:
-      "A curated atlas of English words that carry a place inside them.",
-  },
+  // Only the card type. Naming a title here would pin every page's tweet to
+  // the site tagline, because metadata merges shallowly and no page sets its
+  // own twitter block; left out, each page's title and description are used.
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

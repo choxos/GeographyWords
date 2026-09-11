@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { randomWord, searchAtlas } from "@/lib/data";
 
 const NAVIGATION = [
-  { name: "Atlas", href: "/map" },
+  { name: "Atlas", href: "/" },
   { name: "Words", href: "/words" },
   { name: "Countries", href: "/countries" },
   { name: "Guess", href: "/guess" },

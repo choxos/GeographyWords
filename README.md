@@ -33,8 +33,8 @@ That headline is generated: `node scripts/atlas-stats.mjs` rewrites it from
 
 | Route | What it is |
 |---|---|
-| `/` | Landing: the reveal, stats, featured entries, league table |
-| `/map` | Full-screen atlas with search, confidence filters and a detail rail |
+| `/` | The atlas: full-bleed globe with search, confidence filters and a detail rail |
+| `/map` | Redirects to `/`, kept so older links still resolve |
 | `/guess` | Guess mode: drop a pin, see the great-circle arc and the distance |
 | `/words` | Every entry, filterable by confidence and relationship |
 | `/word/[slug]` | One entry: chain, mini-map, record, sources, related |
@@ -67,12 +67,18 @@ npm run lint
 npm run validate:layers     # map expressions, against the MapLibre style spec
 npm run validate:places     # every Wikidata id exists and agrees with the data
 npm run validate:coverage   # every category member is published or declined
+npm run validate:seo        # every title and description fits a search result
 npm run test:e2e            # the atlas in a real browser
 ```
 
 `validate:layers` exists because a bad map expression is invisible to
 TypeScript and to `next build`: it fails inside MapLibre at runtime, dropping
 the layer while everything around it still renders.
+
+`validate:seo` exists for the same reason one level up. Titles and
+descriptions are composed from prose fields, so a single long hook pushes a
+page past what a search result shows, and one place record with a blank
+country printed "Pinned to Sweden, ." on a live page for months.
 
 ## The tour
 

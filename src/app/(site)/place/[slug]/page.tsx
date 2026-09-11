@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ChevronRight } from "lucide-react";
@@ -13,6 +14,15 @@ import {
 import { getPlaces, getWordsByPlace, nearestWords } from "@/lib/data";
 import { storyFor } from "@/data/stories";
 import { formatKm } from "@/lib/geo";
+import {
+  breadcrumbLd,
+  placeCrumbs,
+  placeDescription,
+  placeLabel,
+  placeTitle,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 type PlaceParams = { slug: string };
 
@@ -31,14 +41,14 @@ export async function generateMetadata({
   const placeWords = getWordsByPlace(slug);
   const place = placeWords[0]?.place;
   if (!place) return { title: "Not found" };
-  const list = placeWords.map((word) => word.lemma).join(", ");
+  const lemmas = placeWords.map((word) => word.lemma);
   return {
-    title: `${place.name}: ${list}`,
-    description: `English words that trace back to ${place.name}, ${place.country}: ${list}.`,
+    title: placeTitle(place, lemmas),
+    description: placeDescription(place, lemmas),
     alternates: { canonical: `/place/${place.slug}` },
     openGraph: {
       title: `English words hiding in ${place.name}`,
-      description: list,
+      description: lemmas.join(", "),
       url: `/place/${place.slug}`,
     },
   };
@@ -60,6 +70,7 @@ export default async function PlacePage({
   const countryHref = place.countryCode
     ? `/country/${place.countryCode.toLowerCase()}`
     : "/countries";
+  const crumbs = placeCrumbs(place);
 
   return (
     <article>
@@ -68,13 +79,14 @@ export default async function PlacePage({
         className="shell flex items-center gap-1.5 pt-6 mono"
         style={{ fontSize: 11, color: "var(--ink-4)" }}
       >
-        <Link href="/map" style={{ color: "var(--ink-3)" }}>
-          Atlas
-        </Link>
-        <ChevronRight size={11} aria-hidden />
-        <Link href={countryHref} style={{ color: "var(--ink-3)" }}>
-          {place.country}
-        </Link>
+        {crumbs.map((crumb, index) => (
+          <Fragment key={crumb.href}>
+            {index > 0 ? <ChevronRight size={11} aria-hidden /> : null}
+            <Link href={crumb.href} style={{ color: "var(--ink-3)" }}>
+              {crumb.name}
+            </Link>
+          </Fragment>
+        ))}
         <ChevronRight size={11} aria-hidden />
         <span>{place.name}</span>
       </nav>
@@ -205,6 +217,29 @@ export default async function PlacePage({
           ))}
         </div>
       </section>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Place",
+          name: place.name,
+          description: placeDescription(
+            place,
+            placeWords.map((word) => word.lemma),
+          ),
+          url: `${SITE_URL}/place/${place.slug}`,
+          sameAs: `https://www.wikidata.org/wiki/${place.wikidata}`,
+          ...(placeLabel(place) === place.name
+            ? {}
+            : { address: { "@type": "PostalAddress", addressCountry: place.country } }),
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: place.lat,
+            longitude: place.lng,
+          },
+        }}
+      />
+      <JsonLd data={breadcrumbLd(crumbs, place.name, SITE_URL)} />
     </article>
   );
 }

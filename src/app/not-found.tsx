@@ -23,7 +23,7 @@ export default function NotFound() {
           or start from the globe.
         </p>
         <div className="flex flex-wrap gap-2.5 mt-8">
-          <Link href="/map" className="btn btn-primary btn-lg">
+          <Link href="/" className="btn btn-primary btn-lg">
             Open the atlas
           </Link>
           <Link href="/words" className="btn btn-lg">

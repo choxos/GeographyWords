@@ -23,6 +23,9 @@ jobs:
       # Map layer expressions are invisible to tsc and to next build: a bad
       # one fails only inside MapLibre at runtime, dropping the layer.
       - run: npm run validate:layers
+      # Titles and descriptions are composed from prose fields, so one long
+      # hook is enough to push a page past what a search result shows.
+      - run: npm run validate:seo
       - run: npx playwright install --with-deps chromium
       # The map is only exercised by a real browser against a real build: the
       # two bugs this suite exists for both passed tsc, eslint and next build.

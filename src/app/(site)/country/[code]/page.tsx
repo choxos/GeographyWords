@@ -10,6 +10,9 @@ import {
   RELATIONSHIP_SHORT,
 } from "@/lib/copy";
 import { getCountries, getCountry } from "@/lib/data";
+import { breadcrumbLd, countryDescription, countryTitle } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 type CountryParams = { code: string };
 
@@ -27,14 +30,14 @@ export async function generateMetadata({
   const { code } = await params;
   const country = getCountry(code);
   if (!country) return { title: "Not found" };
-  const list = country.words.map((word) => word.lemma).join(", ");
+  const lemmas = country.words.map((word) => word.lemma);
   return {
-    title: `${country.words.length} English words from ${country.name}`,
-    description: `English words in this atlas that point back to ${country.name}: ${list}.`,
+    title: countryTitle(country.name, lemmas.length),
+    description: countryDescription(country.name, lemmas),
     alternates: { canonical: `/country/${country.code.toLowerCase()}` },
     openGraph: {
-      title: `${country.words.length} English words hiding inside ${country.name}`,
-      description: list,
+      title: `${lemmas.length} English words hiding inside ${country.name}`,
+      description: lemmas.join(", "),
       url: `/country/${country.code.toLowerCase()}`,
     },
   };
@@ -175,6 +178,17 @@ export default async function CountryPage({
           </Link>
         </div>
       </section>
+
+      <JsonLd
+        data={breadcrumbLd(
+          [
+            { name: "Atlas", href: "/" },
+            { name: "Countries", href: "/countries" },
+          ],
+          country.name,
+          SITE_URL,
+        )}
+      />
     </article>
   );
 }

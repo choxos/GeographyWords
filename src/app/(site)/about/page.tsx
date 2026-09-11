@@ -167,7 +167,7 @@ export default function AboutPage() {
           or that it is typical of that place today.
         </p>
         <div className="flex flex-wrap gap-2.5 mt-7">
-          <Link href="/map" className="btn btn-primary btn-lg">
+          <Link href="/" className="btn btn-primary btn-lg">
             Open the atlas
           </Link>
           <Link href="/words" className="btn btn-lg">
