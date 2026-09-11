@@ -12,6 +12,7 @@ import Map, {
 import "maplibre-gl/dist/maplibre-gl.css";
 // Side effect: points MapLibre at the worker in public/.
 import "@/lib/maplibreWorker";
+import { restyleBasemap } from "@/lib/basemapTheme";
 import { greatCircle, type LngLat } from "@/lib/geo";
 import { MAP_STYLE_DARK, MAP_STYLE_LIGHT } from "@/lib/site";
 import { useReducedMotion } from "@/lib/useReducedMotion";
@@ -61,6 +62,19 @@ export function AtlasMap({
     };
   }, [arc]);
 
+  // Recolour on every style load. Switching theme swaps the whole style, so
+  // this has to run again each time rather than only once at mount.
+  useEffect(() => {
+    const map = mapRef.current?.getMap();
+    if (!map) return;
+    const apply = () => restyleBasemap(map, dark);
+    if (map.isStyleLoaded()) apply();
+    map.on("styledata", apply);
+    return () => {
+      map.off("styledata", apply);
+    };
+  }, [dark, ready]);
+
   useEffect(() => {
     if (!ready || !flyTarget) {
       if (!flyTarget) lastFlyKey.current = "";
@@ -109,7 +123,10 @@ export function AtlasMap({
               "atmosphere-blend": 0.5,
             }
       }
-      onLoad={() => setReady(true)}
+      onLoad={(event) => {
+        restyleBasemap(event.target, dark);
+        setReady(true);
+      }}
       onError={(event) => {
         const message = event.error?.message ?? String(event.error ?? "unknown");
         console.error("[atlas-map]", message, event.error);
