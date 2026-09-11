@@ -5,7 +5,7 @@ and the globe flies to Nîmes; open Bikini Atoll and the swimsuit is waiting
 there.
 
 <!-- stats -->
-**251 words · 229 places · 66 countries** — 228 well attested, 15 probable, 8 disputed.
+**315 words · 281 places · 68 countries** — 292 well attested, 15 probable, 8 disputed.
 <!-- /stats -->
 
 Every entry records what kind of link it is (named from the place, named for a product of it, from
