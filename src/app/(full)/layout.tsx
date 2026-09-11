@@ -8,7 +8,7 @@ import { Header } from "@/components/layout/Header";
 export default function FullLayout({ children }: { children: ReactNode }) {
   return (
     <div style={{ height: "100dvh", display: "flex", flexDirection: "column" }}>
-      <Header compact />
+      <Header />
       <main style={{ flex: 1, minHeight: 0, position: "relative" }}>{children}</main>
     </div>
   );

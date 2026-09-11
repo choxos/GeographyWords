@@ -20,7 +20,12 @@ function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(href + "/");
 }
 
-export function Header({ compact = false }: { compact?: boolean }) {
+/**
+ * One bar on every route. The atlas needs a full width header above its
+ * edge to edge rails, and switching between that and a centered container
+ * on the other pages moved the nav sideways on every navigation.
+ */
+export function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -72,7 +77,7 @@ export function Header({ compact = false }: { compact?: boolean }) {
       }}
     >
       <div
-        className={compact ? "flex items-center gap-6 h-[60px] px-5" : "shell flex items-center gap-6 h-[60px]"}
+        className="flex items-center gap-6 h-[60px] px-5"
       >
         <Link href="/" className="flex items-center gap-2.5 select-none shrink-0">
           <span

@@ -114,6 +114,10 @@
 
   html {
     scroll-behavior: smooth;
+    /* Reserve the scrollbar track on every page. The atlas fills the viewport
+       and never scrolls while the list pages do, so without this the whole
+       layout jumps sideways by the scrollbar width on each navigation. */
+    scrollbar-gutter: stable;
   }
   html.dark {
     color-scheme: dark;

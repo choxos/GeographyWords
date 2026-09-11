@@ -115,6 +115,19 @@ test("entry and country pages render", async ({ page }) => {
   }
 });
 
+// The atlas is full bleed and never scrolls; the list pages are centered and
+// do. The header used to switch containers between the two, so the nav slid
+// sideways on every navigation.
+test("the header sits in the same place on every page", async ({ page }) => {
+  const positions: number[] = [];
+  for (const path of ["/", "/words", "/countries", "/about", "/"]) {
+    await page.goto(path);
+    const box = await page.locator("header a").first().boundingBox();
+    positions.push(Math.round(box?.x ?? -1));
+  }
+  expect(new Set(positions).size, `header x positions: ${positions.join(", ")}`).toBe(1);
+});
+
 test.describe("on a phone", () => {
   test.use({ viewport: { width: 390, height: 844 } });
 
