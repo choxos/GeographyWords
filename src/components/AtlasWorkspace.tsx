@@ -96,16 +96,12 @@ export function AtlasWorkspace() {
   // page is for. The details rail opens by itself when a pin is chosen, since
   // choosing a pin is a request to read about it.
   const [browseOpen, setBrowseOpen] = useState(false);
-  const [detailsOpen, setDetailsOpen] = useState(false);
-
-  // A shared link carries ?word=, so the rail has to be open on arrival.
-  useEffect(() => {
-    if (selectedSlug) setDetailsOpen(true);
-  }, [selectedSlug]);
+  // Opened by hand, when nothing is selected to open it.
+  const [detailsPinned, setDetailsPinned] = useState(false);
 
   const clearSelection = useCallback(() => {
     setPlaceSlug(null);
-    setDetailsOpen(false);
+    setDetailsPinned(false);
     setParams({ word: null });
   }, [setParams]);
 
@@ -157,6 +153,14 @@ export function AtlasWorkspace() {
   // instead of the inspector arbitrarily showing the first.
   const atPlace = placeSlug ? getWordsByPlace(placeSlug) : [];
 
+  /**
+   * The details rail is open whenever it has something to show. Selecting a
+   * word or a pin is a request to read about it, and a shared link carrying
+   * ?word= is the same request, so both open the rail without any state to
+   * keep in sync.
+   */
+  const detailsOpen = detailsPinned || Boolean(selected) || atPlace.length > 1;
+
   const flyTarget = selected
     ? {
         lng: selected.place.lng,
@@ -188,7 +192,6 @@ export function AtlasWorkspace() {
     // One word at the pin opens straight away; several are offered first.
     setSelectedSlug(here.length === 1 ? here[0].slug : null);
     setPanel("details");
-    setDetailsOpen(true);
   }
 
   /** Selecting a word from the list or the map moves a phone to the entry. */
@@ -196,7 +199,6 @@ export function AtlasWorkspace() {
     setPlaceSlug(null);
     setSelectedSlug(slug);
     setPanel(slug ? "details" : "browse");
-    setDetailsOpen(Boolean(slug));
   }
 
 
@@ -372,7 +374,7 @@ export function AtlasWorkspace() {
           className="atlas-handle atlas-handle-right"
           aria-expanded={detailsOpen}
           aria-controls="atlas-details"
-          onClick={() => setDetailsOpen((open) => !open)}
+          onClick={() => (detailsOpen ? clearSelection() : setDetailsPinned(true))}
         >
           <span>{selected ? selected.lemma : "Details"}</span>
           {detailsOpen ? <ChevronRight size={15} /> : <ChevronLeft size={15} />}
