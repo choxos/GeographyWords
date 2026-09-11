@@ -16,6 +16,7 @@ import json
 import pathlib
 import re
 import sys
+import unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CATEGORY = ROOT / "data" / "toponym-category.json"
@@ -37,6 +38,18 @@ REASONS = {
 }
 
 
+def fold(text):
+    """Match on accents and case stripped.
+
+    The atlas writes a word the way English writes it, which is not always
+    the way Wiktionary titles the page: gouda and jersey are lowercase as
+    common nouns, and a category title carries the capital. Comparing the
+    raw strings reported those as missing entries.
+    """
+    stripped = unicodedata.normalize("NFKD", text)
+    return "".join(c for c in stripped if not unicodedata.combining(c)).lower()
+
+
 def published_lemmas():
     source = WORDS.read_text(encoding="utf-8")
     return {m.group(1) for m in re.finditer(r'lemma:\s*"((?:[^"\\]|\\.)*)"', source)}
@@ -45,13 +58,13 @@ def published_lemmas():
 def main():
     members = json.loads(CATEGORY.read_text(encoding="utf-8"))["pages"]
     declined = json.loads(DECLINED.read_text(encoding="utf-8")) if DECLINED.exists() else []
-    lemmas = {l.lower() for l in published_lemmas()}
-    by_term = {d["term"].lower(): d for d in declined}
+    lemmas = {fold(l) for l in published_lemmas()}
+    by_term = {fold(d["term"]): d for d in declined}
 
     rows, missing, bad_reason = [], [], []
     counts = {"published": 0, "declined": 0}
     for term in members:
-        key = term.lower()
+        key = fold(term)
         if key in lemmas:
             rows.append({"term": term, "disposition": "published"})
             counts["published"] += 1

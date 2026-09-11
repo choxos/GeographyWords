@@ -55,7 +55,11 @@ export default async function PlacePage({
   if (!place) notFound();
 
   const nearby = nearestWords(placeWords[0], 4);
-  const countryHref = `/country/${place.countryCode.toLowerCase()}`;
+  // A place spanning several countries has no country page to point at, so
+  // the links fall back to the country index rather than disappearing.
+  const countryHref = place.countryCode
+    ? `/country/${place.countryCode.toLowerCase()}`
+    : "/countries";
 
   return (
     <article>

@@ -23,13 +23,35 @@ const storiesPath = join(root, "src", "data", "stories.ts");
 
 const source = readFileSync(wordsPath, "utf8");
 
+/**
+ * Stories already moved out stay put. A later writing round appends entries
+ * to words.ts with their prose inline, and this run has to fold those in
+ * rather than replace the file with only the new ones.
+ */
+function existingStories() {
+  let text = "";
+  try {
+    text = readFileSync(storiesPath, "utf8");
+  } catch {
+    return new Map();
+  }
+  const kept = new Map();
+  const row = /^ {2}("(?:[^"\\]|\\.)*"): ("(?:[^"\\]|\\.)*"),$/gm;
+  let found;
+  while ((found = row.exec(text)) !== null) {
+    kept.set(JSON.parse(found[1]), found[2]);
+  }
+  return kept;
+}
+
 // Anchor on indentation, not on field order. A place object carries its own
 // slug two levels in, so a loose pattern pairs each place slug with the next
 // entry's story and silently shifts the whole file by one.
 const ENTRY_SLUG = /^ {4}slug: "([^"]+)",$/;
 const STORY_START = /^ {4}story:(.*)$/;
 
-const stories = new Map();
+const stories = existingStories();
+const before = stories.size;
 let slug = null;
 const lines = source.split("\n");
 for (let i = 0; i < lines.length; i += 1) {
@@ -47,7 +69,7 @@ for (let i = 0; i < lines.length; i += 1) {
 }
 
 if (stories.size === 0) {
-  console.log("split-stories: no story fields found, nothing to do");
+  console.log("split-stories: no stories found, nothing to do");
   process.exit(0);
 }
 
@@ -78,4 +100,6 @@ export function storyFor(slug: string): string {
 );
 
 writeFileSync(wordsPath, stripped, "utf8");
-console.log(`split-stories: moved ${stories.size} stories to src/data/stories.ts`);
+console.log(
+  `split-stories: ${stories.size - before} moved, ${stories.size} total in src/data/stories.ts`,
+);

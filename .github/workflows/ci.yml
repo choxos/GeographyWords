@@ -41,3 +41,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 scripts/validate-places.py
+      # Every Wiktionary category member has to be either published or
+      # declined with a reason. "All the words" cannot mean a pin for all
+      # 887 of them; it means none of them goes missing without a record.
+      - run: python3 scripts/coverage-ledger.py

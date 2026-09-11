@@ -67,13 +67,17 @@ export default async function WordPage({
   const samePlace = getWordsByPlace(word.place.slug).filter(
     (item) => item.slug !== word.slug,
   );
-  const country = getCountry(word.place.countryCode);
+  const country = word.place.countryCode
+    ? getCountry(word.place.countryCode)
+    : undefined;
   const sameCountry = (country?.words ?? []).filter(
     (item) => item.slug !== word.slug && item.place.slug !== word.place.slug,
   );
   const nearby = nearestWords(word, 4);
   const next = randomWord(word.slug);
-  const countryHref = `/country/${word.place.countryCode.toLowerCase()}`;
+  const countryHref = word.place.countryCode
+    ? `/country/${word.place.countryCode.toLowerCase()}`
+    : null;
 
   return (
     <article>
@@ -87,9 +91,13 @@ export default async function WordPage({
           Atlas
         </Link>
         <ChevronRight size={11} aria-hidden />
-        <Link href={countryHref} style={{ color: "var(--ink-3)" }}>
-          {word.place.country}
-        </Link>
+        {countryHref ? (
+          <Link href={countryHref} style={{ color: "var(--ink-3)" }}>
+            {word.place.country}
+          </Link>
+        ) : (
+          <span style={{ color: "var(--ink-3)" }}>{word.place.country}</span>
+        )}
         <ChevronRight size={11} aria-hidden />
         <Link href={`/place/${word.place.slug}`} style={{ color: "var(--ink-3)" }}>
           {word.place.name}
@@ -176,9 +184,13 @@ export default async function WordPage({
                 <MapPin size={14} style={{ color: "var(--xera)" }} aria-hidden />
                 <Link href={`/place/${word.place.slug}`}>{word.place.name}</Link>
                 <span style={{ color: "var(--ink-4)" }}>·</span>
-                <Link href={countryHref} style={{ color: "var(--ink-3)" }}>
-                  {word.place.country}
-                </Link>
+                {countryHref ? (
+                  <Link href={countryHref} style={{ color: "var(--ink-3)" }}>
+                    {word.place.country}
+                  </Link>
+                ) : (
+                  <span style={{ color: "var(--ink-3)" }}>{word.place.country}</span>
+                )}
               </p>
               <p className="mono m-0 mt-1.5" style={{ fontSize: 11, color: "var(--ink-4)" }}>
                 {word.place.lat.toFixed(4)}°{word.place.lat >= 0 ? "N" : "S"}{" "}
@@ -312,7 +324,7 @@ export default async function WordPage({
         />
       ) : null}
 
-      {sameCountry.length > 0 ? (
+      {sameCountry.length > 0 && countryHref ? (
         <RelatedGrid
           eyebrow={word.place.country}
           heading={`${sameCountry.length} more ${sameCountry.length === 1 ? "word" : "words"} from ${word.place.country}`}

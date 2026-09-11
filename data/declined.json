@@ -1,1 +1,287 @@
-[]
+[
+ {
+  "term": "afro",
+  "reason": "continent-or-ocean",
+  "note": "Derived from Afro- and so from Africa, a continent and too large to pin to a point."
+ },
+ {
+  "term": "Alabama wind chime",
+  "reason": "unverifiable",
+  "note": "A racist term for a lynched person; no dictionary gives an etymology and the only citations are Usenet posts, so nothing documents why Alabama."
+ },
+ {
+  "term": "americium",
+  "reason": "continent-or-ocean",
+  "note": "Named for the Americas by analogy with europium; the proposed pin on Americ, Serbia is spurious."
+ },
+ {
+  "term": "apple of Sodom",
+  "reason": "legendary-place",
+  "note": "Sodom has no agreed real site; the fruit is a legend attached to a legendary city."
+ },
+ {
+  "term": "Blighty",
+  "reason": "not-toponymic",
+  "note": "From Hindi and Urdu vilayati, meaning foreign, ultimately Arabic wilayah, a state or province; it names Britain but is not derived from any place name."
+ },
+ {
+  "term": "Brobdingnagian",
+  "reason": "fictional-place",
+  "note": "Brobdingnag is an invented country in Gulliver's Travels."
+ },
+ {
+  "term": "Buller",
+  "reason": "not-toponymic",
+  "note": "Occupational surname from Middle English bulle, a letter or document; no place involved."
+ },
+ {
+  "term": "Burlington bun",
+  "reason": "unverifiable",
+  "note": "Nova Scotian for a jelly doughnut, but no source identifies which Burlington is meant, so the place cannot be pinned."
+ },
+ {
+  "term": "byzantievite",
+  "reason": "other",
+  "note": "Named by Pautov and colleagues for the Byzantine empire as a metaphor for the mineral's chemical complexity, not for any locality."
+ },
+ {
+  "term": "Colombian cold",
+  "reason": "unverifiable",
+  "note": "Glossed in Wiktionary as a cold caused by cocaine use, with no citations and no entry in Green's Dictionary of Slang."
+ },
+ {
+  "term": "Death Valley driver",
+  "reason": "unverifiable",
+  "note": "A wrestling throw, known in Japan as the Death Valley Bomb; no source connects the name to Death Valley in California."
+ },
+ {
+  "term": "Deppford wife",
+  "reason": "fictional-place",
+  "note": "A blend of Johnny Depp and Stepford wife; Stepford is the invented Connecticut town of Ira Levin's 1972 novel."
+ },
+ {
+  "term": "Discworlder",
+  "reason": "fictional-place",
+  "note": "Same invented world."
+ },
+ {
+  "term": "Discworldian",
+  "reason": "fictional-place",
+  "note": "Discworld is Terry Pratchett's invented world."
+ },
+ {
+  "term": "El Dorado",
+  "reason": "legendary-place",
+  "note": "Spanish for the golden one, originally a gilded king and then a city of gold that was never located."
+ },
+ {
+  "term": "europium",
+  "reason": "continent-or-ocean",
+  "note": "Named for the continent of Europe, not a mappable locality."
+ },
+ {
+  "term": "Eurosceptic",
+  "reason": "continent-or-ocean",
+  "note": "Euro- here stands for Europe, a continent."
+ },
+ {
+  "term": "Eurostyle",
+  "reason": "continent-or-ocean",
+  "note": "The Euro element refers to Europe as a whole, too large to pin to a location."
+ },
+ {
+  "term": "Florida honeymoon",
+  "reason": "unverifiable",
+  "note": "Glossed in Wiktionary as a dirty weekend with no citations, no etymology and no entry in Green's Dictionary of Slang."
+ },
+ {
+  "term": "hack",
+  "reason": "not-toponymic",
+  "note": "Inherited from Middle English hacken, to chop; no place involved."
+ },
+ {
+  "term": "Hogwarts-esque",
+  "reason": "fictional-place",
+  "note": "Hogwarts is an invented school in the Harry Potter books."
+ },
+ {
+  "term": "Hogwartsian",
+  "reason": "fictional-place",
+  "note": "Hogwarts is an invented school in the Harry Potter books."
+ },
+ {
+  "term": "Hogwartsy",
+  "reason": "fictional-place",
+  "note": "Same invented school; no real-world location."
+ },
+ {
+  "term": "hot as Hades",
+  "reason": "legendary-place",
+  "note": "Hades is the mythological underworld, not a mappable place."
+ },
+ {
+  "term": "Indiana Jones",
+  "reason": "not-toponymic",
+  "note": "Named for George Lucas's dog Indiana, not for the state."
+ },
+ {
+  "term": "kinda",
+  "reason": "not-toponymic",
+  "note": "Pronunciation spelling of kind of; no place involved."
+ },
+ {
+  "term": "Lake Wobegon effect",
+  "reason": "fictional-place",
+  "note": "Lake Wobegon is Garrison Keillor's invented Minnesota town."
+ },
+ {
+  "term": "Law of Jante",
+  "reason": "fictional-place",
+  "note": "Jante is the invented Danish town of Aksel Sandemose's 1933 novel."
+ },
+ {
+  "term": "lilliputian",
+  "reason": "fictional-place",
+  "note": "Lilliput is an invented island in Gulliver's Travels."
+ },
+ {
+  "term": "Middle-earther",
+  "reason": "fictional-place",
+  "note": "Middle-earth is Tolkien's invented world."
+ },
+ {
+  "term": "Middle-earthian",
+  "reason": "fictional-place",
+  "note": "Middle-earth is Tolkien's invented world."
+ },
+ {
+  "term": "Mississippi wind chime",
+  "reason": "unverifiable",
+  "note": "Rare racist slur with no documented etymology in any dictionary source."
+ },
+ {
+  "term": "Out of Africa",
+  "reason": "continent-or-ocean",
+  "note": "The eponym is the continent of Africa."
+ },
+ {
+  "term": "Ozian",
+  "reason": "fictional-place",
+  "note": "Derived from the same invented Land of Oz."
+ },
+ {
+  "term": "Ozite",
+  "reason": "other",
+  "note": "Oz here is L. Frank Baum's fictional Land of Oz, not a real place."
+ },
+ {
+  "term": "POTC",
+  "reason": "not-toponymic",
+  "note": "Initialism of the film title Pirates of the Caribbean."
+ },
+ {
+  "term": "Shangri-La",
+  "reason": "legendary-place",
+  "note": "Invented in James Hilton's Lost Horizon and with no agreed real site."
+ },
+ {
+  "term": "Smallvilleverse",
+  "reason": "fictional-place",
+  "note": "Smallville is the invented town of the Superman comics."
+ },
+ {
+  "term": "Sodom and Gomorrah",
+  "reason": "legendary-place",
+  "note": "Biblical cities with no agreed archaeological location."
+ },
+ {
+  "term": "sodomy",
+  "reason": "legendary-place",
+  "note": "Derived from Sodom, a biblical city with no agreed real site."
+ },
+ {
+  "term": "Southsider",
+  "reason": "not-toponymic",
+  "note": "From the generic southside, not from any named place."
+ },
+ {
+  "term": "stade",
+  "reason": "not-toponymic",
+  "note": "From Greek stadion, a unit of length and a racetrack; no place involved."
+ },
+ {
+  "term": "Stepford",
+  "reason": "fictional-place",
+  "note": "Invented Connecticut town in Ira Levin's The Stepford Wives."
+ },
+ {
+  "term": "Stepford wife",
+  "reason": "fictional-place",
+  "note": "Stepford is the invented Connecticut town of Ira Levin's 1972 novel."
+ },
+ {
+  "term": "Stepfordesque",
+  "reason": "fictional-place",
+  "note": "Derived from the same invented town."
+ },
+ {
+  "term": "Stepfordian",
+  "reason": "fictional-place",
+  "note": "Derived from the same invented town."
+ },
+ {
+  "term": "Swiss meringue",
+  "reason": "unverifiable",
+  "note": "The whisked-over-heat method is real, but no source establishes why it is called Swiss."
+ },
+ {
+  "term": "Tennessee Valley Indians",
+  "reason": "not-toponymic",
+  "note": "Ham radio backronym for TVI, television interference; the place supplies only the initials."
+ },
+ {
+  "term": "thulium",
+  "reason": "other",
+  "note": "Named for Thule, a legendary far northern land of classical geography with no agreed real location."
+ },
+ {
+  "term": "Tuktoyaktuk",
+  "reason": "not-toponymic",
+  "note": "Is the place name itself, an anglicized Inuvialuktun name, not an English word derived from a place."
+ },
+ {
+  "term": "uncompahgrite",
+  "reason": "unverifiable",
+  "note": "Named from Uncompahgre, but no source states which Uncompahgre feature, and the type locality at Iron Hill, Gunnison County, lies outside the Uncompahgre drainage."
+ },
+ {
+  "term": "utopia",
+  "reason": "fictional-place",
+  "note": "Thomas More's invented island, named from Greek for no-place."
+ },
+ {
+  "term": "weddellite",
+  "reason": "continent-or-ocean",
+  "note": "Eponym is the Weddell Sea, which is also itself named for the sealing captain James Weddell."
+ },
+ {
+  "term": "Wizard of Oz",
+  "reason": "fictional-place",
+  "note": "Oz is invented for L. Frank Baum's 1900 book and has no real-world location."
+ },
+ {
+  "term": "Wong Tai Sin",
+  "reason": "not-toponymic",
+  "note": "Named after a deity, the Great Immortal Wong; the Hong Kong district takes its name from the temple, not the reverse."
+ },
+ {
+  "term": "wuhanic",
+  "reason": "case-variant",
+  "note": "Wiktionary defines it as an ellipsis of wuhanic acid; covered by that entry."
+ },
+ {
+  "term": "zoar",
+  "reason": "legendary-place",
+  "note": "Biblical city of refuge with no agreed site; treated like Sodom and Gomorrah, and the common noun has almost no currency."
+ }
+]

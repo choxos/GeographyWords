@@ -40,12 +40,15 @@ export function getPlaces(): PlaceIndex[] {
 export function getCountries(): CountryIndex[] {
   const map = new Map<string, CountryIndex>();
   for (const word of WORDS) {
-    const existing = map.get(word.place.countryCode);
+    // Transnational places carry no country code, so they join no country.
+    const code = word.place.countryCode;
+    if (!code) continue;
+    const existing = map.get(code);
     if (existing) {
       existing.words.push(word);
     } else {
-      map.set(word.place.countryCode, {
-        code: word.place.countryCode,
+      map.set(code, {
+        code,
         name: word.place.country,
         words: [word],
       });
@@ -155,7 +158,9 @@ export function getStats(): AtlasStats {
   return {
     words: WORDS.length,
     places: new Set(WORDS.map((word) => word.place.slug)).size,
-    countries: new Set(WORDS.map((word) => word.place.countryCode)).size,
+    countries: new Set(
+      WORDS.map((word) => word.place.countryCode).filter(Boolean),
+    ).size,
     disputed: WORDS.filter((word) => word.confidence !== "well-attested").length,
   };
 }

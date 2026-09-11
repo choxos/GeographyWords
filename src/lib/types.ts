@@ -30,7 +30,13 @@ export type Place = {
   name: string;
   wikidata: string;
   country: string;
-  countryCode: string;
+  /**
+   * Absent when the place spans more than one country or none at all: the
+   * Balkans, Macedonia, Roman Pannonia, a bay in Antarctica. Picking one
+   * country for those would state something false, so the atlas records no
+   * country rather than the nearest plausible one.
+   */
+  countryCode?: string;
   lat: number;
   lng: number;
   zoom?: number;

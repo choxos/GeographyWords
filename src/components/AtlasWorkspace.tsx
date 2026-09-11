@@ -384,6 +384,11 @@ function useStory(slug: string) {
   return stories?.[slug] ?? "";
 }
 
+/** Places that span several countries link to the atlas rather than nowhere. */
+function countryPath(code: string | undefined) {
+  return code ? `/country/${code.toLowerCase()}` : "/countries";
+}
+
 function toneVar(confidence: Confidence) {
   if (confidence === "well-attested") return "attested";
   if (confidence === "probable") return "probable";
@@ -456,7 +461,7 @@ function Inspector({ word, onClose }: { word: Word; onClose: () => void }) {
                 <MapPin size={12} aria-hidden /> {word.place.name}
               </Link>
               {", "}
-              <Link href={`/country/${word.place.countryCode.toLowerCase()}`}>
+              <Link href={countryPath(word.place.countryCode)}>
                 {word.place.country}
               </Link>
             </dd>

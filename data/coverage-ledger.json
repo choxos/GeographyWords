@@ -1,10 +1,40 @@
 {
  "generated_from": "data/toponym-category.json, data/declined.json, src/data/words.ts",
  "members": 887,
- "published": 533,
- "declined": 0,
- "declined_by_reason": {},
+ "published": 830,
+ "declined": 57,
+ "declined_by_reason": {
+  "case-variant": 1,
+  "continent-or-ocean": 7,
+  "fictional-place": 20,
+  "legendary-place": 7,
+  "not-toponymic": 11,
+  "other": 3,
+  "unverifiable": 8
+ },
  "rows": [
+  {
+   "term": "-athon",
+   "disposition": "published"
+  },
+  {
+   "term": "Aberdeen cutlet",
+   "disposition": "published"
+  },
+  {
+   "term": "Abruzzi ware",
+   "disposition": "published"
+  },
+  {
+   "term": "Alabama wind chime",
+   "disposition": "declined",
+   "reason": "unverifiable",
+   "note": "A racist term for a lynched person; no dictionary gives an etymology and the only citations are Usenet posts, so nothing documents why Alabama."
+  },
+  {
+   "term": "Alaskan King",
+   "disposition": "published"
+  },
   {
    "term": "Alberta clipper",
    "disposition": "published"
@@ -26,6 +56,10 @@
    "disposition": "published"
   },
   {
+   "term": "Arizona perfume",
+   "disposition": "published"
+  },
+  {
    "term": "Arizona room",
    "disposition": "published"
   },
@@ -35,6 +69,18 @@
   },
   {
    "term": "Attic salt",
+   "disposition": "published"
+  },
+  {
+   "term": "Aurignacian",
+   "disposition": "published"
+  },
+  {
+   "term": "Babelesque",
+   "disposition": "published"
+  },
+  {
+   "term": "Babylonize",
    "disposition": "published"
   },
   {
@@ -54,7 +100,27 @@
    "disposition": "published"
   },
   {
+   "term": "Bali belly",
+   "disposition": "published"
+  },
+  {
+   "term": "Balkanization",
+   "disposition": "published"
+  },
+  {
+   "term": "Balkanize",
+   "disposition": "published"
+  },
+  {
+   "term": "Baltimorgue",
+   "disposition": "published"
+  },
+  {
    "term": "Bangalore",
+   "disposition": "published"
+  },
+  {
+   "term": "Bankside lady",
    "disposition": "published"
   },
   {
@@ -79,6 +145,10 @@
   },
   {
    "term": "Bedlington terrier",
+   "disposition": "published"
+  },
+  {
+   "term": "Beijing bikini",
    "disposition": "published"
   },
   {
@@ -110,6 +180,14 @@
    "disposition": "published"
   },
   {
+   "term": "Bilbao effect",
+   "disposition": "published"
+  },
+  {
+   "term": "Birman",
+   "disposition": "published"
+  },
+  {
    "term": "Bisbee blue",
    "disposition": "published"
   },
@@ -122,7 +200,25 @@
    "disposition": "published"
   },
   {
+   "term": "Blighty",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "From Hindi and Urdu vilayati, meaning foreign, ultimately Arabic wilayah, a state or province; it names Britain but is not derived from any place name."
+  },
+  {
+   "term": "Blighty wound",
+   "disposition": "published"
+  },
+  {
+   "term": "Bloomsberries",
+   "disposition": "published"
+  },
+  {
    "term": "Boeotian",
+   "disposition": "published"
+  },
+  {
+   "term": "Bolivian marching powder",
    "disposition": "published"
   },
   {
@@ -146,11 +242,19 @@
    "disposition": "published"
   },
   {
+   "term": "Bosox",
+   "disposition": "published"
+  },
+  {
    "term": "Boston Brahmin",
    "disposition": "published"
   },
   {
    "term": "Boston cream pie",
+   "disposition": "published"
+  },
+  {
+   "term": "Boston marriage",
    "disposition": "published"
   },
   {
@@ -162,12 +266,26 @@
    "disposition": "published"
   },
   {
+   "term": "Brazil plum",
+   "disposition": "published"
+  },
+  {
    "term": "Bretton Woods",
+   "disposition": "published"
+  },
+  {
+   "term": "Brexit",
    "disposition": "published"
   },
   {
    "term": "Bristol sound",
    "disposition": "published"
+  },
+  {
+   "term": "Brobdingnagian",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Brobdingnag is an invented country in Gulliver's Travels."
   },
   {
    "term": "Bronx cheer",
@@ -178,12 +296,40 @@
    "disposition": "published"
   },
   {
+   "term": "Brooklyn fade",
+   "disposition": "published"
+  },
+  {
+   "term": "Brooklynese",
+   "disposition": "published"
+  },
+  {
    "term": "Brummagem",
+   "disposition": "published"
+  },
+  {
+   "term": "Brummajem",
    "disposition": "published"
   },
   {
    "term": "Brussels sprout",
    "disposition": "published"
+  },
+  {
+   "term": "Buckie",
+   "disposition": "published"
+  },
+  {
+   "term": "Buller",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "Occupational surname from Middle English bulle, a letter or document; no place involved."
+  },
+  {
+   "term": "Burlington bun",
+   "disposition": "declined",
+   "reason": "unverifiable",
+   "note": "Nova Scotian for a jelly doughnut, but no source identifies which Burlington is meant, so the place cannot be pinned."
   },
   {
    "term": "Byzantine",
@@ -202,11 +348,27 @@
    "disposition": "published"
   },
   {
+   "term": "Calydonian Boar",
+   "disposition": "published"
+  },
+  {
+   "term": "Calydonian Hunt",
+   "disposition": "published"
+  },
+  {
+   "term": "Camden bench",
+   "disposition": "published"
+  },
+  {
    "term": "Canada goose",
    "disposition": "published"
   },
   {
    "term": "Canadian bacon",
+   "disposition": "published"
+  },
+  {
+   "term": "Canola",
    "disposition": "published"
   },
   {
@@ -230,11 +392,19 @@
    "disposition": "published"
   },
   {
+   "term": "Champ",
+   "disposition": "published"
+  },
+  {
    "term": "Chardonnay",
    "disposition": "published"
   },
   {
    "term": "Charleston",
+   "disposition": "published"
+  },
+  {
+   "term": "Chatham Islands penguin",
    "disposition": "published"
   },
   {
@@ -246,7 +416,23 @@
    "disposition": "published"
   },
   {
+   "term": "Cheget",
+   "disposition": "published"
+  },
+  {
    "term": "Chelsea bun",
+   "disposition": "published"
+  },
+  {
+   "term": "Chelsea grin",
+   "disposition": "published"
+  },
+  {
+   "term": "Chelsea smile",
+   "disposition": "published"
+  },
+  {
+   "term": "Chernobyl syndrome",
    "disposition": "published"
   },
   {
@@ -262,11 +448,47 @@
    "disposition": "published"
   },
   {
+   "term": "Chicago overcoat",
+   "disposition": "published"
+  },
+  {
+   "term": "Chicago typewriter",
+   "disposition": "published"
+  },
+  {
    "term": "Chihuahua",
    "disposition": "published"
   },
   {
+   "term": "Chile saltpetre",
+   "disposition": "published"
+  },
+  {
+   "term": "China syndrome",
+   "disposition": "published"
+  },
+  {
+   "term": "Chinadom",
+   "disposition": "published"
+  },
+  {
+   "term": "Chinatown",
+   "disposition": "published"
+  },
+  {
+   "term": "Chinese dragon",
+   "disposition": "published"
+  },
+  {
    "term": "Chinese pie",
+   "disposition": "published"
+  },
+  {
+   "term": "Chisox",
+   "disposition": "published"
+  },
+  {
+   "term": "Choclo virus",
    "disposition": "published"
   },
   {
@@ -279,6 +501,20 @@
   },
   {
    "term": "Colby cheese",
+   "disposition": "published"
+  },
+  {
+   "term": "Colombian cold",
+   "disposition": "declined",
+   "reason": "unverifiable",
+   "note": "Glossed in Wiktionary as a cold caused by cocaine use, with no citations and no entry in Green's Dictionary of Slang."
+  },
+  {
+   "term": "Colombian marching powder",
+   "disposition": "published"
+  },
+  {
+   "term": "Colombian necktie",
    "disposition": "published"
   },
   {
@@ -302,7 +538,15 @@
    "disposition": "published"
   },
   {
+   "term": "Covent Garden abbess",
+   "disposition": "published"
+  },
+  {
    "term": "Covent Garden ague",
+   "disposition": "published"
+  },
+  {
+   "term": "Covent Garden nun",
    "disposition": "published"
   },
   {
@@ -322,6 +566,10 @@
    "disposition": "published"
   },
   {
+   "term": "Cupertino effect",
+   "disposition": "published"
+  },
+  {
    "term": "Cyprian",
    "disposition": "published"
   },
@@ -334,7 +582,25 @@
    "disposition": "published"
   },
   {
+   "term": "Davos Man",
+   "disposition": "published"
+  },
+  {
+   "term": "Dearbornistan",
+   "disposition": "published"
+  },
+  {
+   "term": "Death Valley driver",
+   "disposition": "declined",
+   "reason": "unverifiable",
+   "note": "A wrestling throw, known in Japan as the Death Valley Bomb; no source connects the name to Death Valley in California."
+  },
+  {
    "term": "Delft",
+   "disposition": "published"
+  },
+  {
+   "term": "Delhi belly",
    "disposition": "published"
   },
   {
@@ -342,8 +608,34 @@
    "disposition": "published"
   },
   {
+   "term": "Deppford wife",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "A blend of Johnny Depp and Stepford wife; Stepford is the invented Connecticut town of Ira Levin's 1972 novel."
+  },
+  {
+   "term": "Devonian",
+   "disposition": "published"
+  },
+  {
+   "term": "Diabloer",
+   "disposition": "published"
+  },
+  {
    "term": "Dijon mustard",
    "disposition": "published"
+  },
+  {
+   "term": "Discworlder",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Same invented world."
+  },
+  {
+   "term": "Discworldian",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Discworld is Terry Pratchett's invented world."
   },
   {
    "term": "Dogo Argentino",
@@ -358,7 +650,15 @@
    "disposition": "published"
   },
   {
+   "term": "Duluth model",
+   "disposition": "published"
+  },
+  {
    "term": "Dunkirk spirit",
+   "disposition": "published"
+  },
+  {
+   "term": "Dutch Shepherd",
    "disposition": "published"
   },
   {
@@ -374,8 +674,22 @@
    "disposition": "published"
   },
   {
+   "term": "Egerian",
+   "disposition": "published"
+  },
+  {
+   "term": "Eggenburgian",
+   "disposition": "published"
+  },
+  {
    "term": "Egyptian Mau",
    "disposition": "published"
+  },
+  {
+   "term": "El Dorado",
+   "disposition": "declined",
+   "reason": "legendary-place",
+   "note": "Spanish for the golden one, originally a gilded king and then a city of gold that was never located."
   },
   {
    "term": "Eleusinian Mysteries",
@@ -387,6 +701,10 @@
   },
   {
    "term": "English Shepherd",
+   "disposition": "published"
+  },
+  {
+   "term": "English breakfast",
    "disposition": "published"
   },
   {
@@ -402,6 +720,10 @@
    "disposition": "published"
   },
   {
+   "term": "English saddle",
+   "disposition": "published"
+  },
+  {
    "term": "English setter",
    "disposition": "published"
   },
@@ -410,8 +732,58 @@
    "disposition": "published"
   },
   {
+   "term": "English-cut",
+   "disposition": "published"
+  },
+  {
    "term": "Epsom salts",
    "disposition": "published"
+  },
+  {
+   "term": "Essex girl",
+   "disposition": "published"
+  },
+  {
+   "term": "Essex man",
+   "disposition": "published"
+  },
+  {
+   "term": "Eurosceptic",
+   "disposition": "declined",
+   "reason": "continent-or-ocean",
+   "note": "Euro- here stands for Europe, a continent."
+  },
+  {
+   "term": "Eurostyle",
+   "disposition": "declined",
+   "reason": "continent-or-ocean",
+   "note": "The Euro element refers to Europe as a whole, too large to pin to a location."
+  },
+  {
+   "term": "Everest syndrome",
+   "disposition": "published"
+  },
+  {
+   "term": "Ferro meridian",
+   "disposition": "published"
+  },
+  {
+   "term": "Filthadelphia",
+   "disposition": "published"
+  },
+  {
+   "term": "Finlandization",
+   "disposition": "published"
+  },
+  {
+   "term": "Finlandize",
+   "disposition": "published"
+  },
+  {
+   "term": "Florida honeymoon",
+   "disposition": "declined",
+   "reason": "unverifiable",
+   "note": "Glossed in Wiktionary as a dirty weekend with no citations, no etymology and no entry in Green's Dictionary of Slang."
   },
   {
    "term": "Florida panther",
@@ -426,7 +798,19 @@
    "disposition": "published"
   },
   {
+   "term": "Frankfurtian",
+   "disposition": "published"
+  },
+  {
    "term": "Frascati",
+   "disposition": "published"
+  },
+  {
+   "term": "French bread",
+   "disposition": "published"
+  },
+  {
+   "term": "French door",
    "disposition": "published"
   },
   {
@@ -454,11 +838,35 @@
    "disposition": "published"
   },
   {
+   "term": "Fulham virgin",
+   "disposition": "published"
+  },
+  {
+   "term": "Georgia overdrive",
+   "disposition": "published"
+  },
+  {
    "term": "German measles",
    "disposition": "published"
   },
   {
    "term": "German shepherd",
+   "disposition": "published"
+  },
+  {
+   "term": "Glasgow kiss",
+   "disposition": "published"
+  },
+  {
+   "term": "Glasgow magistrate",
+   "disposition": "published"
+  },
+  {
+   "term": "Glasgow salad",
+   "disposition": "published"
+  },
+  {
+   "term": "Glasgow smile",
    "disposition": "published"
   },
   {
@@ -471,6 +879,10 @@
   },
   {
    "term": "Gravettian",
+   "disposition": "published"
+  },
+  {
+   "term": "Greek salad",
    "disposition": "published"
   },
   {
@@ -490,6 +902,10 @@
    "disposition": "published"
   },
   {
+   "term": "Gypsy",
+   "disposition": "published"
+  },
+  {
    "term": "Hamburg parsley",
    "disposition": "published"
   },
@@ -498,7 +914,19 @@
    "disposition": "published"
   },
   {
+   "term": "Harlem sunset",
+   "disposition": "published"
+  },
+  {
    "term": "Havana",
+   "disposition": "published"
+  },
+  {
+   "term": "Havana syndrome",
+   "disposition": "published"
+  },
+  {
+   "term": "Havarti",
    "disposition": "published"
   },
   {
@@ -506,8 +934,34 @@
    "disposition": "published"
   },
   {
+   "term": "Hawthorne effect",
+   "disposition": "published"
+  },
+  {
+   "term": "Haymarket ware",
+   "disposition": "published"
+  },
+  {
    "term": "Highland games",
    "disposition": "published"
+  },
+  {
+   "term": "Hogwarts-esque",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Hogwarts is an invented school in the Harry Potter books."
+  },
+  {
+   "term": "Hogwartsian",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Hogwarts is an invented school in the Harry Potter books."
+  },
+  {
+   "term": "Hogwartsy",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Same invented school; no real-world location."
   },
   {
    "term": "Hollywood bed",
@@ -519,6 +973,14 @@
   },
   {
    "term": "Homburg",
+   "disposition": "published"
+  },
+  {
+   "term": "Hongcouver",
+   "disposition": "published"
+  },
+  {
+   "term": "Hoxton fin",
    "disposition": "published"
   },
   {
@@ -542,7 +1004,21 @@
    "disposition": "published"
   },
   {
+   "term": "Indiana Jones",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "Named for George Lucas's dog Indiana, not for the state."
+  },
+  {
    "term": "Irish setter",
+   "disposition": "published"
+  },
+  {
+   "term": "Irish wolfhound",
+   "disposition": "published"
+  },
+  {
+   "term": "Istanbulite",
    "disposition": "published"
   },
   {
@@ -562,6 +1038,14 @@
    "disposition": "published"
   },
   {
+   "term": "Japanimation",
+   "disposition": "published"
+  },
+  {
+   "term": "Japanophile",
+   "disposition": "published"
+  },
+  {
    "term": "Jena glass",
    "disposition": "published"
   },
@@ -574,7 +1058,27 @@
    "disposition": "published"
   },
   {
+   "term": "Jersey Devil",
+   "disposition": "published"
+  },
+  {
+   "term": "Jersey girl",
+   "disposition": "published"
+  },
+  {
    "term": "Joachimsthaler",
+   "disposition": "published"
+  },
+  {
+   "term": "Jumeirah Jane",
+   "disposition": "published"
+  },
+  {
+   "term": "Kansas City shuffle",
+   "disposition": "published"
+  },
+  {
+   "term": "Kensucky",
    "disposition": "published"
   },
   {
@@ -606,11 +1110,55 @@
    "disposition": "published"
   },
   {
+   "term": "Kopite",
+   "disposition": "published"
+  },
+  {
+   "term": "Korean age",
+   "disposition": "published"
+  },
+  {
+   "term": "Kotlin",
+   "disposition": "published"
+  },
+  {
+   "term": "Krems white",
+   "disposition": "published"
+  },
+  {
    "term": "Kyoto Protocol",
    "disposition": "published"
   },
   {
+   "term": "Lake Wobegon effect",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Lake Wobegon is Garrison Keillor's invented Minnesota town."
+  },
+  {
+   "term": "Las Vegas effect",
+   "disposition": "published"
+  },
+  {
+   "term": "Law of Jante",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Jante is the invented Danish town of Aksel Sandemose's 1933 novel."
+  },
+  {
+   "term": "Leaning Tower of Pisa",
+   "disposition": "published"
+  },
+  {
+   "term": "Lima syndrome",
+   "disposition": "published"
+  },
+  {
    "term": "Limburger",
+   "disposition": "published"
+  },
+  {
+   "term": "Limburger cheese",
    "disposition": "published"
   },
   {
@@ -650,7 +1198,19 @@
    "disposition": "published"
   },
   {
+   "term": "Madchester",
+   "disposition": "published"
+  },
+  {
+   "term": "Madridista",
+   "disposition": "published"
+  },
+  {
    "term": "Maine Coon",
+   "disposition": "published"
+  },
+  {
+   "term": "Manchurian candidate",
    "disposition": "published"
   },
   {
@@ -694,12 +1254,44 @@
    "disposition": "published"
   },
   {
+   "term": "Merseybeat",
+   "disposition": "published"
+  },
+  {
+   "term": "Mexican overdrive",
+   "disposition": "published"
+  },
+  {
+   "term": "Mexican standoff",
+   "disposition": "published"
+  },
+  {
    "term": "Mexican wave",
+   "disposition": "published"
+  },
+  {
+   "term": "Mexpat",
    "disposition": "published"
   },
   {
    "term": "Miami bass",
    "disposition": "published"
+  },
+  {
+   "term": "Michigan roll",
+   "disposition": "published"
+  },
+  {
+   "term": "Middle-earther",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Middle-earth is Tolkien's invented world."
+  },
+  {
+   "term": "Middle-earthian",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Middle-earth is Tolkien's invented world."
   },
   {
    "term": "Miltown",
@@ -714,7 +1306,37 @@
    "disposition": "published"
   },
   {
+   "term": "Minnesota Nice",
+   "disposition": "published"
+  },
+  {
+   "term": "Minnesota ice",
+   "disposition": "published"
+  },
+  {
+   "term": "Minnesota nice",
+   "disposition": "published"
+  },
+  {
    "term": "Mishima",
+   "disposition": "published"
+  },
+  {
+   "term": "Mississippi wind chime",
+   "disposition": "declined",
+   "reason": "unverifiable",
+   "note": "Rare racist slur with no documented etymology in any dictionary source."
+  },
+  {
+   "term": "Mississippian",
+   "disposition": "published"
+  },
+  {
+   "term": "Missouri canary",
+   "disposition": "published"
+  },
+  {
+   "term": "Missouri toothpick",
    "disposition": "published"
   },
   {
@@ -738,6 +1360,10 @@
    "disposition": "published"
   },
   {
+   "term": "Moscow salad",
+   "disposition": "published"
+  },
+  {
    "term": "Nabulsi soap",
    "disposition": "published"
   },
@@ -755,6 +1381,22 @@
   },
   {
    "term": "Neanderthal",
+   "disposition": "published"
+  },
+  {
+   "term": "Nebraska Ice",
+   "disposition": "published"
+  },
+  {
+   "term": "Nessie",
+   "disposition": "published"
+  },
+  {
+   "term": "Nevada Triangle",
+   "disposition": "published"
+  },
+  {
+   "term": "New England clam chowder",
    "disposition": "published"
   },
   {
@@ -778,6 +1420,14 @@
    "disposition": "published"
   },
   {
+   "term": "Newfoundland speed bump",
+   "disposition": "published"
+  },
+  {
+   "term": "Nice model",
+   "disposition": "published"
+  },
+  {
    "term": "Nicene Creed",
    "disposition": "published"
   },
@@ -790,7 +1440,27 @@
    "disposition": "published"
   },
   {
+   "term": "Nixon in China",
+   "disposition": "published"
+  },
+  {
+   "term": "Niçoise salad",
+   "disposition": "published"
+  },
+  {
    "term": "Nokia",
+   "disposition": "published"
+  },
+  {
+   "term": "Norwegian forest cat",
+   "disposition": "published"
+  },
+  {
+   "term": "Nueva Ecija",
+   "disposition": "published"
+  },
+  {
+   "term": "Nueva Vizcaya",
    "disposition": "published"
   },
   {
@@ -822,8 +1492,32 @@
    "disposition": "published"
   },
   {
+   "term": "Out of Africa",
+   "disposition": "declined",
+   "reason": "continent-or-ocean",
+   "note": "The eponym is the continent of Africa."
+  },
+  {
    "term": "Oxford comma",
    "disposition": "published"
+  },
+  {
+   "term": "Ozian",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Derived from the same invented Land of Oz."
+  },
+  {
+   "term": "Ozite",
+   "disposition": "declined",
+   "reason": "other",
+   "note": "Oz here is L. Frank Baum's fictional Land of Oz, not a real place."
+  },
+  {
+   "term": "POTC",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "Initialism of the film title Pirates of the Caribbean."
   },
   {
    "term": "Panama hat",
@@ -835,6 +1529,10 @@
   },
   {
    "term": "Paris-Brest",
+   "disposition": "published"
+  },
+  {
+   "term": "Parnassian",
    "disposition": "published"
   },
   {
@@ -862,6 +1560,14 @@
    "disposition": "published"
   },
   {
+   "term": "Pennsylvanian",
+   "disposition": "published"
+  },
+  {
+   "term": "Peruvian marching powder",
+   "disposition": "published"
+  },
+  {
    "term": "Philadelphia lawyer",
    "disposition": "published"
   },
@@ -879,6 +1585,18 @@
   },
   {
    "term": "Piltdown Man",
+   "disposition": "published"
+  },
+  {
+   "term": "Pitt Street farmer",
+   "disposition": "published"
+  },
+  {
+   "term": "Pittsburghese",
+   "disposition": "published"
+  },
+  {
+   "term": "Polish bed",
    "disposition": "published"
   },
   {
@@ -902,6 +1620,18 @@
    "disposition": "published"
   },
   {
+   "term": "Prussian red",
+   "disposition": "published"
+  },
+  {
+   "term": "Puertopia",
+   "disposition": "published"
+  },
+  {
+   "term": "Q-ship",
+   "disposition": "published"
+  },
+  {
    "term": "Quonset",
    "disposition": "published"
   },
@@ -915,6 +1645,18 @@
   },
   {
    "term": "Rhodesian Ridgeback",
+   "disposition": "published"
+  },
+  {
+   "term": "Rocky Mountain Kool-Aid",
+   "disposition": "published"
+  },
+  {
+   "term": "Rocky Mountain canary",
+   "disposition": "published"
+  },
+  {
+   "term": "Rocky Mountain oyster",
    "disposition": "published"
   },
   {
@@ -982,8 +1724,18 @@
    "disposition": "published"
   },
   {
+   "term": "Seattle roll",
+   "disposition": "published"
+  },
+  {
    "term": "Seville orange",
    "disposition": "published"
+  },
+  {
+   "term": "Shangri-La",
+   "disposition": "declined",
+   "reason": "legendary-place",
+   "note": "Invented in James Hilton's Lost Horizon and with no agreed real site."
   },
   {
    "term": "Sharon fruit",
@@ -994,8 +1746,38 @@
    "disposition": "published"
   },
   {
+   "term": "Shitsburgh",
+   "disposition": "published"
+  },
+  {
    "term": "Siamese twin",
    "disposition": "published"
+  },
+  {
+   "term": "Sloane Ranger",
+   "disposition": "published"
+  },
+  {
+   "term": "Smallvilleverse",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Smallville is the invented town of the Superman comics."
+  },
+  {
+   "term": "Sodom and Gomorrah",
+   "disposition": "declined",
+   "reason": "legendary-place",
+   "note": "Biblical cities with no agreed archaeological location."
+  },
+  {
+   "term": "Solutrean",
+   "disposition": "published"
+  },
+  {
+   "term": "Southsider",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "From the generic southside, not from any named place."
   },
   {
    "term": "Spanish fly",
@@ -1010,8 +1792,36 @@
    "disposition": "published"
   },
   {
+   "term": "Spenard divorce",
+   "disposition": "published"
+  },
+  {
    "term": "St. Paul sandwich",
    "disposition": "published"
+  },
+  {
+   "term": "Stepford",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Invented Connecticut town in Ira Levin's The Stepford Wives."
+  },
+  {
+   "term": "Stepford wife",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Stepford is the invented Connecticut town of Ira Levin's 1972 novel."
+  },
+  {
+   "term": "Stepfordesque",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Derived from the same invented town."
+  },
+  {
+   "term": "Stepfordian",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Derived from the same invented town."
   },
   {
    "term": "Stockholm syndrome",
@@ -1022,12 +1832,22 @@
    "disposition": "published"
   },
   {
+   "term": "Swedish model",
+   "disposition": "published"
+  },
+  {
    "term": "Swiss bank account",
    "disposition": "published"
   },
   {
    "term": "Swiss cheese",
    "disposition": "published"
+  },
+  {
+   "term": "Swiss meringue",
+   "disposition": "declined",
+   "reason": "unverifiable",
+   "note": "The whisked-over-heat method is real, but no source establishes why it is called Swiss."
   },
   {
    "term": "Sybaritic",
@@ -1042,6 +1862,16 @@
    "disposition": "published"
   },
   {
+   "term": "Tennessee Valley Indians",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "Ham radio backronym for TVI, television interference; the place supplies only the initials."
+  },
+  {
+   "term": "Tennessee quick step",
+   "disposition": "published"
+  },
+  {
    "term": "Tex-Mex",
    "disposition": "published"
   },
@@ -1050,7 +1880,15 @@
    "disposition": "published"
   },
   {
+   "term": "Texas heart shot",
+   "disposition": "published"
+  },
+  {
    "term": "Texas hold 'em",
+   "disposition": "published"
+  },
+  {
+   "term": "Texas mickey",
    "disposition": "published"
   },
   {
@@ -1066,11 +1904,19 @@
    "disposition": "published"
   },
   {
+   "term": "Texpat",
+   "disposition": "published"
+  },
+  {
    "term": "Thai Ridgeback",
    "disposition": "published"
   },
   {
    "term": "Thousand Island dressing",
+   "disposition": "published"
+  },
+  {
+   "term": "Tijuana Bible",
    "disposition": "published"
   },
   {
@@ -1086,6 +1932,12 @@
    "disposition": "published"
   },
   {
+   "term": "Tuktoyaktuk",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "Is the place name itself, an anglicized Inuvialuktun name, not an English word derived from a place."
+  },
+  {
    "term": "Turkish delight",
    "disposition": "published"
   },
@@ -1095,6 +1947,10 @@
   },
   {
    "term": "Tyrolean traverse",
+   "disposition": "published"
+  },
+  {
+   "term": "Utah curls",
    "disposition": "published"
   },
   {
@@ -1142,8 +1998,24 @@
    "disposition": "published"
   },
   {
+   "term": "Whetstone",
+   "disposition": "published"
+  },
+  {
    "term": "Wiener schnitzel",
    "disposition": "published"
+  },
+  {
+   "term": "Wizard of Oz",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Oz is invented for L. Frank Baum's 1900 book and has no real-world location."
+  },
+  {
+   "term": "Wong Tai Sin",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "Named after a deity, the Great Immortal Wong; the Hong Kong district takes its name from the temple, not the reverse."
   },
   {
    "term": "Worcestershire sauce",
@@ -1154,12 +2026,26 @@
    "disposition": "published"
   },
   {
+   "term": "Xavier",
+   "disposition": "published"
+  },
+  {
    "term": "Yorkshire pudding",
+   "disposition": "published"
+  },
+  {
+   "term": "abukumalite",
    "disposition": "published"
   },
   {
    "term": "afghan",
    "disposition": "published"
+  },
+  {
+   "term": "afro",
+   "disposition": "declined",
+   "reason": "continent-or-ocean",
+   "note": "Derived from Afro- and so from Africa, a continent and too large to pin to a point."
   },
   {
    "term": "albertosaur",
@@ -1170,11 +2056,39 @@
    "disposition": "published"
   },
   {
+   "term": "amarillite",
+   "disposition": "published"
+  },
+  {
    "term": "americano",
    "disposition": "published"
   },
   {
+   "term": "americium",
+   "disposition": "declined",
+   "reason": "continent-or-ocean",
+   "note": "Named for the Americas by analogy with europium; the proposed pin on Americ, Serbia is spurious."
+  },
+  {
+   "term": "amstallite",
+   "disposition": "published"
+  },
+  {
    "term": "angora",
+   "disposition": "published"
+  },
+  {
+   "term": "anilite",
+   "disposition": "published"
+  },
+  {
+   "term": "apple of Sodom",
+   "disposition": "declined",
+   "reason": "legendary-place",
+   "note": "Sodom has no agreed real site; the fruit is a legend attached to a legendary city."
+  },
+  {
+   "term": "ardealite",
    "disposition": "published"
   },
   {
@@ -1198,7 +2112,15 @@
    "disposition": "published"
   },
   {
+   "term": "australite",
+   "disposition": "published"
+  },
+  {
    "term": "avellane",
+   "disposition": "published"
+  },
+  {
+   "term": "baccarat",
    "disposition": "published"
   },
   {
@@ -1230,6 +2152,14 @@
    "disposition": "published"
   },
   {
+   "term": "barquillite",
+   "disposition": "published"
+  },
+  {
+   "term": "barège",
+   "disposition": "published"
+  },
+  {
    "term": "bayonet",
    "disposition": "published"
   },
@@ -1238,11 +2168,23 @@
    "disposition": "published"
   },
   {
+   "term": "beidellite",
+   "disposition": "published"
+  },
+  {
    "term": "bergamot",
    "disposition": "published"
   },
   {
+   "term": "berkelium",
+   "disposition": "published"
+  },
+  {
    "term": "berlin",
+   "disposition": "published"
+  },
+  {
+   "term": "betpakdalite",
    "disposition": "published"
   },
   {
@@ -1255,6 +2197,10 @@
   },
   {
    "term": "bible",
+   "disposition": "published"
+  },
+  {
+   "term": "bicchulite",
    "disposition": "published"
   },
   {
@@ -1275,6 +2221,10 @@
   },
   {
    "term": "bluepoint",
+   "disposition": "published"
+  },
+  {
+   "term": "bohemian",
    "disposition": "published"
   },
   {
@@ -1306,6 +2256,10 @@
    "disposition": "published"
   },
   {
+   "term": "bromlite",
+   "disposition": "published"
+  },
+  {
    "term": "brummagem",
    "disposition": "published"
   },
@@ -1330,6 +2284,16 @@
    "disposition": "published"
   },
   {
+   "term": "burpalite",
+   "disposition": "published"
+  },
+  {
+   "term": "byzantievite",
+   "disposition": "declined",
+   "reason": "other",
+   "note": "Named by Pautov and colleagues for the Byzantine empire as a metaphor for the mineral's chemical complexity, not for any locality."
+  },
+  {
    "term": "café liégeois",
    "disposition": "published"
   },
@@ -1338,11 +2302,23 @@
    "disposition": "published"
   },
   {
+   "term": "californium",
+   "disposition": "published"
+  },
+  {
    "term": "camembert",
    "disposition": "published"
   },
   {
+   "term": "camisa de chino",
+   "disposition": "published"
+  },
+  {
    "term": "canary",
+   "disposition": "published"
+  },
+  {
+   "term": "canola",
    "disposition": "published"
   },
   {
@@ -1362,6 +2338,22 @@
    "disposition": "published"
   },
   {
+   "term": "capris",
+   "disposition": "published"
+  },
+  {
+   "term": "caracolite",
+   "disposition": "published"
+  },
+  {
+   "term": "carolinium",
+   "disposition": "published"
+  },
+  {
+   "term": "carrollite",
+   "disposition": "published"
+  },
+  {
    "term": "carry coals to Newcastle",
    "disposition": "published"
   },
@@ -1375,6 +2367,14 @@
   },
   {
    "term": "castles in Spain",
+   "disposition": "published"
+  },
+  {
+   "term": "cebollite",
+   "disposition": "published"
+  },
+  {
+   "term": "ceyssatite",
    "disposition": "published"
   },
   {
@@ -1394,7 +2394,15 @@
    "disposition": "published"
   },
   {
+   "term": "chatkalite",
+   "disposition": "published"
+  },
+  {
    "term": "cheddar",
+   "disposition": "published"
+  },
+  {
+   "term": "chernobylite",
    "disposition": "published"
   },
   {
@@ -1414,6 +2422,10 @@
    "disposition": "published"
   },
   {
+   "term": "close one's eyes and think of England",
+   "disposition": "published"
+  },
+  {
    "term": "coach",
    "disposition": "published"
   },
@@ -1426,6 +2438,10 @@
    "disposition": "published"
   },
   {
+   "term": "colophonite",
+   "disposition": "published"
+  },
+  {
    "term": "colophony",
    "disposition": "published"
   },
@@ -1434,7 +2450,15 @@
    "disposition": "published"
   },
   {
+   "term": "congolite",
+   "disposition": "published"
+  },
+  {
    "term": "copper",
+   "disposition": "published"
+  },
+  {
+   "term": "cornwallite",
    "disposition": "published"
   },
   {
@@ -1443,6 +2467,14 @@
   },
   {
    "term": "cos lettuce",
+   "disposition": "published"
+  },
+  {
+   "term": "cosalite",
+   "disposition": "published"
+  },
+  {
+   "term": "cream Havarti",
    "disposition": "published"
   },
   {
@@ -1470,7 +2502,19 @@
    "disposition": "published"
   },
   {
+   "term": "damkjernite",
+   "disposition": "published"
+  },
+  {
+   "term": "damtjernite",
+   "disposition": "published"
+  },
+  {
    "term": "danish",
+   "disposition": "published"
+  },
+  {
+   "term": "darmstadtium",
    "disposition": "published"
   },
   {
@@ -1479,6 +2523,10 @@
   },
   {
    "term": "derby",
+   "disposition": "published"
+  },
+  {
+   "term": "discuss Uganda",
    "disposition": "published"
   },
   {
@@ -1502,6 +2550,14 @@
    "disposition": "published"
   },
   {
+   "term": "dubbo",
+   "disposition": "published"
+  },
+  {
+   "term": "dubnium",
+   "disposition": "published"
+  },
+  {
    "term": "duffel",
    "disposition": "published"
   },
@@ -1522,11 +2578,41 @@
    "disposition": "published"
   },
   {
+   "term": "ehlite",
+   "disposition": "published"
+  },
+  {
+   "term": "eifelite",
+   "disposition": "published"
+  },
+  {
+   "term": "elpasolite",
+   "disposition": "published"
+  },
+  {
+   "term": "erbium",
+   "disposition": "published"
+  },
+  {
    "term": "etna",
    "disposition": "published"
   },
   {
+   "term": "europium",
+   "disposition": "declined",
+   "reason": "continent-or-ocean",
+   "note": "Named for the continent of Europe, not a mappable locality."
+  },
+  {
    "term": "faience",
+   "disposition": "published"
+  },
+  {
+   "term": "fayalite",
+   "disposition": "published"
+  },
+  {
+   "term": "felbertalite",
    "disposition": "published"
   },
   {
@@ -1534,7 +2620,23 @@
    "disposition": "published"
   },
   {
+   "term": "fianelite",
+   "disposition": "published"
+  },
+  {
+   "term": "fichtelite",
+   "disposition": "published"
+  },
+  {
    "term": "fiddle while Rome burns",
+   "disposition": "published"
+  },
+  {
+   "term": "francevillite",
+   "disposition": "published"
+  },
+  {
+   "term": "francium",
    "disposition": "published"
   },
   {
@@ -1542,11 +2644,43 @@
    "disposition": "published"
   },
   {
+   "term": "franklinphilite",
+   "disposition": "published"
+  },
+  {
+   "term": "galangal",
+   "disposition": "published"
+  },
+  {
+   "term": "gallium",
+   "disposition": "published"
+  },
+  {
    "term": "gasconade",
    "disposition": "published"
   },
   {
+   "term": "genoise",
+   "disposition": "published"
+  },
+  {
+   "term": "get out of Dodge",
+   "disposition": "published"
+  },
+  {
+   "term": "getchellite",
+   "disposition": "published"
+  },
+  {
    "term": "geyser",
+   "disposition": "published"
+  },
+  {
+   "term": "gilalite",
+   "disposition": "published"
+  },
+  {
+   "term": "gingham",
    "disposition": "published"
   },
   {
@@ -1574,6 +2708,14 @@
    "disposition": "published"
   },
   {
+   "term": "grenache",
+   "disposition": "published"
+  },
+  {
+   "term": "grimselite",
+   "disposition": "published"
+  },
+  {
    "term": "guelder rose",
    "disposition": "published"
   },
@@ -1594,6 +2736,12 @@
    "disposition": "published"
   },
   {
+   "term": "hack",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "Inherited from Middle English hacken, to chop; no place involved."
+  },
+  {
    "term": "hackney writer",
    "disposition": "published"
   },
@@ -1606,7 +2754,19 @@
    "disposition": "published"
   },
   {
+   "term": "have more chins than Chinatown",
+   "disposition": "published"
+  },
+  {
+   "term": "have more chins than a Chinese phone book",
+   "disposition": "published"
+  },
+  {
    "term": "hell and half of Georgia",
+   "disposition": "published"
+  },
+  {
+   "term": "helvetane",
    "disposition": "published"
   },
   {
@@ -1618,7 +2778,15 @@
    "disposition": "published"
   },
   {
+   "term": "hockamore",
+   "disposition": "published"
+  },
+  {
    "term": "hollandaise sauce",
+   "disposition": "published"
+  },
+  {
+   "term": "holmium",
    "disposition": "published"
   },
   {
@@ -1630,7 +2798,33 @@
    "disposition": "published"
   },
   {
+   "term": "hot as Hades",
+   "disposition": "declined",
+   "reason": "legendary-place",
+   "note": "Hades is the mythological underworld, not a mappable place."
+  },
+  {
+   "term": "ikunolite",
+   "disposition": "published"
+  },
+  {
+   "term": "in more shit than a Werribee duck",
+   "disposition": "published"
+  },
+  {
+   "term": "indialite",
+   "disposition": "published"
+  },
+  {
    "term": "indigo",
+   "disposition": "published"
+  },
+  {
+   "term": "israelane",
+   "disposition": "published"
+  },
+  {
+   "term": "itabirite",
    "disposition": "published"
   },
   {
@@ -1643,6 +2837,10 @@
   },
   {
    "term": "japan",
+   "disposition": "published"
+  },
+  {
+   "term": "jarandolite",
    "disposition": "published"
   },
   {
@@ -1674,11 +2872,19 @@
    "disposition": "published"
   },
   {
+   "term": "johachidolite",
+   "disposition": "published"
+  },
+  {
    "term": "juarez",
    "disposition": "published"
   },
   {
    "term": "kabocha",
+   "disposition": "published"
+  },
+  {
+   "term": "kamaishilite",
    "disposition": "published"
   },
   {
@@ -1690,7 +2896,49 @@
    "disposition": "published"
   },
   {
+   "term": "karpatka",
+   "disposition": "published"
+  },
+  {
+   "term": "kasolite",
+   "disposition": "published"
+  },
+  {
+   "term": "kawazulite",
+   "disposition": "published"
+  },
+  {
+   "term": "kersantite",
+   "disposition": "published"
+  },
+  {
+   "term": "khmaralite",
+   "disposition": "published"
+  },
+  {
+   "term": "kimblewick",
+   "disposition": "published"
+  },
+  {
+   "term": "kinda",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "Pronunciation spelling of kind of; no place involved."
+  },
+  {
    "term": "kush",
+   "disposition": "published"
+  },
+  {
+   "term": "laurdalite",
+   "disposition": "published"
+  },
+  {
+   "term": "laurelite",
+   "disposition": "published"
+  },
+  {
+   "term": "lautenthalite",
    "disposition": "published"
   },
   {
@@ -1699,6 +2947,10 @@
   },
   {
    "term": "lesbian",
+   "disposition": "published"
+  },
+  {
+   "term": "lherzolite",
    "disposition": "published"
   },
   {
@@ -1714,6 +2966,12 @@
    "disposition": "published"
   },
   {
+   "term": "lilliputian",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Lilliput is an invented island in Gulliver's Travels."
+  },
+  {
    "term": "lima bean",
    "disposition": "published"
   },
@@ -1726,7 +2984,23 @@
    "disposition": "published"
   },
   {
+   "term": "livermorium",
+   "disposition": "published"
+  },
+  {
+   "term": "lutetium",
+   "disposition": "published"
+  },
+  {
    "term": "macassar oil",
+   "disposition": "published"
+  },
+  {
+   "term": "macédoine",
+   "disposition": "published"
+  },
+  {
+   "term": "madison",
    "disposition": "published"
   },
   {
@@ -1738,11 +3012,19 @@
    "disposition": "published"
   },
   {
+   "term": "magnesium",
+   "disposition": "published"
+  },
+  {
    "term": "magnet",
    "disposition": "published"
   },
   {
    "term": "majolica",
+   "disposition": "published"
+  },
+  {
+   "term": "malvoisie",
    "disposition": "published"
   },
   {
@@ -1778,7 +3060,15 @@
    "disposition": "published"
   },
   {
+   "term": "mbobomkulite",
+   "disposition": "published"
+  },
+  {
    "term": "meet one's Waterloo",
+   "disposition": "published"
+  },
+  {
+   "term": "melocoton",
    "disposition": "published"
   },
   {
@@ -1794,11 +3084,39 @@
    "disposition": "published"
   },
   {
+   "term": "minehillite",
+   "disposition": "published"
+  },
+  {
+   "term": "minyulite",
+   "disposition": "published"
+  },
+  {
    "term": "mirepoix",
    "disposition": "published"
   },
   {
    "term": "mocha",
+   "disposition": "published"
+  },
+  {
+   "term": "moldavite",
+   "disposition": "published"
+  },
+  {
+   "term": "montroyalite",
+   "disposition": "published"
+  },
+  {
+   "term": "mordenite",
+   "disposition": "published"
+  },
+  {
+   "term": "mornay",
+   "disposition": "published"
+  },
+  {
+   "term": "moschelite",
    "disposition": "published"
   },
   {
@@ -1810,11 +3128,23 @@
    "disposition": "published"
   },
   {
+   "term": "mullite",
+   "disposition": "published"
+  },
+  {
    "term": "muslin",
    "disposition": "published"
   },
   {
    "term": "nankeen",
+   "disposition": "published"
+  },
+  {
+   "term": "nebraskanic",
+   "disposition": "published"
+  },
+  {
+   "term": "nebraskanic acid",
    "disposition": "published"
   },
   {
@@ -1830,11 +3160,39 @@
    "disposition": "published"
   },
   {
+   "term": "ohmilite",
+   "disposition": "published"
+  },
+  {
+   "term": "okada",
+   "disposition": "published"
+  },
+  {
+   "term": "okayamalite",
+   "disposition": "published"
+  },
+  {
    "term": "olomoucine",
    "disposition": "published"
   },
   {
+   "term": "ominelite",
+   "disposition": "published"
+  },
+  {
+   "term": "orangeite",
+   "disposition": "published"
+  },
+  {
    "term": "orvietan",
+   "disposition": "published"
+  },
+  {
+   "term": "orvietite",
+   "disposition": "published"
+  },
+  {
+   "term": "ottrelite",
    "disposition": "published"
   },
   {
@@ -1843,6 +3201,14 @@
   },
   {
    "term": "palace",
+   "disposition": "published"
+  },
+  {
+   "term": "pannoniasaur",
+   "disposition": "published"
+  },
+  {
+   "term": "paracress",
    "disposition": "published"
   },
   {
@@ -1882,7 +3248,15 @@
    "disposition": "published"
   },
   {
+   "term": "play in Peoria",
+   "disposition": "published"
+  },
+  {
    "term": "polonaise",
+   "disposition": "published"
+  },
+  {
+   "term": "polonium",
    "disposition": "published"
   },
   {
@@ -1902,7 +3276,27 @@
    "disposition": "published"
   },
   {
+   "term": "pretulite",
+   "disposition": "published"
+  },
+  {
    "term": "quince",
+   "disposition": "published"
+  },
+  {
+   "term": "randannite",
+   "disposition": "published"
+  },
+  {
+   "term": "rauenthalite",
+   "disposition": "published"
+  },
+  {
+   "term": "rengeite",
+   "disposition": "published"
+  },
+  {
+   "term": "richellite",
    "disposition": "published"
   },
   {
@@ -1922,6 +3316,10 @@
    "disposition": "published"
   },
   {
+   "term": "salite",
+   "disposition": "published"
+  },
+  {
    "term": "sardine",
    "disposition": "published"
   },
@@ -1931,6 +3329,10 @@
   },
   {
    "term": "satsuma",
+   "disposition": "published"
+  },
+  {
+   "term": "scandium",
    "disposition": "published"
   },
   {
@@ -1951,6 +3353,10 @@
   },
   {
    "term": "send to Coventry",
+   "disposition": "published"
+  },
+  {
+   "term": "senegalite",
    "disposition": "published"
   },
   {
@@ -1982,6 +3388,16 @@
    "disposition": "published"
   },
   {
+   "term": "skutterudite",
+   "disposition": "published"
+  },
+  {
+   "term": "sodomy",
+   "disposition": "declined",
+   "reason": "legendary-place",
+   "note": "Derived from Sodom, a biblical city with no agreed real site."
+  },
+  {
    "term": "solecism",
    "disposition": "published"
   },
@@ -1994,6 +3410,10 @@
    "disposition": "published"
   },
   {
+   "term": "sorghum",
+   "disposition": "published"
+  },
+  {
    "term": "spa",
    "disposition": "published"
   },
@@ -2002,7 +3422,21 @@
    "disposition": "published"
   },
   {
+   "term": "stade",
+   "disposition": "declined",
+   "reason": "not-toponymic",
+   "note": "From Greek stadion, a unit of length and a racetrack; no place involved."
+  },
+  {
    "term": "stellenbosch",
+   "disposition": "published"
+  },
+  {
+   "term": "sterlinghillite",
+   "disposition": "published"
+  },
+  {
+   "term": "storrow",
    "disposition": "published"
   },
   {
@@ -2015,6 +3449,14 @@
   },
   {
    "term": "surrey",
+   "disposition": "published"
+  },
+  {
+   "term": "sweet home Alabama",
+   "disposition": "published"
+  },
+  {
+   "term": "swim the Thames",
    "disposition": "published"
   },
   {
@@ -2038,7 +3480,15 @@
    "disposition": "published"
   },
   {
+   "term": "take a wrong turn at Albuquerque",
+   "disposition": "published"
+  },
+  {
    "term": "tangerine",
+   "disposition": "published"
+  },
+  {
+   "term": "tanzanite",
    "disposition": "published"
   },
   {
@@ -2066,11 +3516,33 @@
    "disposition": "published"
   },
   {
+   "term": "terbium",
+   "disposition": "published"
+  },
+  {
    "term": "think of England",
    "disposition": "published"
   },
   {
+   "term": "three stops short of Dagenham",
+   "disposition": "published"
+  },
+  {
+   "term": "thulium",
+   "disposition": "declined",
+   "reason": "other",
+   "note": "Named for Thule, a legendary far northern land of classical geography with no agreed real location."
+  },
+  {
    "term": "tokay",
+   "disposition": "published"
+  },
+  {
+   "term": "tonalite",
+   "disposition": "published"
+  },
+  {
+   "term": "tripolite",
    "disposition": "published"
   },
   {
@@ -2090,6 +3562,10 @@
    "disposition": "published"
   },
   {
+   "term": "turgite",
+   "disposition": "published"
+  },
+  {
    "term": "turkey",
    "disposition": "published"
   },
@@ -2106,7 +3582,23 @@
    "disposition": "published"
   },
   {
+   "term": "uncompahgrite",
+   "disposition": "declined",
+   "reason": "unverifiable",
+   "note": "Named from Uncompahgre, but no source states which Uncompahgre feature, and the type locality at Iron Hill, Gunnison County, lies outside the Uncompahgre drainage."
+  },
+  {
    "term": "urfa biber",
+   "disposition": "published"
+  },
+  {
+   "term": "utopia",
+   "disposition": "declined",
+   "reason": "fictional-place",
+   "note": "Thomas More's invented island, named from Greek for no-place."
+  },
+  {
+   "term": "valley girl",
    "disposition": "published"
   },
   {
@@ -2122,6 +3614,20 @@
    "disposition": "published"
   },
   {
+   "term": "virginium",
+   "disposition": "published"
+  },
+  {
+   "term": "walk like an Egyptian",
+   "disposition": "published"
+  },
+  {
+   "term": "weddellite",
+   "disposition": "declined",
+   "reason": "continent-or-ocean",
+   "note": "Eponym is the Weddell Sea, which is also itself named for the sealing captain James Weddell."
+  },
+  {
    "term": "when in Rome, do as the Romans do",
    "disposition": "published"
   },
@@ -2134,7 +3640,39 @@
    "disposition": "published"
   },
   {
+   "term": "wuhanic",
+   "disposition": "declined",
+   "reason": "case-variant",
+   "note": "Wiktionary defines it as an ellipsis of wuhanic acid; covered by that entry."
+  },
+  {
+   "term": "wuhanic acid",
+   "disposition": "published"
+  },
+  {
+   "term": "ytterbium",
+   "disposition": "published"
+  },
+  {
+   "term": "yttrium",
+   "disposition": "published"
+  },
+  {
    "term": "zarzuela",
+   "disposition": "published"
+  },
+  {
+   "term": "zeerust",
+   "disposition": "published"
+  },
+  {
+   "term": "zoar",
+   "disposition": "declined",
+   "reason": "legendary-place",
+   "note": "Biblical city of refuge with no agreed site; treated like Sodom and Gomorrah, and the common noun has almost no currency."
+  },
+  {
+   "term": "zwieselite",
    "disposition": "published"
   }
  ]

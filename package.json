@@ -13,7 +13,8 @@
     "validate:places": "python3 scripts/validate-places.py",
     "validate:layers": "node --experimental-strip-types --no-warnings scripts/validate-layers.mjs",
     "test:e2e": "playwright test",
-    "data:stories": "node scripts/split-stories.mjs"
+    "data:stories": "node scripts/split-stories.mjs",
+    "validate:coverage": "python3 scripts/coverage-ledger.py"
   },
   "dependencies": {
     "lucide-react": "^1.44.0",
