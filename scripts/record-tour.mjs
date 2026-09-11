@@ -28,8 +28,8 @@ const gif = join(outDir, "tour.gif");
 
 /** Words a reader already knows, so the etymology lands without explanation. */
 const FLIGHTS = [
-  "sandwich", "jeans", "jersey", "marathon", "nokia",
-  "tuxedo", "spa", "peach", "bikini",
+  "sandwich", "mocha", "jeans", "jersey", "marathon",
+  "nokia", "tuxedo", "spa", "peach", "bikini",
 ];
 /** Guess mode shuffles its deck, so keep reseeding until it offers one of these. */
 const GUESSABLE = [

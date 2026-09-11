@@ -221,9 +221,9 @@ export function AtlasMap({
       projection="globe"
       attributionControl={{ compact: true }}
       cursor={onPickPoint && !guessPin ? "crosshair" : hover ? "pointer" : "grab"}
-      // Europe holds the densest run of pins in the atlas, so the globe opens
-      // facing it rather than on the equator.
-      initialViewState={{ longitude: 12, latitude: 47, zoom: 1.95 }}
+      // Framed so Europe's dense cluster sits in the upper half and Africa
+      // fills the lower, rather than centering on either one.
+      initialViewState={{ longitude: 13, latitude: 28, zoom: 1.9 }}
       minZoom={1}
       interactiveLayerIds={hidePins ? [] : INTERACTIVE}
       style={{ width: "100%", height: "100%" }}
