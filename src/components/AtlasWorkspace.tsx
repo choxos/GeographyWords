@@ -116,6 +116,22 @@ export function AtlasWorkspace() {
       }
     : null;
 
+  const filtersOn = Boolean(query.trim() || confidence || relationship);
+
+  // With filters narrowing the atlas, frame what is left rather than leaving
+  // the reader on the whole globe. Only while nothing specific is selected.
+  const fitTarget = useMemo(() => {
+    if (selected || !filtersOn || places.length === 0) return null;
+    const lngs = places.map((place) => place.lng);
+    const lats = places.map((place) => place.lat);
+    return {
+      west: Math.min(...lngs),
+      south: Math.min(...lats),
+      east: Math.max(...lngs),
+      north: Math.max(...lats),
+    };
+  }, [filtersOn, places, selected]);
+
   function pickPlace(slug: string) {
     const here = getWordsByPlace(slug);
     if (here.length === 0) return;
@@ -124,7 +140,6 @@ export function AtlasWorkspace() {
     setSelectedSlug(here.length === 1 ? here[0].slug : null);
   }
 
-  const filtersOn = Boolean(query.trim() || confidence || relationship);
 
   return (
     <div className="atlas-workspace">
@@ -264,6 +279,7 @@ export function AtlasWorkspace() {
           places={places}
           selectedPlaceSlug={selected?.place.slug}
           flyTarget={flyTarget}
+          fitTarget={fitTarget}
           onSelectPlace={pickPlace}
         />
       </div>

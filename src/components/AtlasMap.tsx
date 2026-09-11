@@ -23,12 +23,16 @@ import type { PlaceIndex } from "@/lib/data";
 
 export type FlyTarget = { lng: number; lat: number; zoom: number };
 
+/** A box to frame, used when a filter narrows the atlas to a few places. */
+export type FitTarget = { west: number; south: number; east: number; north: number };
+
 type AtlasMapProps = {
   places: PlaceIndex[];
   /** In guess mode the pins stay hidden until the answer is revealed. */
   hidePins?: boolean;
   selectedPlaceSlug?: string;
   flyTarget?: FlyTarget | null;
+  fitTarget?: FitTarget | null;
   arc?: { from: LngLat; to: LngLat } | null;
   guessPin?: LngLat | null;
   onSelectPlace?: (slug: string) => void;
@@ -49,6 +53,7 @@ export function AtlasMap({
   hidePins = false,
   selectedPlaceSlug,
   flyTarget,
+  fitTarget,
   arc,
   guessPin,
   onSelectPlace,
@@ -56,6 +61,7 @@ export function AtlasMap({
 }: AtlasMapProps) {
   const mapRef = useRef<MapRef>(null);
   const lastFlyKey = useRef("");
+  const lastFitKey = useRef("");
   const [ready, setReady] = useState(false);
   const [mapError, setMapError] = useState<string | null>(null);
   const [vectorTiles, setVectorTiles] = useState(0);
@@ -123,6 +129,32 @@ export function AtlasMap({
       essential: true,
     });
   }, [flyTarget, reducedMotion, ready]);
+
+  /**
+   * Frame the filtered places. A search that matches three pins should not
+   * leave the reader looking at the whole planet. A selected word takes
+   * precedence, since flying to it is the more specific intent.
+   */
+  useEffect(() => {
+    if (!ready || flyTarget || !fitTarget) {
+      if (!fitTarget) lastFitKey.current = "";
+      return;
+    }
+    const key = `${fitTarget.west},${fitTarget.south},${fitTarget.east},${fitTarget.north}`;
+    if (key === lastFitKey.current) return;
+    lastFitKey.current = key;
+    mapRef.current?.fitBounds(
+      [
+        [fitTarget.west, fitTarget.south],
+        [fitTarget.east, fitTarget.north],
+      ],
+      {
+        padding: 96,
+        maxZoom: 7,
+        duration: reducedMotion ? 0 : 1200,
+      },
+    );
+  }, [fitTarget, flyTarget, reducedMotion, ready]);
 
   const handleClick = useCallback(
     (event: MapLayerMouseEvent) => {
