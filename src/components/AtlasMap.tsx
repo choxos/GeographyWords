@@ -42,6 +42,8 @@ export function AtlasMap({
   const mapRef = useRef<MapRef>(null);
   const lastFlyKey = useRef("");
   const [ready, setReady] = useState(false);
+  const [mapError, setMapError] = useState<string | null>(null);
+  const [tiles, setTiles] = useState(0);
   const reducedMotion = useReducedMotion();
   const { resolvedTheme } = useTheme();
   const dark = resolvedTheme === "dark";
@@ -81,7 +83,6 @@ export function AtlasMap({
       cursor={onPickPoint && !guessPin ? "crosshair" : "grab"}
       initialViewState={{ longitude: 12, latitude: 24, zoom: 1.6 }}
       minZoom={1}
-      maxPitch={0}
       style={{ width: "100%", height: "100%" }}
       // Without a sky block the globe projection paints the space around the
       // sphere flat, so the planet reads as a hole rather than a globe.
@@ -105,6 +106,14 @@ export function AtlasMap({
             }
       }
       onLoad={() => setReady(true)}
+      onError={(event) => {
+        const message = event.error?.message ?? String(event.error ?? "unknown");
+        console.error("[atlas-map]", message, event.error);
+        setMapError(message);
+      }}
+      onSourceData={(event) => {
+        if (event.isSourceLoaded) setTiles((count) => count + 1);
+      }}
       onClick={(event) => {
         if (onPickPoint && !guessPin) {
           onPickPoint({ lng: event.lngLat.lng, lat: event.lngLat.lat });
@@ -182,6 +191,20 @@ export function AtlasMap({
       ) : null}
 
       <NavigationControl position="bottom-right" showCompass={false} />
+
+      {mapError ? (
+        <div className="atlas-map-error" role="status">
+          <strong>Map source error</strong>
+          <span>{mapError}</span>
+        </div>
+      ) : null}
+
+      {ready && tiles === 0 && !mapError ? (
+        <div className="atlas-map-error" role="status">
+          <strong>No tiles loaded</strong>
+          <span>Style attached but no source finished loading.</span>
+        </div>
+      ) : null}
     </Map>
   );
 }
