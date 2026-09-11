@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowRight, RotateCcw } from "lucide-react";
 import { CONFIDENCE_LABEL, CONFIDENCE_TONE } from "@/lib/copy";
+import { storyFor } from "@/data/stories";
 import { getPlaces, words as allWords } from "@/lib/data";
 import { formatKm, haversineKm, type LngLat } from "@/lib/geo";
 import type { Word } from "@/lib/types";
@@ -170,7 +171,7 @@ export function GuessGame() {
               </p>
 
               <p className="m-0 mt-3" style={{ fontSize: 14.5, lineHeight: 1.65, color: "var(--ink-2)" }}>
-                {word.story}
+                {storyFor(word.slug)}
               </p>
             </>
           ) : (

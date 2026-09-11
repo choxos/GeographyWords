@@ -33,7 +33,6 @@ export type Word = {
   pos: PartOfSpeech;
   definition: string;
   hook: string;
-  story: string;
   chain: string[];
   relationship: RelationshipType;
   confidence: Confidence;

@@ -79,6 +79,10 @@ test("a word in the url selects it and fills the details rail", async ({ page })
 
   const details = page.locator('[aria-label="Entry details"]');
   await expect(details).toContainText("Bombay duck", { timeout: 15_000 });
+
+  // The story arrives from its own chunk now, so an empty rail would mean
+  // the lazy import silently failed.
+  await expect(details.locator(".atlas-story")).not.toBeEmpty({ timeout: 15_000 });
 });
 
 test("escape clears the selection", async ({ page }) => {

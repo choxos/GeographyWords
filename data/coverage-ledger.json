@@ -1,0 +1,2141 @@
+{
+ "generated_from": "data/toponym-category.json, data/declined.json, src/data/words.ts",
+ "members": 887,
+ "published": 533,
+ "declined": 0,
+ "declined_by_reason": {},
+ "rows": [
+  {
+   "term": "Alberta clipper",
+   "disposition": "published"
+  },
+  {
+   "term": "Aleppo soap",
+   "disposition": "published"
+  },
+  {
+   "term": "American cheese",
+   "disposition": "published"
+  },
+  {
+   "term": "Appalachian dulcimer",
+   "disposition": "published"
+  },
+  {
+   "term": "Aran jumper",
+   "disposition": "published"
+  },
+  {
+   "term": "Arizona room",
+   "disposition": "published"
+  },
+  {
+   "term": "Armageddon",
+   "disposition": "published"
+  },
+  {
+   "term": "Attic salt",
+   "disposition": "published"
+  },
+  {
+   "term": "Baghdad by the Bay",
+   "disposition": "published"
+  },
+  {
+   "term": "Bakersfield sound",
+   "disposition": "published"
+  },
+  {
+   "term": "Bakewell pudding",
+   "disposition": "published"
+  },
+  {
+   "term": "Bakewell tart",
+   "disposition": "published"
+  },
+  {
+   "term": "Bangalore",
+   "disposition": "published"
+  },
+  {
+   "term": "Bath bun",
+   "disposition": "published"
+  },
+  {
+   "term": "Bath chair",
+   "disposition": "published"
+  },
+  {
+   "term": "Battenberg",
+   "disposition": "published"
+  },
+  {
+   "term": "Battenberg cake",
+   "disposition": "published"
+  },
+  {
+   "term": "Beaujolais",
+   "disposition": "published"
+  },
+  {
+   "term": "Bedlington terrier",
+   "disposition": "published"
+  },
+  {
+   "term": "Belfast sink",
+   "disposition": "published"
+  },
+  {
+   "term": "Belle de Boskoop",
+   "disposition": "published"
+  },
+  {
+   "term": "Berliner",
+   "disposition": "published"
+  },
+  {
+   "term": "Bermuda Triangle",
+   "disposition": "published"
+  },
+  {
+   "term": "Bermuda grass",
+   "disposition": "published"
+  },
+  {
+   "term": "Bermuda shorts",
+   "disposition": "published"
+  },
+  {
+   "term": "Bible",
+   "disposition": "published"
+  },
+  {
+   "term": "Bisbee blue",
+   "disposition": "published"
+  },
+  {
+   "term": "Black Forest cake",
+   "disposition": "published"
+  },
+  {
+   "term": "Black Forest gâteau",
+   "disposition": "published"
+  },
+  {
+   "term": "Boeotian",
+   "disposition": "published"
+  },
+  {
+   "term": "Bolognese sauce",
+   "disposition": "published"
+  },
+  {
+   "term": "Bombay duck",
+   "disposition": "published"
+  },
+  {
+   "term": "Bombay sandwich",
+   "disposition": "published"
+  },
+  {
+   "term": "Borodino bread",
+   "disposition": "published"
+  },
+  {
+   "term": "Borodinsky bread",
+   "disposition": "published"
+  },
+  {
+   "term": "Boston Brahmin",
+   "disposition": "published"
+  },
+  {
+   "term": "Boston cream pie",
+   "disposition": "published"
+  },
+  {
+   "term": "Bovey coal",
+   "disposition": "published"
+  },
+  {
+   "term": "Braeburn",
+   "disposition": "published"
+  },
+  {
+   "term": "Bretton Woods",
+   "disposition": "published"
+  },
+  {
+   "term": "Bristol sound",
+   "disposition": "published"
+  },
+  {
+   "term": "Bronx cheer",
+   "disposition": "published"
+  },
+  {
+   "term": "Brooklyn blackout cake",
+   "disposition": "published"
+  },
+  {
+   "term": "Brummagem",
+   "disposition": "published"
+  },
+  {
+   "term": "Brussels sprout",
+   "disposition": "published"
+  },
+  {
+   "term": "Byzantine",
+   "disposition": "published"
+  },
+  {
+   "term": "California Current",
+   "disposition": "published"
+  },
+  {
+   "term": "California king",
+   "disposition": "published"
+  },
+  {
+   "term": "California roll",
+   "disposition": "published"
+  },
+  {
+   "term": "Canada goose",
+   "disposition": "published"
+  },
+  {
+   "term": "Canadian bacon",
+   "disposition": "published"
+  },
+  {
+   "term": "Canton flannel",
+   "disposition": "published"
+  },
+  {
+   "term": "Cape Codder",
+   "disposition": "published"
+  },
+  {
+   "term": "Caprese salad",
+   "disposition": "published"
+  },
+  {
+   "term": "Carrara marble",
+   "disposition": "published"
+  },
+  {
+   "term": "Castile soap",
+   "disposition": "published"
+  },
+  {
+   "term": "Chardonnay",
+   "disposition": "published"
+  },
+  {
+   "term": "Charleston",
+   "disposition": "published"
+  },
+  {
+   "term": "Chautauqua",
+   "disposition": "published"
+  },
+  {
+   "term": "Cheddar cheese",
+   "disposition": "published"
+  },
+  {
+   "term": "Chelsea bun",
+   "disposition": "published"
+  },
+  {
+   "term": "Cheshire cat",
+   "disposition": "published"
+  },
+  {
+   "term": "Chianti",
+   "disposition": "published"
+  },
+  {
+   "term": "Chicago Boy",
+   "disposition": "published"
+  },
+  {
+   "term": "Chihuahua",
+   "disposition": "published"
+  },
+  {
+   "term": "Chinese pie",
+   "disposition": "published"
+  },
+  {
+   "term": "Chorleywood process",
+   "disposition": "published"
+  },
+  {
+   "term": "Cincinnati chili",
+   "disposition": "published"
+  },
+  {
+   "term": "Colby cheese",
+   "disposition": "published"
+  },
+  {
+   "term": "Concord grape",
+   "disposition": "published"
+  },
+  {
+   "term": "Condrieu",
+   "disposition": "published"
+  },
+  {
+   "term": "Coney Island hot dog",
+   "disposition": "published"
+  },
+  {
+   "term": "Copenhagen plank",
+   "disposition": "published"
+  },
+  {
+   "term": "Corinthian helmet",
+   "disposition": "published"
+  },
+  {
+   "term": "Covent Garden ague",
+   "disposition": "published"
+  },
+  {
+   "term": "Cro-Magnon",
+   "disposition": "published"
+  },
+  {
+   "term": "Cuban heel",
+   "disposition": "published"
+  },
+  {
+   "term": "Cuban sandwich",
+   "disposition": "published"
+  },
+  {
+   "term": "Cupertino",
+   "disposition": "published"
+  },
+  {
+   "term": "Cyprian",
+   "disposition": "published"
+  },
+  {
+   "term": "Dalmatian",
+   "disposition": "published"
+  },
+  {
+   "term": "Damascene conversion",
+   "disposition": "published"
+  },
+  {
+   "term": "Delft",
+   "disposition": "published"
+  },
+  {
+   "term": "Denver boot",
+   "disposition": "published"
+  },
+  {
+   "term": "Dijon mustard",
+   "disposition": "published"
+  },
+  {
+   "term": "Dogo Argentino",
+   "disposition": "published"
+  },
+  {
+   "term": "Dover sole",
+   "disposition": "published"
+  },
+  {
+   "term": "Dubai chocolate",
+   "disposition": "published"
+  },
+  {
+   "term": "Dunkirk spirit",
+   "disposition": "published"
+  },
+  {
+   "term": "Dutch door",
+   "disposition": "published"
+  },
+  {
+   "term": "Dutch rub",
+   "disposition": "published"
+  },
+  {
+   "term": "Eccles cake",
+   "disposition": "published"
+  },
+  {
+   "term": "Egyptian Mau",
+   "disposition": "published"
+  },
+  {
+   "term": "Eleusinian Mysteries",
+   "disposition": "published"
+  },
+  {
+   "term": "English Carrier",
+   "disposition": "published"
+  },
+  {
+   "term": "English Shepherd",
+   "disposition": "published"
+  },
+  {
+   "term": "English cocker spaniel",
+   "disposition": "published"
+  },
+  {
+   "term": "English horn",
+   "disposition": "published"
+  },
+  {
+   "term": "English muffin",
+   "disposition": "published"
+  },
+  {
+   "term": "English setter",
+   "disposition": "published"
+  },
+  {
+   "term": "English sparrow",
+   "disposition": "published"
+  },
+  {
+   "term": "Epsom salts",
+   "disposition": "published"
+  },
+  {
+   "term": "Florida panther",
+   "disposition": "published"
+  },
+  {
+   "term": "Florida room",
+   "disposition": "published"
+  },
+  {
+   "term": "Frankfurt School",
+   "disposition": "published"
+  },
+  {
+   "term": "Frascati",
+   "disposition": "published"
+  },
+  {
+   "term": "French horn",
+   "disposition": "published"
+  },
+  {
+   "term": "French leave",
+   "disposition": "published"
+  },
+  {
+   "term": "French polish",
+   "disposition": "published"
+  },
+  {
+   "term": "French tickler",
+   "disposition": "published"
+  },
+  {
+   "term": "French window",
+   "disposition": "published"
+  },
+  {
+   "term": "Frogmore stew",
+   "disposition": "published"
+  },
+  {
+   "term": "German measles",
+   "disposition": "published"
+  },
+  {
+   "term": "German shepherd",
+   "disposition": "published"
+  },
+  {
+   "term": "Gordian knot",
+   "disposition": "published"
+  },
+  {
+   "term": "Gouda",
+   "disposition": "published"
+  },
+  {
+   "term": "Gravettian",
+   "disposition": "published"
+  },
+  {
+   "term": "Greek yogurt",
+   "disposition": "published"
+  },
+  {
+   "term": "Gruyère",
+   "disposition": "published"
+  },
+  {
+   "term": "Guernsey",
+   "disposition": "published"
+  },
+  {
+   "term": "Gulf Stream",
+   "disposition": "published"
+  },
+  {
+   "term": "Hamburg parsley",
+   "disposition": "published"
+  },
+  {
+   "term": "Harlem Renaissance",
+   "disposition": "published"
+  },
+  {
+   "term": "Havana",
+   "disposition": "published"
+  },
+  {
+   "term": "Hawaiian shirt",
+   "disposition": "published"
+  },
+  {
+   "term": "Highland games",
+   "disposition": "published"
+  },
+  {
+   "term": "Hollywood bed",
+   "disposition": "published"
+  },
+  {
+   "term": "Hollywood ugly",
+   "disposition": "published"
+  },
+  {
+   "term": "Homburg",
+   "disposition": "published"
+  },
+  {
+   "term": "Hungarian notation",
+   "disposition": "published"
+  },
+  {
+   "term": "Icelandic Sheepdog",
+   "disposition": "published"
+  },
+  {
+   "term": "Idaho stop",
+   "disposition": "published"
+  },
+  {
+   "term": "India ink",
+   "disposition": "published"
+  },
+  {
+   "term": "India paper",
+   "disposition": "published"
+  },
+  {
+   "term": "Irish setter",
+   "disposition": "published"
+  },
+  {
+   "term": "Italian sandwich",
+   "disposition": "published"
+  },
+  {
+   "term": "Jaffa cake",
+   "disposition": "published"
+  },
+  {
+   "term": "Jaffa orange",
+   "disposition": "published"
+  },
+  {
+   "term": "Jamestown weed",
+   "disposition": "published"
+  },
+  {
+   "term": "Jena glass",
+   "disposition": "published"
+  },
+  {
+   "term": "Jericho walk",
+   "disposition": "published"
+  },
+  {
+   "term": "Jersey",
+   "disposition": "published"
+  },
+  {
+   "term": "Joachimsthaler",
+   "disposition": "published"
+  },
+  {
+   "term": "Kentucky rifle",
+   "disposition": "published"
+  },
+  {
+   "term": "Key lime",
+   "disposition": "published"
+  },
+  {
+   "term": "Khorasan wheat",
+   "disposition": "published"
+  },
+  {
+   "term": "Kiev cake",
+   "disposition": "published"
+  },
+  {
+   "term": "King Island brown thornbill",
+   "disposition": "published"
+  },
+  {
+   "term": "Kobe beef",
+   "disposition": "published"
+  },
+  {
+   "term": "Komodo dragon",
+   "disposition": "published"
+  },
+  {
+   "term": "Kyoto Protocol",
+   "disposition": "published"
+  },
+  {
+   "term": "Limburger",
+   "disposition": "published"
+  },
+  {
+   "term": "Lincolnshire spinach",
+   "disposition": "published"
+  },
+  {
+   "term": "Lipizzan",
+   "disposition": "published"
+  },
+  {
+   "term": "Liverpool sound",
+   "disposition": "published"
+  },
+  {
+   "term": "Logan bread",
+   "disposition": "published"
+  },
+  {
+   "term": "Lombardy poplar",
+   "disposition": "published"
+  },
+  {
+   "term": "London broil",
+   "disposition": "published"
+  },
+  {
+   "term": "Long Island iced tea",
+   "disposition": "published"
+  },
+  {
+   "term": "Lucerne hammer",
+   "disposition": "published"
+  },
+  {
+   "term": "Lyme disease",
+   "disposition": "published"
+  },
+  {
+   "term": "Maine Coon",
+   "disposition": "published"
+  },
+  {
+   "term": "Manhattan",
+   "disposition": "published"
+  },
+  {
+   "term": "Manhattan distance",
+   "disposition": "published"
+  },
+  {
+   "term": "Manitoba maple",
+   "disposition": "published"
+  },
+  {
+   "term": "Marseillaise",
+   "disposition": "published"
+  },
+  {
+   "term": "Marseille soap",
+   "disposition": "published"
+  },
+  {
+   "term": "Mecca",
+   "disposition": "published"
+  },
+  {
+   "term": "Mechlin",
+   "disposition": "published"
+  },
+  {
+   "term": "Melba",
+   "disposition": "published"
+  },
+  {
+   "term": "Melba toast",
+   "disposition": "published"
+  },
+  {
+   "term": "Mersey sound",
+   "disposition": "published"
+  },
+  {
+   "term": "Mexican wave",
+   "disposition": "published"
+  },
+  {
+   "term": "Miami bass",
+   "disposition": "published"
+  },
+  {
+   "term": "Miltown",
+   "disposition": "published"
+  },
+  {
+   "term": "Milwaukee protocol",
+   "disposition": "published"
+  },
+  {
+   "term": "Minamata disease",
+   "disposition": "published"
+  },
+  {
+   "term": "Mishima",
+   "disposition": "published"
+  },
+  {
+   "term": "Mogadishu line",
+   "disposition": "published"
+  },
+  {
+   "term": "Monte Carlo fallacy",
+   "disposition": "published"
+  },
+  {
+   "term": "Monterey Jack",
+   "disposition": "published"
+  },
+  {
+   "term": "Montreal Protocol",
+   "disposition": "published"
+  },
+  {
+   "term": "Montreal procedure",
+   "disposition": "published"
+  },
+  {
+   "term": "Nabulsi soap",
+   "disposition": "published"
+  },
+  {
+   "term": "Nanaimo bar",
+   "disposition": "published"
+  },
+  {
+   "term": "Nashville hot chicken",
+   "disposition": "published"
+  },
+  {
+   "term": "Nashville sound",
+   "disposition": "published"
+  },
+  {
+   "term": "Neanderthal",
+   "disposition": "published"
+  },
+  {
+   "term": "New Jersey tea",
+   "disposition": "published"
+  },
+  {
+   "term": "New York minute",
+   "disposition": "published"
+  },
+  {
+   "term": "New York second",
+   "disposition": "published"
+  },
+  {
+   "term": "New York strip",
+   "disposition": "published"
+  },
+  {
+   "term": "New York-style pizza",
+   "disposition": "published"
+  },
+  {
+   "term": "Nicene Creed",
+   "disposition": "published"
+  },
+  {
+   "term": "Nicene Faith",
+   "disposition": "published"
+  },
+  {
+   "term": "Nicene-Constantinopolitan Creed",
+   "disposition": "published"
+  },
+  {
+   "term": "Nokia",
+   "disposition": "published"
+  },
+  {
+   "term": "Oaxaca",
+   "disposition": "published"
+  },
+  {
+   "term": "Ockelbo disease",
+   "disposition": "published"
+  },
+  {
+   "term": "Oerlikon",
+   "disposition": "published"
+  },
+  {
+   "term": "Ohio Valley disease",
+   "disposition": "published"
+  },
+  {
+   "term": "Olomouc cheese",
+   "disposition": "published"
+  },
+  {
+   "term": "Orvieto",
+   "disposition": "published"
+  },
+  {
+   "term": "Orvieto ware",
+   "disposition": "published"
+  },
+  {
+   "term": "Oxford comma",
+   "disposition": "published"
+  },
+  {
+   "term": "Panama hat",
+   "disposition": "published"
+  },
+  {
+   "term": "Panamax",
+   "disposition": "published"
+  },
+  {
+   "term": "Paris-Brest",
+   "disposition": "published"
+  },
+  {
+   "term": "Parnassus",
+   "disposition": "published"
+  },
+  {
+   "term": "Pará nut",
+   "disposition": "published"
+  },
+  {
+   "term": "Peach Melba",
+   "disposition": "published"
+  },
+  {
+   "term": "Pearl Harbor",
+   "disposition": "published"
+  },
+  {
+   "term": "Peking duck",
+   "disposition": "published"
+  },
+  {
+   "term": "Pennsylvania barn",
+   "disposition": "published"
+  },
+  {
+   "term": "Philadelphia lawyer",
+   "disposition": "published"
+  },
+  {
+   "term": "Philly cheesesteak",
+   "disposition": "published"
+  },
+  {
+   "term": "Phrygian cap",
+   "disposition": "published"
+  },
+  {
+   "term": "Pierian spring",
+   "disposition": "published"
+  },
+  {
+   "term": "Piltdown Man",
+   "disposition": "published"
+  },
+  {
+   "term": "Pontefract cake",
+   "disposition": "published"
+  },
+  {
+   "term": "Pontus",
+   "disposition": "published"
+  },
+  {
+   "term": "Portland cement",
+   "disposition": "published"
+  },
+  {
+   "term": "Prosecco",
+   "disposition": "published"
+  },
+  {
+   "term": "Prussian blue",
+   "disposition": "published"
+  },
+  {
+   "term": "Quonset",
+   "disposition": "published"
+  },
+  {
+   "term": "Quonset hut",
+   "disposition": "published"
+  },
+  {
+   "term": "Rhode Island Red",
+   "disposition": "published"
+  },
+  {
+   "term": "Rhodesian Ridgeback",
+   "disposition": "published"
+  },
+  {
+   "term": "Rocky Mountain spotted fever",
+   "disposition": "published"
+  },
+  {
+   "term": "Romaine",
+   "disposition": "published"
+  },
+  {
+   "term": "Roman nose",
+   "disposition": "published"
+  },
+  {
+   "term": "Rome wasn't built in a day",
+   "disposition": "published"
+  },
+  {
+   "term": "Roquefort",
+   "disposition": "published"
+  },
+  {
+   "term": "Ross River fever",
+   "disposition": "published"
+  },
+  {
+   "term": "Rottweiler",
+   "disposition": "published"
+  },
+  {
+   "term": "Russian reversal",
+   "disposition": "published"
+  },
+  {
+   "term": "Russian roulette",
+   "disposition": "published"
+  },
+  {
+   "term": "Russian salad",
+   "disposition": "published"
+  },
+  {
+   "term": "Salvadoran quesadilla",
+   "disposition": "published"
+  },
+  {
+   "term": "San Francisco sound",
+   "disposition": "published"
+  },
+  {
+   "term": "Savoy cabbage",
+   "disposition": "published"
+  },
+  {
+   "term": "Schengen Area",
+   "disposition": "published"
+  },
+  {
+   "term": "Scotch tape",
+   "disposition": "published"
+  },
+  {
+   "term": "Scunthorpe problem",
+   "disposition": "published"
+  },
+  {
+   "term": "Seville orange",
+   "disposition": "published"
+  },
+  {
+   "term": "Sharon fruit",
+   "disposition": "published"
+  },
+  {
+   "term": "Shiraz",
+   "disposition": "published"
+  },
+  {
+   "term": "Siamese twin",
+   "disposition": "published"
+  },
+  {
+   "term": "Spanish fly",
+   "disposition": "published"
+  },
+  {
+   "term": "Spanish influenza",
+   "disposition": "published"
+  },
+  {
+   "term": "Spanish jasmine",
+   "disposition": "published"
+  },
+  {
+   "term": "St. Paul sandwich",
+   "disposition": "published"
+  },
+  {
+   "term": "Stockholm syndrome",
+   "disposition": "published"
+  },
+  {
+   "term": "Swedish massage",
+   "disposition": "published"
+  },
+  {
+   "term": "Swiss bank account",
+   "disposition": "published"
+  },
+  {
+   "term": "Swiss cheese",
+   "disposition": "published"
+  },
+  {
+   "term": "Sybaritic",
+   "disposition": "published"
+  },
+  {
+   "term": "Sèvres ware",
+   "disposition": "published"
+  },
+  {
+   "term": "Tasmanian devil",
+   "disposition": "published"
+  },
+  {
+   "term": "Tex-Mex",
+   "disposition": "published"
+  },
+  {
+   "term": "Texas dip",
+   "disposition": "published"
+  },
+  {
+   "term": "Texas hold 'em",
+   "disposition": "published"
+  },
+  {
+   "term": "Texas tea",
+   "disposition": "published"
+  },
+  {
+   "term": "Texas toast",
+   "disposition": "published"
+  },
+  {
+   "term": "Texas-sized",
+   "disposition": "published"
+  },
+  {
+   "term": "Thai Ridgeback",
+   "disposition": "published"
+  },
+  {
+   "term": "Thousand Island dressing",
+   "disposition": "published"
+  },
+  {
+   "term": "Timbuktu",
+   "disposition": "published"
+  },
+  {
+   "term": "Tower of Hanoi",
+   "disposition": "published"
+  },
+  {
+   "term": "Trojan horse",
+   "disposition": "published"
+  },
+  {
+   "term": "Turkish delight",
+   "disposition": "published"
+  },
+  {
+   "term": "Tyrian purple",
+   "disposition": "published"
+  },
+  {
+   "term": "Tyrolean traverse",
+   "disposition": "published"
+  },
+  {
+   "term": "Vauclusian spring",
+   "disposition": "published"
+  },
+  {
+   "term": "Vienna sausage",
+   "disposition": "published"
+  },
+  {
+   "term": "Vietnamese sandwich",
+   "disposition": "published"
+  },
+  {
+   "term": "Virginia creeper",
+   "disposition": "published"
+  },
+  {
+   "term": "Warrington hammer",
+   "disposition": "published"
+  },
+  {
+   "term": "Watergate",
+   "disposition": "published"
+  },
+  {
+   "term": "Welsh corgi",
+   "disposition": "published"
+  },
+  {
+   "term": "Welsh rarebit",
+   "disposition": "published"
+  },
+  {
+   "term": "Wensleydale",
+   "disposition": "published"
+  },
+  {
+   "term": "West Nile fever",
+   "disposition": "published"
+  },
+  {
+   "term": "West Nile virus",
+   "disposition": "published"
+  },
+  {
+   "term": "Wiener schnitzel",
+   "disposition": "published"
+  },
+  {
+   "term": "Worcestershire sauce",
+   "disposition": "published"
+  },
+  {
+   "term": "Xanadu",
+   "disposition": "published"
+  },
+  {
+   "term": "Yorkshire pudding",
+   "disposition": "published"
+  },
+  {
+   "term": "afghan",
+   "disposition": "published"
+  },
+  {
+   "term": "albertosaur",
+   "disposition": "published"
+  },
+  {
+   "term": "all roads lead to Rome",
+   "disposition": "published"
+  },
+  {
+   "term": "americano",
+   "disposition": "published"
+  },
+  {
+   "term": "angora",
+   "disposition": "published"
+  },
+  {
+   "term": "ascot",
+   "disposition": "published"
+  },
+  {
+   "term": "ascot tie",
+   "disposition": "published"
+  },
+  {
+   "term": "asiago",
+   "disposition": "published"
+  },
+  {
+   "term": "astrakhan",
+   "disposition": "published"
+  },
+  {
+   "term": "attic",
+   "disposition": "published"
+  },
+  {
+   "term": "avellane",
+   "disposition": "published"
+  },
+  {
+   "term": "badminton",
+   "disposition": "published"
+  },
+  {
+   "term": "baked Alaska",
+   "disposition": "published"
+  },
+  {
+   "term": "balaclava",
+   "disposition": "published"
+  },
+  {
+   "term": "balbriggan",
+   "disposition": "published"
+  },
+  {
+   "term": "balm of Gilead",
+   "disposition": "published"
+  },
+  {
+   "term": "balmoral",
+   "disposition": "published"
+  },
+  {
+   "term": "barnet",
+   "disposition": "published"
+  },
+  {
+   "term": "bayonet",
+   "disposition": "published"
+  },
+  {
+   "term": "bedlam",
+   "disposition": "published"
+  },
+  {
+   "term": "bergamot",
+   "disposition": "published"
+  },
+  {
+   "term": "berlin",
+   "disposition": "published"
+  },
+  {
+   "term": "bezant",
+   "disposition": "published"
+  },
+  {
+   "term": "bhut jolokia",
+   "disposition": "published"
+  },
+  {
+   "term": "bible",
+   "disposition": "published"
+  },
+  {
+   "term": "bikini",
+   "disposition": "published"
+  },
+  {
+   "term": "bilbo",
+   "disposition": "published"
+  },
+  {
+   "term": "bistoury",
+   "disposition": "published"
+  },
+  {
+   "term": "blarney",
+   "disposition": "published"
+  },
+  {
+   "term": "bluepoint",
+   "disposition": "published"
+  },
+  {
+   "term": "bologna",
+   "disposition": "published"
+  },
+  {
+   "term": "bolognese",
+   "disposition": "published"
+  },
+  {
+   "term": "botafogo",
+   "disposition": "published"
+  },
+  {
+   "term": "bougie",
+   "disposition": "published"
+  },
+  {
+   "term": "bourbon",
+   "disposition": "published"
+  },
+  {
+   "term": "brazil nut",
+   "disposition": "published"
+  },
+  {
+   "term": "bring owls to Athens",
+   "disposition": "published"
+  },
+  {
+   "term": "brummagem",
+   "disposition": "published"
+  },
+  {
+   "term": "buffalo wing",
+   "disposition": "published"
+  },
+  {
+   "term": "bugia",
+   "disposition": "published"
+  },
+  {
+   "term": "bungalow",
+   "disposition": "published"
+  },
+  {
+   "term": "bunkum",
+   "disposition": "published"
+  },
+  {
+   "term": "burgundy",
+   "disposition": "published"
+  },
+  {
+   "term": "café liégeois",
+   "disposition": "published"
+  },
+  {
+   "term": "calico",
+   "disposition": "published"
+  },
+  {
+   "term": "camembert",
+   "disposition": "published"
+  },
+  {
+   "term": "canary",
+   "disposition": "published"
+  },
+  {
+   "term": "cantaloupe",
+   "disposition": "published"
+  },
+  {
+   "term": "caprese salad",
+   "disposition": "published"
+  },
+  {
+   "term": "capri",
+   "disposition": "published"
+  },
+  {
+   "term": "capri pants",
+   "disposition": "published"
+  },
+  {
+   "term": "carry coals to Newcastle",
+   "disposition": "published"
+  },
+  {
+   "term": "casaba",
+   "disposition": "published"
+  },
+  {
+   "term": "cashmere",
+   "disposition": "published"
+  },
+  {
+   "term": "castles in Spain",
+   "disposition": "published"
+  },
+  {
+   "term": "chambray",
+   "disposition": "published"
+  },
+  {
+   "term": "champagne",
+   "disposition": "published"
+  },
+  {
+   "term": "charlatan",
+   "disposition": "published"
+  },
+  {
+   "term": "chartreuse",
+   "disposition": "published"
+  },
+  {
+   "term": "cheddar",
+   "disposition": "published"
+  },
+  {
+   "term": "cherry Bakewell tart",
+   "disposition": "published"
+  },
+  {
+   "term": "chicken Marengo",
+   "disposition": "published"
+  },
+  {
+   "term": "china",
+   "disposition": "published"
+  },
+  {
+   "term": "cilice",
+   "disposition": "published"
+  },
+  {
+   "term": "coach",
+   "disposition": "published"
+  },
+  {
+   "term": "cognac",
+   "disposition": "published"
+  },
+  {
+   "term": "cologne",
+   "disposition": "published"
+  },
+  {
+   "term": "colophony",
+   "disposition": "published"
+  },
+  {
+   "term": "conga",
+   "disposition": "published"
+  },
+  {
+   "term": "copper",
+   "disposition": "published"
+  },
+  {
+   "term": "cos",
+   "disposition": "published"
+  },
+  {
+   "term": "cos lettuce",
+   "disposition": "published"
+  },
+  {
+   "term": "cretonne",
+   "disposition": "published"
+  },
+  {
+   "term": "curaçao",
+   "disposition": "published"
+  },
+  {
+   "term": "currant",
+   "disposition": "published"
+  },
+  {
+   "term": "dacquoise",
+   "disposition": "published"
+  },
+  {
+   "term": "daiquiri",
+   "disposition": "published"
+  },
+  {
+   "term": "damask",
+   "disposition": "published"
+  },
+  {
+   "term": "danish",
+   "disposition": "published"
+  },
+  {
+   "term": "denim",
+   "disposition": "published"
+  },
+  {
+   "term": "derby",
+   "disposition": "published"
+  },
+  {
+   "term": "dollar",
+   "disposition": "published"
+  },
+  {
+   "term": "donnybrook",
+   "disposition": "published"
+  },
+  {
+   "term": "doolally",
+   "disposition": "published"
+  },
+  {
+   "term": "doolally tap",
+   "disposition": "published"
+  },
+  {
+   "term": "drap de Berry",
+   "disposition": "published"
+  },
+  {
+   "term": "duffel",
+   "disposition": "published"
+  },
+  {
+   "term": "duffel bag",
+   "disposition": "published"
+  },
+  {
+   "term": "duffel coat",
+   "disposition": "published"
+  },
+  {
+   "term": "dumdum",
+   "disposition": "published"
+  },
+  {
+   "term": "dungarees",
+   "disposition": "published"
+  },
+  {
+   "term": "etna",
+   "disposition": "published"
+  },
+  {
+   "term": "faience",
+   "disposition": "published"
+  },
+  {
+   "term": "fez",
+   "disposition": "published"
+  },
+  {
+   "term": "fiddle while Rome burns",
+   "disposition": "published"
+  },
+  {
+   "term": "frankfurter",
+   "disposition": "published"
+  },
+  {
+   "term": "gasconade",
+   "disposition": "published"
+  },
+  {
+   "term": "geyser",
+   "disposition": "published"
+  },
+  {
+   "term": "gnome of Zürich",
+   "disposition": "published"
+  },
+  {
+   "term": "go to Canossa",
+   "disposition": "published"
+  },
+  {
+   "term": "go to Halifax",
+   "disposition": "published"
+  },
+  {
+   "term": "goodnight Vienna",
+   "disposition": "published"
+  },
+  {
+   "term": "gorgonzola",
+   "disposition": "published"
+  },
+  {
+   "term": "gouda",
+   "disposition": "published"
+  },
+  {
+   "term": "guelder rose",
+   "disposition": "published"
+  },
+  {
+   "term": "guinea fowl",
+   "disposition": "published"
+  },
+  {
+   "term": "guinea pig",
+   "disposition": "published"
+  },
+  {
+   "term": "habanera",
+   "disposition": "published"
+  },
+  {
+   "term": "habanero",
+   "disposition": "published"
+  },
+  {
+   "term": "hackney writer",
+   "disposition": "published"
+  },
+  {
+   "term": "hamburger",
+   "disposition": "published"
+  },
+  {
+   "term": "hantavirus",
+   "disposition": "published"
+  },
+  {
+   "term": "hell and half of Georgia",
+   "disposition": "published"
+  },
+  {
+   "term": "henley",
+   "disposition": "published"
+  },
+  {
+   "term": "hock",
+   "disposition": "published"
+  },
+  {
+   "term": "hollandaise sauce",
+   "disposition": "published"
+  },
+  {
+   "term": "holy Toledo",
+   "disposition": "published"
+  },
+  {
+   "term": "hooch",
+   "disposition": "published"
+  },
+  {
+   "term": "indigo",
+   "disposition": "published"
+  },
+  {
+   "term": "italic",
+   "disposition": "published"
+  },
+  {
+   "term": "jalapeño",
+   "disposition": "published"
+  },
+  {
+   "term": "japan",
+   "disposition": "published"
+  },
+  {
+   "term": "java",
+   "disposition": "published"
+  },
+  {
+   "term": "jeans",
+   "disposition": "published"
+  },
+  {
+   "term": "jersey",
+   "disposition": "published"
+  },
+  {
+   "term": "jet",
+   "disposition": "published"
+  },
+  {
+   "term": "jimsonweed",
+   "disposition": "published"
+  },
+  {
+   "term": "jipijapa",
+   "disposition": "published"
+  },
+  {
+   "term": "jodhpurs",
+   "disposition": "published"
+  },
+  {
+   "term": "juarez",
+   "disposition": "published"
+  },
+  {
+   "term": "kabocha",
+   "disposition": "published"
+  },
+  {
+   "term": "kaolin",
+   "disposition": "published"
+  },
+  {
+   "term": "karakul",
+   "disposition": "published"
+  },
+  {
+   "term": "kush",
+   "disposition": "published"
+  },
+  {
+   "term": "leghorn",
+   "disposition": "published"
+  },
+  {
+   "term": "lesbian",
+   "disposition": "published"
+  },
+  {
+   "term": "lido",
+   "disposition": "published"
+  },
+  {
+   "term": "lie back and think of England",
+   "disposition": "published"
+  },
+  {
+   "term": "like Blackpool Illuminations",
+   "disposition": "published"
+  },
+  {
+   "term": "lima bean",
+   "disposition": "published"
+  },
+  {
+   "term": "limerick",
+   "disposition": "published"
+  },
+  {
+   "term": "limousine",
+   "disposition": "published"
+  },
+  {
+   "term": "macassar oil",
+   "disposition": "published"
+  },
+  {
+   "term": "madras",
+   "disposition": "published"
+  },
+  {
+   "term": "magenta",
+   "disposition": "published"
+  },
+  {
+   "term": "magnet",
+   "disposition": "published"
+  },
+  {
+   "term": "majolica",
+   "disposition": "published"
+  },
+  {
+   "term": "manganese",
+   "disposition": "published"
+  },
+  {
+   "term": "manila",
+   "disposition": "published"
+  },
+  {
+   "term": "manila envelope",
+   "disposition": "published"
+  },
+  {
+   "term": "manila paper",
+   "disposition": "published"
+  },
+  {
+   "term": "marathon",
+   "disposition": "published"
+  },
+  {
+   "term": "marvel of Peru",
+   "disposition": "published"
+  },
+  {
+   "term": "marzipan",
+   "disposition": "published"
+  },
+  {
+   "term": "mayonnaise",
+   "disposition": "published"
+  },
+  {
+   "term": "meet one's Waterloo",
+   "disposition": "published"
+  },
+  {
+   "term": "milanesa",
+   "disposition": "published"
+  },
+  {
+   "term": "milliner",
+   "disposition": "published"
+  },
+  {
+   "term": "millinery",
+   "disposition": "published"
+  },
+  {
+   "term": "mirepoix",
+   "disposition": "published"
+  },
+  {
+   "term": "mocha",
+   "disposition": "published"
+  },
+  {
+   "term": "mousseline",
+   "disposition": "published"
+  },
+  {
+   "term": "muenster",
+   "disposition": "published"
+  },
+  {
+   "term": "muslin",
+   "disposition": "published"
+  },
+  {
+   "term": "nankeen",
+   "disposition": "published"
+  },
+  {
+   "term": "neroli",
+   "disposition": "published"
+  },
+  {
+   "term": "norovirus",
+   "disposition": "published"
+  },
+  {
+   "term": "not in Kansas anymore",
+   "disposition": "published"
+  },
+  {
+   "term": "olomoucine",
+   "disposition": "published"
+  },
+  {
+   "term": "orvietan",
+   "disposition": "published"
+  },
+  {
+   "term": "paisley",
+   "disposition": "published"
+  },
+  {
+   "term": "palace",
+   "disposition": "published"
+  },
+  {
+   "term": "parmesan",
+   "disposition": "published"
+  },
+  {
+   "term": "pavane",
+   "disposition": "published"
+  },
+  {
+   "term": "peach",
+   "disposition": "published"
+  },
+  {
+   "term": "pilsner",
+   "disposition": "published"
+  },
+  {
+   "term": "pisco",
+   "disposition": "published"
+  },
+  {
+   "term": "pistol",
+   "disposition": "published"
+  },
+  {
+   "term": "plain Dunstable",
+   "disposition": "published"
+  },
+  {
+   "term": "plain as Dunstable highway",
+   "disposition": "published"
+  },
+  {
+   "term": "plaster of Paris",
+   "disposition": "published"
+  },
+  {
+   "term": "polonaise",
+   "disposition": "published"
+  },
+  {
+   "term": "pomfret cake",
+   "disposition": "published"
+  },
+  {
+   "term": "port",
+   "disposition": "published"
+  },
+  {
+   "term": "port wine",
+   "disposition": "published"
+  },
+  {
+   "term": "pozzolana",
+   "disposition": "published"
+  },
+  {
+   "term": "quince",
+   "disposition": "published"
+  },
+  {
+   "term": "road to Damascus",
+   "disposition": "published"
+  },
+  {
+   "term": "romaine",
+   "disposition": "published"
+  },
+  {
+   "term": "rose of Jericho",
+   "disposition": "published"
+  },
+  {
+   "term": "rugby",
+   "disposition": "published"
+  },
+  {
+   "term": "sardine",
+   "disposition": "published"
+  },
+  {
+   "term": "satin",
+   "disposition": "published"
+  },
+  {
+   "term": "satsuma",
+   "disposition": "published"
+  },
+  {
+   "term": "sell coal to Newcastle",
+   "disposition": "published"
+  },
+  {
+   "term": "sell coals to Newcastle",
+   "disposition": "published"
+  },
+  {
+   "term": "seltzer",
+   "disposition": "published"
+  },
+  {
+   "term": "seltzer water",
+   "disposition": "published"
+  },
+  {
+   "term": "send to Coventry",
+   "disposition": "published"
+  },
+  {
+   "term": "serendipity",
+   "disposition": "published"
+  },
+  {
+   "term": "shallot",
+   "disposition": "published"
+  },
+  {
+   "term": "shanghai",
+   "disposition": "published"
+  },
+  {
+   "term": "sherry",
+   "disposition": "published"
+  },
+  {
+   "term": "shipshape and Bristol fashion",
+   "disposition": "published"
+  },
+  {
+   "term": "shut one's eyes and think of England",
+   "disposition": "published"
+  },
+  {
+   "term": "sienna",
+   "disposition": "published"
+  },
+  {
+   "term": "solecism",
+   "disposition": "published"
+  },
+  {
+   "term": "solid as the Rock of Gibraltar",
+   "disposition": "published"
+  },
+  {
+   "term": "something is rotten in the state of Denmark",
+   "disposition": "published"
+  },
+  {
+   "term": "spa",
+   "disposition": "published"
+  },
+  {
+   "term": "sriracha",
+   "disposition": "published"
+  },
+  {
+   "term": "stellenbosch",
+   "disposition": "published"
+  },
+  {
+   "term": "stromboli",
+   "disposition": "published"
+  },
+  {
+   "term": "suede",
+   "disposition": "published"
+  },
+  {
+   "term": "surrey",
+   "disposition": "published"
+  },
+  {
+   "term": "swim the Tiber",
+   "disposition": "published"
+  },
+  {
+   "term": "sybarite",
+   "disposition": "published"
+  },
+  {
+   "term": "sybaritic",
+   "disposition": "published"
+  },
+  {
+   "term": "tabby",
+   "disposition": "published"
+  },
+  {
+   "term": "take French leave",
+   "disposition": "published"
+  },
+  {
+   "term": "tangerine",
+   "disposition": "published"
+  },
+  {
+   "term": "tarantella",
+   "disposition": "published"
+  },
+  {
+   "term": "tarantula",
+   "disposition": "published"
+  },
+  {
+   "term": "telemark",
+   "disposition": "published"
+  },
+  {
+   "term": "telemark skiing",
+   "disposition": "published"
+  },
+  {
+   "term": "telemark turn",
+   "disposition": "published"
+  },
+  {
+   "term": "tequila",
+   "disposition": "published"
+  },
+  {
+   "term": "think of England",
+   "disposition": "published"
+  },
+  {
+   "term": "tokay",
+   "disposition": "published"
+  },
+  {
+   "term": "troy grain",
+   "disposition": "published"
+  },
+  {
+   "term": "troy ounce",
+   "disposition": "published"
+  },
+  {
+   "term": "troy pound",
+   "disposition": "published"
+  },
+  {
+   "term": "tularemia",
+   "disposition": "published"
+  },
+  {
+   "term": "turkey",
+   "disposition": "published"
+  },
+  {
+   "term": "turquoise",
+   "disposition": "published"
+  },
+  {
+   "term": "tuxedo",
+   "disposition": "published"
+  },
+  {
+   "term": "ulster",
+   "disposition": "published"
+  },
+  {
+   "term": "urfa biber",
+   "disposition": "published"
+  },
+  {
+   "term": "veronal",
+   "disposition": "published"
+  },
+  {
+   "term": "vichyssoise",
+   "disposition": "published"
+  },
+  {
+   "term": "viennoiserie",
+   "disposition": "published"
+  },
+  {
+   "term": "when in Rome, do as the Romans do",
+   "disposition": "published"
+  },
+  {
+   "term": "winnebago",
+   "disposition": "published"
+  },
+  {
+   "term": "worsted",
+   "disposition": "published"
+  },
+  {
+   "term": "zarzuela",
+   "disposition": "published"
+  }
+ ]
+}

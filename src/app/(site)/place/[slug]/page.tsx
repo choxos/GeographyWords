@@ -11,6 +11,7 @@ import {
   RELATIONSHIP_LABEL,
 } from "@/lib/copy";
 import { getPlaces, getWordsByPlace, nearestWords } from "@/lib/data";
+import { storyFor } from "@/data/stories";
 import { formatKm } from "@/lib/geo";
 
 type PlaceParams = { slug: string };
@@ -158,7 +159,7 @@ export default async function PlacePage({
               </p>
 
               <p className="m-0" style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--ink-2)" }}>
-                {word.story}
+                {storyFor(word.slug)}
               </p>
 
               <div

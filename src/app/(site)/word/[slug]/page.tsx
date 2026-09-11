@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ChevronRight, ExternalLink, MapPin } from "lucide-react";
 import { MiniMap } from "@/components/MiniMap";
+import { storyFor } from "@/data/stories";
 import { ShareButton } from "@/components/ShareButton";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import {
@@ -44,7 +45,7 @@ export async function generateMetadata({
     description: `${word.hook} ${word.definition} Pinned to ${word.place.name}, ${word.place.country}.`,
     openGraph: {
       title: `${word.lemma}: ${word.hook}`,
-      description: word.story,
+      description: storyFor(word.slug),
       url: `/word/${word.slug}`,
     },
     alternates: { canonical: `/word/${word.slug}` },
@@ -281,7 +282,7 @@ export default async function WordPage({
           className="m-0 mt-4"
           style={{ fontSize: 19, lineHeight: 1.7, color: "var(--ink-2)", maxWidth: 680 }}
         >
-          {word.story}
+          {storyFor(word.slug)}
         </p>
       </section>
 
@@ -334,7 +335,7 @@ export default async function WordPage({
             "@context": "https://schema.org",
             "@type": "DefinedTerm",
             name: word.lemma,
-            description: word.story,
+            description: storyFor(word.slug),
             inDefinedTermSet: {
               "@type": "DefinedTermSet",
               name: "Geography Words",

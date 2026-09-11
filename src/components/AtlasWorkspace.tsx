@@ -361,6 +361,27 @@ export function AtlasWorkspace() {
   );
 }
 
+/**
+ * Loads the story module once, then reads each entry out of it. The import
+ * resolves to the same module instance on every call, so only the first
+ * selection pays for the fetch.
+ */
+function useStory(slug: string) {
+  const [stories, setStories] = useState<Record<string, string> | null>(null);
+
+  useEffect(() => {
+    let live = true;
+    import("@/data/stories").then((module) => {
+      if (live) setStories(module.STORIES);
+    });
+    return () => {
+      live = false;
+    };
+  }, []);
+
+  return stories?.[slug] ?? "";
+}
+
 function toneVar(confidence: Confidence) {
   if (confidence === "well-attested") return "attested";
   if (confidence === "probable") return "probable";
@@ -371,6 +392,9 @@ function toneVar(confidence: Confidence) {
 
 function Inspector({ word, onClose }: { word: Word; onClose: () => void }) {
   const sources = sourcesFor(word);
+  // Stories are a quarter of the dataset and only the open entry shows one,
+  // so they are fetched on first selection rather than shipped with the map.
+  const story = useStory(word.slug);
   const alsoHere = getWordsByPlace(word.place.slug).filter(
     (item) => item.slug !== word.slug,
   );
@@ -413,7 +437,7 @@ function Inspector({ word, onClose }: { word: Word; onClose: () => void }) {
 
         <div className="atlas-block">
           <span className="atlas-filter-label">The entry</span>
-          <p className="atlas-story">{word.story}</p>
+          <p className="atlas-story">{story}</p>
         </div>
 
         <div className="atlas-block">

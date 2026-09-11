@@ -7,8 +7,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sturdy cotton twill cloth, usually dyed indigo.",
     hook: "The cloth is named for Nîmes, not for jeans.",
-    story:
-      "English took the name from French serge de Nîmes, twill associated with the city of Nîmes. The fabric later became the body of workwear, then of jeans.",
     chain: ["serge de Nîmes", "Nîmes"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -31,8 +29,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Trousers of heavy twill, especially denim.",
     hook: "The trousers point to Genoa, not to the American West.",
-    story:
-      "The English word comes by way of French Gênes, the name for Genoa. Sailors and workers there were associated with a heavy cotton cloth that later became jeans.",
     chain: ["bleu de Gênes", "Gênes", "Genoa"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -55,8 +51,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A racket game played with a shuttlecock.",
     hook: "The sport is named for an English country house.",
-    story:
-      "The modern game took its English name from Badminton House in Gloucestershire, where it was played in the 19th century. Related shuttlecock games are older and not English.",
     chain: ["Badminton House", "Badminton"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -79,8 +73,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A close-fitting knit covering for the head and neck.",
     hook: "The winter hood is named for a Crimean War landing place.",
-    story:
-      "British troops at the 1854 Battle of Balaclava received knitted coverings against the cold. The garment kept the name of the town on the Crimean coast.",
     chain: ["Battle of Balaclava", "Balaklava"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -103,8 +95,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A blade fixed to the muzzle of a firearm.",
     hook: "The blade is traditionally tied to a port in the Basque country.",
-    story:
-      "French baïonnette is conventionally linked to Bayonne, a city associated with early use or manufacture of the weapon. Some etymologists treat the town link as traditional rather than proven.",
     chain: ["baïonnette", "Bayonne"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -127,8 +117,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A two-piece swimsuit.",
     hook: "The swimsuit is named for a nuclear test site.",
-    story:
-      "In 1946 Louis Réard named a two-piece swimsuit after Bikini Atoll, where the United States had just begun nuclear tests. The atoll’s own name is Marshallese and has nothing to do with swimming.",
     chain: ["Bikini Atoll"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -151,8 +139,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Sparkling wine from the Champagne region of France.",
     hook: "The drink is a place-name first, a party word second.",
-    story:
-      "English borrowed the name of the French province whose sparkling wine became famous. In protected use, champagne still points to that region rather than to any sparkling wine.",
     chain: ["Champagne"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -175,8 +161,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A brandy distilled in the region around Cognac.",
     hook: "The brandy is the town’s name in a glass.",
-    story:
-      "The drink takes its name from Cognac in western France, the town around which the brandy was produced and shipped. English kept the place-name as the word for the spirit.",
     chain: ["Cognac"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -199,8 +183,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A firm cow’s-milk cheese, originally from Somerset.",
     hook: "The cheese is named for a gorge village, not a brand.",
-    story:
-      "The cheese takes its name from Cheddar in Somerset, where it was made and matured, including in the local caves. The village name then became a generic English cheese word.",
     chain: ["Cheddar"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -223,8 +205,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Dutch cow’s-milk cheese, typically mild and round.",
     hook: "The cheese is named for the market that sold it.",
-    story:
-      "Gouda in South Holland was the market town through which the regional cheese was traded. English borrowed the town’s name as the name of the cheese.",
     chain: ["Gouda"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -247,8 +227,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard, granular cheese associated with Parma.",
     hook: "The grater cheese is an English take on Parma.",
-    story:
-      "English parmesan comes from French parmesan and Italian parmigiano, “of Parma.” The cheese belongs to a wider area of northern Italy, but the city supplied the English name.",
     chain: ["parmigiano", "Parma"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -271,8 +249,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A ground-beef patty, often served in a bun.",
     hook: "The sandwich is American. The name still points to Hamburg.",
-    story:
-      "Hamburger began as Hamburg steak, chopped beef associated with the German port. The bun sandwich is a later American form; the city name stuck to the meat.",
     chain: ["Hamburg steak", "Hamburg"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -295,8 +271,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A smoked sausage of the type associated with Frankfurt.",
     hook: "The hot dog’s older name is a city adjective.",
-    story:
-      "German Frankfurter names a sausage from Frankfurt am Main. English borrowed the adjective and later shortened the food to frank.",
     chain: ["Frankfurter", "Frankfurt"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -319,8 +293,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A frankfurter-style sausage; also an informal name for Vienna.",
     hook: "The sausage is named for Vienna, in German Wien.",
-    story:
-      "German Wiener means “of Vienna.” English took the adjective as a sausage name, parallel to frankfurter. The place behind the word is Wien.",
     chain: ["Wiener", "Wien", "Vienna"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -343,8 +315,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Food between slices of bread, or a similar stacked meal.",
     hook: "The meal is named for an earl. The earl is named for a town in Kent.",
-    story:
-      "The 18th-century English snack is linked to John Montagu, 4th Earl of Sandwich. His title comes from Sandwich in Kent, so the lunch word hides a coastal town one step back.",
     chain: ["Earl of Sandwich", "Sandwich"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -367,8 +337,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tailless dinner jacket; also the matching evening suit.",
     hook: "American evening dress is named for a Hudson Valley club.",
-    story:
-      "The tailless dinner jacket caught on at the Tuxedo Park country club in New York. English then used the place-name for the garment itself.",
     chain: ["Tuxedo Park"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -391,8 +359,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A footrace of 42.195 km; also any long, demanding effort.",
     hook: "The long race is named for a plain in Attica.",
-    story:
-      "The modern race commemorates the run associated with the Battle of Marathon in 490 BCE. The place-name became the word for the distance, then for any grind that feels that long.",
     chain: ["Battle of Marathon", "Marathon"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -415,8 +381,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A mineral-spring resort, or a place for bathing and treatment.",
     hook: "Every spa is named for one Belgian town.",
-    story:
-      "The town of Spa in Liège province was famous for its mineral springs. English borrowed the place-name as a generic word for a watering place, then for the treatments that go with one.",
     chain: ["Spa"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -439,8 +403,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A scented toilet water; originally eau de Cologne.",
     hook: "The fragrance is named for Cologne, in German Köln.",
-    story:
-      "Eau de Cologne was blended in the city of Cologne in the 18th century. English shortened the French phrase until the city name alone meant the scent.",
     chain: ["eau de Cologne", "Cologne"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -463,8 +425,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A reversible figured fabric, or a steel with a watery pattern.",
     hook: "The cloth and the steel both remember Damascus.",
-    story:
-      "English damask points to Damascus, long a source of patterned silk and of famously worked steel. The city name became the word for those techniques in Europe.",
     chain: ["Damascus"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -487,8 +447,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small, tart plum with dark skin.",
     hook: "The plum is a damascene fruit in miniature.",
-    story:
-      "Damson comes from damascene, “of Damascus.” The fruit was associated with Syria in Latin and Greek naming, then shrank into an English orchard word.",
     chain: ["damascene", "Damascus"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -511,8 +469,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A plain-woven cotton cloth, often fine and loosely set.",
     hook: "The cotton is named for Mosul.",
-    story:
-      "European traders associated a fine cotton with Mosul in present-day Iraq. Italian mussolo and French mousseline carried the city into English as muslin.",
     chain: ["mussolo", "Mosul"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -535,8 +491,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A plain cotton cloth, often printed; also a piebald cat.",
     hook: "The print cloth is named for Kozhikode, once called Calicut.",
-    story:
-      "English calico comes from Calicut, the colonial name for Kozhikode on the Malabar Coast, a port for Indian cottons. The place-name became a cloth word, then a cat pattern.",
     chain: ["Calicut", "Kozhikode"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -559,8 +513,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fine wool from the undercoat of certain goats.",
     hook: "The wool is Kashmir, spelled the old English way.",
-    story:
-      "English cashmere is an older spelling of Kashmir, the Himalayan region associated with the goat and the shawls made from its wool. The place became the fiber.",
     chain: ["Kashmir"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -583,8 +535,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A teardrop textile pattern, or a fabric bearing it.",
     hook: "The pattern is from Kashmir. The English name is a Scottish mill town.",
-    story:
-      "The curved motif is an import from Iranian and Kashmiri design. English named it for Paisley in Scotland, where mills copied and sold the shawls in huge numbers.",
     chain: ["Paisley"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -607,8 +557,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Leather with a napped finish, usually from the inner surface.",
     hook: "The leather is named for Sweden, in French.",
-    story:
-      "English suede comes from French gants de Suède, “gloves of Sweden.” The napped leather was associated with Swedish gloves, then the country name became the finish.",
     chain: ["gants de Suède", "Suède", "Sweden"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -631,8 +579,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small dried grape, or a related berry shrub.",
     hook: "The baking fruit is a worn-down word for Corinth.",
-    story:
-      "Raisins of Corinth were imported through that Greek city. In English the phrase shrank to currant, which later spread to the garden berries that resembled the dried fruit.",
     chain: ["raisins of Corinth", "Corinth"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -655,8 +601,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small citrus fruit with a loose skin, or its orange color.",
     hook: "The fruit is named for the port of Tangier.",
-    story:
-      "English named the fruit for Tangier, the Moroccan port through which it reached Britain. The city adjective became the everyday name of the citrus.",
     chain: ["Tangier"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -679,8 +623,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hot chili powder or the pepper it is made from.",
     hook: "The heat is named for a capital on the Atlantic coast of South America.",
-    story:
-      "English cayenne comes from Cayenne, the capital of French Guiana, a name already used for the pepper associated with that coast. The city stands in for the spice.",
     chain: ["Cayenne"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -703,8 +645,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A medium-hot chili pepper, often used green.",
     hook: "The pepper is named for Xalapa in Veracruz.",
-    story:
-      "Spanish jalapeño means “from Jalapa,” now usually spelled Xalapa, the capital of Veracruz. English kept the adjective as the name of the chili.",
     chain: ["jalapeño", "Xalapa"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -727,8 +667,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hot sauce, or the chili variety associated with it.",
     hook: "The sauce is named for a Mexican state.",
-    story:
-      "The pepper and the famous sauce take their English name from Tabasco, a state on the Gulf of Mexico. The place-name traveled farther than the chili’s original growing region.",
     chain: ["Tabasco"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -751,8 +689,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A thick, cold sauce of oil beaten with egg yolk.",
     hook: "One story ties the sauce to Mahón. Many etymologists are not convinced.",
-    story:
-      "A popular account derives mayonnaise from Mahón on Menorca, taken by the French in 1756. Other scholars look to French moyeu, “egg yolk,” or to a variant of bayonnaise. The place link remains contested.",
     chain: ["Mahón"],
     relationship: "disputed",
     confidence: "disputed",
@@ -775,8 +711,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The basic monetary unit of the United States and several other countries.",
     hook: "The word traces to a silver mine in the Ore Mountains.",
-    story:
-      "German Joachimsthaler named a coin from Sankt Joachimsthal, now Jáchymov. The word shortened to thaler, then Dutch daalder, then English dollar. A Czech valley sits inside every dollar bill.",
     chain: ["Joachimsthaler", "Joachimsthal", "Jáchymov"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -799,8 +733,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet drupe with fuzzy skin, or the tree that bears it.",
     hook: "The fruit is a Persian apple in old botanical Latin.",
-    story:
-      "Latin malum persicum means “Persian apple.” The peach reached the Mediterranean from farther east, but European naming pinned it to Persia. English peach is that place-name, worn smooth.",
     chain: ["malum persicum", "Persia"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -823,8 +755,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A long-tailed game bird, originally of Asia.",
     hook: "The bird is named for a river at the edge of the Black Sea.",
-    story:
-      "Greek phasianos means “of the Phasis,” the river now called the Rioni, which meets the sea at Poti in Georgia. Classical writers treated that river as the bird’s home, and English kept the name.",
     chain: ["phasianos", "Phasis", "Rioni"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -847,8 +777,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A reddish-brown metal; also a coin made from it.",
     hook: "The metal’s name is the ancient name of Cyprus.",
-    story:
-      "Latin cuprum comes from Cyprium aes, “metal of Cyprus,” an island famous in antiquity for copper working. The place-name became the English name of the element.",
     chain: ["cuprum", "Cyprium aes", "Cyprus"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -871,8 +799,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A blue-green gemstone, or the color of that stone.",
     hook: "The gem is named for the country it was traded through, not where it formed.",
-    story:
-      "French pierre turquoise means “Turkish stone.” The mineral reached Europe through Ottoman trade, so English named it for Turkey rather than for the Persian and Sinai mines that produced it.",
     chain: ["pierre turquoise", "Turkey"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -895,8 +821,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A body that attracts iron; also a person or thing that attracts.",
     hook: "The lodestone is named for Magnesia.",
-    story:
-      "Greek Magnēs lithos, “stone of Magnesia,” named the lodestone for a district in Thessaly (and sometimes for Magnesia in Asia Minor). English magnet is that place-name, now used for any attracting body.",
     chain: ["Magnēs lithos", "Magnesia"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -919,8 +843,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A school, learned society, or place of specialized training.",
     hook: "Every academy is named for a grove outside Athens.",
-    story:
-      "Plato taught in the grove of Akademeia, a sanctuary northwest of Athens named for the hero Akademos. The place-name became the word for a school of philosophy, then for schools in general.",
     chain: ["Akademeia", "Akademos"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -943,8 +865,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Using very few words; terse to the point of bluntness.",
     hook: "A tight-lipped style is named for Sparta’s region.",
-    story:
-      "Laconia was the territory of Sparta, whose citizens had a reputation for short, pointed speech. English laconic turns that regional stereotype into a style of talking.",
     chain: ["Laconia", "Sparta"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -967,8 +887,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A person devoted to luxury and pleasure.",
     hook: "The pleasure-seeker is named for a vanished Greek city in Italy.",
-    story:
-      "Sybaris, a Greek city in Magna Graecia, was famous in antiquity for wealth and ease. English sybarite keeps that reputation as a personal noun, long after the city itself was destroyed.",
     chain: ["Sybaris"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -991,8 +909,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A mistake in grammar, manners, or etiquette.",
     hook: "A grammar error is named for a city whose Greek sounded wrong to Athens.",
-    story:
-      "Soloi in Cilicia was said to speak a Greek that Attic writers judged corrupt. A solecism began as a local way of talking and became any breach of correctness.",
     chain: ["Soloi"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1015,8 +931,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A scene of noisy confusion; historically a psychiatric hospital.",
     hook: "Chaos is a worn-down pronunciation of Bethlehem.",
-    story:
-      "Bedlam is a folk form of Bethlem, the London hospital of St Mary of Bethlehem. The hospital’s reputation for disorder turned the place-name into a word for uproar.",
     chain: ["Bethlem", "Bethlehem Hospital"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -1039,8 +953,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A low house, often of one storey, with a wide veranda.",
     hook: "The house type is named for Bengal.",
-    story:
-      "Hindi and Gujarati bangla means “Bengali,” a house in the Bengal style. English borrowed the regional adjective as the name of a low, verandaed dwelling.",
     chain: ["bangla", "Bengal"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -1063,8 +975,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large carriage or bus; also a trainer of a team or student.",
     hook: "The carriage is named for a village in Hungary.",
-    story:
-      "Hungarian Kocs produced a noted type of horse-drawn wagon. The village name traveled through German and French into English as coach, later extended to buses and to the person who trains you.",
     chain: ["Kocs"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1087,8 +997,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A long, chauffeur-driven car with a divided cabin.",
     hook: "The luxury car is named for a cloak from Limousin.",
-    story:
-      "A limousine was first a hooded cloak associated with the Limousin region. The word then named a car whose covered driver’s seat resembled that hood, and finally a long hired car.",
     chain: ["Limousin", "Limoges"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1111,8 +1019,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A handling-and-kicking football game with an oval ball.",
     hook: "The game is named for the school that played it.",
-    story:
-      "Rugby football takes its name from Rugby School in Warwickshire, where a distinctive handling game was played in the 19th century. The town’s school became the sport.",
     chain: ["Rugby School", "Rugby"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1135,8 +1041,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A decisive, often final, defeat.",
     hook: "A crushing loss is named for a ridge south of Brussels.",
-    story:
-      "Napoleon’s defeat near Waterloo in 1815 made the village name a byword for a final fall. English then used meet one’s Waterloo for any decisive undoing.",
     chain: ["Battle of Waterloo", "Waterloo"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1159,8 +1063,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To kidnap or trick someone into service, especially at sea.",
     hook: "The verb is named for a port, not for a method invented there alone.",
-    story:
-      "In 19th-century English, to shanghai someone was to force them onto a ship, a practice associated with Pacific ports including Shanghai. The city name became the verb for the crime.",
     chain: ["Shanghai"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1183,8 +1085,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A purplish-red dye and the color it produces.",
     hook: "The color is named for a battle in Lombardy.",
-    story:
-      "An aniline dye discovered in 1859 was named after the Battle of Magenta, fought that year in Lombardy. The town’s name became a color, far from any pigment native to the place.",
     chain: ["Battle of Magenta", "Magenta"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -1207,8 +1107,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Carbonated water, sometimes flavored.",
     hook: "Fizz is named for a German spring.",
-    story:
-      "German Selterswasser named the mineral water of Selters. English shortened it to seltzer and then used it for manufactured soda water that had never seen the spring.",
     chain: ["Selterswasser", "Selters"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1231,8 +1129,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A distilled agave spirit from a defined region of Mexico.",
     hook: "The spirit is a town in Jalisco.",
-    story:
-      "Tequila is a town in Jalisco in whose region the agave spirit is produced. English borrowed the place-name as the name of the drink.",
     chain: ["Tequila"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1255,8 +1151,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fortified wine originally from Andalusia.",
     hook: "The wine is an English attempt at saying Jerez.",
-    story:
-      "Sherry comes from the Spanish town of Jerez de la Frontera, whose name reached English through forms like sherris. The place-name, misheard and shortened, became the wine.",
     chain: ["sherris", "Jerez"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1279,8 +1173,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet fortified wine originally shipped from Porto.",
     hook: "The dessert wine is named for the harbor that sent it out.",
-    story:
-      "Port wine takes its English name from Porto, the Portuguese city from which the Douro wine was exported. The harbor’s name became the drink.",
     chain: ["Porto"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1303,8 +1195,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A blue sheep’s-milk cheese aged in limestone caves.",
     hook: "The blue cheese is a village in the Aveyron.",
-    story:
-      "Roquefort is named for Roquefort-sur-Soulzon, whose caves are used to age the cheese. English uses the village name for the cheese itself.",
     chain: ["Roquefort-sur-Soulzon"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1327,8 +1217,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A soft, bloomy cow’s-milk cheese from Normandy.",
     hook: "The cheese is a Norman village.",
-    story:
-      "Camembert takes its name from the village in Normandy where the modern cheese is said to have been developed. The place-name became a generic English cheese word.",
     chain: ["Camembert"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1351,8 +1239,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A muskmelon with netted skin and orange flesh.",
     hook: "The melon is named for a papal estate in the Sabine hills.",
-    story:
-      "The fruit is usually linked to Cantalupo, a papal estate near Rome where the melon was grown after arriving from Armenia. The estate name, not the plant’s wild home, became the English word.",
     chain: ["Cantalupo"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -1375,8 +1261,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large, hairy spider; originally a wolf spider of southern Italy.",
     hook: "The spider is named for Taranto.",
-    story:
-      "Italian tarantola names the wolf spider associated with Taranto. Folk belief tied its bite to tarantism and the tarantella. English tarantula later spread to large New World spiders that are not the original animal.",
     chain: ["tarantola", "Taranto"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1399,8 +1283,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small songbird, originally of the Canary Islands; also a bright yellow.",
     hook: "The bird is named for the islands. The islands are named for dogs.",
-    story:
-      "The wild canary is native to the Canary Islands. Latin Canaria insula, “isle of dogs,” named the islands first. English then named the bird, and later the color, after the place.",
     chain: ["Canary Islands", "Canaria"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1423,8 +1305,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Slanted type, originally associated with Italian printing.",
     hook: "Slanted type is named for Italy, and more tightly for Venice.",
-    story:
-      "Italic type was cut in Italy, notably for Aldus Manutius in Venice. English named the slanted letters for the country, then used italic for any such face.",
     chain: ["Italy", "Venice"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -1447,8 +1327,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fermented savory sauce created in Worcester.",
     hook: "The pantry bottle is named for an English cathedral city.",
-    story:
-      "Lea & Perrins developed the sauce in Worcester in the 19th century. English uses the county adjective Worcestershire as the name of the condiment.",
     chain: ["Worcester"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1471,8 +1349,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A coffee associated with Yemen, or a chocolate-coffee flavor.",
     hook: "The coffee is named for a Red Sea port.",
-    story:
-      "Mocha, or al-Mukha, was the Yemeni port from which coffee was shipped to the world. English named the bean for the harbor, then extended mocha to chocolate-coffee drinks.",
     chain: ["Mocha", "al-Mukha"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1495,8 +1371,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To follow a winding course, or to wander without hurry.",
     hook: "A winding path is named for a river in Anatolia.",
-    story:
-      "The Maeander, now the Büyük Menderes, was famous in antiquity for its loops. Greek and Latin turned the river’s name into a word for any winding, and English meander still does that work.",
     chain: ["Maeander", "Büyük Menderes"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1519,8 +1393,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Of the Olympic Games, or of Olympia in Elis.",
     hook: "The games are named for a sanctuary, not for Mount Olympus.",
-    story:
-      "The ancient games were held at Olympia in Elis, a sanctuary of Zeus. English Olympic points to that site. Mount Olympus, home of the gods, is a different place in Thessaly.",
     chain: ["Olympia"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1543,8 +1415,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A retriever breed; also the mainland region of Newfoundland and Labrador.",
     hook: "The dog is named for a northern coast.",
-    story:
-      "The Labrador retriever is named for the Labrador coast, where fishermen used water dogs related to the modern breed. The regional name became the dog.",
     chain: ["Labrador"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1567,8 +1437,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A former British gold coin, originally made from West African gold.",
     hook: "The coin is named for the Guinea coast.",
-    story:
-      "The guinea was struck from gold associated with the Guinea coast of West Africa. English named the coin for that stretch of Atlantic Africa, a broad historical region rather than one modern state.",
     chain: ["Guinea coast"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -1591,8 +1459,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fine goatskin leather, typically vegetable-tanned and dyed.",
     hook: "The bookbinder’s leather is named for Morocco.",
-    story:
-      "English morocco names a goatskin leather associated with Moroccan tanning, especially the workshops of cities such as Fez. The country became the word for the hide.",
     chain: ["Morocco", "Fez"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1615,8 +1481,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Porcelain tableware, or household porcelain in general.",
     hook: "The teacup is named for the country that made porcelain famous in Europe.",
-    story:
-      "English china is a shortening of china-ware, porcelain imported from China. Jingdezhen was the great kiln city behind much of that trade, so the country name became the crockery.",
     chain: ["china-ware", "China", "Jingdezhen"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1639,8 +1503,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Informal name for coffee; also the Indonesian island.",
     hook: "A cup of java is named for an island.",
-    story:
-      "Coffee grown on Java entered American slang as java. The island’s name became a casual word for the drink, even when the beans never saw Indonesia.",
     chain: ["Java"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1663,8 +1525,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A rough woolen cloth associated with Scotland.",
     hook: "The cloth may be a river, or a misread word for twill.",
-    story:
-      "One account derives tweed from a misreading of tweel, Scots for twill. Another ties it to the River Tweed, which runs along the Scottish border. Both stories circulate; neither is beyond doubt.",
     chain: ["tweel", "River Tweed"],
     relationship: "disputed",
     confidence: "disputed",
@@ -1687,8 +1547,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small pilchard or related fish, often canned.",
     hook: "The fish may be named for Sardinia. It also may not.",
-    story:
-      "Latin sardina is often linked to Sardinia, but the connection is not secure. The fish name could be older than the island association. This atlas pins the conventional story and marks it disputed.",
     chain: ["sardina", "Sardinia"],
     relationship: "disputed",
     confidence: "disputed",
@@ -1711,8 +1569,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A bitter aromatic made from bark, used in drinks and medicine.",
     hook: "The bitters are named for a river town now called Ciudad Bolívar.",
-    story:
-      "Angostura was the colonial name of a town on a narrowing of the Orinoco, now Ciudad Bolívar. A local bark and the bitters made from recipes associated with the town kept the old place-name.",
     chain: ["Angostura", "Ciudad Bolívar"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1735,8 +1591,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A veined Italian cow’s-milk cheese.",
     hook: "The blue cheese is a town on the edge of Milan.",
-    story:
-      "Gorgonzola is a town in Lombardy that gave its name to the veined cheese. English uses the place-name for the cheese, whether or not a given wheel was made in the town itself.",
     chain: ["Gorgonzola"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1759,8 +1613,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An American whiskey originally associated with Bourbon County, Kentucky.",
     hook: "The whiskey is named for a Kentucky county, itself named for a French dynasty.",
-    story:
-      "Bourbon whiskey is generally linked to Bourbon County, Kentucky. The county was named for the French House of Bourbon, so the glass holds two place-names, one of them a royal house.",
     chain: ["Bourbon County", "House of Bourbon"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -1783,8 +1635,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Wool from the angora goat or rabbit.",
     hook: "The wool carries the old name of Ankara.",
-    story:
-      "Angora was the European name for Ankara, and the goats of the region gave their fleece the city's name. The city was renamed; the fibre was not.",
     chain: ["Ankara"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -1807,8 +1657,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A final, catastrophic conflict.",
     hook: "The end of the world is named after a hill in Israel.",
-    story:
-      "The Book of Revelation names a place transliterated from Har Megiddo, the mount of Megiddo, a fortified site that saw many ancient battles. English kept the place and dropped the geography.",
     chain: ["Tel Megiddo"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -1831,8 +1679,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A broad silk necktie worn looped over itself.",
     hook: "The tie is named for a Berkshire racecourse.",
-    story:
-      "Formal dress at Royal Ascot fixed the style in the public eye, and the village's name went to the tie rather than to the race.",
     chain: ["Ascot"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -1855,8 +1701,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cow's-milk cheese from the Veneto.",
     hook: "The cheese is named for a plateau town in the Veneto.",
-    story:
-      "Asiago sits on a plateau in Vicenza where the cheese was made. The name now covers a protected area wider than the town.",
     chain: ["Asiago"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1879,8 +1723,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The tightly curled fleece of young karakul lambs.",
     hook: "The curled fleece is named for a city on the Volga delta.",
-    story:
-      "Astrakhan was the trading point through which the pelts reached European markets. The sheep are raised much further east.",
     chain: ["Astrakhan"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1903,8 +1745,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The space directly under a roof.",
     hook: "The room under the roof is named for the region around Athens.",
-    story:
-      "In classical architecture an attic storey sat above the main order, in a style associated with Attica. English kept the name and applied it to the loft.",
     chain: ["Attica"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -1927,8 +1767,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A light red wine from southern Burgundy.",
     hook: "The wine is named for a former lordship, not a town.",
-    story:
-      "Beaujolais takes its name from Beaujeu, the seat of its medieval lords. The wine district kept the name after the lordship ended.",
     chain: ["Beaujolais"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -1951,8 +1789,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A gold coin of the Byzantine empire.",
     hook: "The coin carries the same old name as the adjective.",
-    story:
-      "Bezant comes through Old French from Byzantium. The coin and the word for convolution share a city three names ago.",
     chain: ["Istanbul"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -1975,8 +1811,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A narrow surgical knife.",
     hook: "The surgical blade may be named for a Tuscan city, like the pistol.",
-    story:
-      "The word is often traced through French to Pistoia, a noted centre of metalwork. The link is conventional but not settled.",
     chain: ["Pistoia"],
     relationship: "product_from_place",
     confidence: "disputed",
@@ -1999,8 +1833,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Dull and unrefined.",
     hook: "An insult preserved from one Greek region's rivalry with another.",
-    story:
-      "Athenian writers cast their Boeotian neighbours as slow-witted, and the adjective carried that judgement into English. Thebes was Boeotia's chief city.",
     chain: ["Boeotia"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -2023,8 +1855,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large smooth-textured cooked sausage.",
     hook: "The lunch meat is named for an Italian city.",
-    story:
-      "The sausage descends from mortadella di Bologna. American English kept the city's name, and often its own spelling of the sound.",
     chain: ["Bologna"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2047,8 +1877,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Cheap and showy; counterfeit.",
     hook: "The word for shoddy goods is a local pronunciation of Birmingham.",
-    story:
-      "Brummagem is a dialect form of the city's name, once linked to counterfeit coin and cheap plated ware. Brummie, for a resident, comes from the same form.",
     chain: ["Birmingham"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2071,8 +1899,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Empty talk meant to impress rather than inform.",
     hook: "Nonsense is named after a North Carolina county.",
-    story:
-      "A congressman from Buncombe County is said to have given a long speech aimed only at his constituents. The county's name became the word for the genre.",
     chain: ["Buncombe County"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2095,8 +1921,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dark red wine from eastern France, and its colour.",
     hook: "The colour is a French wine region.",
-    story:
-      "The wine took the region's name, and English then used the name for the deep red itself. The colour is now further from Burgundy than the wine ever was.",
     chain: ["Burgundy"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2119,8 +1943,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Excessively complicated, with hidden workings.",
     hook: "The word for bureaucratic tangle is an old name for Istanbul.",
-    story:
-      "Byzantium was the Greek city that became Constantinople and then Istanbul. Its later empire's reputation for intricate administration gave English the adjective.",
     chain: ["Istanbul"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -2143,8 +1965,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A plain-woven cloth with a coloured warp and white weft.",
     hook: "The cloth is named for a city in northern France.",
-    story:
-      "Cambrai gave its name to two fabrics in English, chambray and cambric. Both record the city's linen trade.",
     chain: ["Cambrai"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2167,8 +1987,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A white wine grape, and the wine made from it.",
     hook: "The grape is named for a village in Burgundy.",
-    story:
-      "Chardonnay in the Mâconnais gave its name to the variety. The grape went everywhere; the village stayed small.",
     chain: ["Chardonnay"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2191,8 +2009,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Someone who claims knowledge or skill they do not have.",
     hook: "The fraud may be named for an Umbrian village of licence-sellers.",
-    story:
-      "Italian ciarlatano is sometimes explained as a blend of ciarlare, to chatter, with cerretano, a person from Cerreto. The place element is plausible but contested.",
     chain: ["Cerreto di Spoleto"],
     relationship: "disputed",
     confidence: "disputed",
@@ -2215,8 +2031,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A green or yellow herbal liqueur, and the colour of it.",
     hook: "The colour is named after a monastery in the Alps.",
-    story:
-      "Carthusian monks at the Grande Chartreuse have made the liqueur since the 18th century. English borrowed the name for the drink, then for its particular green.",
     chain: ["Grande Chartreuse"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2239,8 +2053,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dry red wine from central Tuscany.",
     hook: "The wine names the hills it grows on.",
-    story:
-      "Chianti is a hill district between Florence and Siena. The name is now controlled, so the geography and the label have been pulled back together.",
     chain: ["Chianti"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2263,8 +2075,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A very small dog with large upright ears.",
     hook: "The smallest dog is named for the largest Mexican state.",
-    story:
-      "The breed was brought to wider notice from the state of Chihuahua in the 19th century. The state's name is much older than the dog's.",
     chain: ["Chihuahua"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2287,8 +2097,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A long-leaved crisp lettuce, also called romaine.",
     hook: "One lettuce is named for a Greek island and the other for Rome.",
-    story:
-      "Cos lettuce takes its name from the island of Kos. The same plant is called romaine in French and American usage, after Rome.",
     chain: ["Kos"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2311,8 +2119,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An orange-flavoured liqueur.",
     hook: "The liqueur is named for the island whose oranges flavour it.",
-    story:
-      "The bitter laraha orange grows on Curaçao, descended from Seville oranges that did poorly in the dry climate. The peel makes the liqueur.",
     chain: ["Curaçao"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2335,8 +2141,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cocktail of rum, lime juice and sugar.",
     hook: "The cocktail is named for a Cuban mining beach.",
-    story:
-      "Daiquirí is a beach and iron-mining settlement near Santiago de Cuba, where the drink is said to have been mixed for engineers.",
     chain: ["Daiquirí"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2359,8 +2163,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A white dog with dark spots.",
     hook: "The spotted dog is named for a stretch of the Adriatic coast.",
-    story:
-      "Dalmatia is the coastal region of present-day Croatia. The link between the breed and the region is traditional rather than documented.",
     chain: ["Dalmatia"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2383,8 +2185,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Tin-glazed earthenware, typically blue on white.",
     hook: "The blue and white pottery is named for a Dutch city.",
-    story:
-      "Delft potters imitated Chinese porcelain in tin-glazed earthenware. English named the whole ware for the city, whatever its actual origin.",
     chain: ["Delft"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2407,8 +2207,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A noisy brawl.",
     hook: "A free-for-all is named after a Dublin suburb's fair.",
-    story:
-      "Donnybrook Fair ran for centuries and was suppressed in 1855 after repeated disorder. The name outlived the fair as a word for a melee.",
     chain: ["Donnybrook"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2431,8 +2229,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Out of one's mind, temporarily or otherwise.",
     hook: "The word for losing it comes from a transit camp in Maharashtra.",
-    story:
-      "British soldiers waiting at Deolali for passage home coined the phrase doolally tap for the state it induced. English kept the place and dropped the rest.",
     chain: ["Deolali"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2455,8 +2251,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A coarse woollen cloth, and the bag made from it.",
     hook: "The bag is named for a Flemish town.",
-    story:
-      "Duffel in Flanders supplied a heavy napped cloth that took the town's name. The cloth later gave its name to the bag, and the bag outlived the fabric trade.",
     chain: ["Duffel"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2479,8 +2273,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An expanding bullet that deforms on impact.",
     hook: "The bullet is named for an arsenal near Kolkata.",
-    story:
-      "The round was developed at the Dum Dum arsenal in the 1890s. It was prohibited for international warfare soon afterwards.",
     chain: ["Dum Dum"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2503,8 +2295,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Hard-wearing work trousers, often with a bib.",
     hook: "The work clothes are usually traced to a district of Mumbai.",
-    story:
-      "The name is generally linked to Dongri, where a coarse cotton was made and sold. The cloth name came first and the garment followed.",
     chain: ["Dongri"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -2527,8 +2317,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Glazed and painted earthenware.",
     hook: "The glazed ware is named for an Italian town, by way of French.",
-    story:
-      "Faenza in Emilia-Romagna exported tin-glazed pottery into France, where it became faïence. English took the French spelling and the Italian town with it.",
     chain: ["Faenza"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2551,8 +2339,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A brimless felt cap, usually red, with a flat top.",
     hook: "The cap is named for a Moroccan city.",
-    story:
-      "Fez was a centre for the dye and the felt used in the caps. The hat spread across the Ottoman world under the city's name.",
     chain: ["Fez"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2575,8 +2361,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Extravagant boasting.",
     hook: "Bragging is named for a region of south-west France.",
-    story:
-      "French attached a reputation for boasting to Gascons, and gasconnade named the habit. English borrowed the word and the stereotype with it.",
     chain: ["Gascony"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -2599,8 +2383,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A whisked sponge cake enriched with butter.",
     hook: "The sponge is the French feminine for Genoese.",
-    story:
-      "French named the cake génoise, of Genoa. Jeans carry the same city, arrived at by a different route.",
     chain: ["Genoa"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -2623,8 +2405,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A spring that throws hot water and steam into the air.",
     hook: "Every geyser on Earth is named after one hot spring in Iceland.",
-    story:
-      "The spring Geysir, in the Haukadalur valley of southern Iceland, takes its name from a verb meaning to gush. English borrowed the proper name and made it the general word.",
     chain: ["Haukadalur"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2647,8 +2427,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A firm Swiss cheese with a dense, nutty paste.",
     hook: "The cheese is named for a small town in Fribourg.",
-    story:
-      "Gruyères in the Swiss canton of Fribourg gave the cheese its name. The district it names is still where the protected version is made.",
     chain: ["Gruyères"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2671,8 +2449,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A close-fitting knitted sweater worn by seamen.",
     hook: "The neighbouring island got its own sweater.",
-    story:
-      "Guernsey, like Jersey, exported knitted wool goods, and each island ended up naming a garment. The Guernsey is the heavier, darker one.",
     chain: ["Guernsey"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2695,8 +2471,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Cuban dance in slow two-four time.",
     hook: "The dance is the feminine of Havanan.",
-    story:
-      "The contradanza habanera took the name of Havana. It travelled to Spain and into opera, where Bizet used it in Carmen.",
     chain: ["Havana"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -2719,8 +2493,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small, very hot chilli pepper.",
     hook: "The chilli is named for Havana, though it is not from there.",
-    story:
-      "Spanish habanero means of Havana, and the pepper reached wider trade through Cuba. Its cultivation centres are in Mexico, so the name records a trade route rather than an origin.",
     chain: ["Havana"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -2743,8 +2515,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A genus of rodent-borne viruses.",
     hook: "The virus family is named for a Korean river.",
-    story:
-      "The type virus was isolated near the Hantan River in South Korea in the 1970s. Naming diseases after places has since fallen out of favour.",
     chain: ["Hantan River"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2767,8 +2537,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A collarless pullover shirt with a short buttoned placket.",
     hook: "The shirt is named for a rowing regatta.",
-    story:
-      "The style was worn by rowers at Henley-on-Thames, home of the Royal Regatta since 1839. The town named the shirt rather than the sport.",
     chain: ["Henley-on-Thames"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2791,8 +2559,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A stiff felt hat with a curled brim and a centre crease.",
     hook: "The hat is named for a German spa town.",
-    story:
-      "Bad Homburg's hat trade was popularised abroad after the Prince of Wales wore one. English kept the town name and lowered the case.",
     chain: ["Bad Homburg vor der Höhe"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2815,8 +2581,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Cheap or illicitly made liquor.",
     hook: "Bootleg liquor is named for a Tlingit community in Alaska.",
-    story:
-      "The word shortens hoochinoo, from Hutsnuwu, the name of a Tlingit group of Admiralty Island whose distilling was reported during the Alaska gold rushes.",
     chain: ["Angoon"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2839,8 +2603,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard black lacquer, and to coat something with it.",
     hook: "The lacquer is simply the country, used as a verb.",
-    story:
-      "European workshops imitated East Asian lacquerwork and called the finish japan, then japanned things with it. The lower-case word is now rarer than the country.",
     chain: ["Japan"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2863,8 +2625,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A knitted garment, and the knitted fabric itself.",
     hook: "The pullover is named for a Channel Island.",
-    story:
-      "Jersey was known for machine knitting, and the island name attached first to the cloth and then to the garment. It now also names a sports shirt.",
     chain: ["Jersey"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2887,8 +2647,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Riding trousers cut wide at the hip and close at the calf.",
     hook: "The riding trousers are named for a city in Rajasthan.",
-    story:
-      "The cut was associated with Jodhpur and reached British riders through polo. English kept the city name and made it a plural garment word.",
     chain: ["Jodhpur"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2911,8 +2669,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fine white clay used to make porcelain.",
     hook: "The clay behind porcelain is named for a hill in Jiangxi.",
-    story:
-      "The name comes from Gaoling, a hill near Jingdezhen in Jiangxi whose clay was worked for ceramics. European traders took the place name along with the material.",
     chain: ["Jingdezhen"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -2935,8 +2691,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A breed of laying hen, and a plaited straw hat.",
     hook: "The chicken carries the English name for Livorno.",
-    story:
-      "Leghorn was how English speakers said and wrote Livorno. Both the hens and the straw hats shipped from that port under that name.",
     chain: ["Livorno"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -2959,8 +2713,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Relating to women who are attracted to women.",
     hook: "The word comes from a Greek island in the Aegean.",
-    story:
-      "Sappho, who wrote about desire between women, lived on Lesbos in the seventh century BCE. English formed the adjective from the island's name.",
     chain: ["Lesbos"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -2983,8 +2735,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A soft, washed-rind cheese with a strong smell.",
     hook: "The cheese is named for a duchy split across three countries.",
-    story:
-      "Historic Limburg is now divided between Belgium, the Netherlands and Germany. The cheese is made well beyond it, but the name stuck to the smell.",
     chain: ["Limburg"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3007,8 +2757,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A five-line comic verse rhyming AABBA.",
     hook: "The verse form is named for an Irish city, for reasons no one has pinned down.",
-    story:
-      "The connection to Limerick is not documented. Suggestions include a song refrain naming the city, but the form was popular before the name attached to it.",
     chain: ["Limerick"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -3031,8 +2779,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A grey horse breed used in classical dressage.",
     hook: "The dressage horse is named for a stud farm in Slovenia.",
-    story:
-      "The Habsburg stud at Lipica, Italian Lipizza, founded the breed in 1580. The Spanish Riding School in Vienna still rides them.",
     chain: ["Lipica"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3055,8 +2801,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A light cotton cloth in bright checks or stripes.",
     hook: "The checked cotton carries the old name of Chennai.",
-    story:
-      "The cloth was exported through Madras, now Chennai, and English named it for the port rather than the weave. The city changed its name in 1996; the cloth did not.",
     chain: ["Chennai"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3079,8 +2823,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Brightly glazed Italian earthenware.",
     hook: "The Italian pottery is named for a Spanish island.",
-    story:
-      "The ware reached Italy along a route associated with Mallorca, and Italian named it maiolica after the island rather than after where it was made.",
     chain: ["Mallorca"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -3103,8 +2845,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard, brittle metallic element, number 25.",
     hook: "The metal is a scrambled form of Magnesia, like magnesium and magnet.",
-    story:
-      "Ores from Magnesia in Thessaly produced several names in Latin and Italian that blurred into one another. Manganese, magnesium and magnet all come back to the same district.",
     chain: ["Magnesia"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -3127,8 +2867,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A place that draws people who care about one thing.",
     hook: "Any enthusiast's destination borrows one city in the Hejaz.",
-    story:
-      "English uses the name of Islam's holiest city for any place of pilgrimage, however trivial. Lower-cased, it has drifted a long way from the original.",
     chain: ["Mecca"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3151,8 +2889,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A maker or seller of women's hats.",
     hook: "The hatmaker is a Milanese, spelling aside.",
-    story:
-      "English milliner began as a word for a trader in goods from Milan, then narrowed to fine dress accessories and finally to hats alone.",
     chain: ["Milan"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -3175,8 +2911,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A firm yellowish cotton cloth.",
     hook: "The yellow cotton is named for Nanjing.",
-    story:
-      "The naturally tan cotton was exported through Nanjing, which English wrote as Nankin. The cloth name preserves the older spelling.",
     chain: ["Nanjing"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3199,8 +2933,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An extinct human species, Homo neanderthalensis.",
     hook: "A whole human species is named for a small German valley.",
-    story:
-      "The first recognised specimen came from the Neandertal near Düsseldorf in 1856. The valley itself was named after a 17th-century hymn writer.",
     chain: ["Neandertal"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3223,8 +2955,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A virus causing sudden vomiting and diarrhoea.",
     hook: "The winter vomiting bug is named for a town in Ohio.",
-    story:
-      "The first strain was identified after a 1968 outbreak at a school in Norwalk, Ohio. It was called Norwalk virus before the genus was renamed.",
     chain: ["Norwalk"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3247,8 +2977,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A pale, strongly hopped lager.",
     hook: "The world's default beer style is named for a Bohemian city.",
-    story:
-      "The style was first brewed in Plzeň, German Pilsen, in 1842. The name spread with the method until it described the beer rather than the origin.",
     chain: ["Plzeň"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3271,8 +2999,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A grape brandy from Peru and Chile.",
     hook: "The brandy is named for a Peruvian port.",
-    story:
-      "Pisco on the Peruvian coast shipped the spirit, and the port's name went with the cargo. Peru and Chile both now claim the name.",
     chain: ["Pisco"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3295,8 +3021,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small firearm designed for one hand.",
     hook: "The handgun's name may come from Pistoia, or from a Czech word for a pipe.",
-    story:
-      "One account traces it to Pistoia's gunsmiths, another to Czech pišťala, a pipe or whistle. Both routes are argued and neither is settled.",
     chain: ["Pistoia"],
     relationship: "disputed",
     confidence: "disputed",
@@ -3319,8 +3043,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A stately Polish dance in three-four time.",
     hook: "The dance is just the French adjective for Polish.",
-    story:
-      "French named the dance polonaise, the feminine of Polish, and English borrowed it whole. Chopin then made it a concert form.",
     chain: ["Poland"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -3343,8 +3065,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sparkling white wine from north-east Italy.",
     hook: "The sparkling wine is named for a village near Trieste.",
-    story:
-      "Prosecco is a settlement now inside Trieste. The name was attached to the grape, then in 2009 tied to a protected production zone instead.",
     chain: ["Prosecco"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3367,8 +3087,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard, fragrant fruit that needs cooking.",
     hook: "The fruit is named for a city in Crete.",
-    story:
-      "The Greek name for the fruit referred to Kydonia, now Chania. It travelled through Latin and French into English, losing the city on the way.",
     chain: ["Chania"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -3391,8 +3109,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A long-leaved crisp lettuce, also called cos.",
     hook: "The other name for cos lettuce is simply Roman.",
-    story:
-      "French romaine means Roman, said to record the lettuce reaching France from papal Avignon. English took the French name for the same plant it already called cos.",
     chain: ["Rome"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -3415,8 +3131,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large black and tan working dog.",
     hook: "The dog is named for a town on the Neckar.",
-    story:
-      "The breed was used to drive cattle around Rottweil in Baden-Württemberg. German named the dog for the town, and English took the name unchanged.",
     chain: ["Rottweil"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3439,8 +3153,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A seedless, easily peeled mandarin orange.",
     hook: "The orange is named for a former Japanese province.",
-    story:
-      "Satsuma was a province in southern Kyūshū, abolished in the 1870s. The fruit reached the West under the old provincial name and kept it.",
     chain: ["Satsuma Province"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -3463,8 +3175,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The knack of making a happy discovery by accident.",
     hook: "The word was invented from an old Arabic name for Sri Lanka.",
-    story:
-      "Horace Walpole coined it in a letter, building on Serendip, a name for the island used in Arabic and Persian writing. The island's name changed; the coinage stayed.",
     chain: ["Sri Lanka"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -3487,8 +3197,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small onion that grows in clustered bulbs.",
     hook: "The onion is named for an ancient Levantine port.",
-    story:
-      "The name traces back through French to Ascalon, now Ashkelon, which Greek and Latin writers associated with the plant. The route is old and the link is standard.",
     chain: ["Ashkelon"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -3511,8 +3219,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An earth pigment, yellow-brown raw and red-brown burnt.",
     hook: "The pigment is named for a Tuscan city.",
-    story:
-      "The earth was quarried near Siena and sold as terra di Siena. English shortened it, and the colour name now travels far from Tuscany.",
     chain: ["Siena"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3535,8 +3241,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hot sauce of chilli, garlic and vinegar.",
     hook: "The chilli sauce is named for a Thai coastal town.",
-    story:
-      "Si Racha in Chonburi province is where the style originated. The best-known brand is made in California, under the Thai town's name.",
     chain: ["Si Racha"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3559,8 +3263,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A rolled, filled bread baked like a turnover.",
     hook: "The stuffed bread is named for an Italian volcano.",
-    story:
-      "The dish appears to have been named in the United States after the volcanic island, or the 1950 film of that name, rather than invented there.",
     chain: ["Stromboli"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3583,8 +3285,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A light four-wheeled carriage with two seats.",
     hook: "The carriage is named for an English county.",
-    story:
-      "The vehicle derived from a Surrey cart and took the county's name in American use. It survives mostly in the song from Oklahoma!",
     chain: ["Surrey"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3607,8 +3307,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fast southern Italian dance in six-eight time.",
     hook: "The dance and the spider share a city.",
-    story:
-      "Folk belief held that a bite from the Taranto spider caused a frenzy that had to be danced out. The city named the spider and the cure alike.",
     chain: ["Taranto"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3631,8 +3329,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Any place impossibly far away.",
     hook: "A real Malian city became English shorthand for the middle of nowhere.",
-    story:
-      "Timbuktu was a wealthy centre of trade and scholarship on the Niger bend. European unfamiliarity turned its name into a byword for remoteness.",
     chain: ["Timbuktu"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3655,8 +3351,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet wine from north-eastern Hungary.",
     hook: "The dessert wine is named for a Hungarian town.",
-    story:
-      "Tokaj sits where the Bodrog meets the Tisza, in a region whose sweet wines were prized across Europe. English spells it with a y.",
     chain: ["Tokaj"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3679,8 +3373,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A bacterial disease of rodents transmissible to people.",
     hook: "The disease is named for a county in California.",
-    story:
-      "The bacterium was described from ground squirrels in Tulare County in 1911. The county is named in turn for its former lake.",
     chain: ["Tulare County"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3703,8 +3395,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A long, loose overcoat, often with a cape.",
     hook: "The overcoat is named for a province of Ireland.",
-    story:
-      "The coat was made from Ulster frieze, a heavy woollen cloth woven in the province. English named the garment for the region that supplied the cloth.",
     chain: ["Ulster"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3727,8 +3417,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A chilled soup of leeks and potatoes.",
     hook: "The cold soup is named for a French spa town.",
-    story:
-      "The name means of Vichy. It was popularised at the Ritz-Carlton in New York by a chef from the Bourbonnais, near the town.",
     chain: ["Vichy"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -3751,8 +3439,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A political scandal, especially one involving a cover-up.",
     hook: "The suffix for every scandal since is a Washington office block.",
-    story:
-      "The 1972 break-in at the Watergate complex gave the affair its name, and the ending -gate has been attached to scandals ever since.",
     chain: ["Watergate complex"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3775,8 +3461,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A crumbly white cheese from North Yorkshire.",
     hook: "The cheese is named for a Yorkshire dale.",
-    story:
-      "Wensleydale is a valley in the Yorkshire Dales, itself named after the village of Wensley. The cheese kept the dale's name.",
     chain: ["Wensleydale"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3799,8 +3483,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A smooth yarn spun from long combed wool, and cloth made of it.",
     hook: "The suiting yarn is named for a Norfolk village.",
-    story:
-      "Worstead in Norfolk was a centre of the medieval English wool trade. The spelling drifted away from the village, and the pronunciation drifted further.",
     chain: ["Worstead"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3823,8 +3505,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An idealised place of luxury and calm.",
     hook: "The dream palace was a real Mongol capital.",
-    story:
-      "Coleridge's Kubla Khan fixed the name in English. It renders Shangdu, Kublai Khan's summer capital in what is now Inner Mongolia.",
     chain: ["Shangdu"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -3847,8 +3527,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A knitted or crocheted blanket in coloured panels.",
     hook: "The blanket is named for a country it was never made in.",
-    story:
-      "English named the woollen covering after Afghanistan, by analogy with imported shawls and rugs. The craft became a domestic one in Britain and North America.",
     chain: ["Afghanistan"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -3871,8 +3549,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Espresso lengthened with hot water.",
     hook: "The coffee is named for the Americans who wanted it weaker.",
-    story:
-      "The name is Italian for American, and the usual account credits soldiers in Italy who diluted espresso toward the coffee they knew at home.",
     chain: ["United States"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -3895,8 +3571,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A knitted cotton fabric used for underwear and hosiery.",
     hook: "The knitted cotton is named for a town north of Dublin.",
-    story:
-      "Balbriggan's mills supplied fine knitted cotton, and the town's name travelled with the cloth into American usage.",
     chain: ["Balbriggan"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -3919,8 +3593,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A citrus fruit whose rind flavours Earl Grey tea.",
     hook: "The tea's perfume is usually traced to a Lombard city.",
-    story:
-      "The name is generally derived from Bergamo, where the fruit was traded. The trees themselves grow mainly in Calabria.",
     chain: ["Bergamo"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -3943,8 +3615,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A filled doughnut without a hole.",
     hook: "The doughnut is simply a Berliner.",
-    story:
-      "German named the pastry for the city, though Berliners themselves call it something else. English borrowed the outsider's name.",
     chain: ["Berlin"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -3967,8 +3637,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small oyster from the waters off Long Island.",
     hook: "The oyster is named for a hamlet on Long Island.",
-    story:
-      "Blue Point in Suffolk County, New York, gave the oyster its name. The label later spread to oysters from well beyond it.",
     chain: ["Blue Point"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -3991,8 +3659,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A thin flexible instrument passed into a body passage.",
     hook: "The medical instrument is named for an Algerian port that exported wax.",
-    story:
-      "Bougie is the French name for Bejaia, a source of wax candles. The candle sense came first, and the surgical instrument took its shape and its name.",
     chain: ["Bejaia"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4015,8 +3681,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A crisp red and gold eating apple.",
     hook: "The apple is named for a New Zealand orchard.",
-    story:
-      "The chance seedling was propagated at Braeburn Orchard near Waiwhero in the Motueka valley, and the orchard's name became the cultivar's.",
     chain: ["Waiwhero"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4039,8 +3703,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Close-fitting trousers ending above the ankle.",
     hook: "The trousers are named for an Italian island.",
-    story:
-      "Capri pants were designed for resort wear on the island in the late 1940s and named for it. English keeps the island as an adjective.",
     chain: ["Capri"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4063,8 +3725,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet winter melon with wrinkled yellow skin.",
     hook: "The melon is named for a town in western Turkey.",
-    story:
-      "The melon reached the United States from Kasaba, now Turgutlu, in the 19th century and kept the old name of the town.",
     chain: ["Turgutlu"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -4087,8 +3747,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fast 1920s dance with twisting feet.",
     hook: "The dance is named for a South Carolina port.",
-    story:
-      "The tune that carried the dance was named for Charleston, and the city's name went with it around the world in the 1920s.",
     chain: ["Charleston"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4111,8 +3769,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An adult education assembly combining lectures and entertainment.",
     hook: "A whole movement in adult education is named for a lake in New York.",
-    story:
-      "The first assembly met at Chautauqua Lake in 1874. Travelling versions carried the name across the United States.",
     chain: ["Chautauqua Lake"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4135,8 +3791,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A rough haircloth garment worn as penance.",
     hook: "The hair shirt is named for a region of southern Anatolia.",
-    story:
-      "Cilicia supplied a coarse cloth woven from goat hair. Latin named the cloth for the region, and the penitential sense followed.",
     chain: ["Cilicia"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4159,8 +3813,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Rosin, the residue left after distilling turpentine.",
     hook: "Violinists' rosin is named for an Ionian city.",
-    story:
-      "Colophon in Asia Minor was known for its resin. The city also gave English colophon, the note at the end of a book, by a separate route.",
     chain: ["Colophon"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4183,8 +3835,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A line dance, and the tall drum played for it.",
     hook: "The dance and the drum both point to the Congo.",
-    story:
-      "The Cuban form carries a name meaning of the Congo, recording the origins of the people who developed it in Cuba.",
     chain: ["Democratic Republic of the Congo"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -4207,8 +3857,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A strong printed cotton used for curtains and covers.",
     hook: "The furnishing cotton is usually traced to a Norman village.",
-    story:
-      "The name is generally linked to Creton in Normandy, where the cloth is said to have been made. The derivation is conventional rather than documented.",
     chain: ["Creton"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -4231,8 +3879,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dessert of nut meringue layered with cream.",
     hook: "The meringue cake is the feminine of from Dax.",
-    story:
-      "French dacquoise means of Dax, a spa town in the Landes. The cake carries the town's adjective rather than its name.",
     chain: ["Dax"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -4255,8 +3901,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A stiff felt hat with a domed crown; a sporting contest.",
     hook: "The hat and the local rivalry both come from an earl's racehorse prize.",
-    story:
-      "The Derby was founded by the 12th Earl of Derby, whose title comes from the town. The horse race gave English both the hat and the word for a fierce local fixture.",
     chain: ["Derby"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -4279,8 +3923,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dry white wine from the hills near Rome.",
     hook: "The Roman table wine is named for a hill town.",
-    story:
-      "Frascati sits in the Alban Hills south-east of Rome and has supplied the city with white wine for centuries.",
     chain: ["Frascati"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4303,8 +3945,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Of an Upper Palaeolithic culture of Europe.",
     hook: "A prehistoric culture is named for a French rock shelter.",
-    story:
-      "The type site is La Gravette in the Dordogne. Archaeology names cultures for the place their material was first described.",
     chain: ["La Gravette"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4327,8 +3967,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A horse for ordinary riding; a carriage for hire.",
     hook: "The hired cab, and the verb hack, point to a London parish.",
-    story:
-      "Hackney is usually traced to the London district, where horses were pastured. Hackneyed, meaning worn out by overuse, comes from the same hired horse.",
     chain: ["Hackney"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -4351,8 +3989,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A white wine from the Rhine.",
     hook: "The English name for Rhine wine is a clipped German town.",
-    story:
-      "Hock shortens Hockamore, an English rendering of Hochheimer. The town of Hochheim am Main named a wine that English then applied to the whole region.",
     chain: ["Hochheim am Main"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -4375,8 +4011,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A deep blue dye, and the colour of it.",
     hook: "The dye is named for the country it was shipped from.",
-    story:
-      "Greek indikon meant Indian, and the name followed the dye west through Latin and Spanish. Denim owes its colour to it.",
     chain: ["India"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -4399,8 +4033,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A poisonous plant of the nightshade family.",
     hook: "The weed is a worn-down Jamestown.",
-    story:
-      "Soldiers at Jamestown, Virginia, were poisoned by the plant in 1676. Jamestown weed contracted into jimsonweed.",
     chain: ["Jamestown"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4423,8 +4055,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet Japanese winter squash.",
     hook: "The Japanese squash is named for Cambodia.",
-    story:
-      "Portuguese traders are said to have introduced the squash to Japan from Cambodia, and the Japanese name preserves the country.",
     chain: ["Cambodia"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -4447,8 +4077,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fat-tailed sheep breed, and the pelt of its lambs.",
     hook: "The sheep is named for a town in Uzbekistan.",
-    story:
-      "Qorako'l in the Bukhara region gave its name to the breed whose lambskin is sold as astrakhan.",
     chain: ["Qorako'l"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4471,8 +4099,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A public open-air swimming pool or bathing beach.",
     hook: "British swimming pools are named for a Venetian sandbar.",
-    story:
-      "The Lido is the barrier island that shelters the Venetian lagoon, and its beach resort was fashionable in the 1920s. Britain applied the name to municipal pools.",
     chain: ["Lido di Venezia"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4495,8 +4121,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet fortified wine, especially from Madeira.",
     hook: "The sweet wine is a worn-down Greek fortress town.",
-    story:
-      "Monemvasia in the Peloponnese shipped the wine, and its name eroded through Italian and French into malmsey.",
     chain: ["Monemvasia"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -4519,8 +4143,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A strong brown paper, and the envelope made of it.",
     hook: "The envelope is named for a Philippine city.",
-    story:
-      "The paper was made from abaca fibre exported through Manila. The city's name stuck to the envelope long after the fibre stopped being used.",
     chain: ["Manila"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4543,8 +4165,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fine bobbin lace with a corded outline.",
     hook: "The lace carries the English name for Mechelen.",
-    story:
-      "Mechlin is how English wrote Mechelen, a Flemish lacemaking town. The lace kept the anglicised spelling.",
     chain: ["Mechelen"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4567,8 +4187,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Diced onion, carrot and celery used as a flavour base.",
     hook: "The vegetable base is named for a duke, whose title is a town.",
-    story:
-      "The name is usually credited to the 18th-century Duc de Levis-Mirepoix, whose title comes from the town of Mirepoix in Ariege.",
     chain: ["Mirepoix"],
     relationship: "indirect_derivation",
     confidence: "probable",
@@ -4591,8 +4209,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A soft, pale cheese with a washed rind.",
     hook: "The cheese is named for an Alsatian valley town.",
-    story:
-      "Munster in the Vosges gave the cheese its name, from a word meaning monastery. The American cheese sold under the name is a milder relative.",
     chain: ["Munster"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4615,8 +4231,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large official residence.",
     hook: "Every palace in English is one hill in Rome.",
-    story:
-      "Imperial residences stood on the Palatine Hill, and Latin palatium became the word for the building type. It reached English through French.",
     chain: ["Palatine Hill"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4639,8 +4253,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A slow processional court dance.",
     hook: "The stately dance is usually traced to Padua.",
-    story:
-      "The name is generally derived from a dialect adjective meaning of Padua. A rival account links it to the Latin for peacock.",
     chain: ["Padua"],
     relationship: "historical_place_name",
     confidence: "probable",
@@ -4663,8 +4275,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Volcanic ash used to make hydraulic cement.",
     hook: "Roman concrete is named for a town near Naples.",
-    story:
-      "Ash from around Pozzuoli let Roman concrete set under water. The material kept the town's name into modern engineering.",
     chain: ["Pozzuoli"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4687,8 +4297,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A glossy fabric with a smooth unbroken surface.",
     hook: "The cloth is usually traced to a Chinese port's Arabic name.",
-    story:
-      "Satin is commonly derived from Zaytun, the Arabic name for Quanzhou, from which the fabric was shipped. The route is long and the link is probable rather than certain.",
     chain: ["Quanzhou"],
     relationship: "historical_place_name",
     confidence: "probable",
@@ -4711,8 +4319,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dark-skinned wine grape, also called syrah.",
     hook: "The grape may be named for a Persian city, or not at all.",
-    story:
-      "A traditional story brings the vine from Shiraz, but genetic work places syrah's parentage in south-eastern France. The name may be a later embellishment.",
     chain: ["Shiraz"],
     relationship: "disputed",
     confidence: "disputed",
@@ -4735,8 +4341,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cat with a striped or mottled coat.",
     hook: "The striped cat is named for a striped silk from Baghdad.",
-    story:
-      "The cloth was named for al-Attabiyya, a quarter of Baghdad. English applied the fabric's name to the cat's markings.",
     chain: ["Baghdad"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -4759,8 +4363,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A skiing turn made in a lunge with the heel free.",
     hook: "The ski turn is named for a Norwegian county.",
-    story:
-      "Skiers from Telemark developed the technique in the 19th century, and the county's name travelled with it.",
     chain: ["Telemark"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4783,8 +4385,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An early barbiturate sedative, barbital.",
     hook: "The first barbiturate sleeping drug was named for Verona.",
-    story:
-      "The chemist who introduced it is said to have named it for Verona, reportedly as the most restful city he knew. The account is traditional.",
     chain: ["Verona"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -4807,8 +4407,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Spanish musical drama alternating song and speech.",
     hook: "The Spanish operetta is named for a royal hunting lodge.",
-    story:
-      "Early performances were staged at the Palacio de la Zarzuela outside Madrid, which took its own name from the brambles around it.",
     chain: ["Palacio de la Zarzuela"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4831,8 +4429,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet laminated pastry.",
     hook: "The pastry is named for the wrong country.",
-    story:
-      "Danish bakers learned the method from Austrian workers, and Danish itself calls it Viennese bread. English named it for the intermediary.",
     chain: ["Denmark"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -4855,8 +4451,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tyrannosaurid dinosaur of Late Cretaceous North America.",
     hook: "The dinosaur is named for a Canadian province.",
-    story:
-      "Albertosaurus was described in 1905 from specimens in the badlands of Alberta, and named for the province in its founding year.",
     chain: ["Alberta"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4879,8 +4473,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Of a heraldic cross shaped like four hazelnuts.",
     hook: "A heraldic cross is named for an Italian hazelnut town.",
-    story:
-      "Avella in Campania gave Latin its word for the hazelnut, and heraldry took the adjective for the nut-shaped cross.",
     chain: ["Avella"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4903,8 +4495,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A flat Scottish bonnet, and a laced ankle boot.",
     hook: "Two different garments are named for one royal estate in Aberdeenshire.",
-    story:
-      "Balmoral Castle became a royal residence in 1852, and Victorian fashion attached its name to both a bonnet and a boot.",
     chain: ["Balmoral Castle"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4927,8 +4517,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tube of explosive used to clear wire and mines.",
     hook: "The demolition charge carries the old spelling of Bengaluru.",
-    story:
-      "The Bangalore torpedo was devised in 1912 at the Madras Sappers' base in Bangalore. The city is now Bengaluru; the weapon is not.",
     chain: ["Bengaluru"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -4951,8 +4539,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sheer fabric of silk and wool.",
     hook: "The gauzy dress fabric is named for a Pyrenean spa.",
-    story:
-      "Bareges in the Hautes-Pyrenees produced the light cloth, and the village's name followed it into French and English fashion.",
     chain: ["Bareges"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -4975,8 +4561,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Hair, in Cockney rhyming slang.",
     hook: "London slang for hair is half of Barnet Fair.",
-    story:
-      "Barnet Fair, held in the north London town since the Middle Ages, supplied the rhyme. The second half dropped away, as it usually does.",
     chain: ["Barnet"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -4999,8 +4583,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sponge cake in pink and yellow checks under marzipan.",
     hook: "The checked cake is named for a German village, by way of a royal wedding.",
-    story:
-      "The cake is generally said to honour the 1884 marriage of Princess Victoria to Prince Louis of Battenberg, whose family took its name from the Hessian village.",
     chain: ["Battenberg"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5023,8 +4605,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A four-wheeled covered carriage with a hooded rear seat.",
     hook: "The carriage is named for the city where it was designed.",
-    story:
-      "The design is credited to a Brandenburg architect working in Berlin in the 17th century. The city's name travelled with the vehicle across Europe.",
     chain: ["Berlin"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5047,8 +4627,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The Christian scriptures, or the Hebrew scriptures.",
     hook: "The word for the book traces to a Phoenician port that traded papyrus.",
-    story:
-      "Greek biblion, a book, is generally derived from Byblos, the Phoenician city through which papyrus was traded. The city is now Jbeil in Lebanon.",
     chain: ["Byblos"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -5071,8 +4649,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sword with a finely tempered blade.",
     hook: "The Elizabethan sword is named for a Basque port.",
-    story:
-      "Bilbao's ironworking reputation gave English bilbo for a good blade. The spelling records how English speakers heard the city's name.",
     chain: ["Bilbao"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -5095,8 +4671,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Flattering, coaxing talk.",
     hook: "Smooth talk is named for a village in County Cork.",
-    story:
-      "Blarney Castle's stone is said to confer eloquence on those who kiss it. The village's name became the word for the gift itself.",
     chain: ["Blarney"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5119,8 +4693,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Of a meat sauce for pasta, in the style of Bologna.",
     hook: "The meat sauce is the adjective for Bolognese.",
-    story:
-      "Italian ragu alla bolognese means in the manner of Bologna. English kept the adjective and dropped the rest of the phrase.",
     chain: ["Bologna"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -5143,8 +4715,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A travelling step in samba and ballroom dance.",
     hook: "The dance step is named for a district of Rio de Janeiro.",
-    story:
-      "Botafogo is a neighbourhood on Guanabara Bay. Ballroom notation borrowed its name for the crossing step.",
     chain: ["Botafogo"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5167,8 +4737,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A flat candlestick with a handle.",
     hook: "The candlestick shares its origin with the surgical bougie.",
-    story:
-      "Italian bugia, like French bougie, comes from Bejaia in Algeria, a source of candle wax.",
     chain: ["Bejaia"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -5191,8 +4759,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A white wine made from viognier in the northern Rhone.",
     hook: "The wine is named for a small Rhone commune.",
-    story:
-      "Condrieu's terraced slopes grow viognier almost exclusively, and the appellation carries the commune's name.",
     chain: ["Condrieu"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -5215,8 +4781,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An autocorrection that replaces a word with a wrong one.",
     hook: "The autocorrect blunder is named for a Californian city.",
-    story:
-      "Early spellcheckers lacking cooperation offered Cupertino instead, and the substitution became the name for the whole class of error.",
     chain: ["Cupertino"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5239,8 +4803,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Of Cyprus; formerly, licentious.",
     hook: "An island's name was once a euphemism.",
-    story:
-      "Cyprus was associated in classical writing with the cult of Aphrodite, and English took the adjective in a moralising sense that has since faded.",
     chain: ["Cyprus"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -5263,8 +4825,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small vessel for heating liquid with spirit.",
     hook: "The spirit burner is named for a Sicilian volcano.",
-    story:
-      "The laboratory and travelling heater took the volcano's name from the flame beneath it.",
     chain: ["Mount Etna"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5287,8 +4847,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cigar made in Cuba.",
     hook: "The cigar is simply the city.",
-    story:
-      "English uses the capital's name for the cigar, as French and Spanish do. Cuban tobacco was shipped through the port.",
     chain: ["Havana"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -5311,8 +4869,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard black lignite that takes a high polish.",
     hook: "The black stone is usually traced to a river in Lycia.",
-    story:
-      "The name is generally derived through Latin and French from Gagas, a town and river in ancient Lycia. Jet-black comes from the mineral, not the aircraft.",
     chain: ["Gagas"],
     relationship: "historical_place_name",
     confidence: "probable",
@@ -5335,8 +4891,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The palm fibre used for Panama hats, and the hat itself.",
     hook: "The Panama hat's fibre is named for an Ecuadorian town.",
-    story:
-      "Jipijapa in Manabi province is a centre of the weaving. The hats were shipped through Panama, which is how they got the wrong name.",
     chain: ["Jipijapa"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -5359,8 +4913,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A silver coin struck in the Bohemian mining town.",
     hook: "The full form of the word that became dollar.",
-    story:
-      "Coins from Joachimsthal, now Jachymov, were called Joachimsthaler, shortened to thaler and later reshaped into dollar.",
     chain: ["Jachymov"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5383,8 +4935,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Of or from Ciudad Juarez, on the Mexican border.",
     hook: "A border city named for a president lends its name onward.",
-    story:
-      "Ciudad Juarez was renamed in 1888 for Benito Juarez. The city's name now attaches to things associated with the border.",
     chain: ["Ciudad Juarez"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -5407,8 +4957,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A variety of cannabis with broad leaves.",
     hook: "The cannabis strain is named for a mountain range.",
-    story:
-      "The name points to landrace varieties from the Hindu Kush, the range running through Afghanistan and Pakistan.",
     chain: ["Hindu Kush"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -5431,8 +4979,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cocktail of whiskey, vermouth and bitters.",
     hook: "The cocktail is named for a New York island.",
-    story:
-      "The drink is associated with the Manhattan Club in the 1870s. The island's name comes from Lenape.",
     chain: ["Manhattan"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5455,8 +5001,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The national anthem of France.",
     hook: "The anthem is named for the volunteers who sang it into Paris.",
-    story:
-      "Written in Strasbourg in 1792, the song was carried to Paris by volunteers from Marseille and took their city's adjective.",
     chain: ["Marseille"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -5479,8 +5023,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A paste of ground almonds and sugar.",
     hook: "One account traces the sweet to a Burmese port, but it is far from settled.",
-    story:
-      "Marzipan has been linked to Martaban, now Mottama, whose glazed jars may have named the boxes the sweet was sold in. Other accounts are entirely non-geographic.",
     chain: ["Mottama"],
     relationship: "disputed",
     confidence: "disputed",
@@ -5503,8 +5045,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Of dishes named for the soprano Nellie Melba.",
     hook: "Peach Melba and Melba toast go back to Melbourne.",
-    story:
-      "The singer Helen Porter Mitchell took the stage name Melba from her home city. Escoffier then named dishes for her, so the city is two steps back.",
     chain: ["Melbourne"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -5527,8 +5067,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A thin breaded and fried cutlet.",
     hook: "The South American cutlet is Milanese.",
-    story:
-      "The dish follows cotoletta alla milanese, of Milan, and travelled to the River Plate with Italian migration.",
     chain: ["Milan"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -5551,8 +5089,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The trade of making and selling women's hats.",
     hook: "The trade name, like the milliner, is Milanese.",
-    story:
-      "Millinery follows milliner, which began as a word for a dealer in goods from Milan before narrowing to hats.",
     chain: ["Milan"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -5575,8 +5111,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Meprobamate, an early tranquilliser.",
     hook: "The first blockbuster tranquilliser is named for a New Jersey borough.",
-    story:
-      "The drug was developed at Wallace Laboratories in Milltown, New Jersey, and marketed under the town's name in the 1950s.",
     chain: ["Milltown"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5599,8 +5133,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Japanese pottery style inlaid with white slip.",
     hook: "The inlaid pottery is named for a Japanese city's almanac.",
-    story:
-      "The comb-like patterns were likened to the printed calendar issued at Mishima in Shizuoka, and the technique took the city's name.",
     chain: ["Mishima"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5623,8 +5155,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fine sheer fabric; a sauce lightened with cream.",
     hook: "The French cousin of muslin, from the same Iraqi city.",
-    story:
-      "French mousseline and English muslin both go back to Mosul. The culinary sense borrows the fabric's lightness.",
     chain: ["Mosul"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -5647,8 +5177,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An essential oil distilled from bitter orange blossom.",
     hook: "The perfume oil is named for an Italian town, through a princess.",
-    story:
-      "Anne Marie Orsini, Princess of Nerola, popularised the scent in the 17th century. Her title comes from Nerola, north-east of Rome.",
     chain: ["Nerola"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -5671,8 +5199,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Finnish company, originally a paper mill.",
     hook: "The phone company is named for a river and a town.",
-    story:
-      "The mill was founded on the Nokianvirta river, and the town of Nokia grew around it. The name long predates the telephones.",
     chain: ["Nokia"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5695,8 +5221,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A soft stringy Mexican cheese.",
     hook: "The stretched-curd cheese is named for a southern Mexican state.",
-    story:
-      "Queso Oaxaca comes from the state of Oaxaca, where it is wound into balls. English uses the state name alone.",
     chain: ["Oaxaca"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -5719,8 +5243,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A rapid-firing autocannon of 20 mm calibre.",
     hook: "The anti-aircraft gun is named for a Zurich suburb.",
-    story:
-      "The gun was manufactured by a works at Oerlikon, now a district of Zurich. Allied and Axis navies both used it.",
     chain: ["Oerlikon"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5743,8 +5265,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A compound isolated from cotyledons, studied as a kinase inhibitor.",
     hook: "A laboratory compound is named for a Moravian city.",
-    story:
-      "Olomoucine was characterised by researchers at Palacky University in Olomouc and named for the city.",
     chain: ["Olomouc"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5767,8 +5287,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A supposed antidote sold by travelling quacks.",
     hook: "A famous fake cure-all is named for the same Umbrian town.",
-    story:
-      "Orvietan was hawked across Europe as a universal antidote. It kept the name of the town its first vendor came from.",
     chain: ["Orvieto"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -5791,8 +5309,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A white wine from southern Umbria.",
     hook: "The wine is named for a town on a tufa outcrop.",
-    story:
-      "Orvieto's cellars are cut into the rock the town stands on. The wine has carried its name since the Middle Ages.",
     chain: ["Orvieto"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -5815,8 +5331,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Of the largest ship that fits the Panama Canal locks.",
     hook: "A whole class of ship is sized by one canal.",
-    story:
-      "Panamax describes vessels built to the maximum dimensions of the canal's original locks. Post-Panamax followed when the locks were enlarged.",
     chain: ["Panama Canal"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5839,8 +5353,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The world of poetry, taken collectively.",
     hook: "Poetry itself is a Greek mountain.",
-    story:
-      "Mount Parnassus above Delphi was sacred to Apollo and the Muses. English uses it for the domain of poets.",
     chain: ["Mount Parnassus"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5863,8 +5375,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The ancient region along the southern Black Sea coast.",
     hook: "A sea's name became a region's.",
-    story:
-      "Greek pontos meant sea, and the Black Sea's southern shore took the name. Pontic Greek is still spoken by its descendants.",
     chain: ["Pontus"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5887,8 +5397,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A prefabricated hut with a semicircular corrugated roof.",
     hook: "The wartime hut is named for a point in Rhode Island.",
-    story:
-      "The design was first produced in 1941 at Quonset Point naval base. The name became generic for the shape.",
     chain: ["Quonset Point"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5911,8 +5419,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To move an incompetent officer to a harmless post.",
     hook: "A South African town became a verb for sidelining someone.",
-    story:
-      "During the South African War, officers judged unfit were sent to a remount depot at Stellenbosch. The town's name became the word for the manoeuvre.",
     chain: ["Stellenbosch"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -5935,8 +5441,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Devoted to luxury and pleasure.",
     hook: "The adjective for luxury is a Greek colony in Italy.",
-    story:
-      "Sybaris in Calabria was a byword for indulgence among Greek writers. English has both sybarite and sybaritic from it.",
     chain: ["Sybaris"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -5959,8 +5463,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large game bird domesticated in the Americas.",
     hook: "The American bird is named for a country on the wrong continent.",
-    story:
-      "English first applied turkey to guineafowl imported through Ottoman territory, then transferred the name to the unrelated American bird.",
     chain: ["Turkey"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -5983,8 +5485,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Enriched baked goods such as croissants and brioche.",
     hook: "A whole class of French pastry is labelled Viennese.",
-    story:
-      "French viennoiserie means things from Vienna, crediting the Austrian bakers who brought the method to Paris. The danish records the same journey.",
     chain: ["Vienna"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6007,8 +5507,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large motorhome.",
     hook: "The motorhome is named for an Iowa county.",
-    story:
-      "The company began in Winnebago County, Iowa, in 1958. The county takes its name from the Ho-Chunk people, formerly called Winnebago.",
     chain: ["Winnebago County"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6031,8 +5529,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Dry, refined wit.",
     hook: "Wit itself is measured in Athenian units.",
-    story:
-      "Attic, of Attica, stood for Athenian elegance, and salt for pungency. English borrowed the Latin phrase whole.",
     chain: ["Attica"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6055,8 +5551,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An almond tart on a jam-lined pastry case.",
     hook: "The almond tart is named for a Derbyshire town.",
-    story:
-      "Bakewell in the Peak District gives its name both to the pudding and to the later tart.",
     chain: ["Bakewell"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6079,8 +5573,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A rich sweet bun with sugar crystals on top.",
     hook: "The bun is named for a spa city.",
-    story:
-      "Bath's visitors made the bun fashionable in the 18th century, and it has carried the city's name since.",
     chain: ["Bath"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6103,8 +5595,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hardy creeping lawn and pasture grass.",
     hook: "The grass is named for a stopover, not a home.",
-    story:
-      "Native to Africa, it reached the Americas via Bermuda and English named it for the island it arrived from.",
     chain: ["Bermuda"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -6127,8 +5617,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Tailored shorts reaching just above the knee.",
     hook: "The shorts are named for the island where they became formal wear.",
-    story:
-      "British forces in Bermuda adopted knee-length shorts in the heat, and civilian dress there followed. The island's name went with the garment.",
     chain: ["Bermuda"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6151,8 +5639,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An Atlantic region associated with unexplained disappearances.",
     hook: "A stretch of ocean is named for one of its corners.",
-    story:
-      "The name marks out the area between Bermuda, Florida and Puerto Rico. Statistical studies find no unusual loss rate.",
     chain: ["Bermuda"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6175,8 +5661,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A chocolate and cherry cake with kirsch.",
     hook: "The cake is named for a German upland, through its cherry spirit.",
-    story:
-      "The name points to Schwarzwalder Kirschwasser, the cherry brandy of the Black Forest, rather than to the forest itself.",
     chain: ["Black Forest"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6199,8 +5683,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sponge cake filled with custard and topped with chocolate.",
     hook: "A cake called a pie is named for a city.",
-    story:
-      "It was popularised at a Boston hotel in the 1850s and named for the city. It is a cake, and has never been a pie.",
     chain: ["Boston"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6223,8 +5705,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large three-sided nut from an Amazonian tree.",
     hook: "The nut is named for the country it was shipped from.",
-    story:
-      "The tree grows across Amazonia, but the export trade ran through Brazil, and English named the nut for the country.",
     chain: ["Brazil"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6247,8 +5727,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A derisive noise made with the tongue and lips.",
     hook: "A rude noise is named for a New York borough.",
-    story:
-      "The sound is associated with baseball crowds in the Bronx, and the borough's name became the polite way to refer to it.",
     chain: ["The Bronx"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6271,8 +5749,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small cabbage-like bud grown on a tall stem.",
     hook: "The vegetable is named for a city that cultivated it.",
-    story:
-      "The plant was widely grown around Brussels by the 18th century, and English named it for the city rather than for the plant it belongs to.",
     chain: ["Brussels"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6295,8 +5771,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fried chicken wing in a butter and hot sauce coating.",
     hook: "The wings are named for a city, not an animal.",
-    story:
-      "They were first served in Buffalo, New York, in 1964. No buffalo is involved at any stage.",
     chain: ["Buffalo"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6319,8 +5793,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The cold Pacific current flowing south along western North America.",
     hook: "The Pacific's cold counterpart is named for the coast it follows.",
-    story:
-      "The current runs south past California and keeps its coastal waters cold and its summers foggy.",
     chain: ["California"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6343,8 +5815,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard soap made from olive oil.",
     hook: "The olive oil soap is named for a Spanish kingdom.",
-    story:
-      "Castile's olive oil made a white, hard soap that European markets named for the region it came from.",
     chain: ["Castile"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6367,8 +5837,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A spiral currant bun glazed with sugar.",
     hook: "The bun is named for a London district's bakery.",
-    story:
-      "The Chelsea Bun House sold them in the 18th century to crowds including royalty, and the district's name stayed on the bun.",
     chain: ["Chelsea"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6391,8 +5859,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hot dog topped with meat sauce, onion and mustard.",
     hook: "A Michigan diner staple is named for a New York beach.",
-    story:
-      "Greek and Macedonian immigrants who arrived through New York carried the name west, where Coney Island now denotes the style.",
     chain: ["Coney Island"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6415,8 +5881,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A bronze helmet covering the whole face.",
     hook: "The classic Greek helmet is named for one city.",
-    story:
-      "The form is associated with Corinth in archaeological classification. It is the helmet on countless later emblems.",
     chain: ["Corinth"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6439,8 +5903,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A moderately high, straight-sided heel.",
     hook: "The boot heel is named for an island.",
-    story:
-      "The style is associated with Cuban dance shoes and reached wider fashion under that name.",
     chain: ["Cuba"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6463,8 +5925,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A patterned steel used for sword blades.",
     hook: "The watered steel carries the city that traded it.",
-    story:
-      "Blades of this steel reached Europe through Damascus, and the city's name attached to the banded surface pattern rather than to the making of it.",
     chain: ["Damascus"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6487,8 +5947,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A pale, sharp mustard made with white wine or verjuice.",
     hook: "The mustard is named for a Burgundian city.",
-    story:
-      "Dijon has made mustard since the Middle Ages. The name describes the style and is not restricted to the city.",
     chain: ["Dijon"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6511,8 +5969,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A prized flatfish of European waters.",
     hook: "The fish is named for the port that landed it freshest.",
-    story:
-      "Dover's boats could get sole to London markets quickly, and the town's name became the mark of quality for the fish.",
     chain: ["Dover"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6535,8 +5991,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A door divided so the halves open separately.",
     hook: "English has a whole set of phrases that use Dutch as a slight.",
-    story:
-      "The split door is a genuine feature of Dutch building. Other Dutch phrases in English come from 17th-century rivalry rather than description.",
     chain: ["Netherlands"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6559,8 +6013,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small round pastry filled with currants.",
     hook: "The currant pastry is named for a Lancashire town.",
-    story:
-      "Eccles, now part of Salford, is where the cake was first sold commercially in the late 18th century.",
     chain: ["Eccles"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6583,8 +6035,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The secret initiation rites of Demeter and Persephone.",
     hook: "Antiquity's most famous secret is named for a town near Athens.",
-    story:
-      "The rites were held at Eleusis for nearly two thousand years, and initiates were forbidden to describe them.",
     chain: ["Eleusis"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6607,8 +6057,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A flat yeast-raised round griddled on both sides.",
     hook: "The muffin is only English outside England.",
-    story:
-      "In England it is a muffin. American English added the country to distinguish it from the cake-like muffin.",
     chain: ["England"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6631,8 +6079,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Magnesium sulfate, used medicinally and in bathing.",
     hook: "The bath salts are named for an English spa town.",
-    story:
-      "The salt was first obtained from a mineral spring at Epsom in Surrey. Its bitter water made the town a spa before it made the salt famous.",
     chain: ["Epsom"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6655,8 +6101,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A coiled brass instrument with a wide bell.",
     hook: "The orchestra's horn is French only in English.",
-    story:
-      "English distinguished the French style of hunting horn from the German. The instrument's makers were largely German, and players often just call it the horn.",
     chain: ["France"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6679,8 +6123,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A glazed door reaching to the floor, usually in pairs.",
     hook: "A whole family of English words for fittings points at France.",
-    story:
-      "French window, French door and French polish all use the country as a mark of a particular style rather than of manufacture there.",
     chain: ["France"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6703,8 +6145,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Rubella, a mild viral rash illness.",
     hook: "The disease is named for the physicians who described it.",
-    story:
-      "German doctors distinguished it from measles and scarlet fever in the 18th century, and English named it for them. Rubella is now the preferred term.",
     chain: ["Germany"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6727,8 +6167,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A problem solved only by abandoning the usual approach.",
     hook: "The knot was tied in a Phrygian capital.",
-    story:
-      "An intricate knot at Gordion was said to await whoever would rule Asia. Alexander cut it, which is why the phrase means what it means.",
     chain: ["Gordion"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6751,8 +6189,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Strained yogurt with much of its whey removed.",
     hook: "Strained yogurt is named for one country among many that make it.",
-    story:
-      "Straining is common across the eastern Mediterranean and the Levant. English-speaking markets settled on the Greek label.",
     chain: ["Greece"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6775,8 +6211,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The warm Atlantic current flowing north-east from the Gulf.",
     hook: "The current that warms Europe is named for where it starts.",
-    story:
-      "The flow emerges from the Gulf of Mexico and crosses the Atlantic. Franklin's chart of it gave the name wide currency.",
     chain: ["Gulf of Mexico"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6799,8 +6233,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A loose printed short-sleeved shirt.",
     hook: "The loud shirt is named for the islands that made it.",
-    story:
-      "The aloha shirt was commercialised in Honolulu in the 1930s. English outside the islands calls it Hawaiian.",
     chain: ["Hawaii"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6823,8 +6255,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dense black ink of carbon in a binder.",
     hook: "The ink is named for a trade route, not its origin.",
-    story:
-      "The ink was developed in China, but English speakers met it through trade with India and named it accordingly.",
     chain: ["India"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -6847,8 +6277,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A flat, pale edible bean.",
     hook: "The bean is named for the Peruvian capital.",
-    story:
-      "Boxes of the beans shipped from Lima were labelled with the port, and the name followed the cargo into English.",
     chain: ["Lima"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -6871,8 +6299,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tick-borne bacterial infection.",
     hook: "The disease is named for a town in Connecticut.",
-    story:
-      "A cluster of arthritis cases in children around Lyme and Old Lyme in the 1970s led to the description of the illness.",
     chain: ["Lyme"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6895,8 +6321,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Mercury poisoning from contaminated seafood.",
     hook: "An industrial disaster gave a Japanese city's name to a disease.",
-    story:
-      "Methylmercury discharged into Minamata Bay from the 1930s poisoned people who ate the fish. The city's name now denotes the poisoning itself.",
     chain: ["Minamata"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6919,8 +6343,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A very short interval of time.",
     hook: "Impatience has a city attached to it.",
-    story:
-      "The phrase contrasts the pace of New York with everywhere else, and is usually said by people who do not live there.",
     chain: ["New York City"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -6943,8 +6365,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A salad of tomato, olives, anchovy and egg.",
     hook: "The salad is the adjective for Nice.",
-    story:
-      "Nicoise means of Nice, on the French Riviera. Arguments about what belongs in it are a local sport.",
     chain: ["Nice"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -6967,8 +6387,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A light straw hat woven from toquilla palm.",
     hook: "The hat is named for the wrong country.",
-    story:
-      "The hats are woven in Ecuador but were shipped and sold through Panama, and buyers named them for the place they bought them.",
     chain: ["Panama"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -6991,8 +6409,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Roast duck served with thin pancakes.",
     hook: "The dish carries the older English spelling of Beijing.",
-    story:
-      "Peking was the standard English rendering before pinyin. The city changed how it is written; the dish did not.",
     chain: ["Beijing"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -7015,8 +6431,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A roll filled with sliced beef and melted cheese.",
     hook: "The sandwich is named for the city that argues about it.",
-    story:
-      "It emerged in Philadelphia in the 1930s. Which cheese belongs on it remains locally contentious.",
     chain: ["Philadelphia"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7039,8 +6453,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A soft conical cap with the tip bent forward.",
     hook: "The cap of liberty is named for an Anatolian region.",
-    story:
-      "Classical art used the cap to mark figures from Phrygia. Revolutionary France adopted it as a symbol of freedom.",
     chain: ["Phrygia"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7063,8 +6475,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The source of poetic inspiration.",
     hook: "Inspiration is a spring in northern Greece.",
-    story:
-      "Pieria, on the slopes of Olympus, was held sacred to the Muses. Pope's line about drinking deep of it fixed the phrase in English.",
     chain: ["Pieria"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7087,8 +6497,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Gypsum plaster that sets hard and quickly.",
     hook: "The plaster is named for the gypsum quarries of Montmartre.",
-    story:
-      "Large gypsum deposits under Montmartre in Paris supplied the calcined plaster, and English named the material for the city.",
     chain: ["Paris"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7111,8 +6519,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small round liquorice sweet.",
     hook: "The liquorice sweet is named for a Yorkshire town.",
-    story:
-      "Liquorice was grown around Pontefract, and the discs were stamped with the town's castle.",
     chain: ["Pontefract"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7135,8 +6541,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The common hydraulic cement used in concrete.",
     hook: "The cement is named for the stone it was said to resemble.",
-    story:
-      "Joseph Aspdin patented it in 1824 and named it for Portland stone, quarried on the Isle of Portland in Dorset, whose colour the set cement recalls.",
     chain: ["Isle of Portland"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7159,8 +6563,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A deep blue pigment, ferric ferrocyanide.",
     hook: "The first modern synthetic pigment is named for a vanished kingdom.",
-    story:
-      "It was made in Berlin around 1706 and named for Prussia. The kingdom is gone; the pigment is still on every artist's palette.",
     chain: ["Prussia"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7183,8 +6585,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A nose with a prominent bridge.",
     hook: "A facial profile is named for a city's portrait busts.",
-    story:
-      "English took the profile of Roman portrait sculpture as the type, and the phrase has described the shape ever since.",
     chain: ["Rome"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -7207,8 +6607,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Transparent adhesive tape.",
     hook: "A brand name preserves an old slur about thrift.",
-    story:
-      "The story is that a frustrated user called the sparsely coated early tape Scotch, meaning stingy. The company kept the name.",
     chain: ["Scotland"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -7231,8 +6629,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A bitter orange used for marmalade.",
     hook: "The marmalade orange is named for an Andalusian city.",
-    story:
-      "The bitter fruit was associated with Seville's groves, and British marmalade makers named it for the source.",
     chain: ["Seville"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7255,8 +6651,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The influenza pandemic of 1918 and 1919.",
     hook: "The 1918 pandemic is named for the only country reporting it honestly.",
-    story:
-      "Wartime censorship suppressed reporting elsewhere, while neutral Spain covered the outbreak freely. The name records press freedom, not origin.",
     chain: ["Spain"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -7279,8 +6673,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A captive's apparent sympathy toward a captor.",
     hook: "The syndrome is named for a bank robbery.",
-    story:
-      "Hostages taken during a 1973 robbery in Stockholm defended their captors afterwards, and a criminologist named the pattern for the city.",
     chain: ["Stockholm"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7303,8 +6695,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A pale cheese with large holes.",
     hook: "The holes made a country into a cheese.",
-    story:
-      "American usage calls emmental-style cheese simply Swiss, and the phrase now describes anything full of holes.",
     chain: ["Switzerland"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -7327,8 +6717,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A thin hot sauce of chilli, vinegar and salt.",
     hook: "The sauce is named for a Mexican state.",
-    story:
-      "The pepper variety carries the name of Tabasco, and the Louisiana-made sauce took it in turn.",
     chain: ["Tabasco"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7351,8 +6739,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A creamy dressing with chopped pickle and tomato.",
     hook: "The dressing is named for an archipelago on the St Lawrence.",
-    story:
-      "The Thousand Islands lie along the border of New York and Ontario, where the dressing is said to have been devised.",
     chain: ["Thousand Islands"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7375,8 +6761,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A trick that gets something harmful past a defence.",
     hook: "Every malicious program of this kind is named for one siege.",
-    story:
-      "The wooden horse of the Iliad tradition gave English both the phrase and, later, the name for software that hides its purpose.",
     chain: ["Troy"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7399,8 +6783,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A gelled sweet dusted with icing sugar.",
     hook: "The sweet is named for the country that exported it.",
-    story:
-      "Its Turkish name means throat comfort. British importers in the 19th century sold it simply as Turkish delight.",
     chain: ["Turkey"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -7423,8 +6805,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A costly purple dye made from sea snails.",
     hook: "Imperial purple is named for a Phoenician port.",
-    story:
-      "Tyre, in present-day Lebanon, was the centre of the murex dye trade. The colour marked rank across the Mediterranean world.",
     chain: ["Tyre"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7447,8 +6827,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Melted seasoned cheese served on toast.",
     hook: "The dish is a joke at Wales's expense that outlived the joke.",
-    story:
-      "It began as Welsh rabbit, mocking a meal without meat. Rarebit is a later, politer respelling of the same phrase.",
     chain: ["Wales"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -7471,8 +6849,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A mosquito-borne virus that can cause encephalitis.",
     hook: "The virus is named for a district in Uganda.",
-    story:
-      "It was first isolated in 1937 from a woman in the West Nile district of Uganda.",
     chain: ["West Nile"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7495,8 +6871,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A thin breaded veal cutlet.",
     hook: "The cutlet is simply Viennese.",
-    story:
-      "Wiener means of Vienna. Austrian law reserves the name for veal; anything else has to be labelled differently.",
     chain: ["Vienna"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -7519,8 +6893,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A thin fermented sauce of vinegar, anchovy and tamarind.",
     hook: "The sauce is named for an English county.",
-    story:
-      "It was first sold from a shop in Worcester in the 1830s, and the county's name has been hard to spell ever since.",
     chain: ["Worcester"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7543,8 +6915,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A batter pudding baked in hot fat.",
     hook: "The pudding is named for an English county.",
-    story:
-      "Earlier called dripping pudding, it was renamed for Yorkshire in an 18th-century cookbook and the name stuck.",
     chain: ["Yorkshire"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -7567,8 +6937,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fast-moving winter storm that forms in western Canada and races southeast across the northern United States with wind, cold and light snow.",
     hook: "One weather term, two borrowings: a Canadian province and a racing sailing ship.",
-    story:
-      "Forecasters named these systems for Alberta, where the lee of the Rockies spins them up, and for the clipper ships whose speed they seemed to match. They cross the mountains wrung dry, so the drama is usually the temperature crash rather than the snowfall.",
     chain: ["Alberta"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7591,8 +6959,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard olive oil soap enriched with laurel berry oil, made in the Syrian city of Aleppo.",
     hook: "The laurel oil, not the olive oil, is what makes it Aleppo soap.",
-    story:
-      "Aleppo sat where Mediterranean olive groves met the overland caravan routes, and its soapmakers stacked the cut bars in open towers to cure for months before export. The Syrian war scattered the trade, and much soap sold under the name is now made by Aleppan families working in Turkey and France.",
     chain: ["Aleppo"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7615,8 +6981,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "A saying that many different methods can arrive at the same result.",
     hook: "The Roman road network really did radiate from one gilded marker in the Forum.",
-    story:
-      "Imperial roads were reckoned from the Milliarium Aureum, the golden milestone Augustus set in the Forum as the point where every road was considered to begin. The proverb is medieval rather than Roman; Latin versions circulate from the twelfth century before English picks it up.",
     chain: ["Rome"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7639,8 +7003,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A mild, pale, highly meltable cheese that in the United States legally denotes a pasteurized process product.",
     hook: "It names a country; in US law it now means processed cheese.",
-    story:
-      "Before processing existed, American-made cheddar sold at home and abroad was simply called American cheese. The modern sense arrived in the early twentieth century, when process cheese took over the name and the older meaning quietly died.",
     chain: ["United States"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -7663,8 +7025,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A narrow fretted zither played across the lap, with three or four strings and a droning sound.",
     hook: "It is not a dulcimer: real dulcimers are struck, and this one is plucked.",
-    story:
-      "Settlers in the southern mountains built the instrument in the early 1800s from older European fretted zithers, and folk revivalists attached the regional name to it in the 20th century. Calling it a dulcimer is a misfit borrowed from the hammered instrument it does not resemble in play.",
     chain: ["Appalachian Mountains"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7687,8 +7047,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A heavy cream-colored wool sweater worked in raised cable, diamond, and honeycomb stitches.",
     hook: "The \"ancient clan patterns\" are a 20th-century marketing invention.",
-    story:
-      "Knitting for sale grew on the Aran Islands off Galway in the early 1900s, and the sweaters reached American shops after the 1940s. The claim that each family had a hereditary stitch so drowned fishermen could be identified traces to J. M. Synge's drama and later tourist copy, not to island records.",
     chain: ["Aran Islands"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7711,8 +7069,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An enclosed or screened porch on a Southwestern house, built for shade and airflow rather than heating.",
     hook: "A room named for a state, built to dodge the heat that state is famous for.",
-    story:
-      "Postwar builders in Phoenix and Tucson sold the shaded side room as a regional feature, and the name spread with the Sun Belt. The same idea is called a Florida room farther east, where the enemy is humidity and insects rather than sun.",
     chain: ["Arizona"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -7735,8 +7091,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A wide folded silk neck scarf, looped and pinned under the collar of a jacket.",
     hook: "A necktie named after a Berkshire village with a racecourse and a dress code.",
-    story:
-      "The style took its name from the formal dress worn at the Royal Ascot races in Berkshire. It entered everyday menswear late in the nineteenth century and now survives mostly as costume shorthand for an aristocrat.",
     chain: ["Ascot"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7759,8 +7113,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An affectionate nickname for San Francisco.",
     hook: "San Francisco's fondest nickname belongs to a city 7,000 miles away.",
-    story:
-      "The columnist Herb Caen used it in the San Francisco Chronicle through the 1940s and put it on the cover of a 1949 book, meaning that the fog, the hills and the mixed crowds gave the city the feel of an exotic port. The nickname faded as Baghdad came to stand for war rather than romance.",
     chain: ["Baghdad"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7783,8 +7135,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dessert of ice cream on a cake base, covered in meringue and baked briefly so the outside browns while the inside stays frozen.",
     hook: "A hot dessert named for a frozen territory the United States had just bought.",
-    story:
-      "The name is usually credited to Delmonico's in New York, marking the 1867 purchase of Alaska, though the printed name only surfaces decades afterward. Meringue-over-ice-cream dishes were already circulating in Europe under other names, so the recipe is older than its geography.",
     chain: ["Alaska"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -7807,8 +7157,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard-edged style of country music built on electric Telecaster twang and a stiff backbeat.",
     hook: "Country music's sharpest rebuttal to Nashville came from a California oil town.",
-    story:
-      "Dust Bowl migrants carried southern music into Kern County, and by the late 1950s Buck Owens and Merle Haggard were cutting records in Bakersfield that refused Nashville's smooth strings. The label came from critics and the trade press rather than from the musicians themselves.",
     chain: ["Bakersfield"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7831,8 +7179,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Derbyshire dessert of pastry spread with jam and filled with a rich almond and egg mixture.",
     hook: "The town's pudding and the supermarket's tart are not the same thing.",
-    story:
-      "Bakewell in Derbyshire has claimed the pudding since at least the 1830s, with a well-worn local tale of a cook at an inn who misread the instructions. The Bakewell tart, with its frangipane and white icing, is a later and quite different sweet that borrowed the town's name.",
     chain: ["Bakewell"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7855,8 +7201,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fragrant medicinal resin of the ancient Levant, and by extension anything that soothes.",
     hook: "The North American balm of Gilead is a poplar bud, not the Levantine resin.",
-    story:
-      "Gilead is a highland region east of the Jordan, in what is now northwestern Jordan, famous in antiquity for an aromatic balsam that English Bibles made proverbial. Which plant the original resin came from is still argued, and settlers later moved the name onto the sticky buds of the North American balsam poplar.",
     chain: ["Gilead"],
     relationship: "historical_place_name",
     confidence: "probable",
@@ -7879,8 +7223,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hooded wheeled chair with a steering handle, used to push an invalid about.",
     hook: "The wheelchair's ancestor is named for an English spa town's gouty visitors.",
-    story:
-      "James Heath of Bath is credited with building the three-wheeled chair around 1750 to carry patients between their lodgings and the hot springs. It spread to every English resort and stayed in service into the 20th century, long after Bath stopped being the reason for it.",
     chain: ["Bath"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7903,8 +7245,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A British sponge cake baked in pink and yellow squares, assembled into a checkerboard and wrapped in marzipan.",
     hook: "The checkerboard cake is named for a small German town almost nobody visits.",
-    story:
-      "The usual account ties it to the 1884 marriage of a granddaughter of Queen Victoria to Prince Louis of Battenberg, whose title came from a town in Hesse. The family anglicized itself to Mountbatten during the First World War; the cake kept the German name.",
     chain: ["Battenberg"],
     relationship: "indirect_derivation",
     confidence: "probable",
@@ -7927,8 +7267,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A lithe terrier with a pale curly coat, a topknot, and an arched back, bred in northeast England.",
     hook: "It is groomed to look like a lamb and was bred to kill things underground.",
-    story:
-      "Miners around the Northumberland pit village of Bedlington kept these dogs for vermin and poaching, and the village name attached to the type in the 1820s. The lamb-like trim is a show ring convention; working Bedlingtons were kept a good deal plainer.",
     chain: ["Bedlington"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7951,8 +7289,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A deep rectangular glazed ceramic sink with a built-in overflow.",
     hook: "Belfast had water to spare; London did not, and their sinks differ by one hole.",
-    story:
-      "The Belfast pattern was made deep with an overflow, while the similar Butler sink used in water-short London was shallower and had none. Kitchen suppliers now use the two names almost interchangeably, so the distinction survives mainly among restorers.",
     chain: ["Belfast"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -7975,8 +7311,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large russeted cooking apple with sharp flesh that holds its shape when baked.",
     hook: "A Dutch nursery town's chance seedling became a standard European baking apple.",
-    story:
-      "The variety turned up as a chance seedling in Boskoop, a Dutch town built on its nursery trade, and was propagated from 1856. Its name means simply the beauty of Boskoop, and the apple is now grown across northern Europe.",
     chain: ["Boskoop"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -7999,8 +7333,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An extremely hot chili grown in northeast India, sold in English as the ghost pepper.",
     hook: "The ghost in ghost pepper may really be Bhutan.",
-    story:
-      "In Assamese, jolokia is chili and bhut is usually read as ghost, which is where the English name comes from; another reading takes bhut as a reference to the Bhutia, the people of Bhutan, marking the chili as something that arrived from over the border. Neither account is settled, and the pepper is grown across Assam, Nagaland and Manipur rather than in any one place.",
     chain: ["Bhutan"],
     relationship: "disputed",
     confidence: "disputed",
@@ -8023,8 +7355,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A deep blue turquoise shot through with reddish-brown matrix, mined at Bisbee in southern Arizona.",
     hook: "The most prized American turquoise was a nuisance byproduct of copper mining.",
-    story:
-      "Miners working the Lavender Pit for copper cut through turquoise seams, and the stone reportedly left the site in lunch pails before the company sold it deliberately. The pit stopped producing in the 1970s, so genuine Bisbee blue now comes only from old stock.",
     chain: ["Bisbee"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -8047,8 +7377,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A layered chocolate sponge cake with whipped cream, sour cherries, and cherry brandy.",
     hook: "It is named for a cherry spirit, not for a forest full of cakes.",
-    story:
-      "The usual explanation is that the cake takes its name from Schwarzwälder Kirschwasser, the clear cherry brandy distilled in the Black Forest, rather than from the region itself. A competing account points at the region's traditional costume, whose dark dress, white blouse, and red pompom hat match the cake's colors.",
     chain: ["Black Forest"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -8071,8 +7399,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A slow-cooked Italian meat sauce built on minced beef, soffritto, a little tomato, and milk or wine.",
     hook: "Bologna serves its ragu with flat egg pasta; the spaghetti version is a foreign habit.",
-    story:
-      "Pellegrino Artusi printed a Bologna style meat sauce in 1891, and the city's chamber of commerce later registered an official recipe of its own. Spaghetti bolognese is largely a British and American creation; in Bologna the sauce meets tagliatelle or goes into lasagne.",
     chain: ["Bologna"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8095,8 +7421,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A lizardfish of South Asian coastal waters, usually salted and dried before cooking.",
     hook: "Bombay duck is a fish, dried and pungent, with no bird in it at all.",
-    story:
-      "The fish, bombil to Marathi speakers, was landed and cured around Bombay, now Mumbai, and the dried slabs traveled inland by rail. The duck half is unexplained; a popular guess ties it to the mail trains, the Bombay dak, but nothing supports it.",
     chain: ["Mumbai"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -8119,8 +7443,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A layered street sandwich of potato, beet, cucumber and tomato with green chutney, often grilled.",
     hook: "Bombay became Mumbai in 1995; the sandwich kept the old name anyway.",
-    story:
-      "Cart vendors in the city have sold the stacked, chutney-smeared version since the mid-20th century, and menus across India and abroad still print it as Bombay. Food names travel more slowly than maps do, so the sandwich preserves a city name the city itself retired.",
     chain: ["Mumbai"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -8143,8 +7465,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dark, slightly sweet and sour Russian rye bread with a crust of coriander seed.",
     hook: "A dark rye named after the bloodiest single day of Napoleon's Russian campaign.",
-    story:
-      "The bread takes its name from Borodino, the village west of Moscow where Napoleon met the Russian army in 1812, and a much-repeated legend credits a general's widow who founded a convent on the battlefield. The loaf sold today is a Soviet-era standard recipe, and the convent story has no contemporary support.",
     chain: ["Borodino"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8167,8 +7487,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dark, faintly sweet Russian rye sourdough crusted with coriander seed.",
     hook: "The bread is named for the bloodiest single day of the Napoleonic wars.",
-    story:
-      "Tradition credits the loaf to the convent that a widowed general's wife founded on the Borodino battlefield after 1812, where the coriander seeds are said to stand for buckshot. The recipe as anyone actually knows it comes from Soviet bakery standards of the 1930s, and the convent story has no contemporary support.",
     chain: ["Borodino"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8191,8 +7509,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A member of Boston's old-moneyed, Harvard-educated establishment families.",
     hook: "A New England aristocracy named after an Indian priestly caste by a Boston doctor.",
-    story:
-      "Oliver Wendell Holmes Sr. coined the Brahmin caste of New England in his novel Elsie Venner, which began serialization in 1860, borrowing the Hindu priestly class to describe Boston's bookish gentry. The label stuck to families such as the Cabots and Lowells and is now used as often in mockery as in description.",
     chain: ["Boston"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8215,8 +7531,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A soft brown lignite dug from the clay basin around Bovey Tracey in Devon.",
     hook: "A Devon town named a coal too young and too smoky to be much good.",
-    story:
-      "The Bovey Basin holds beds of lignite laid down alongside its famous ball clays, and the fuel was burned locally despite its sulfurous smell. Geologists adopted the town's name for the material, though the workings were never a serious rival to true coal.",
     chain: ["Bovey Tracey"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -8239,8 +7553,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The postwar system of exchange rates fixed against the dollar, together with the 1944 conference and the institutions it created.",
     hook: "The world's monetary order is named for a resort hotel in the New Hampshire woods.",
-    story:
-      "Delegates from 44 nations met in July 1944 at the Mount Washington Hotel in Bretton Woods, chosen partly because it was remote and had enough beds. The fixed-rate system broke down in 1971, but the name still attaches to the IMF and the World Bank.",
     chain: ["Bretton Woods"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8263,8 +7575,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To supply something to a place that already has more of it than it can use.",
     hook: "Athens' own silver coins were stamped with the owl nobody needed more of.",
-    story:
-      "The saying turns up in Aristophanes and became a stock Greek proverb: the owl was sacred to Athena and appeared on the city's coinage, so owls in Athens were the definition of surplus. English writers borrowed it as a classical equivalent of carrying coals to Newcastle.",
     chain: ["Athens"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8287,8 +7597,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The slow, dub-inflected style of British dance music associated with Bristol acts in the 1990s.",
     hook: "Journalists coined trip hop for it; the musicians preferred the city's name.",
-    story:
-      "Massive Attack, Portishead, and Tricky emerged from overlapping Bristol crews around the turn of the 1990s, and the music press labeled the result the Bristol sound. Several of the artists rejected both the trip hop tag and the idea that there was a single scene at all.",
     chain: ["Bristol"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8311,8 +7619,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A very dark chocolate layer cake filled with pudding and coated in cake crumbs.",
     hook: "Named for wartime blackouts ordered to hide the Brooklyn Navy Yard.",
-    story:
-      "Ebinger's, a Brooklyn bakery chain, sold the cake during the Second World War, when the borough darkened its windows so the Navy Yard could not be spotted from the sea. The chain closed in 1972 without releasing its recipe, so every version since has been a reconstruction.",
     chain: ["Brooklyn"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8335,8 +7641,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cold dessert of coffee ice cream or chilled sweetened coffee under whipped cream, served in a glass.",
     hook: "A Viennese dessert renamed for the Belgian city that slowed the German advance.",
-    story:
-      "French cafés are said to have dropped the older name café viennois in 1914, when Vienna was an enemy capital and the forts of Liège had just held out longer than anyone expected. The patriotic rename is repeated everywhere but poorly documented, so treat it as likely rather than proven.",
     chain: ["Liège"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8359,8 +7663,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A mattress size four inches narrower and four inches longer than a standard king.",
     hook: "A California king is narrower than an ordinary king, not bigger.",
-    story:
-      "The size is generally traced to Los Angeles mattress makers in the 1960s, who built extra-long beds for large houses and let the trade name follow. No single inventor is documented, and the dimensions were only pinned down later by the industry.",
     chain: ["California"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8383,8 +7685,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An inside-out sushi roll filled with crab or imitation crab, avocado, and cucumber.",
     hook: "A roll named for California may well have been invented in Canada.",
-    story:
-      "Chefs in the Little Tokyo district of Los Angeles and Hidekazu Tojo in Vancouver have both been credited, and the rice-outside construction was reportedly meant to hide the seaweed from wary diners. The roll later traveled to Japan as an American curiosity rather than the other way around.",
     chain: ["California"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8407,8 +7707,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large black-necked goose with a white chinstrap, native to North America.",
     hook: "It is the Canada goose, never the Canadian goose, and many never see Canada.",
-    story:
-      "Linnaeus latinized the bird as canadensis in 1758 from specimens tied to the northern colonies, and the English name followed the scientific one. Birds introduced to Britain, Scandinavia, and New Zealand now breed there year round, and many North American flocks have given up migrating altogether.",
     chain: ["Canada"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8431,8 +7729,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The American name for lean smoked pork loin sold in round slices.",
     hook: "In Canada it is just back bacon; the country in the name is an American addition.",
-    story:
-      "The name arose in the United States for the cured back cut, which Canadians simply call back bacon. It is also not peameal bacon, the unsmoked cornmeal-rolled Toronto specialty it is often confused with.",
     chain: ["Canada"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -8455,8 +7751,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A stout cotton cloth with a soft napped fiber on one face and a twill weave on the other.",
     hook: "Canton is Guangzhou; the cloth was named for the port, not a mill there.",
-    story:
-      "Canton was the single port through which Western traders dealt with China for much of the eighteenth and nineteenth centuries, so its name attached itself to many goods that passed through. The flannel was soon woven in American and European mills, keeping the name long after the trade route stopped mattering.",
     chain: ["Guangzhou"],
     relationship: "historical_place_name",
     confidence: "probable",
@@ -8479,8 +7773,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tall drink of vodka and cranberry juice served over ice.",
     hook: "Named for the cranberry bogs, not the beaches.",
-    story:
-      "The sandy wetlands behind the dunes made Massachusetts the center of American cranberry growing, and the peninsula's name came with the juice when growers pushed it as a mixer in the mid-20th century. The word is a plain demonym for a person from the Cape; the drink borrowed it.",
     chain: ["Cape Cod"],
     relationship: "demonym",
     confidence: "probable",
@@ -8503,8 +7795,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A salad of sliced tomato, fresh mozzarella and basil dressed with olive oil.",
     hook: "Caprese simply means from Capri; the island named a dish the mainland now owns.",
-    story:
-      "The name is the ordinary Italian adjective for Capri, and the dish is tied to the island's cafés in the early twentieth century. The claim that its three colors were chosen for the Italian flag is a later flourish that no early source supports.",
     chain: ["Capri"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -8527,8 +7817,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Close fitting women's trousers cut to end partway down the calf.",
     hook: "Named for an Italian holiday island by a designer who was not Italian.",
-    story:
-      "The German designer Sonja de Lennart is generally credited with the cut in 1948 and named it for the island she loved; Hollywood and Audrey Hepburn carried it worldwide in the following decade. The attribution rests largely on the designer's own account, so the story is likelier than it is documented.",
     chain: ["Capri"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8551,8 +7839,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A white to blue-gray marble quarried in the Apuan Alps above Carrara in Tuscany.",
     hook: "Michelangelo climbed the mountain to pick his own blocks from the quarry.",
-    story:
-      "The quarries above Carrara have been worked since Roman times, supplying the Pantheon and later Michelangelo, who went up himself to choose stone. The name marks the town at the foot of the range rather than any single pit, and hundreds are still cut today.",
     chain: ["Carrara"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -8575,8 +7861,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To supply something to a place that already has more of it than it needs.",
     hook: "The Tyne shipped coal south for centuries; nobody needed anyone to bring some.",
-    story:
-      "Coal went from the Tyne to London by sea from the medieval period onward, and Thomas Fuller had the proverb in print by 1661. The Northumberland and Durham pits have since closed, which turns the joke into a historical footnote about an industry that is gone.",
     chain: ["Newcastle upon Tyne"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8599,8 +7883,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Daydreams or grand schemes with no foundation in reality.",
     hook: "Medieval French daydreamers put their imaginary castles in Moorish Spain.",
-    story:
-      "English took the image from the Old French chateaux en Espagne, which appears in the Roman de la Rose and reached English readers through Chaucer. The usual explanation is that a knight could hold no land in Muslim-ruled Spain, making a castle there pure fantasy; that reading is a later reconstruction rather than a medieval gloss.",
     chain: ["Spain"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8623,8 +7905,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A firm cow's milk cheese ripened after the curd is cut, stacked, and turned.",
     hook: "The most copied cheese name in the world belongs to one small Somerset village.",
-    story:
-      "Cheese was matured in the caves of Cheddar Gorge and traded at the village market by the sixteenth century, and the cheddaring step still carries the name. The bare word is unprotected and the cheese is made on every continent, though West Country Farmhouse Cheddar holds a European protected designation.",
     chain: ["Cheddar"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8647,8 +7927,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An almond frangipane tart with a jam layer, fondant icing, and a candied cherry on top.",
     hook: "Bakewell's own specialty is a different pudding; the iced tart is an upstart.",
-    story:
-      "The Derbyshire town of Bakewell is known for a jam and almond pudding whose origin is told in several incompatible stories, most of them involving a cook's mistake. The iced cherry tart is a later commercial relative, and locals will point out that it is not the original.",
     chain: ["Bakewell"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8671,8 +7949,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A creature wearing a broad, fixed grin; used of anyone who smiles far too widely.",
     hook: "The grin was proverbial in England decades before Lewis Carroll borrowed it.",
-    story:
-      "Grinning like a Cheshire cat was already a stock English simile by the 1780s, long before Alice met the vanishing one in 1865. Why Cheshire is unsettled: the candidates include cheeses molded in the shape of a smiling cat and badly painted heraldic lions on county inn signs.",
     chain: ["Cheshire"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8695,8 +7971,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "One of the Chilean economists trained at the University of Chicago who directed Chile's free-market reforms after 1973.",
     hook: "A 1950s student exchange put Chicago economics into a Chilean junta's cabinet.",
-    story:
-      "From the mid-1950s a US-funded program sent students from Santiago's Catholic University to study under Milton Friedman and Arnold Harberger, and the nickname followed them home. After the 1973 coup they ran much of the economy, and the label has since been reused for free-market technocrats elsewhere.",
     chain: ["Chicago"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -8719,8 +7993,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A braise of chicken with tomato, garlic, and wine, classically garnished with fried eggs and crayfish.",
     hook: "Napoleon's cook almost certainly did not improvise it on the battlefield.",
-    story:
-      "The dish commemorates the French victory at Marengo in Piedmont in June 1800, and legend has the chef Dunand scavenging a chicken, tomatoes, and river crayfish for his hungry commander. Tomatoes were barely used in French cooking then and the recipe appears in print only decades later, so the battlefield tale looks retrofitted.",
     chain: ["Spinetta Marengo"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8743,8 +8015,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Naturally occurring sodium nitrate, used as fertilizer and in explosives.",
     hook: "A desert where it almost never rains once held the world's nitrate supply.",
-    story:
-      "The Atacama nitrate fields made Chile rich, drew British capital, and helped set off the War of the Pacific against Peru and Bolivia in 1879. Synthetic ammonia from the Haber-Bosch process collapsed the trade within a generation, leaving ghost towns strung across the desert.",
     chain: ["Chile"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -8767,8 +8037,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Quebec casserole layered from ground beef, creamed corn and mashed potato.",
     hook: "The China in this pie may be South China, Maine.",
-    story:
-      "French speakers call it pate chinois, and one account says Quebec laborers met the dish while working around South China, Maine, while another credits Chinese cooks feeding railway crews. Neither has been documented, and the dish underneath the argument is a shepherd's pie with a corn layer.",
     chain: ["South China"],
     relationship: "disputed",
     confidence: "disputed",
@@ -8791,8 +8059,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A high-speed bread-making method that replaces slow bulk fermentation with intense mechanical mixing.",
     hook: "Most British supermarket bread comes from a method named after a commuter village.",
-    story:
-      "The British Baking Industries Research Association developed it in 1961 at its laboratory in Chorleywood, Hertfordshire, so that weaker home-grown wheat could still make an acceptable loaf. It cut fermentation from hours to minutes and now accounts for the great majority of bread sold in the UK.",
     chain: ["Chorleywood"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8815,8 +8081,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A thin meat sauce scented with cinnamon and allspice, served over spaghetti or hot dogs.",
     hook: "Chili made by Macedonian immigrants, spiced like a Balkan stew, served on pasta.",
-    story:
-      "Tom and John Kiradjieff began selling it from their Empress stand in 1922, adapting the seasonings they knew to an American dish name. Locals still order by number: three-way adds cheese, four-way onions or beans, five-way both.",
     chain: ["Cincinnati"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8839,8 +8103,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A mild, open-textured American cheese made like cheddar but rinsed in cold water before pressing.",
     hook: "A young Wisconsin cheesemaker invented it in 1885 and named it after his township.",
-    story:
-      "Joseph Steinwand made the first batch at his father's factory near Colby, Wisconsin, cutting the cheddaring short and washing the curd so the cheese stayed moist and mild. The town is tiny, the cheese is sold nationwide, and the name carries no legal protection at all.",
     chain: ["Colby"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8863,8 +8125,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dark blue-purple American grape with a slip skin and musky flavor, used for juice, jelly and sweet wine.",
     hook: "America's juice-and-jelly grape was bred in one backyard in Massachusetts.",
-    story:
-      "Ephraim Wales Bull selected it from wild fox grapes at his home in Concord, Massachusetts, and released it in the early 1850s. He earned almost nothing from it; his gravestone complains that other men reaped what he sowed.",
     chain: ["Concord"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8887,8 +8147,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A side plank in which the upper leg rests on a bench and the inner thigh muscles hold the hips up.",
     hook: "A groin exercise carries a Danish city's name and nobody agrees why.",
-    story:
-      "The move spread through Danish sports science work on preventing groin injuries in soccer, alongside the similarly named Nordic hamstring curl. Accounts differ over whether the name points at the research groups in the city or at the football club that drilled it.",
     chain: ["Copenhagen"],
     relationship: "direct_toponym",
     confidence: "disputed",
@@ -8911,8 +8169,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A lettuce with long, upright, crisp-ribbed leaves, known in America as romaine.",
     hook: "One lettuce, named for a Greek island in Britain and for Rome in America.",
-    story:
-      "English gardeners took the name from Kos in the Aegean, where the plant was said to have been collected, while French and American usage credits Rome and the papal gardens instead. Neither route is firmly documented, and the lettuce probably reached Europe from Egypt and the Near East.",
     chain: ["Kos"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8935,8 +8191,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Old slang for a venereal infection caught in London's theater district.",
     hook: "Georgian London named a venereal disease after a single square.",
-    story:
-      "Covent Garden was the center of the capital's sex trade in the eighteenth century, and the slang dictionaries of the period fill up with jokes built on its name. An ague is properly a fever with chills, so the phrase is a euphemism twice over.",
     chain: ["Covent Garden"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -8959,8 +8213,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An early modern human of Ice Age Europe, known from Upper Paleolithic skeletons and the culture associated with them.",
     hook: "Europe's first modern humans are named for a rock shelter behind a village hotel.",
-    story:
-      "Railway workers exposed the shelter at Les Eyzies in the Dordogne in 1868, and Louis Lartet excavated the skeletons that carried the site's name into every textbook; cro is local dialect for a hollow or cave. Specialists now prefer early modern human, because the old label lumped together populations spread across tens of thousands of years.",
     chain: ["Les Eyzies"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -8983,8 +8235,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A pressed sandwich of roast pork, ham, Swiss cheese, pickles, and mustard on Cuban bread.",
     hook: "The Cuban sandwich was worked out in Florida, not in Cuba.",
-    story:
-      "Cuban cigar workers in Tampa's Ybor City and in Key West built it from the mixed pantry of their neighborhoods, which is why Italian salami turns up in the Tampa version. Tampa and Miami still argue over the authoritative recipe, and neither city is on the island.",
     chain: ["Cuba"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -9007,8 +8257,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sudden and complete reversal of belief or opinion.",
     hook: "One blinding flash on a Syrian trade road now describes any change of heart.",
-    story:
-      "Acts describes Saul of Tarsus struck blind on his way to Damascus to persecute Christians and rising as Paul, on a real road into one of the longest-inhabited cities on earth. The English phrase is far younger than the story and is now applied to politicians who switch position as readily as to genuine revelation.",
     chain: ["Damascus"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -9031,8 +8279,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A clamp locked onto a car wheel to immobilize the vehicle until fines are paid.",
     hook: "Denver clamped cars instead of towing them, and the city kept the credit.",
-    story:
-      "The first clamp is credited to Frank Marugg, a Denver musician and patternmaker who supplied equipment to a police force tired of towing, in the mid 1950s. The name spread with the device, which is called a wheel clamp almost everywhere outside the United States.",
     chain: ["Denver"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9055,8 +8301,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large white Argentine hound bred to hunt wild boar and puma in packs.",
     hook: "Bred out of a fighting dog that no longer exists.",
-    story:
-      "Antonio Nores Martinez began the line near Cordoba in 1928, crossing the now-extinct Cordoba fighting dog with mastiffs, boxers, pointers and Great Danes to get an animal that would hunt alongside other dogs instead of attacking them. Several countries restrict or ban the breed, a legacy of the fighting stock still sitting in its pedigree.",
     chain: ["Argentina"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -9079,8 +8323,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A state of mental breakdown or unhinged behavior, in old British army slang.",
     hook: "Soldiers lost their minds waiting for a troopship at a camp called Deolali.",
-    story:
-      "Deolali, near Nashik in western India, held British troops between the end of their service and the next ship home, sometimes for months with nothing whatever to do; tap comes from an Indian word for fever. English kept the clipped form doolally long after the camp and the empire behind it had gone.",
     chain: ["Deolali"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9103,8 +8345,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An obsolete English name for a woolen broadcloth woven in the Berry region of central France.",
     hook: "A retired English word for cloth, borrowed whole from a French province.",
-    story:
-      "Weavers at Châteauroux, Issoudun, and Romorantin turned local fleece into a serviceable cloth that English-speaking merchants bought and inventoried under its French name. Berry ceased to be an administrative province at the Revolution, and the cloth name faded with the trade that carried it.",
     chain: ["Berry"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -9127,8 +8367,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A thick filled chocolate bar containing pistachio cream and shredded kunafa pastry.",
     hook: "A pregnancy craving in Dubai went on to strain the world pistachio supply.",
-    story:
-      "Sarah Hamouda created the bar for her company Fix Dessert Chocolatier in Dubai in 2021, packing the pistachio and kunafa flavors of Levantine sweets into a chocolate shell. A viral video in 2024 turned it into a global copycat product and helped push pistachio prices sharply upward.",
     chain: ["Dubai"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9151,8 +8389,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cylindrical cloth sack closed at the top, used for carrying personal gear.",
     hook: "The bag is named for a Flemish town that sold the cloth, not the bag.",
-    story:
-      "Duffel, near Antwerp, gave its name to a thick woolen cloth traded across Europe from the seventeenth century. English speakers later moved the word onto military kit sacks made of heavy fabric, and the town is now better known abroad for luggage than for weaving.",
     chain: ["Duffel"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -9175,8 +8411,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hooded woolen coat fastened with toggles and rope loops.",
     hook: "Named for a Belgian town that made the cloth, not the coat.",
-    story:
-      "Duffel, near Antwerp, gave its name to a thick, coarse wool traded across Europe from the 17th century onward. The coat cut from that cloth became naval issue in both world wars, then surplus-store fashion, and finally the uniform of a fictional bear.",
     chain: ["Duffel"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -9199,8 +8433,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Stubborn collective cheerfulness and improvisation in the face of disaster, in British usage.",
     hook: "Britain's favorite morale phrase commemorates a retreat, not a victory.",
-    story:
-      "It refers to the evacuation of more than 300,000 Allied troops from the beaches at Dunkirk in northern France in the spring of 1940, carried out partly by civilian small boats. Churchill warned at the time that wars are not won by evacuations; the phrase became shorthand for pulling together anyway.",
     chain: ["Dunkirk"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9223,8 +8455,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A schoolyard torment in which knuckles are ground hard against someone's scalp.",
     hook: "It joins Dutch courage and Dutch uncle in English's long grudge against the Dutch.",
-    story:
-      "English built up a family of insulting \"Dutch\" compounds during the naval and trade rivalries of the 1600s, and later slang kept adding to it. American use muddies the question further, since \"Dutch\" there often stands instead for Deutsch, meaning German.",
     chain: ["Netherlands"],
     relationship: "demonym",
     confidence: "disputed",
@@ -9247,8 +8477,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A naturally spotted shorthaired cat breed with a banded tail and green eyes.",
     hook: "Mau just means cat; the breed is a 1950s project built on Egyptian imports.",
-    story:
-      "The modern breed traces to cats taken out of Egypt in the 1950s by an exiled Russian princess and bred first in Italy, then in the United States. Spotted cats appear in Egyptian tomb painting, but no continuous line from antiquity to the show bench has ever been demonstrated.",
     chain: ["Egypt"],
     relationship: "demonym",
     confidence: "probable",
@@ -9271,8 +8499,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tall show pigeon with a long beak and heavy fleshy wattles around the eyes and nostrils.",
     hook: "The pigeon called Carrier is the one that no longer carries anything.",
-    story:
-      "Bred in England from Middle Eastern wattled stock and once used for messages, it was refined for the exhibition bench until its homing ability lapsed; Darwin studied it closely as evidence of what selection can do to a skull. The birds that actually flew wartime dispatches were Racing Homers, a separate breed.",
     chain: ["England"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -9295,8 +8521,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A compact British gun dog bred to flush woodcock and other birds from cover.",
     hook: "In England it is just a cocker spaniel; Americans added the country.",
-    story:
-      "Victorian breeders sorted spaniels by size and job, and the smallest were kept for woodcock, which gave the cocker its name. American breeders developed a smaller, domed-headed variety, and when the two were recognized as separate breeds in 1946 the older type acquired a national label it had never needed at home.",
     chain: ["England"],
     relationship: "demonym",
     confidence: "probable",
@@ -9319,8 +8543,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An alto oboe with a bulb-shaped bell and a bent metal crook, pitched a fifth below the oboe.",
     hook: "Neither English nor a horn.",
-    story:
-      "The instrument appears in central Europe around 1720 under the Italian name corno inglese, and the English half may be a garbling of angled, since early examples were bent, or of angelic, from paintings of angels playing curved horns. No version of the story begins in England, and it is a woodwind rather than a brass instrument.",
     chain: ["England"],
     relationship: "disputed",
     confidence: "disputed",
@@ -9343,8 +8565,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A feathered gun dog that freezes into a crouch when it locates game birds.",
     hook: "\"Setter\" is no temperament: the dog sat so a net could be thrown over the birds.",
-    story:
-      "Before guns were practical for wing shooting, these dogs set, or crouched, in front of a covey while the hunter drew a net over dog and birds together. The modern breed was fixed in the 1800s largely by Edward Laverack and Purcell Llewellin, whose separate lines still divide show dogs from field dogs.",
     chain: ["England"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -9367,8 +8587,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An American farm dog of collie type, used for herding stock and general farm work.",
     hook: "The English Shepherd is an American breed named for its ancestors' homeland.",
-    story:
-      "Settlers brought British farm collies to eastern North America, where the type was worked, fixed, and named on this side of the Atlantic. There is no English Shepherd breed in Britain, where the related working collies go by other names entirely.",
     chain: ["England"],
     relationship: "demonym",
     confidence: "probable",
@@ -9391,8 +8609,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The North American name for the house sparrow, a small brown bird of towns and farms.",
     hook: "Native across Eurasia; Americans named it for the country that shipped it.",
-    story:
-      "House sparrows were released in Brooklyn in the early 1850s in the hope they would eat crop pests, and they spread across the continent within decades. The English label records the source of the shipments rather than the bird's range, which runs from Britain to Central Asia.",
     chain: ["England"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -9415,8 +8631,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To busy oneself with trifles while a disaster runs its course.",
     hook: "The fiddle would not be invented for another fourteen centuries.",
-    story:
-      "Roman writers reported that Nero sang about the fall of Troy during the fire of AD 64, and later retellings handed him a fiddle instead; bowed instruments reached Europe much later, and the violin is a 16th-century creation. Tacitus also places Nero outside the city when the fire started, which spoils the picture further.",
     chain: ["Rome"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9439,8 +8653,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The endangered cougar population that survives in the swamps and forests of southern Florida.",
     hook: "It is not a panther, and no black one has ever been confirmed.",
-    story:
-      "American English applied \"panther\" loosely to the cougar, so Florida's cats carry the name despite being the same species as western mountain lions. The population fell to a few dozen animals before Texas cougars were released in 1995 to relieve the inbreeding.",
     chain: ["Florida"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9463,8 +8675,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A glazed or screened room added to a house for sitting outdoors in comfort.",
     hook: "The room that sells a Florida lifestyle is mostly a defense against mosquitoes.",
-    story:
-      "Postwar Florida developers attached screened rooms to new houses so families could sit outside without the insects, and realtors nationwide picked up the name. The drier Southwest builds its version for shade instead and calls it an Arizona room.",
     chain: ["Florida"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -9487,8 +8697,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The circle of critical social theorists around the Institute for Social Research in Frankfurt.",
     hook: "The Frankfurt School wrote its most famous books in American exile.",
-    story:
-      "The institute opened in Frankfurt in 1923, but its leading figures fled Germany in 1933 and did their best known work in New York and southern California. The label itself came into general use only after the war, once some of them had returned to the city.",
     chain: ["Frankfurt"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9511,8 +8719,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A departure made without announcement, permission, or goodbye.",
     hook: "The French say the same thing about the English: filer à l'anglaise.",
-    story:
-      "Eighteenth-century English writers used it for the supposedly French habit of leaving a party without taking leave of the host, and the army later applied it to absence without leave. French returned the compliment with an identical phrase pointing the other way across the Channel.",
     chain: ["France"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -9535,8 +8741,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A furniture finish built up from many thin coats of shellac rubbed on with a cloth pad.",
     hook: "A French finish made from a resin secreted by an insect farmed in India.",
-    story:
-      "The rubbed shellac technique spread through European cabinet workshops in the early nineteenth century, and English speakers credited French practice when they named it. The shellac itself comes from the lac insect, harvested mainly in India and Thailand.",
     chain: ["France"],
     relationship: "demonym",
     confidence: "probable",
@@ -9559,8 +8763,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A condom or sheath made with ridges or projections intended to heighten sensation.",
     hook: "English pins anything sexual on France; French does the same to England.",
-    story:
-      "English slang has attached the word French to sexual practices, devices, and diseases for centuries, with no evidence that any of them started there. French speakers made the same move in reverse, calling the condom a capote anglaise, the English hood.",
     chain: ["France"],
     relationship: "demonym",
     confidence: "probable",
@@ -9583,8 +8785,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A one-pot boil of shrimp, sausage, corn and potatoes, drained and tipped out onto a table.",
     hook: "Named for a South Carolina community you will struggle to find on a map.",
-    story:
-      "Frogmore sits on St. Helena Island in the South Carolina Lowcountry, and the dish is credited to a local fishing family who cooked it in bulk for crowds. The community name reportedly fell out of postal use, so the stew now carries it further than the island itself does.",
     chain: ["Frogmore"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -9607,8 +8807,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large working dog breed standardized in Germany from regional herding dogs.",
     hook: "Britain called it the Alsatian for nearly sixty years to avoid the word German.",
-    story:
-      "Max von Stephanitz fixed the breed from Württemberg and Thuringian herding stock beginning in 1899. Anti-German feeling after the First World War pushed British registries to rename it the Alsatian wolf dog, after Alsace, and American ones to drop the word too; the United Kingdom only restored the original name in 1977.",
     chain: ["Germany"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -9631,8 +8829,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Swiss banker or currency speculator, cast as working secretly against another country's economy.",
     hook: "A British cabinet minister coined it in one bad night of a sterling crisis.",
-    story:
-      "George Brown used the line during Labour's emergency meetings over pressure on the pound in November 1964, though Harold Wilson had reached for similar gnome imagery back in 1956. Gnomes were a stock image for secretive underground hoarding, and the phrase stuck to Zurich because that is where the money was.",
     chain: ["Zurich"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9655,8 +8851,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To submit humiliatingly to an opponent one has previously defied.",
     hook: "A castle in Emilia where an emperor waited in the snow for three days.",
-    story:
-      "In 1077 the emperor Henry IV stood outside the castle of Canossa to beg absolution from Pope Gregory VII, an image that lodged permanently in European political language. The English phrase mostly follows Bismarck, who announced in 1872 that Germany would not go to Canossa.",
     chain: ["Canossa"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9679,8 +8873,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "A mild curse telling someone to clear off, used in place of go to hell.",
     hook: "A polite way to say hell that points at a real town instead.",
-    story:
-      "English beggars once prayed to be delivered from Hull, Hell and Halifax, the Yorkshire town whose gibbet beheaded cloth thieves centuries before the guillotine. American speakers may simply have wanted a word that began like the one they were dodging, and some of them certainly had Halifax in Nova Scotia in mind.",
     chain: ["Halifax"],
     relationship: "direct_toponym",
     confidence: "disputed",
@@ -9703,8 +8895,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "British slang for a sudden and final ending, as in it's goodnight Vienna.",
     hook: "British slang for total defeat, lifted from a cheerful 1932 musical about Vienna.",
-    story:
-      "The phrase is usually traced to Goodnight Vienna, a 1932 British musical film and its title song, which were popular enough for the words to float free of them. Vienna contributes nothing but the title; the sense of finality is entirely English, and the phrase is a favorite of football commentators.",
     chain: ["Vienna"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -9727,8 +8917,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A European shrub with flat white flower heads and translucent red berries, Viburnum opulus.",
     hook: "Not a rose, and the \"Guelders\" in the name is a vanished Dutch duchy.",
-    story:
-      "The snowball-flowered garden form was propagated by Dutch nurserymen in the duchy of Guelders and reached England in the 1500s carrying its source's name. The duchy is now the province of Gelderland, and the wild shrub grows across Europe, Britain included.",
     chain: ["Gelderland"],
     relationship: "historical_place_name",
     confidence: "probable",
@@ -9751,8 +8939,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A ground-dwelling African game bird with a bare head and gray, white-spotted plumage.",
     hook: "Named for one stretch of African coast, and native to most of a continent.",
-    story:
-      "European traders met the birds through Guinea, their name for the West African coast, and the label followed the bird into farmyards worldwide. The same coastal name rides on the English guinea coin, struck from West African gold, and on the guinea pig, which is South American.",
     chain: ["Guinea"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9775,8 +8961,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tailless South American rodent kept as a pet and long used as a test animal.",
     hook: "An Andean rodent named for West Africa and sold to Europeans as a pig.",
-    story:
-      "The animal reached Europe from the Andes on ships that also worked the Guinea trade, and the explanations compete: the African coast, the Guiana coast, or the guinea coin it supposedly cost. None has been settled, and the pig half is only a nod to its squeal and its shape.",
     chain: ["Guinea"],
     relationship: "disputed",
     confidence: "disputed",
@@ -9799,8 +8983,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A writer who produces work to order for whoever is paying.",
     hook: "The hack in hack writer started out as a horse from a London parish.",
-    story:
-      "Hackney, then pasture on the edge of London, is the usual source given for hackney meaning a horse let out for hire, which passed to anything worn out in someone else's service and shortened to hack. A rival account derives the word from Old French haquenee, and the two explanations have never been cleanly separated.",
     chain: ["Hackney"],
     relationship: "disputed",
     confidence: "disputed",
@@ -9823,8 +9005,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A variety of parsley grown for its thick white taproot, which is cooked like a parsnip.",
     hook: "The parsley you eat from the bottom, named for the port that shipped the seed.",
-    story:
-      "English gardeners took the plant up in the eighteenth century and named it for Hamburg, the northern German port through which German seed and produce reached them. It is the same species as the leaf parsley on your plate, simply selected for the root instead.",
     chain: ["Hamburg"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -9847,8 +9027,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The flowering of Black American literature, music, and art centered on upper Manhattan in the 1920s.",
     hook: "The most American of movements is named for a town in the Netherlands.",
-    story:
-      "Dutch settlers named the northern Manhattan settlement Nieuw Haarlem in 1658 after Haarlem in North Holland, and the English kept a clipped spelling of it. Participants at the time spoke of the New Negro movement; the neighborhood label became the standard name only afterward.",
     chain: ["Harlem"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9871,8 +9049,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A vast scattered area, almost always in the phrase all over hell and half of Georgia.",
     hook: "An American measure of distance that takes in most of the afterlife.",
-    story:
-      "The expression is Southern in flavor and appears in print through the twentieth century, always as comic exaggeration of how far something is spread. Its origin is unrecorded, and the tempting link to Sherman's march through Georgia is guesswork.",
     chain: ["Georgia"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -9895,8 +9071,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Scottish gathering built around heavy athletic events, piping and dancing.",
     hook: "The caber toss is scored on accuracy, not on distance.",
-    story:
-      "Local gatherings are much older, but the games took their familiar shape in the 19th century, helped along by Queen Victoria's patronage of the Braemar Gathering. A caber throw only counts if the pole turns over and lands pointing straight away from the thrower.",
     chain: ["Scottish Highlands"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -9919,8 +9093,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A warm emulsified sauce of egg yolk, melted butter and lemon juice or vinegar.",
     hook: "A thoroughly French sauce called Dutch, for reasons nobody has ever pinned down.",
-    story:
-      "Hollandaise means in the Dutch manner, and the competing guesses are Dutch butter, Dutch eggs, or a wartime renaming of a Normandy sauce from Isigny when French butter ran short. None of them is documented, and the recipe appears in French kitchens under several names before this one stuck.",
     chain: ["Netherlands"],
     relationship: "demonym",
     confidence: "disputed",
@@ -9943,8 +9115,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A bed of mattress and box spring on a low legged frame with a headboard and no footboard.",
     hook: "A bed named for glamour that mostly means \"we left the footboard off.\"",
-    story:
-      "The term is recorded in American English from the late 1940s, when an upholstered headboard over a low open frame looked like film-star luxury. No documented Hollywood origin exists; the name borrows the movie town's shine much as Hollywood Regency furniture does.",
     chain: ["Hollywood"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -9967,8 +9137,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Describing a conventionally attractive performer dressed down to read as plain.",
     hook: "Glasses and a ponytail are all it takes to be ugly in Hollywood.",
-    story:
-      "The convention lets a film stage a makeover reveal without casting anyone the audience would actually find unappealing, and critics have named and mocked it since at least the 1990s. It is an informal label rather than an industry term, so its edges are loose.",
     chain: ["Hollywood"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -9991,8 +9159,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An exclamation of surprise or amazement.",
     hook: "Two cities claim it: a Spanish cathedral seat and an Ohio river port.",
-    story:
-      "One account points to Toledo in Spain, long a seat of Christian and Islamic learning, which makes the adjective holy natural; another points to Toledo in Ohio, where the phrase may have started as a joke about a city with a reputation for anything but holiness. Neither has been demonstrated, and the expression spread through American radio and comics regardless.",
     chain: ["Toledo"],
     relationship: "disputed",
     confidence: "disputed",
@@ -10015,8 +9181,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A programming convention that prefixes every identifier with letters encoding its type or intended use.",
     hook: "Named for a programmer's birthplace, because the prefixed names looked foreign.",
-    story:
-      "The convention comes from Charles Simonyi, a Hungarian-born engineer at Xerox PARC and later Microsoft, and colleagues joked that identifiers written this way looked like Hungarian. The name also fits in a second way, since Hungarian puts the family name first, as the notation puts the type first.",
     chain: ["Hungary"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -10039,8 +9203,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small spitz herding dog with a curled tail, worked on sheep and horses in Iceland.",
     hook: "The breed nearly died out at home and was rescued partly by an Englishman.",
-    story:
-      "Norse settlers brought the dogs' ancestors in the ninth century and the type appears in later Icelandic writing, but disease and culls had almost finished it by the early 1900s. Mark Watson, an Englishman who imported and bred the dogs from the 1950s, is generally credited with starting the recovery.",
     chain: ["Iceland"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10063,8 +9225,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A traffic rule letting cyclists treat a stop sign as a yield and a red light as a stop sign.",
     hook: "One state legalized rolling stops for bikes in 1982; the rest ignored it for decades.",
-    story:
-      "Idaho adopted the rule in 1982 during a routine tidying of its traffic code, with no cycling campaign behind it, and later analyses found no rise in cyclist injuries. Delaware, Colorado, and other states passed versions of it long afterward, by which time the rule was universally named for Idaho.",
     chain: ["Idaho"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10087,8 +9247,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A very thin, opaque printing paper used for Bibles and compact reference books.",
     hook: "India paper came from China and Japan; India was only the shipping route.",
-    story:
-      "European printers met these thin East Asian papers through the East India Company, so the name followed the route rather than the source. Oxford University Press made its own version famous from the 1870s, which is why thin Bibles are still described as printed on India paper.",
     chain: ["India"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -10111,8 +9269,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tall red gundog bred to find game birds and freeze, or set, in front of them.",
     hook: "The solid red coat is a Victorian fashion; the original dog was red and white.",
-    story:
-      "Irish sportsmen bred setters in the 18th century in red and white, a pattern that was easier to pick out at distance in the field. Breeders then chased the solid mahogany coat for the show ring, and the red and white setter survived only because a few kennels refused to give it up.",
     chain: ["Ireland"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -10135,8 +9291,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "In Maine, a long soft roll filled with meat, cheese, and raw vegetables dressed in oil.",
     hook: "In Maine, ordering \"an Italian\" gets you a sandwich, not a person.",
-    story:
-      "Giovanni Amato, a Neapolitan grocer in Portland, Maine, sold rolls to dockworkers from 1902, and the filled version took his homeland's name rather than a description of its contents. The sandwich stayed a Maine regionalism: elsewhere the same shape is a sub, a hoagie, or a grinder.",
     chain: ["Italy"],
     relationship: "demonym",
     confidence: "probable",
@@ -10159,8 +9313,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small British cake of sponge base, orange-flavored jelly, and a chocolate top.",
     hook: "Named for an orange shipped from a port now swallowed by Tel Aviv.",
-    story:
-      "McVitie's launched them in 1927 and took the name from the Jaffa orange, the fragrant variety exported through the old port that is now a district of Tel Aviv. A 1991 British tax tribunal had to rule whether they were cakes or chocolate-covered biscuits; cake won, and they escaped value-added tax.",
     chain: ["Jaffa"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -10183,8 +9335,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet, thick-skinned, nearly seedless orange of the Shamouti variety.",
     hook: "The port that named the orange is now a neighborhood of Tel Aviv.",
-    story:
-      "The Shamouti arose in orchards near Jaffa in the middle of the nineteenth century and left through its harbor in such quantity that the port's name became the brand. Jaffa was absorbed into Tel Aviv in 1950, and the name now survives mainly as a trademark.",
     chain: ["Jaffa"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -10207,8 +9357,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Datura stramonium, a poisonous nightshade with trumpet flowers and spiny fruit, now usually called jimsonweed.",
     hook: "Jimsonweed is Jamestown weed, worn down by centuries of saying it fast.",
-    story:
-      "Robert Beverley's 1705 history of Virginia describes soldiers sent to Jamestown in 1676 who boiled the plant as a pot herb and spent eleven days deranged before coming back to themselves. American speech clipped the name into jimson, hiding an entire colony inside a weed.",
     chain: ["Jamestown"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10231,8 +9379,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Heat-resistant borosilicate glass for laboratory and kitchen use, of the type first made at Jena in Germany.",
     hook: "Modern laboratory glassware was invented in one small Thuringian university town.",
-    story:
-      "Otto Schott worked out borosilicate compositions at Jena with Ernst Abbe and Carl Zeiss, and the glassworks he founded in 1884 supplied thermometers and vessels that did not crack when heated. The American equivalent, Pyrex, followed the same chemistry a generation later.",
     chain: ["Jena"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -10255,8 +9401,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A prayer procession that circles a building or site, often seven times, asking for a breakthrough.",
     hook: "Congregations still march the route of a siege from the Book of Joshua.",
-    story:
-      "The practice reenacts Joshua 6, in which Israelite priests circle Jericho for seven days until the walls fall, and churches now walk the same circuit around homes, hospitals, and city blocks. Excavation at Tell es-Sultan, the site of ancient Jericho, has not produced evidence matching the biblical siege.",
     chain: ["Jericho"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10279,8 +9423,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A long, small-bore flintlock rifle used on the American frontier.",
     hook: "Almost every one of them was made in Pennsylvania.",
-    story:
-      "German-trained gunsmiths in Lancaster County and elsewhere in Pennsylvania developed the long rifle through the 18th century, and collectors still argue for the name Pennsylvania rifle. The Kentucky label stuck after the Battle of New Orleans in 1815 and the popular song that celebrated the riflemen who fought there.",
     chain: ["Kentucky"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10303,8 +9445,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small, seedy, intensely aromatic lime, and the custard pie made from its juice.",
     hook: "The Florida Keys lime is a Southeast Asian fruit that Spanish ships carried west.",
-    story:
-      "The tree reached the Caribbean with Spanish shipping and naturalized in the Keys, where growers farmed it commercially until a hurricane destroyed most of the groves in 1926. Nearly all limes sold under the name today are grown in Mexico and Central America.",
     chain: ["Florida Keys"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10327,8 +9467,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An ancient large-grained wheat, Triticum turgidum subspecies turanicum, sold under the brand Kamut.",
     hook: "The seed was sold as King Tut's wheat; it is named for a region in Iran.",
-    story:
-      "Khorasan was the historic territory spanning northeastern Iran and neighboring Central Asia, and the crop's name points there rather than to Egypt. The tale that the modern grain grew from seeds taken out of a pharaoh's tomb is folklore attached to the 1990 Kamut trademark.",
     chain: ["Khorasan"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -10351,8 +9489,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Ukrainian cake of nut-studded meringue layers sandwiched with buttercream.",
     hook: "A factory mistake in 1956 is the cake's own official origin story.",
-    story:
-      "The Karl Marx confectionery factory in Kyiv, now part of Roshen, produced the first cakes in 1956, and the company's own legend credits a batch of egg whites left out overnight. English keeps the older Kiev transliteration in the cake's name even though the city is now written Kyiv.",
     chain: ["Kyiv"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10375,8 +9511,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A critically endangered brown thornbill found only on King Island in Bass Strait.",
     hook: "One island's thornbill may be down to a few dozen birds in scraps of scrub.",
-    story:
-      "The subspecies was described from King Island, between Tasmania and mainland Australia, where clearing has left it only fragments of wet forest. Surveys since 2000 have found so few birds that it ranks among the most endangered on the continent.",
     chain: ["King Island"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10399,8 +9533,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Beef from Tajima-strain cattle raised in Hyogo Prefecture and graded against a strict marbling standard.",
     hook: "The cattle are not from Kobe; the foreigners who ate them were.",
-    story:
-      "Tajima cattle come from the rural north of Hyogo Prefecture, but the beef reached Western diners through Kobe, the port opened to foreign residents in 1868, and took the port's name rather than the herd's. Only a few thousand carcasses qualify each year, so most Kobe beef sold outside Japan is something else entirely.",
     chain: ["Kobe"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -10423,8 +9555,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The largest living lizard, a giant monitor found on Komodo and a few neighboring Indonesian islands.",
     hook: "The largest lizard on earth was a rumor science did not check until 1910.",
-    story:
-      "Dutch colonial officials heard stories of a land crocodile on Komodo, and the animal was formally described in 1912 once specimens reached Java. Its entire range is a handful of islands in the Lesser Sundas, which is why one small island's name now covers the whole species.",
     chain: ["Komodo"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10447,8 +9577,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The 1997 treaty setting binding greenhouse gas reduction targets for industrialized countries.",
     hook: "Treaties take the name of whichever city happened to host the meeting.",
-    story:
-      "Delegates adopted the text at the climate conference held in Kyoto in December 1997, and diplomatic practice names an instrument after its venue, as with Montreal, Helsinki, and Paris. It entered force only in 2005, and the United States, which signed it, never ratified.",
     chain: ["Kyoto"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10471,8 +9599,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To endure something unpleasant passively, said originally of unwanted sex.",
     hook: "The famous Victorian diary behind the phrase has never been produced.",
-    story:
-      "The advice is attributed to a 1912 journal entry by Lady Alice Hillingdon, quoted endlessly but never traced to any actual manuscript. It circulates in several forms, including close your eyes and think of England, and now covers any grim duty.",
     chain: ["England"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10495,8 +9621,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Lit up far more brightly than the occasion calls for.",
     hook: "An entire seaside light festival, reduced to a simile for a red face.",
-    story:
-      "Blackpool has strung miles of lights along its promenade most autumns since 1879, originally to stretch the holiday season past summer. British speakers use the display as a measuring stick for anything garishly illuminated, from an overdecorated house to someone blushing.",
     chain: ["Blackpool"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10519,8 +9643,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A local English name for Good King Henry, a perennial leaf vegetable cooked like spinach.",
     hook: "England's older spinach survives as a market-stall crop in one county.",
-    story:
-      "Good King Henry was a common cottage garden green before true spinach displaced it, and it held on in Lincolnshire, where it also goes by mercury or markery. A handful of growers there still cut and sell the young shoots in spring.",
     chain: ["Lincolnshire"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10543,8 +9665,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The bright, guitar-led beat music made by Liverpool groups in the early 1960s.",
     hook: "Merseybeat by another name, exported worldwide by four of its practitioners.",
-    story:
-      "Dozens of Liverpool bands, the Beatles among them, played a fast guitar style that the press labeled the Liverpool sound around 1963. The romantic explanation, that merchant sailors carried rare American records home to the port, is popular locally but hard to prove.",
     chain: ["Liverpool"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10567,8 +9687,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dense, sweetened survival bread baked to be carried on long expeditions.",
     hook: "Baked for an attempt on Canada's highest mountain, then kept by hikers.",
-    story:
-      "The recipe is credited to climbers preparing for Mount Logan in the Yukon, who needed something calorie-dense that would not spoil or crumble in a pack. Versions vary enormously, since the point was always fuel rather than flavor.",
     chain: ["Mount Logan"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10591,8 +9709,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A narrow, column-shaped variety of black poplar planted in rows as a windbreak or screen.",
     hook: "Every Lombardy poplar is a male clone of a single mutant tree.",
-    story:
-      "The columnar form was noticed in northern Italy and carried across Europe and to North America from the 18th century, propagated only from cuttings because it breeds no true seedlings. Since they are all male clones of one original, they set no seed and tend to decline at much the same age.",
     chain: ["Lombardy"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10615,8 +9731,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A North American method of cooking a lean beef cut: marinated, broiled or grilled, then sliced thinly across the grain.",
     hook: "Order London broil in London and nobody will know what you are asking for.",
-    story:
-      "The name appears on North American restaurant menus in the early twentieth century, and no connection to English cooking has ever been traced. In American butcher shops it has since drifted from a method to a label slapped on flank or top round steak.",
     chain: ["London"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10639,8 +9753,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cocktail of several white spirits topped with cola, which gives it the look of iced tea.",
     hook: "It contains no tea, and two different Long Islands claim it.",
-    story:
-      "The common account credits a bartender at the Oak Beach Inn on New York's Long Island around 1972. A rival claim places it in the Prohibition-era community of Long Island, Tennessee, where a very different mixture involving maple syrup is said to have been poured.",
     chain: ["Long Island"],
     relationship: "direct_toponym",
     confidence: "disputed",
@@ -10663,8 +9775,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Swiss polearm combining a pronged hammer head with a long spike, made for fighting armored men.",
     hook: "Named after the arsenal where the surviving examples happened to be stored.",
-    story:
-      "Swiss infantry used the weapon from the late medieval period, and arms writers attached the name of Lucerne because so many specimens survive in that city's arsenal. It is a collectors' and curators' label rather than what the soldiers carrying it called the thing.",
     chain: ["Lucerne"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10687,8 +9797,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A perfumed hair oil sold in Britain from the early nineteenth century.",
     hook: "It gave us the antimacassar: the cloth that saved chairs from greasy heads.",
-    story:
-      "Rowland's advertised the oil as made with ingredients from Makassar in Sulawesi, a claim that served the marketing better than it served the chemistry. The stuff stained upholstery so reliably that households pinned protective cloths to their chair backs, named against the product.",
     chain: ["Makassar"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -10711,8 +9819,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A very large, shaggy, tuft-eared cat breed native to the northeastern United States.",
     hook: "The coon half rests on a raccoon story that is biologically impossible.",
-    story:
-      "Farm cats in Maine developed heavy coats and broad snowshoe paws, and local folklore explained the bushy ringed tail by crossing them with raccoons, which cannot happen. The cats were fixtures at 19th-century New England shows, and Maine has since made the breed its official state cat.",
     chain: ["Maine"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10735,8 +9841,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The distance between two points measured as the sum of the differences along each axis, as though travel were confined to a grid.",
     hook: "A distance metric named for a street plan you cannot cut diagonally across.",
-    story:
-      "It is also called taxicab geometry, because a cab in a gridded city drives the blocks rather than the straight line between two addresses. Manhattan's 1811 grid made the picture obvious, even though Broadway cuts across it at an angle.",
     chain: ["Manhattan"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10759,8 +9863,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A stiff buff-colored envelope, usually large enough to hold paper unfolded.",
     hook: "Manila paper came from a banana relative, and today's envelopes contain none of it.",
-    story:
-      "Manila hemp is abacá, a fiber from a banana-family plant grown in the Philippines and shipped through the capital; worn-out abacá rope was pulped into a tough, cheap paper. The color and the name outlived the material once manufacturers switched to ordinary wood pulp.",
     chain: ["Manila"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -10783,8 +9885,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tough buff-colored paper used for envelopes, folders, and wrapping.",
     hook: "The hemp it was made from is not hemp at all; it is a banana relative.",
-    story:
-      "The paper was originally made from Manila hemp, the fiber of abaca, a banana relative grown in the Philippines and shipped out through Manila. Today's manila folders are usually ordinary wood pulp dyed to the expected color, with no Philippine fiber involved.",
     chain: ["Manila"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -10807,8 +9907,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The Canadian name for the box elder, a fast-growing maple with compound leaves.",
     hook: "The only North American maple with compound leaves; it grows far beyond Manitoba.",
-    story:
-      "Acer negundo was planted heavily as a shelterbelt tree on the Canadian prairies, which fixed Manitoba's name to it in Canadian usage. Its natural range runs from central Canada deep into Mexico, and elsewhere it is called box elder or ash-leaved maple.",
     chain: ["Manitoba"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10831,8 +9929,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard soap boiled from olive oil, seawater and alkaline plant ash, usually sold as a plain stamped cube.",
     hook: "Protected by royal edict in 1688 and by nothing whatsoever today.",
-    story:
-      "The city's soapworks drew on Provencal olive oil, and a 1688 edict under Colbert barred animal fats from soap sold under the Marseille name. That rule is long gone and the term has no legal protection, so most cubes labeled Marseille are now made elsewhere and from other oils.",
     chain: ["Marseille"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -10855,8 +9951,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The four o'clock flower, Mirabilis jalapa, a garden plant whose scented blooms open in late afternoon.",
     hook: "Its English name says Peru; its Latin name points at a town in Mexico.",
-    story:
-      "The plant reached European gardens from Spanish America in the sixteenth century and was sold as a marvel out of Peru, the name Spanish ships attached to a great deal of the continent. Its species name jalapa refers to Xalapa in Mexico, and botanists still disagree about where the wild ancestor actually grew.",
     chain: ["Peru"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -10879,8 +9973,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To suffer the decisive defeat that ends a run of success.",
     hook: "Almost none of the battle of Waterloo was fought at Waterloo.",
-    story:
-      "Wellington wrote his victory dispatch from the village of Waterloo in June 1815, and British practice named the battle after his headquarters rather than the slopes at Mont-Saint-Jean where the fighting actually happened. The idiom spread in American English within a few decades of the battle.",
     chain: ["Waterloo"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10903,8 +9995,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Very thin bread toasted twice until dry and brittle.",
     hook: "Named for a soprano, who was named for Melbourne.",
-    story:
-      "Nellie Melba built her stage name out of Melbourne, her home city, and Auguste Escoffier named both this toast and the peach dessert for her while she stayed at his hotels. The toast was reputedly devised when she was unwell, which makes the city's name a two-step inheritance.",
     chain: ["Melbourne"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -10927,8 +10017,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The bright guitar and harmony pop made by Liverpool groups in the early 1960s.",
     hook: "A river named the sound of Liverpool, then named a bestselling poetry book.",
-    story:
-      "The Mersey runs through Liverpool, and journalists covering the city's beat groups reached for the river rather than the city, also coining Merseybeat. The label was borrowed in 1967 for an anthology of Liverpool poets that sold in numbers almost unheard of for poetry.",
     chain: ["River Mersey"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10951,8 +10039,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The ripple of spectators standing and sitting that travels around a stadium.",
     hook: "British television named it for Mexico; American crowds had done it for years.",
-    story:
-      "Broadcasts of the 1986 World Cup in Mexico gave the stunt its British name, and it stuck across the Commonwealth. In North America it is simply the wave, traced to college and professional games in the early 1980s.",
     chain: ["Mexico"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10975,8 +10061,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A fast, sub-bass-heavy style of hip hop built for car stereos, from southern Florida.",
     hook: "A Florida genre defined by a Japanese drum machine nobody wanted at first.",
-    story:
-      "Producers around Miami built the sound on the deep kick of the Roland TR-808, a commercial failure in the early 1980s that became the genre's foundation. The style ran through 2 Live Crew and later fed both Atlanta trap and Brazilian funk carioca.",
     chain: ["Miami"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -10999,8 +10083,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An experimental rabies treatment combining an induced coma with antiviral drugs.",
     hook: "Named for the hospital that saved an unvaccinated rabies patient in 2004.",
-    story:
-      "Doctors in Milwaukee induced a coma in a teenage girl already showing rabies symptoms, and she survived, which had almost never happened before. Later attempts elsewhere nearly all failed, and many specialists now doubt the protocol deserves the credit.",
     chain: ["Milwaukee"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11023,8 +10105,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The point at which a peacekeeping force stops keeping the peace and becomes a party to the fighting.",
     hook: "One firefight in Somalia gave peacekeeping doctrine a boundary and a name.",
-    story:
-      "The American raid in Mogadishu in October 1993 cost eighteen US lives and helped bring the United Nations mission there to an end. British commanders in Bosnia took the city's name for the threshold they intended not to cross, and the phrase spread through military and policy writing over the rest of the decade.",
     chain: ["Mogadishu"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11047,8 +10127,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The mistaken belief that a run of one outcome makes the opposite outcome more likely on the next independent trial.",
     hook: "A Monaco roulette wheel landed on black 26 times and ruined the table betting red.",
-    story:
-      "The name commemorates a night at the Monte Carlo Casino in August 1913, when gamblers piled onto red as the streak of black kept running. It is better known as the gambler's fallacy, and the exact number of spins varies between retellings, but the point does not: the wheel has no memory.",
     chain: ["Monte Carlo"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11071,8 +10149,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A mild, pale, semi-hard cow's milk cheese that melts smoothly.",
     hook: "Half the name is a California town; the other half is probably a man named Jacks.",
-    story:
-      "Franciscan missions around Monterey made a soft young cheese, and the businessman David Jacks marketed it widely in the 1880s, so it traveled as Jacks' cheese. Some accounts instead derive the \"jack\" from the house press used to squeeze the curd, and both explanations are still in circulation.",
     chain: ["Monterey"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11095,8 +10171,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An epilepsy surgery in which an awake patient's cortex is electrically stimulated to map function before tissue is removed.",
     hook: "Patients stayed awake and described their own memories as the surgeon probed.",
-    story:
-      "Wilder Penfield developed the technique at the Montreal Neurological Institute from the 1930s, using local anesthetic so patients could report what each stimulation made them feel or recall. The maps drawn from those reports produced the sensory and motor homunculus still printed in textbooks.",
     chain: ["Montreal"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11119,8 +10193,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The 1987 treaty that phased out the chemicals destroying stratospheric ozone.",
     hook: "The treaty named for a Canadian city was the first every country ratified.",
-    story:
-      "Delegates signed the agreement in Montreal in September 1987, and the host city's name attached to it as it has to other environmental accords. It was the first United Nations treaty ratified by every member state, and the ozone layer is now measurably recovering.",
     chain: ["Montreal"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11143,8 +10215,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hard, pale, unscented olive oil soap made in Nablus in the West Bank.",
     hook: "A whole export industry built on three ingredients: olive oil, water and ash.",
-    story:
-      "The soap is cooked from local olive oil, water and an alkali traditionally made from burnt desert plants, poured into a floor mold, cut by hand and stacked in towers to dry. Dozens of factories worked in the nineteenth century; only a handful survive.",
     chain: ["Nablus"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -11167,8 +10237,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A no-bake dessert square of crumb base, custard-flavored butter icing, and a chocolate top.",
     hook: "The bar's earliest printed recipes may not come from Nanaimo at all.",
-    story:
-      "The name shows up in Nanaimo community cookbooks in the early 1950s, and the city on Vancouver Island has claimed the square ever since. Nearly identical layered bars were printed elsewhere under other names around the same time, so the true birthplace is unsettled.",
     chain: ["Nanaimo"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11191,8 +10259,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Fried chicken brushed after cooking with a cayenne-heavy paste of spice and hot fat.",
     hook: "Tennessee's signature dish began, by family account, as an act of revenge.",
-    story:
-      "The Prince family tells of a girlfriend who over-peppered Thornton Prince's chicken to punish him, only for him to like it enough to build a restaurant around it. The dish stayed a specialty of Black Nashville for decades before national chains carried the city's name onto menus in the 2010s.",
     chain: ["Nashville"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11215,8 +10281,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A smooth, string-backed style of country music that emerged in the late 1950s.",
     hook: "Nashville answered rock and roll by sanding the twang off country music.",
-    story:
-      "Producers including Chet Atkins and Owen Bradley swapped fiddle and steel guitar for strings and background singers in order to win back a pop audience. The style dominated for a decade and provoked the Bakersfield and outlaw reactions against it.",
     chain: ["Nashville"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11239,8 +10303,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A low North American shrub, Ceanothus americanus, whose dried leaves were brewed as a tea substitute.",
     hook: "The tea colonists drank when they refused to drink tea.",
-    story:
-      "The leaves were steeped as a patriotic replacement for boycotted East India Company tea during the American Revolution, which is where the name comes from. The brew is tea-colored but contains no caffeine, and the shrub is no relation to the tea plant.",
     chain: ["New Jersey"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11263,8 +10325,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A joking unit of time: the interval between a light turning green and the horn behind you.",
     hook: "The shortest measurable interval, defined by the driver behind you.",
-    story:
-      "The joke circulated in American speech before Terry Pratchett fixed it in print as the smallest unit of time known to science. It flatters and insults the city in the same breath, which is why New Yorkers repeat it themselves.",
     chain: ["New York City"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11287,8 +10347,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A boneless steak cut from the short loin, without the tenderloin attached.",
     hook: "The same steak becomes a Kansas City strip once you leave New York.",
-    story:
-      "The name is usually traced to Delmonico's in Manhattan, which built its reputation on beef in the nineteenth century. Butchers elsewhere sell the identical cut as a Kansas City strip, a strip loin, or simply a sirloin, depending on local habit.",
     chain: ["New York City"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11311,8 +10369,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A wide, thin-crusted pizza sold by the slice and eaten folded.",
     hook: "The famous it-is-the-water explanation has never actually been demonstrated.",
-    story:
-      "Lombardi's in Manhattan, traditionally credited as the country's first pizzeria, opened in 1905, and the coal-oven style spread outward from lower Manhattan. New Yorkers credit the city's tap water for the crust, a claim nobody has managed to show; oven temperature and flour do far more of the work.",
     chain: ["New York City"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11335,8 +10391,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The Christian statement of faith issued by the Council of Nicaea in 325 and expanded at Constantinople in 381.",
     hook: "The creed recited every Sunday is named after two towns now in Turkey.",
-    story:
-      "Nicaea is modern İznik, a lakeside town in Bursa Province better known today for its tiles, and Constantinople is Istanbul. The double name records the two councils that produced the text most churches still recite.",
     chain: ["İznik"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -11359,8 +10413,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The statement of Christian belief adopted by the church council that met at Nicaea in 325.",
     hook: "A creed recited worldwide is named for a Turkish town now famous for tiles.",
-    story:
-      "Nicaea, where Constantine summoned the bishops, is the modern İznik in northwestern Turkey, celebrated since the sixteenth century for its ceramics. The text most churches actually recite is the expanded version agreed at Constantinople in 381, so even the name is only half right.",
     chain: ["İznik"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -11383,8 +10435,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The statement of Christian belief agreed at the councils of 325 and 381, and adherence to it.",
     hook: "The creed shared by most of Christianity is named for a Turkish tile town.",
-    story:
-      "Bishops summoned by Constantine met in 325 at Nicaea, now İznik in northwestern Turkey, and a council at Constantinople revised the wording in 381 into the text recited today. İznik later became famous for its ceramics, and the lakeside site of the council is now a quiet provincial town.",
     chain: ["İznik"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -11407,8 +10457,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Said of a situation that has turned strange and far removed from the familiar.",
     hook: "One line of movie dialogue turned a real state into a byword for normality.",
-    story:
-      "Dorothy says it to her dog after the cyclone in the 1939 film of The Wizard of Oz; the line does not appear in L. Frank Baum's book. Kansas is real, named for the Kansa people, and the idiom works only by letting the state stand in for ordinary life.",
     chain: ["Kansas"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11431,8 +10479,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A Swedish illness caused by Sindbis virus, marked by rash, fever, and lingering joint pain.",
     hook: "One mosquito-borne virus carries three names, one per country it turns up in.",
-    story:
-      "Cases clustered around Ockelbo in Gävleborg county gave the Swedish form of the illness its name, while the same Sindbis infection is called Pogosta disease in Finland and Karelian fever in Russia. Three national labels for one virus show how local the naming of outbreaks can be.",
     chain: ["Ockelbo"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11455,8 +10501,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Another name for histoplasmosis, a lung infection caught from a soil fungus.",
     hook: "A lung infection named for the valley where almost every resident meets it.",
-    story:
-      "Histoplasma capsulatum thrives in the moist soils of the Ohio and Mississippi valleys, especially where bird or bat droppings enrich them, and most residents are exposed without ever falling ill. The regional name stuck in American medicine even though the fungus occurs on several continents.",
     chain: ["Ohio River"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11479,8 +10523,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A pungent ripened Czech curd cheese sold as small yellow discs, with almost no fat in it.",
     hook: "Named for Olomouc, but actually made in a small town called Lostice.",
-    story:
-      "The cheese reached buyers through the markets of Olomouc, which is how the city's name stuck to it, while production settled up the road in Lostice, where a factory has run since the 19th century. It holds a protected European designation and is ripened from skimmed curd rather than enriched with cream.",
     chain: ["Olomouc"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -11503,8 +10545,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Medieval Italian tin-glazed earthenware painted in copper green and manganese brown, associated with the kilns of Orvieto.",
     hook: "Collectors named a whole medieval pottery style after one Umbrian hill town.",
-    story:
-      "Large quantities of these green and brown jugs came out of disused wells and cisterns in Orvieto in the nineteenth century, and the town's name became the trade label for the type. Similar archaic maiolica was made across central Italy, so the name records where the pots were dug up more reliably than where each was thrown.",
     chain: ["Orvieto"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -11527,8 +10567,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The comma placed before and or or in a list of three or more items.",
     hook: "A university press's house style became a transatlantic identity badge.",
-    story:
-      "The mark is named for Oxford University Press, whose style rules have long required it, and the press in turn carries the name of the city. Most American guides demand the comma and most British ones outside Oxford drop it, which turned a printing convention into a small cultural marker.",
     chain: ["Oxford"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -11551,8 +10589,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The Brazil nut, named for the Amazonian state through which it was shipped.",
     hook: "Brazil nuts are gathered across Amazonia; Pará was only the export door.",
-    story:
-      "The nuts were collected from wild trees throughout the Amazon basin and shipped out of Belém in Pará, so the state's name traveled with the cargo. Almost the entire crop still comes from wild forest, which makes the tree an economic argument for leaving it standing.",
     chain: ["Pará"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -11575,8 +10611,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A ring of choux pastry split and filled with praline cream.",
     hook: "The pastry is a bicycle wheel, baked for a 750-mile race.",
-    story:
-      "The cycling race from Paris to Brest and back began in 1891, and the pastry is said to have been shaped like a wheel in its honor by a baker on the route, usually named as Louis Durand at Maisons-Laffitte around 1910. The race still runs every four years, while the pastry now turns up on menus with no interest in cycling at all.",
     chain: ["Paris"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11599,8 +10633,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dessert of poached peach halves with vanilla ice cream and raspberry sauce.",
     hook: "The dessert honors a soprano who built her stage name out of Melbourne.",
-    story:
-      "Auguste Escoffier created it at the Savoy in London for Nellie Melba, born Helen Porter Mitchell, who took her professional name from her home city. The raspberry sauce came later than the first version, and Escoffier named Melba toast after her as well.",
     chain: ["Melbourne"],
     relationship: "indirect_derivation",
     confidence: "well-attested",
@@ -11623,8 +10655,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A devastating surprise attack delivered without warning.",
     hook: "The harbor is named for the pearl oysters that once grew in it.",
-    story:
-      "Hawaiians called the inlet Wai Momi, water of pearl, for oyster beds that later died off as the lagoon was silted and dredged for the naval base. After December 1941 the place name became an English common noun, and in slang even a verb for striking first without warning.",
     chain: ["Pearl Harbor"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11647,8 +10677,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A two-level barn built into a bank, with the upper floor overhanging the stable wall below.",
     hook: "Its overhanging upper floor came from Alpine Europe, not from Pennsylvania.",
-    story:
-      "Settlers from German-speaking Europe built these bank barns across southeastern Pennsylvania from the eighteenth century, carrying an Alpine and Rhineland form across the Atlantic. The type spread down the Appalachians and into Ontario, taking Pennsylvania's name far outside the state.",
     chain: ["Pennsylvania"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11671,8 +10699,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A lawyer of exceptional cleverness, admired or resented for finding a way through.",
     hook: "The compliment may date from a Philadelphian who won a New York libel case.",
-    story:
-      "Tradition credits Andrew Hamilton, who traveled to New York in 1735 and won John Peter Zenger's acquittal on seditious libel, a landmark for press freedom. The link to Hamilton is traditional rather than documented, and the phrase now carries a hint of sharp practice.",
     chain: ["Philadelphia"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11695,8 +10721,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A forged fossil hominid, and by extension any celebrated fraud that fools the experts for years.",
     hook: "A human skull, an orangutan jaw, and forty years of British paleontology.",
-    story:
-      "Bones announced from a gravel pit at Piltdown in East Sussex in 1912 were accepted as the missing link, partly because they flattered a theory that the big brain evolved first. Chemical dating exposed the composite forgery in 1953, and who assembled it is still argued over.",
     chain: ["Piltdown"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11719,8 +10743,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Completely obvious or blunt, with nothing hidden or roundabout about it.",
     hook: "An old proverb measures plainness against a dead straight Roman road.",
-    story:
-      "Watling Street runs arrow straight through Dunstable in Bedfordshire, crossing the older Icknield Way, and early modern English proverb collections use it as the yardstick for plainness. Variants include plain as Dunstable road and plain as Dunstable way; the phrase had dropped out of ordinary speech by the nineteenth century.",
     chain: ["Dunstable"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11743,8 +10765,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Blunt and straightforward, with nothing dressed up or held back.",
     hook: "The plainest thing in Tudor England was the road to Dunstable.",
-    story:
-      "Watling Street ran dead straight from London through the Bedfordshire town, and \"as plain as Dunstable road\" became a stock comparison that eventually shortened to the adjective. The road is Roman; the phrase now survives mainly in dictionaries of obsolete English.",
     chain: ["Dunstable"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -11767,8 +10787,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small round licorice sweet stamped with a castle, made in West Yorkshire.",
     hook: "Pomfret is the old English name for Pontefract; Shakespeare used it too.",
-    story:
-      "Licorice was grown around Pontefract and pressed into stamped discs bearing the town's castle, sold as Pontefract or pomfret cakes. The older spelling records how the Norman name was actually pronounced in English, and it survives in Shakespeare's history plays.",
     chain: ["Pontefract"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -11791,8 +10809,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet fortified wine from the Douro valley, made by halting fermentation with grape spirit.",
     hook: "Named for the harbor it left from, not the valley it grew in.",
-    story:
-      "The grapes ripen far up the Douro, but the wine was aged in lodges at Vila Nova de Gaia and shipped out past Porto, so English merchants named it for the port of departure. The Douro was demarcated in 1756, making it one of the first wine regions anywhere to be defined by law.",
     chain: ["Porto"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -11815,8 +10831,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A prefabricated shelter of corrugated steel bent into a half cylinder over a concrete floor.",
     hook: "The all-American hut is a copy of a British one, named in Narragansett.",
-    story:
-      "The US Navy had the design worked up in 1941 at Quonset Point, Rhode Island, adapting the British Nissen hut of the First World War so that untrained crews could bolt one together in hours. The place name itself is Narragansett in origin, from the long low point of land the base was built on.",
     chain: ["Quonset Point"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11839,8 +10853,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A hardy dark red American chicken kept for both eggs and meat.",
     hook: "A village in the smallest state built a stone monument to a chicken.",
-    story:
-      "Breeders around Little Compton and Adamsville fixed the type in the late nineteenth century by crossing local hens with Asian and Mediterranean imports. Adamsville raised a monument to the bird in 1925, and the breed is now the official state bird.",
     chain: ["Rhode Island"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11863,8 +10875,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A large southern African hound with a ridge of reversed hair along its spine.",
     hook: "The country in the name is gone: Rhodesia has been Zimbabwe since 1980.",
-    story:
-      "The breed standard was drawn up in Bulawayo in 1922, formalizing a cross of European hunting dogs with the ridged dogs kept by Khoikhoi herders. The name preserves Cecil Rhodes in a country that dropped him in 1980, so the dog carries a place no longer on the map.",
     chain: ["Zimbabwe"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -11887,8 +10897,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sudden and total reversal of conviction.",
     hook: "One of the world's oldest cities is now shorthand for changing your mind.",
-    story:
-      "Acts describes Saul of Tarsus struck blind on the way to Damascus to arrest Christians and rising from the road as Paul, and English writers turned the journey into a stock phrase for any about-face. It attaches most often now to politicians reversing a position, which is rarely as sudden as the original.",
     chain: ["Damascus"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11911,8 +10919,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A tick-borne infection caused by Rickettsia rickettsii, producing fever, headache and a spreading rash.",
     hook: "The disease named for the Rockies is now mostly a problem far from them.",
-    story:
-      "It was first investigated in Montana's Bitterroot Valley in the early 1900s, where Howard Ricketts identified the tick-borne organism that carries his name. Most American cases today are reported from states such as North Carolina, Arkansas, Missouri and Oklahoma, well away from the mountains in the name.",
     chain: ["Rocky Mountains"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11935,8 +10941,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "A reminder that anything worth making takes time and cannot be hurried.",
     hook: "The proverb about Rome reached English through medieval France.",
-    story:
-      "It circulates in twelfth-century French collections as \"Rome ne fut pas faite toute en un jour\" and entered English proverb books in the 1500s, notably John Heywood's. Rome is standing in for the largest thing anyone could picture building, not making a claim about actual construction schedules.",
     chain: ["Rome"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11959,8 +10963,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A desert plant that curls into a dry ball and opens again when wetted.",
     hook: "Not a rose, and the one usually sold is not from Jericho either.",
-    story:
-      "Anastatica hierochuntica grows across the deserts of the Middle East and North Africa and was carried home by pilgrims as an emblem of resurrection. The plant sold under the name today is often a Mexican spikemoss from the Chihuahuan Desert, which performs the same trick more convincingly.",
     chain: ["Jericho"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -11983,8 +10985,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A mosquito-borne illness causing joint pain, rash, and fatigue, common in Australia.",
     hook: "Named for a small river in Townsville where the virus was first trapped.",
-    story:
-      "The virus was isolated in 1959 from mosquitoes collected along the Ross River in northern Queensland. The disease occurs right across Australia and into the Pacific, so the name marks a collecting site rather than a range.",
     chain: ["Ross River"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12007,8 +11007,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A joke built by swapping subject and object, so that in Soviet Russia the thing does it to you.",
     hook: "A Cold War stage bit that outlived the country it was mocking.",
-    story:
-      "The format is associated with the comedian Yakov Smirnoff, who worked it into American routines in the 1980s, although similar reversals circulated before him. The label Russian reversal is later and comes from the internet, which kept the joke running long after the Soviet Union stopped existing.",
     chain: ["Russia"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12031,8 +11029,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The lethal game of spinning the cylinder of a partly loaded revolver and pulling the trigger against one's own head.",
     hook: "There is no real evidence Russians ever played the game named after them.",
-    story:
-      "The English name comes from a 1937 magazine story by Georges Surdez, which set the practice among Russian officers in Romania two decades earlier; no Russian source of the period describes anything like it. The phrase spread far faster than any evidence for the custom behind it.",
     chain: ["Russia"],
     relationship: "demonym",
     confidence: "probable",
@@ -12055,8 +11051,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A salad of diced potato and vegetables, often with meat or egg, bound in mayonnaise.",
     hook: "Abroad it is Russian salad; in Russia it is named for its chef, Olivier.",
-    story:
-      "Lucien Olivier served a luxurious version at his Hermitage restaurant in Moscow in the 1860s, with game, crayfish, and a dressing he declined to write down. It traveled abroad under the country's name and returned to Soviet kitchens as a cheap potato and pea version.",
     chain: ["Russia"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -12079,8 +11073,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A sweet Salvadoran cake of rice flour, cheese, and cream, baked and topped with sesame seeds.",
     hook: "A quesadilla with no tortilla: in El Salvador it is a sweet cheese pound cake.",
-    story:
-      "Salvadoran bakers use the word for a loaf of cheese-enriched sweet bread eaten with coffee, not the folded tortilla the name calls up elsewhere. Both senses descend honestly from queso, cheese; only one of them involves a griddle.",
     chain: ["El Salvador"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -12103,8 +11095,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The improvisational psychedelic rock made in San Francisco in the mid 1960s.",
     hook: "A ballroom scene in one city became the national label for psychedelia.",
-    story:
-      "Bands playing the Fillmore and the Avalon stretched songs into long improvisations behind liquid light shows, and the press named the result after the city. The scene was short; by 1970 its best known groups had scattered or signed to distant labels.",
     chain: ["San Francisco"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12127,8 +11117,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A cabbage with crinkled, loosely packed leaves, milder and more tender than a smooth white one.",
     hook: "The wrinkles are named for an Alpine duchy that no longer exists.",
-    story:
-      "Savoy straddles the French and Italian Alps and was an independent duchy when the crinkled cabbages entered English gardens, so the name records where they were believed to come from rather than where they were bred. They shrug off frost, which is why they show up in winter cooking.",
     chain: ["Savoy"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12151,8 +11139,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The group of European states that have abolished passport checks at their shared borders.",
     hook: "Free movement for hundreds of millions is named for a village of a few hundred.",
-    story:
-      "The founding agreement was signed in 1985 aboard a boat on the Moselle at Schengen, a wine-growing village in Luxembourg chosen because it sits where three countries meet. The village still has a few hundred residents and a small museum about the treaty.",
     chain: ["Schengen"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12175,8 +11161,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The failure of a text filter that blocks innocent words because of a rude string hidden inside them.",
     hook: "A whole class of software bug is named after a Lincolnshire town's spelling.",
-    story:
-      "In 1996 AOL's obscenity filter refused to let residents of Scunthorpe register accounts at all, because of the four letters sitting in the middle of the name. The same trap has since caught surnames, other place names, and scientific terms on search engines and social platforms.",
     chain: ["Scunthorpe"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12199,8 +11183,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To try to sell something where it is already plentiful; a commercially pointless errand.",
     hook: "The Tyne imports coal now, which rather ruins the joke.",
-    story:
-      "This is a later commercial turn on the older proverb about carrying coals to Newcastle, aimed at the salesman instead of the porter. Once the northeastern pits closed, coal began arriving on the Tyne by ship, so the supposedly absurd errand has in fact been run.",
     chain: ["Newcastle upon Tyne"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12223,8 +11205,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To take something to a place that already has an abundance of it.",
     hook: "Newcastle now imports its coal, which rather finishes the joke.",
-    story:
-      "Newcastle upon Tyne shipped coal down the east coast to London for centuries, making it the obvious place where nobody needed any more. The Tyne pits are closed and coal now arrives by sea, so the proverb has outlived the trade that made it self-evident.",
     chain: ["Newcastle upon Tyne"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12247,8 +11227,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Plain carbonated water, with no added minerals or flavoring.",
     hook: "Seltzer is a worn-down spelling of Selters, a spring village in Hesse.",
-    story:
-      "Naturally fizzy water from the springs at Niederselters was shipped across Europe in stoneware jugs, and Selterswasser became a generic term that English borrowed as seltzer. Once carbonation could be manufactured anywhere, the word outlived the trade that produced it.",
     chain: ["Niederselters"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -12271,8 +11249,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To punish someone by collectively refusing to speak to them.",
     hook: "Nobody can prove why Coventry, of all places, became the silent treatment.",
-    story:
-      "The favorite explanation has Royalist prisoners taken to parliamentarian Coventry in the 1640s being shunned by the townspeople, an idea drawn from Clarendon's history of the civil war. The phrase itself is recorded only from the 1760s, leaving a gap of more than a century that no evidence fills.",
     chain: ["Coventry"],
     relationship: "direct_toponym",
     confidence: "disputed",
@@ -12295,8 +11271,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Porcelain from the French royal factory at Sèvres, prized for its ground colors and gilding.",
     hook: "A king's porcelain works made a Paris suburb a synonym for luxury.",
-    story:
-      "The factory moved to Sèvres outside Paris in 1756 and passed into Louis XV's ownership three years later, producing the deep blues and gilded reserves collectors still chase. The town lent its name to one more export: the 1920 Treaty of Sèvres was signed in the factory's own museum.",
     chain: ["Sèvres"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12319,8 +11293,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A persimmon cultivar treated to remove astringency so it can be eaten while firm.",
     hook: "Not a woman's name: the Sharon is a coastal plain in Israel.",
-    story:
-      "Growers on the Sharon plain sold the Triumph persimmon under the region's name after developing a treatment that strips out the mouth-drying tannins. The fruit can therefore be eaten crisp like an apple, unlike persimmons that must go soft before they are palatable.",
     chain: ["Sharon plain"],
     relationship: "product_from_place",
     confidence: "probable",
@@ -12343,8 +11315,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Neat, orderly and properly secured.",
     hook: "Bristol's tide was so extreme that ships had to be packed to survive sitting on mud.",
-    story:
-      "The Avon at Bristol has one of the largest tidal ranges in the world, and before the city's enclosed harbor was built ships settled onto the riverbed twice a day, so cargo and rigging had to be stowed to take that strain. The phrase is recorded in nautical English by the middle of the 19th century and now just means tidy.",
     chain: ["Bristol"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12367,8 +11337,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To endure something unpleasant, usually sex, by retreating into a sense of duty.",
     hook: "The Victorian diary everyone cites for this line has never once been produced.",
-    story:
-      "The advice is usually credited to a 1912 journal by Lady Alice Hillingdon that no researcher has ever seen, and it gets pinned on Queen Victoria just as often. The phrase itself is only recorded much later, which suggests the diary grew out of the joke rather than the other way round.",
     chain: ["England"],
     relationship: "direct_toponym",
     confidence: "disputed",
@@ -12391,8 +11359,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An older term for a conjoined twin, now generally replaced by that phrase.",
     hook: "It comes from two men's stage billing, and their country has since renamed itself.",
-    story:
-      "Chang and Eng Bunker, born in Siam in 1811 and joined at the chest, toured as the Siamese Twins and later settled as farmers in North Carolina. Siam became Thailand in 1939, and the brothers were of Chinese descent, so the label was loose even when it was coined.",
     chain: ["Thailand"],
     relationship: "historical_place_name",
     confidence: "well-attested",
@@ -12415,8 +11381,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Utterly dependable and impossible to shake.",
     hook: "An insurance company built a global brand on one limestone headland.",
-    story:
-      "The limestone promontory at the mouth of the Mediterranean has been fortified for centuries, and its silhouette became shorthand for permanence. Prudential adopted the Rock as its emblem in the 1890s, which planted the simile in American advertising for a century.",
     chain: ["Gibraltar"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12439,8 +11403,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "Said when corruption or wrongdoing is suspected at the top of an organization.",
     hook: "Hamlet does not say it; a guard on the battlements does.",
-    story:
-      "Marcellus speaks the line in Act I of Hamlet, after the ghost leads the prince away, and he means the court rather than the kingdom. English lifted the sentence whole and now aims it at any institution, with Denmark carried along as an innocent bystander.",
     chain: ["Denmark"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12463,8 +11425,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A preparation made from the dried blister beetle Lytta vesicatoria, long sold as an aphrodisiac.",
     hook: "Not a fly, not especially Spanish, and far more dangerous than romantic.",
-    story:
-      "The emerald green beetle lives across southern and central Europe, and its irritant cantharidin was gathered wherever it swarmed rather than in Spain alone. It works by inflaming the urinary tract, and the dose that excites sits uncomfortably close to the dose that kills.",
     chain: ["Spain"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12487,8 +11447,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Jasminum grandiflorum, a large-flowered jasmine grown for its perfume oil.",
     hook: "Spanish jasmine is from South Asia; Spain was only the middleman.",
-    story:
-      "The plant reached Mediterranean gardens from South Asia and Arabia, and Spanish and later French growers supplied the perfume trade, which is how the name attached itself. It also sells as royal jasmine and Catalonian jasmine, labels that likewise point at the trade rather than the origin.",
     chain: ["Spain"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12511,8 +11469,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A St. Louis sandwich of an egg foo young patty on white bread with mayonnaise, pickle, lettuce, and tomato.",
     hook: "Named for Saint Paul, sold only in St. Louis, and nobody can explain why.",
-    story:
-      "The sandwich is a fixture of Chinese American carryout counters in St. Louis and is essentially unknown in Saint Paul, Minnesota; one common account credits a cook who came from that city. No documentation supports the link, leaving a dish named after a place it otherwise has nothing to do with.",
     chain: ["Saint Paul"],
     relationship: "disputed",
     confidence: "disputed",
@@ -12535,8 +11491,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A massage style built on long gliding strokes, kneading, friction, and tapping.",
     hook: "Swedes call it classic massage; the strokes may be Dutch, not Swedish.",
-    story:
-      "The technique is usually credited to Pehr Henrik Ling and his Swedish gymnastics, but the French names for its strokes came through the Dutch practitioner Johann Georg Mezger. In Sweden the same treatment is simply classic massage, and the national label is largely an export product.",
     chain: ["Sweden"],
     relationship: "demonym",
     confidence: "disputed",
@@ -12559,8 +11513,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To convert to Roman Catholicism, especially from Anglicanism.",
     hook: "Converts swim one river toward Rome and another toward Constantinople.",
-    story:
-      "The Tiber runs through Rome past the Vatican, so crossing it stands for entering the Catholic Church, and the phrase is used chiefly by Anglicans about their own. Those who turn instead to Eastern Orthodoxy are said to swim the Bosphorus.",
     chain: ["Tiber"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12583,8 +11535,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An account held in Switzerland, used as shorthand for concealed wealth.",
     hook: "Swiss secrecy became law in 1934 and was largely dismantled by 2018.",
-    story:
-      "A 1934 banking act made disclosing a client's identity a criminal offense, turning discretion into a national industry and a thriller cliche. Switzerland began automatically exchanging account information with foreign tax authorities in 2017 and 2018, so the phrase now describes a past more than a present.",
     chain: ["Switzerland"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -12607,8 +11557,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To leave a gathering, or a post, without telling anyone or saying goodbye.",
     hook: "The French return the insult precisely: they call it leaving English style.",
-    story:
-      "Eighteenth-century English writers attached the habit to French manners, while the French phrase filer à l'anglaise does exactly the same thing in reverse. Several other European languages borrowed one version or the other, so the rudeness always belongs to the neighbors.",
     chain: ["France"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -12631,8 +11579,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A stocky black carnivorous marsupial with a bone-crushing bite, now found only in Tasmania.",
     hook: "The devil is named after an island named after a Dutch sea captain.",
-    story:
-      "European settlers called it a devil for its night screeching and its snarling over carcasses, while the island honors Abel Tasman, who charted the coast in 1642. Devils lived across mainland Australia until roughly three thousand years ago, and a transmissible facial cancer has cut the wild population sharply since the 1990s.",
     chain: ["Tasmania"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12655,8 +11601,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Skiing with the heel left free, turning with one ski advanced and that knee dropped.",
     hook: "Modern skiing was largely worked out by farmers in one Norwegian county.",
-    story:
-      "Sondre Norheim and other skiers from Morgedal in Telemark shaped the waisted skis and heel bindings that made controlled turning possible in the nineteenth century. Alpine technique later locked the heel down and the telemark turn nearly vanished, until a deliberate revival in the 1970s.",
     chain: ["Telemark"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12679,8 +11623,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A ski turn made in a deep lunge with the rear heel free of the binding.",
     hook: "A Norwegian county's turn is why ski jumpers still lunge on landing.",
-    story:
-      "Sondre Norheim and other skiers from Telemark shaped the turn in the later nineteenth century, along with the bindings that made it possible. Alpine skiing later locked the heel down, but jumpers are still scored on the telemark landing.",
     chain: ["Telemark"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12703,8 +11645,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Of the Texan-Mexican border culture, and especially its cooking of chili, cumin, yellow cheese and wheat flour tortillas.",
     hook: "Tex-Mex began life as a telegraphic abbreviation for a railroad company.",
-    story:
-      "The hyphenated form was shorthand for the Texas-Mexican Railway, whose line was founded in the 1870s, and then a label for Texans of Mexican descent. It only became a name for food in the twentieth century, popularized by writers drawing a line between border cooking and the kitchens of central Mexico.",
     chain: ["Texas"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12727,8 +11667,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A very deep curtsy in which a debutante lowers her head almost to the floor and rises without using her hands.",
     hook: "A curtsy so extreme it takes a state's name and weeks of rehearsal.",
-    story:
-      "The move belongs to Texas debutante balls and traveled with Texan debutantes to the International Debutante Ball in New York, where it became the house style. The hard part is coming back up in a full gown with no hand free for balance.",
     chain: ["Texas"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12751,8 +11689,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The poker variant in which each player holds two private cards and shares five community cards.",
     hook: "The Texas legislature voted on where the game was born.",
-    story:
-      "A resolution of the Texas Legislature names Robstown, in the south of the state, as the game's birthplace in the early 1900s, which is as close to documentation as the origin gets. Texan players including Doyle Brunson and Amarillo Slim carried it to Las Vegas in 1967, where it became the tournament game.",
     chain: ["Texas"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12775,8 +11711,6 @@ export const WORDS: Word[] = [
     pos: "adjective",
     definition: "Enormous, especially in a showy or excessive way.",
     hook: "Texas lost its size crown in 1959 and kept the adjective anyway.",
-    story:
-      "Texas was by far the largest American state from 1845 until Alaska joined the union in 1959, long enough for its name to become a general unit of bigness. The phrase survived the demotion; Alaska-sized has never caught on.",
     chain: ["Texas"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -12799,8 +11733,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Slang for crude oil.",
     hook: "Oil as a beverage: the joke reached America through a TV theme song.",
-    story:
-      "Texas became a synonym for oil after the Spindletop gusher of 1901 and the fields that followed it. The phrase reached most Americans through the theme to The Beverly Hillbillies in the 1960s, which paired it with black gold.",
     chain: ["Texas"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12823,8 +11755,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Bread sliced about twice the usual thickness, buttered on both sides and griddled or broiled.",
     hook: "It exists because a bakery cut the slices too thick for the toaster.",
-    story:
-      "The usual account places it at a Texas restaurant in the 1940s, where oversized slices would not fit the toaster and were buttered and grilled on the flat top instead. The name spread nationally on frozen garlic bread packaging, which is how most people now meet it.",
     chain: ["Texas"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12847,8 +11777,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A muscular short-coated dog from Thailand with a strip of hair growing forward along its spine.",
     hook: "A forward-growing stripe of hair links dogs in Thailand, Vietnam, and Africa.",
-    story:
-      "The dogs were kept in eastern Thailand as guards and hunters for centuries and were barely known abroad until the 1990s. The same reversed ridge appears in the Phu Quoc dog of Vietnam and the Rhodesian Ridgeback, and whether it arose separately or traveled by sea remains unsettled.",
     chain: ["Thailand"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12871,8 +11799,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "To endure something unpleasant out of duty, from the advice to lie back and think of England.",
     hook: "The famous quotation has no verified source and may never have been said.",
-    story:
-      "The line is usually credited to a 1912 journal by Alice, Lady Hillingdon, counseling wives on marital duty, but no such journal has ever been produced. The phrase itself is solidly attested in twentieth century English, whatever its origin, and now covers any grim obligation.",
     chain: ["England"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12895,8 +11821,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A puzzle in which graded disks are moved between three pegs, one at a time.",
     hook: "French puzzle, Vietnamese name, and a legend set in an Indian temple.",
-    story:
-      "Édouard Lucas published the puzzle in 1883 under an anagrammatic pen name, selling it with a tale about priests at Benares moving sixty-four golden disks. Why he chose Hanoi is not recorded, though France was then deep in its campaign to take Tonkin.",
     chain: ["Hanoi"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12919,8 +11843,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The smallest unit of troy weight, one 5,760th of a troy pound, about 64.8 milligrams.",
     hook: "Gold is weighed in units named for a market town in Champagne.",
-    story:
-      "Troy weight is generally traced to the fairs at Troyes in northeastern France, a hub of medieval European trade, and English records use the system from the 14th century. The grain began as the weight of a barleycorn and is the one unit that troy and avoirdupois still share exactly.",
     chain: ["Troyes"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12943,8 +11865,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "The unit of about 31.1 grams used for weighing gold, silver and other precious metals.",
     hook: "Gold is priced in an ounce named for a French market town, not ancient Troy.",
-    story:
-      "The weight is generally traced to the medieval trade fairs at Troyes in Champagne, where merchants from across Europe needed one agreed standard. That link is the conventional account rather than a documented one, and rival derivations pointing at English towns have been proposed and largely dismissed.",
     chain: ["Troyes"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12967,8 +11887,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A unit of twelve troy ounces, about 373 grams, used for weighing precious metals.",
     hook: "A pound of gold weighs less than a pound of feathers.",
-    story:
-      "The system is generally traced to Troyes in Champagne, whose medieval trade fairs set weights and measures for merchants from across Europe. A troy ounce is heavier than an ordinary ounce, but only twelve of them make the pound, so a troy pound falls well short of an avoirdupois one.",
     chain: ["Troyes"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -12991,8 +11909,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A crossing of a gap or river made hand-over-hand on a rope fixed between two anchors.",
     hook: "A rope bridge named for the Alpine region whose guides made it routine.",
-    story:
-      "The technique spread through early twentieth century Alpine climbing, and English speakers attached the name of Tyrol, the mountain region divided between Austria and Italy. The attribution is customary rather than documented; no first use in Tyrol has ever been pinned down.",
     chain: ["Tyrol"],
     relationship: "demonym",
     confidence: "probable",
@@ -13015,8 +11931,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A dark, oily Turkish chili flake with a raisin-like sweetness and gentle heat.",
     hook: "Dried in sun by day and wrapped by night, which is why it stays dark and moist.",
-    story:
-      "The peppers are grown around Şanlıurfa in southeastern Turkey and cured by alternating sun during the day with sweating under cover at night, which keeps the oils in the flakes. The result tastes closer to dried fruit than to a hot chili, and it is often sold in English simply as Urfa.",
     chain: ["Şanlıurfa"],
     relationship: "product_from_place",
     confidence: "well-attested",
@@ -13039,8 +11953,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A karst spring where water rises under pressure up a deep flooded shaft instead of seeping from a hillside.",
     hook: "A whole class of springs named after one hole in Provence.",
-    story:
-      "The Fontaine de Vaucluse pours out at the foot of a cliff near Avignon, and a remote submersible finally reached the floor of its shaft at roughly 300 meters in the 1980s. Hydrogeologists borrowed the name for any spring fed this way, so the term now describes water rising in Florida and in China.",
     chain: ["Fontaine-de-Vaucluse"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -13063,8 +11975,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A small, smoked, finely ground pork and beef sausage, sold fresh in Europe and canned in the United States.",
     hook: "In Vienna the very same sausage is called a Frankfurter.",
-    story:
-      "The name translates Wiener Würstchen, and the sausage is usually credited to a butcher trained in the Frankfurt area who set up shop in Vienna, which is why each city names it after the other. The canned American version is a different product that borrowed the name.",
     chain: ["Vienna"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -13087,8 +11997,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A baguette filled with pâté or grilled meat, pickled daikon and carrot, cilantro, and chili; bánh mì.",
     hook: "It is a French colonial baguette, lightened with rice flour.",
-    story:
-      "French rule brought wheat bread to Vietnam, where bakers cut the flour with rice to get a thin, crackling, airy loaf, and Saigon cooks filled it with local pickles and herbs. Refugee communities carried it to the United States after 1975, where \"Vietnamese sandwich\" served as the menu translation until bánh mì grew familiar.",
     chain: ["Vietnam"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -13111,8 +12019,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A vigorous North American climbing vine with five leaflets that turn scarlet in fall.",
     hook: "Named by Europeans for a colony far larger than today's Virginia.",
-    story:
-      "The vine reached European gardens from the early English colony and took its name there, though it grows wild from Canada to Mexico. Adhesive pads on its tendrils let it climb bare masonry, which is why it covers so many old walls nowhere near Virginia.",
     chain: ["Virginia"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -13135,8 +12041,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "A joiner's hammer with a flat face at one end and a thin wedge-shaped cross pein at the other.",
     hook: "The thin end exists so you can start a pin without flattening your fingers.",
-    story:
-      "The pattern takes its name from Warrington in northwest England, a town built on toolmaking and wire. The cross pein taps in a small nail held between finger and thumb, and the flat face then drives it home.",
     chain: ["Warrington"],
     relationship: "direct_toponym",
     confidence: "probable",
@@ -13159,8 +12063,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "Either of two short-legged Welsh herding breeds, the Pembroke and the Cardigan.",
     hook: "Corgi is Welsh too: cor plus ci, meaning dwarf dog.",
-    story:
-      "The second half of the name is a Welsh word rather than an English description, so the breed name effectively says Welsh twice. The two varieties are named for Pembrokeshire and Cardiganshire and were shown as a single breed in Britain until 1934.",
     chain: ["Wales"],
     relationship: "demonym",
     confidence: "well-attested",
@@ -13183,8 +12085,6 @@ export const WORDS: Word[] = [
     pos: "noun",
     definition: "An illness caused by a mosquito-borne virus, ranging from mild fever to brain inflammation.",
     hook: "The virus is named for a district in Uganda it long ago outgrew.",
-    story:
-      "Researchers isolated the virus in 1937 from a woman's blood in the West Nile district of northwestern Uganda, and by convention the region's name went onto the pathogen. It reached New York in 1999 and is now established across North America, thousands of miles from any part of the Nile.",
     chain: ["West Nile sub-region"],
     relationship: "direct_toponym",
     confidence: "well-attested",
@@ -13207,8 +12107,6 @@ export const WORDS: Word[] = [
     pos: "verb",
     definition: "Advice to follow the customs of whatever place you find yourself in.",
     hook: "The advice started as a bishop's ruling on which day to fast.",
-    story:
-      "Ambrose of Milan reportedly told Augustine to fast on Saturday while in Rome and not to in Milan, following each church's local custom, and the anecdote hardened into a proverb. English versions appear by the sixteenth century, by which point the fasting question had dropped out entirely.",
     chain: ["Rome"],
     relationship: "direct_toponym",
     confidence: "well-attested",
