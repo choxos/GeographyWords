@@ -562,23 +562,6 @@
     min-width: 0;
     background: var(--surface-2);
   }
-  /* Hover tooltip over a clustered pin. MapLibre owns the positioning, so
-     these override its default white bubble to match the surface tokens. */
-  .atlas-popup .maplibregl-popup-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    padding: 6px 9px;
-    border: 1px solid var(--border);
-    border-radius: var(--r-md);
-    background: var(--surface);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
-    max-width: 240px;
-  }
-  .atlas-popup .maplibregl-popup-tip {
-    display: none;
-  }
-
   /* Map pins and their hover tooltip. */
   .atlas-pin-wrap {
     position: relative;
@@ -1267,6 +1250,42 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Hover tooltip on a pin.
+   These rules sit outside @layer on purpose: maplibre-gl.css is unlayered, and
+   unlayered CSS outranks every layer, so a layered override loses to it. That
+   is what left the two lines running together on one unreadable row. */
+.atlas-popup .maplibregl-popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 11px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  max-width: 260px;
+  pointer-events: none;
+}
+.atlas-popup .maplibregl-popup-tip {
+  display: none;
+}
+.atlas-popup .atlas-pin-tip-word {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  white-space: normal;
+}
+.atlas-popup .atlas-pin-tip-place {
+  font-family: var(--font-mono), monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  white-space: normal;
 }
 
 /* MapLibre control chrome, themed to match the rest of the surface. */
