@@ -539,42 +539,96 @@
   /* Both rails collapse. The map is what the page is for, so it opens at
      full width and a rail is pulled in when it is wanted; choosing a pin
      opens the details rail on its own. */
+  /* The map is the page, so it fills the frame and the rails float over it
+     as cards. Laying them out as grid columns took width away from the one
+     thing a reader came for, and collapsing those columns only traded a
+     cramped map for empty gutters. */
   .atlas-workspace {
     position: absolute;
     inset: 0;
     display: grid;
-    --rail-browse: 288px;
-    --rail-details: 366px;
+    --rail-browse: 296px;
+    --rail-details: 372px;
+    --rail-gap: 16px;
     grid-template-columns:
       var(--rail-browse) minmax(320px, 1fr) var(--rail-details);
     background: var(--bg);
-    transition: grid-template-columns 0.28s var(--ease);
   }
-  /* Collapsing belongs to the three column layout only. Below 640px the rails
-     are tabs, and hiding one there would empty the panel the reader chose. */
+
   @media (min-width: 641px) {
-    .atlas-workspace[data-browse="closed"] {
-      --rail-browse: 0px;
+    .atlas-workspace {
+      display: block;
     }
-    .atlas-workspace[data-details="closed"] {
-      --rail-details: 0px;
+
+    /* Scoped through the workspace so these win over the base .atlas-stage
+       and .atlas-rail rules, which are declared later in the file. */
+    .atlas-workspace .atlas-stage {
+      position: absolute;
+      inset: 0;
     }
-    /* A zero width column still lays its contents out and can be tabbed into,
-       so close it off properly rather than just narrowing it. */
-    .atlas-workspace[data-browse="closed"] .atlas-rail-left,
-    .atlas-workspace[data-details="closed"] .atlas-rail-right {
+
+    .atlas-workspace .atlas-rail {
+      position: absolute;
+      top: var(--rail-gap);
+      bottom: var(--rail-gap);
+      z-index: 3;
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow:
+        0 1px 2px rgb(16 16 14 / 0.06),
+        0 12px 32px -12px rgb(16 16 14 / 0.28);
       overflow: hidden;
-      border: 0;
+      transition:
+        transform 0.3s var(--ease),
+        opacity 0.22s var(--ease);
+    }
+    .atlas-workspace .atlas-rail-left {
+      left: var(--rail-gap);
+      width: var(--rail-browse);
+      border-right: 1px solid var(--border);
+    }
+    .atlas-workspace .atlas-rail-right {
+      right: var(--rail-gap);
+      width: var(--rail-details);
+      border-left: 1px solid var(--border);
+    }
+
+    /* Closed rails slide off their own edge rather than vanishing, so the
+       movement says where they went. */
+    .atlas-workspace[data-browse="closed"] .atlas-rail-left {
+      transform: translateX(calc(-100% - var(--rail-gap) - 8px));
+      opacity: 0;
       pointer-events: none;
       visibility: hidden;
+    }
+    .atlas-workspace[data-details="closed"] .atlas-rail-right {
+      transform: translateX(calc(100% + var(--rail-gap) + 8px));
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    /* The handle steps aside when its rail is open, so it never sits on top
+       of the card it controls. */
+    .atlas-handle-left {
+      left: var(--rail-gap);
+    }
+    .atlas-workspace[data-browse="open"] .atlas-handle-left {
+      left: calc(var(--rail-gap) + var(--rail-browse) + 10px);
+    }
+    .atlas-handle-right {
+      right: var(--rail-gap);
+    }
+    .atlas-workspace[data-details="open"] .atlas-handle-right {
+      right: calc(var(--rail-gap) + var(--rail-details) + 10px);
     }
   }
 
   /* The handles ride on the map edge, so a closed rail stays discoverable. */
   .atlas-handle {
     position: absolute;
-    top: 14px;
-    z-index: 4;
+    top: 16px;
+    z-index: 5;
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -589,7 +643,11 @@
     box-shadow: 0 1px 3px rgb(0 0 0 / 0.08);
     cursor: pointer;
     max-width: 220px;
-    transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+    transition:
+      color 0.15s var(--ease),
+      border-color 0.15s var(--ease),
+      left 0.3s var(--ease),
+      right 0.3s var(--ease);
   }
   .atlas-handle:hover {
     color: var(--xera);
@@ -599,12 +657,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-  .atlas-handle-left {
-    left: 14px;
-  }
-  .atlas-handle-right {
-    right: 14px;
   }
   @media (max-width: 640px) {
     .atlas-handle {
@@ -721,7 +773,7 @@
     position: absolute;
     left: 12px;
     bottom: 12px;
-    z-index: 4;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     gap: 3px;

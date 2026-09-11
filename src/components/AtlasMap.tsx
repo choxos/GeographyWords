@@ -211,7 +211,7 @@ export function AtlasMap({
       projection="globe"
       attributionControl={{ compact: true }}
       cursor={onPickPoint && !guessPin ? "crosshair" : hover ? "pointer" : "grab"}
-      initialViewState={{ longitude: 12, latitude: 24, zoom: 1.6 }}
+      initialViewState={{ longitude: 12, latitude: 24, zoom: 1.95 }}
       minZoom={1}
       interactiveLayerIds={hidePins ? [] : INTERACTIVE}
       style={{ width: "100%", height: "100%" }}
