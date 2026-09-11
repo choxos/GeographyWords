@@ -18,11 +18,10 @@ import {
   breadcrumbLd,
   placeCrumbs,
   placeDescription,
-  placeLabel,
   placeTitle,
 } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
-import { SITE_URL } from "@/lib/site";
+import { openGraphBase, SITE_URL } from "@/lib/site";
 
 type PlaceParams = { slug: string };
 
@@ -47,6 +46,7 @@ export async function generateMetadata({
     description: placeDescription(place, lemmas),
     alternates: { canonical: `/place/${place.slug}` },
     openGraph: {
+      ...openGraphBase,
       title: `English words hiding in ${place.name}`,
       description: lemmas.join(", "),
       url: `/place/${place.slug}`,
@@ -229,9 +229,15 @@ export default async function PlacePage({
           ),
           url: `${SITE_URL}/place/${place.slug}`,
           sameAs: `https://www.wikidata.org/wiki/${place.wikidata}`,
-          ...(placeLabel(place) === place.name
-            ? {}
-            : { address: { "@type": "PostalAddress", addressCountry: place.country } }),
+          // addressCountry wants the ISO 3166-1 code, not the country's name.
+          ...(place.countryCode
+            ? {
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: place.countryCode,
+                },
+              }
+            : {}),
           geo: {
             "@type": "GeoCoordinates",
             latitude: place.lat,

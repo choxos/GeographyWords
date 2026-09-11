@@ -26,6 +26,10 @@ jobs:
       # Titles and descriptions are composed from prose fields, so one long
       # hook is enough to push a page past what a search result shows.
       - run: npm run validate:seo
+      # Page metadata replaces the root's openGraph block rather than merging
+      # into it, so a page that sets a title drops og:site_name without a
+      # word from tsc. This reads the built HTML instead of the source.
+      - run: npm run validate:built
       - run: npx playwright install --with-deps chromium
       # The map is only exercised by a real browser against a real build: the
       # two bugs this suite exists for both passed tsc, eslint and next build.

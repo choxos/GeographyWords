@@ -68,6 +68,7 @@ npm run validate:layers     # map expressions, against the MapLibre style spec
 npm run validate:places     # every Wikidata id exists and agrees with the data
 npm run validate:coverage   # every category member is published or declined
 npm run validate:seo        # every title and description fits a search result
+npm run validate:built      # head tags and structured data, in the built HTML
 npm run test:e2e            # the atlas in a real browser
 ```
 

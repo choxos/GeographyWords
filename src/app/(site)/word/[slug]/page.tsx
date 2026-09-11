@@ -32,7 +32,7 @@ import {
   wordTitle,
 } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { openGraphBase, SITE_NAME, SITE_URL } from "@/lib/site";
 
 type WordParams = { slug: string };
 
@@ -54,12 +54,12 @@ export async function generateMetadata({
     title: wordTitle(word),
     description: wordDescription(word),
     openGraph: {
+      ...openGraphBase,
       // The hook is the line worth sharing, so the card keeps it even though
       // the search title cannot fit it.
       title: `${word.lemma}: ${word.hook}`,
       description: storyFor(word.slug),
       url: `/word/${word.slug}`,
-      type: "article",
     },
     alternates: { canonical: `/word/${word.slug}` },
   };
@@ -388,7 +388,9 @@ export default async function WordPage({
               longitude: word.place.lng,
             },
           },
-          sameAs: sources.map((source) => source.url),
+          // sameAs is the same entity elsewhere, which for a word means its
+          // dictionary entry. The rest are evidence, so they are citations.
+          sameAs: sources[0].url,
           citation: sources.map((source) => source.url),
         }}
       />

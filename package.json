@@ -16,6 +16,7 @@
     "data:stories": "node scripts/split-stories.mjs",
     "validate:coverage": "python3 scripts/coverage-ledger.py",
     "validate:seo": "node --experimental-strip-types --no-warnings scripts/seo-audit.mjs",
+    "validate:built": "python3 scripts/verify-built-seo.py",
     "tour": "node scripts/record-tour.mjs"
   },
   "dependencies": {

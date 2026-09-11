@@ -12,7 +12,7 @@ import {
 import { getCountries, getCountry } from "@/lib/data";
 import { breadcrumbLd, countryDescription, countryTitle } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
-import { SITE_URL } from "@/lib/site";
+import { openGraphBase, SITE_URL } from "@/lib/site";
 
 type CountryParams = { code: string };
 
@@ -36,6 +36,7 @@ export async function generateMetadata({
     description: countryDescription(country.name, lemmas),
     alternates: { canonical: `/country/${country.code.toLowerCase()}` },
     openGraph: {
+      ...openGraphBase,
       title: `${lemmas.length} English words hiding inside ${country.name}`,
       description: lemmas.join(", "),
       url: `/country/${country.code.toLowerCase()}`,
