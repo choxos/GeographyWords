@@ -42,6 +42,7 @@ type AtlasMapProps = {
 
 const SOURCE = "atlas-places";
 const POINTS = "atlas-points";
+const POINT_COUNT = "atlas-point-count";
 const SELECTED = "atlas-selected";
 const INTERACTIVE = [POINTS];
 
@@ -86,6 +87,7 @@ export function AtlasMap({
           slug: place.slug,
           place: `${place.name}, ${place.country}`,
           label: place.words.map((word) => word.lemma).join(", "),
+          count: place.words.length,
         },
       })),
     }),
@@ -269,20 +271,41 @@ export function AtlasMap({
               "circle-stroke-width": 1.5,
               "circle-stroke-color": surface,
               // Small enough at world zoom that dense regions stay readable
-              // as separate dots, larger once there is room for them.
+              // as separate dots, larger once there is room for them. A place
+              // holding several words is widened to carry its count.
               "circle-radius": [
-                "interpolate",
-                ["linear"],
-                ["zoom"],
-                1,
-                3.2,
-                3,
-                4.5,
-                6,
-                6,
+                "*",
+                [
+                  "interpolate",
+                  ["linear"],
+                  ["zoom"],
+                  1,
+                  3.2,
+                  3,
+                  4.5,
+                  6,
+                  6,
+                ],
+                ["case", [">", ["get", "count"], 1], 1.9, 1],
               ],
             }}
           />
+          {/* Only places holding more than one word carry a number. A single
+              word needs no label; the tooltip already names it. */}
+          <Layer
+            id={POINT_COUNT}
+            type="symbol"
+            filter={[">", ["get", "count"], 1]}
+            layout={{
+              "text-field": ["to-string", ["get", "count"]],
+              "text-font": ["Noto Sans Regular"],
+              "text-size": 10,
+              "text-allow-overlap": true,
+              "text-ignore-placement": true,
+            }}
+            paint={{ "text-color": "#FFFFFF" }}
+          />
+
           {selectedPlaceSlug ? (
             <Layer
               id={SELECTED}
