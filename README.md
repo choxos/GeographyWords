@@ -4,11 +4,17 @@ A curated atlas of English words that carry a place inside them. Search *denim*
 and the globe flies to Nîmes; open Bikini Atoll and the swimsuit is waiting
 there.
 
-74 hand-checked entries across 73 places and 32 countries. Every entry records
-what kind of link it is (named from the place, named for a product of it, from
+<!-- stats -->
+**251 words · 229 places · 66 countries** — 228 well attested, 15 probable, 8 disputed.
+<!-- /stats -->
+
+Every entry records what kind of link it is (named from the place, named for a product of it, from
 its people, through a historical name, indirect, or disputed), how settled the
 etymology is, a short explanation written for this atlas, and links to
 Wiktionary and Wikidata. Dictionary prose is not copied into the database.
+
+That headline is generated: `node scripts/atlas-stats.mjs` rewrites it from
+`src/data/words.ts`, so it cannot drift out of date.
 
 ## Stack
 

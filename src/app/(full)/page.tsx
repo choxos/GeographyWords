@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { AtlasWorkspace } from "@/components/AtlasWorkspace";
 import { getStats } from "@/lib/data";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -12,7 +13,11 @@ export default function HomePage() {
 
   return (
     <>
-      <AtlasWorkspace />
+      {/* The workspace reads its state from the query string, which Next
+          requires to sit behind a Suspense boundary on a prerendered page. */}
+      <Suspense fallback={<div className="atlas-stage-skeleton" />}>
+        <AtlasWorkspace />
+      </Suspense>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

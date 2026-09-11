@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useMemo, useState } from "react";
 import { ArrowRight, ExternalLink, MapPin, Search, Shuffle, X } from "lucide-react";
 import {
   CONFIDENCE_LABEL,
@@ -36,10 +37,36 @@ export function AtlasWorkspace() {
   const countries = useMemo(() => getCountries(), []);
   const allPlaces = useMemo(() => getPlaces(), []);
 
-  const [query, setQuery] = useState("");
-  const [confidence, setConfidence] = useState<Confidence | null>(null);
-  const [relationship, setRelationship] = useState<RelationshipType | null>(null);
-  const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
+  // Atlas state lives in the URL so a view can be refreshed, navigated back
+  // to, and shared. Everything below reads from searchParams and writes with
+  // replace(), which keeps the history stack usable.
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useSearchParams();
+
+  const query = params.get("q") ?? "";
+  const confidence = (params.get("confidence") as Confidence | null) ?? null;
+  const relationship = (params.get("link") as RelationshipType | null) ?? null;
+  const selectedSlug = params.get("word");
+
+  const setParams = useCallback(
+    (patch: Record<string, string | null>) => {
+      const next = new URLSearchParams(params.toString());
+      for (const [key, value] of Object.entries(patch)) {
+        if (value) next.set(key, value);
+        else next.delete(key);
+      }
+      const qs = next.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [params, pathname, router],
+  );
+
+  const setQuery = (value: string) => setParams({ q: value || null });
+  const setConfidence = (value: Confidence | null) => setParams({ confidence: value });
+  const setRelationship = (value: RelationshipType | null) => setParams({ link: value });
+  const setSelectedSlug = (value: string | null) => setParams({ word: value });
+  const [placeSlug, setPlaceSlug] = useState<string | null>(null);
 
   const relationships = useMemo(() => {
     const seen = new Map<RelationshipType, number>();
@@ -64,15 +91,22 @@ export function AtlasWorkspace() {
     });
   }, [confidence, query, relationship]);
 
-  // Pins mirror the filters, so the map and the list never disagree.
-  const places = useMemo(() => {
-    const slugs = new Set(shown.map((word) => word.place.slug));
-    return allPlaces.filter((place) => slugs.has(place.slug));
-  }, [allPlaces, shown]);
-
   const selected = selectedSlug
     ? (allWords.find((word) => word.slug === selectedSlug) ?? null)
     : null;
+
+  // Pins mirror the filters, so the map and the list never disagree. The
+  // selected word's pin is kept regardless: filtering it away while its entry
+  // fills the inspector left the two panels contradicting each other.
+  const places = useMemo(() => {
+    const slugs = new Set(shown.map((word) => word.place.slug));
+    if (selected) slugs.add(selected.place.slug);
+    return allPlaces.filter((place) => slugs.has(place.slug));
+  }, [allPlaces, shown, selected]);
+
+  // Words at the selected pin, so a place holding several offers all of them
+  // instead of the inspector arbitrarily showing the first.
+  const atPlace = placeSlug ? getWordsByPlace(placeSlug) : [];
 
   const flyTarget = selected
     ? {
@@ -82,9 +116,12 @@ export function AtlasWorkspace() {
       }
     : null;
 
-  function pickPlace(placeSlug: string) {
-    const here = getWordsByPlace(placeSlug);
-    if (here.length > 0) setSelectedSlug(here[0].slug);
+  function pickPlace(slug: string) {
+    const here = getWordsByPlace(slug);
+    if (here.length === 0) return;
+    setPlaceSlug(slug);
+    // One word at the pin opens straight away; several are offered first.
+    setSelectedSlug(here.length === 1 ? here[0].slug : null);
   }
 
   const filtersOn = Boolean(query.trim() || confidence || relationship);
@@ -184,7 +221,10 @@ export function AtlasWorkspace() {
                 className={
                   word.slug === selectedSlug ? "atlas-item is-on" : "atlas-item"
                 }
-                onClick={() => setSelectedSlug(word.slug)}
+                onClick={() => {
+                  setPlaceSlug(null);
+                  setSelectedSlug(word.slug);
+                }}
               >
                 <span className="atlas-item-lemma">{word.lemma}</span>
                 <span className="atlas-item-place">{word.place.name}</span>
@@ -208,7 +248,10 @@ export function AtlasWorkspace() {
             type="button"
             className="btn"
             style={{ width: "100%" }}
-            onClick={() => setSelectedSlug(randomWord(selectedSlug ?? undefined).slug)}
+            onClick={() => {
+              setPlaceSlug(null);
+              setSelectedSlug(randomWord(selectedSlug ?? undefined).slug);
+            }}
           >
             <Shuffle size={14} /> Surprise me
           </button>
@@ -228,12 +271,27 @@ export function AtlasWorkspace() {
       {/* ========================================= RIGHT: inspector ==== */}
       <aside className="atlas-rail atlas-rail-right" aria-label="Entry details">
         {selected ? (
-          <Inspector word={selected} onClose={() => setSelectedSlug(null)} />
+          <Inspector
+            word={selected}
+            onClose={() => {
+              setSelectedSlug(null);
+              setPlaceSlug(null);
+            }}
+          />
+        ) : atPlace.length > 1 ? (
+          <PlacePicker
+            words={atPlace}
+            onPick={(slug) => setSelectedSlug(slug)}
+            onClose={() => setPlaceSlug(null)}
+          />
         ) : (
           <Overview
             stats={stats}
             countries={countries}
-            onPick={(slug) => setSelectedSlug(slug)}
+            onPick={(slug) => {
+              setPlaceSlug(null);
+              setSelectedSlug(slug);
+            }}
           />
         )}
       </aside>
@@ -451,6 +509,57 @@ function Overview({
       <div className="atlas-rail-foot">
         <Link href="/guess" className="btn btn-primary" style={{ width: "100%" }}>
           Play guess mode <ArrowRight size={14} />
+        </Link>
+      </div>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+
+function PlacePicker({
+  words,
+  onPick,
+  onClose,
+}: {
+  words: Word[];
+  onPick: (slug: string) => void;
+  onClose: () => void;
+}) {
+  const place = words[0].place;
+  return (
+    <>
+      <div className="atlas-rail-head">
+        <div className="atlas-inspector-top">
+          <span className="atlas-filter-label" style={{ margin: 0 }}>
+            {words.length} words pinned here
+          </span>
+          <button type="button" aria-label="Close place" onClick={onClose}>
+            <X size={15} />
+          </button>
+        </div>
+        <p className="atlas-inspector-lemma lemma" style={{ fontSize: 30 }}>
+          {place.name}
+        </p>
+        <p className="atlas-inspector-meta mono">{place.country}</p>
+      </div>
+
+      <div className="atlas-scroll">
+        <ul className="atlas-starters" style={{ padding: "0 18px" }}>
+          {words.map((word) => (
+            <li key={word.slug}>
+              <button type="button" onClick={() => onPick(word.slug)}>
+                <span className="lemma">{word.lemma}</span>
+                <span>{word.hook}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="atlas-rail-foot">
+        <Link href={`/place/${place.slug}`} className="btn" style={{ width: "100%" }}>
+          Open the place page <ArrowRight size={14} />
         </Link>
       </div>
     </>
